@@ -1,8 +1,4 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F3155 `(f ~T0 @X0 1 tf2`us`us ]
-"51 main.c
-[; ;main.c: 51: __attribute__((inline)) float _power(uint16_t, uint16_t);
-[v __power `TF3155 ~T0 @X0 0 e ]
 [p mainexit ]
 "71 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 71: void SYSTEM_Initialize(void);
@@ -18,27 +14,52 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2201
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 2201: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
 [v _LATCbits `VS120 ~T0 @X0 0 e@270 ]
-[v F3159 `(v ~T0 @X0 1 tf1`*uc ]
-"52 main.c
-[; ;main.c: 52: __attribute__((inline)) void TX_Whole_String(char *);
-[v _TX_Whole_String `TF3159 ~T0 @X0 0 e ]
-[v F668 `(v ~T0 @X0 1 tf1`ul ]
+"81 main.c
+[; ;main.c: 81:     ADC_SelectChannel(channel_AN10);
+[c E3527 10 29 30 31 .. ]
+[n E3527 . channel_AN10 channel_Temp channel_DAC channel_FVR  ]
+"166 ./mcc_generated_files/adc.h
+[; ;./mcc_generated_files/adc.h: 166: void ADC_SelectChannel(adc_channel_t channel);
+[v _ADC_SelectChannel `(v ~T0 @X0 0 ef1`E3527 ]
+"193
+[; ;./mcc_generated_files/adc.h: 193: void ADC_StartConversion(void);
+[v _ADC_StartConversion `(v ~T0 @X0 0 ef ]
+[v F3585 `(us ~T0 @X0 1 tf ]
+"64 main.c
+[; ;main.c: 64: __attribute__((inline)) uint16_t ReadVoltage_ADC(void);
+[v _ReadVoltage_ADC `TF3585 ~T0 @X0 0 e ]
+"113 /opt/microchip/xc8/v2.31/pic/include/c99/stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+[v F3579 `(v ~T0 @X0 1 tf1`*uc ]
+"62 main.c
+[; ;main.c: 62: __attribute__((inline)) void TX_Whole_String(char*);
+[v _TX_Whole_String `TF3579 ~T0 @X0 0 e ]
+[v F1092 `(v ~T0 @X0 1 tf1`ul ]
 "12 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/builtins.h
-[v __delay `JF668 ~T0 @X0 0 e ]
+[v __delay `JF1092 ~T0 @X0 0 e ]
 [p i __delay ]
 "54 /opt/microchip/xc8/v2.31/pic/include/c99/string.h
 [; ;/opt/microchip/xc8/v2.31/pic/include/c99/string.h: 54: size_t strlen (const char *);
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
-[v F3152 `(v ~T0 @X0 1 tf1`uc ]
-"50 main.c
-[; ;main.c: 50: __attribute__((inline)) void TX_Command(uint8_t);
-[v _TX_Command `TF3152 ~T0 @X0 0 e ]
+[v F3576 `(v ~T0 @X0 1 tf1`uc ]
+"61 main.c
+[; ;main.c: 61: __attribute__((inline)) void TX_Command(uint8_t);
+[v _TX_Command `TF3576 ~T0 @X0 0 e ]
 "158 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 158: _Bool EUSART_is_tx_ready(void);
 [v _EUSART_is_tx_ready `(a ~T0 @X0 0 ef ]
 "341
 [; ;./mcc_generated_files/eusart.h: 341: void EUSART_Write(uint8_t txData);
 [v _EUSART_Write `(v ~T0 @X0 0 ef1`uc ]
+"373 /opt/microchip/xc8/v2.31/pic/include/c99/math.h
+[; ;/opt/microchip/xc8/v2.31/pic/include/c99/math.h: 373: float sqrtf(float);
+[v _sqrtf `(f ~T0 @X0 0 ef1`f ]
+"225 ./mcc_generated_files/adc.h
+[; ;./mcc_generated_files/adc.h: 225: _Bool ADC_IsConversionDone(void);
+[v _ADC_IsConversionDone `(a ~T0 @X0 0 ef ]
+"258
+[; ;./mcc_generated_files/adc.h: 258: adc_result_t ADC_GetConversionResult(void);
+[v _ADC_GetConversionResult `(us ~T0 @X0 0 ef ]
 "55 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -531,310 +552,173 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7006
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 7006: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"55 main.c
-[; ;main.c: 55: void reverse(char* str, int len) {
-[v _reverse `(v ~T0 @X0 1 ef2`*uc`i ]
-{
-[e :U _reverse ]
-[v _str `*uc ~T0 @X0 1 r1 ]
-[v _len `i ~T0 @X0 1 r2 ]
-[f ]
-"56
-[; ;main.c: 56:   int i = 0, j = len - 1;
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[v _j `i ~T0 @X0 1 a ]
-[e = _j - _len -> 1 `i ]
-"57
-[; ;main.c: 57:   char temp;
-[v _temp `uc ~T0 @X0 1 a ]
-"58
-[; ;main.c: 58:   while (i < j) {
-[e $U 378  ]
-[e :U 379 ]
-{
-"59
-[; ;main.c: 59:     temp = str[i];
-[e = _temp *U + _str * -> _i `x -> -> # *U _str `i `x ]
-"60
-[; ;main.c: 60:     str[i] = str[j];
-[e = *U + _str * -> _i `x -> -> # *U _str `i `x *U + _str * -> _j `x -> -> # *U _str `i `x ]
-"61
-[; ;main.c: 61:     str[j] = temp;
-[e = *U + _str * -> _j `x -> -> # *U _str `i `x _temp ]
-"62
-[; ;main.c: 62:     i++;
-[e ++ _i -> 1 `i ]
-"63
-[; ;main.c: 63:     j--;
-[e -- _j -> 1 `i ]
-"64
-[; ;main.c: 64:   }
-}
-[e :U 378 ]
-"58
-[; ;main.c: 58:   while (i < j) {
-[e $ < _i _j 379  ]
-[e :U 380 ]
-"65
-[; ;main.c: 65: }
-[e :UE 377 ]
-}
-"67
-[; ;main.c: 67: int intToStr(int x, char str[], int d) {
-[v _intToStr `(i ~T0 @X0 1 ef3`i`*uc`i ]
-{
-[e :U _intToStr ]
-[v _x `i ~T0 @X0 1 r1 ]
-[v _str `*uc ~T0 @X0 1 r2 ]
-[v _d `i ~T0 @X0 1 r3 ]
-[f ]
-"68
-[; ;main.c: 68:   int i = 0;
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-"69
-[; ;main.c: 69:   while (x) {
-[e $U 382  ]
-[e :U 383 ]
-{
-"70
-[; ;main.c: 70:     str[i++] = (x % 10) + '0';
-[e = *U + _str * -> ++ _i -> 1 `i `x -> -> # *U _str `i `x -> + -> % _x -> 10 `i `ui -> 48 `ui `uc ]
-"71
-[; ;main.c: 71:     x = x / 10;
-[e = _x / _x -> 10 `i ]
-"72
-[; ;main.c: 72:   }
-}
-[e :U 382 ]
-"69
-[; ;main.c: 69:   while (x) {
-[e $ != _x -> 0 `i 383  ]
-[e :U 384 ]
-"73
-[; ;main.c: 73:   while (i < d)
-[e $U 385  ]
-[e :U 386 ]
-"74
-[; ;main.c: 74:     str[i++] = '0';
-[e = *U + _str * -> ++ _i -> 1 `i `x -> -> # *U _str `i `x -> -> 48 `ui `uc ]
-[e :U 385 ]
-"73
-[; ;main.c: 73:   while (i < d)
-[e $ < _i _d 386  ]
-[e :U 387 ]
-"75
-[; ;main.c: 75:   reverse(str, i);
-[e ( _reverse (2 , _str _i ]
-"76
-[; ;main.c: 76:   str[i] = '\0';
-[e = *U + _str * -> _i `x -> -> # *U _str `i `x -> -> 0 `ui `uc ]
-"77
-[; ;main.c: 77:   return i;
-[e ) _i ]
-[e $UE 381  ]
-"78
-[; ;main.c: 78: }
-[e :UE 381 ]
-}
-"80
-[; ;main.c: 80: void ftoa(float n, char* res, int afterpoint) {
-[v _ftoa `(v ~T0 @X0 1 ef3`f`*uc`i ]
-{
-[e :U _ftoa ]
-[v _n `f ~T0 @X0 1 r1 ]
-[v _res `*uc ~T0 @X0 1 r2 ]
-[v _afterpoint `i ~T0 @X0 1 r3 ]
-[f ]
-"81
-[; ;main.c: 81:   int ipart = (int)n;
-[v _ipart `i ~T0 @X0 1 a ]
-[e = _ipart -> _n `i ]
-"82
-[; ;main.c: 82:   float fpart = n - (float)ipart;
-[v _fpart `f ~T0 @X0 1 a ]
-[e = _fpart - _n -> _ipart `f ]
-"83
-[; ;main.c: 83:   int i = intToStr(ipart, res, 0);
-[v _i `i ~T0 @X0 1 a ]
-[e = _i ( _intToStr (3 , , _ipart _res -> 0 `i ]
-"84
-[; ;main.c: 84:   if (afterpoint != 0) {
-[e $ ! != _afterpoint -> 0 `i 389  ]
-{
-"85
-[; ;main.c: 85:     res[i] = '.';
-[e = *U + _res * -> _i `x -> -> # *U _res `i `x -> -> 46 `ui `uc ]
-"86
-[; ;main.c: 86:     fpart = fpart * _power(10, afterpoint);
-[e = _fpart * _fpart ( __power (2 , -> -> 10 `i `us -> _afterpoint `us ]
-"87
-[; ;main.c: 87:     intToStr((int)fpart, res + i + 1, afterpoint);
-[e ( _intToStr (3 , , -> _fpart `i + + _res * -> _i `x -> -> # *U _res `i `x * -> -> 1 `i `x -> -> # *U + _res * -> _i `x -> -> # *U _res `i `x `i `x _afterpoint ]
-"88
-[; ;main.c: 88:   }
-}
-[e :U 389 ]
-"89
-[; ;main.c: 89: }
-[e :UE 388 ]
-}
+"59 main.c
+[; ;main.c: 59: unsigned char Buff[20];
+[v _Buff `uc ~T0 @X0 -> 20 `i e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"93
-[; ;main.c: 93: void main(void)
+"74
+[; ;main.c: 74: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"94
-[; ;main.c: 94: {
+"75
+[; ;main.c: 75: {
 {
 [e :U _main ]
 [f ]
-"95
-[; ;main.c: 95:     SYSTEM_Initialize();
+"76
+[; ;main.c: 76:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"112
-[; ;main.c: 112:     do { LATCbits.LATC2 = 1; } while(0);
-[e :U 393 ]
+"77
+[; ;main.c: 77:     do { LATCbits.LATC2 = 1; } while(0);
+[e :U 381 ]
 {
 [e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 392 ]
-"114
-[; ;main.c: 114:     uint8_t SPI1_read;
-[v _SPI1_read `uc ~T0 @X0 1 a ]
-"115
-[; ;main.c: 115:     float aNumber_int = 321.98;
-[v _aNumber_int `f ~T0 @X0 1 a ]
-[e = _aNumber_int -> .321.98 `f ]
-"116
-[; ;main.c: 116:     char aNumber_str[20];
-[v _aNumber_str `uc ~T0 @X0 -> 20 `i a ]
-"117
-[; ;main.c: 117:     ftoa(aNumber_int, aNumber_str, 2);
-[e ( _ftoa (3 , , _aNumber_int &U _aNumber_str -> 2 `i ]
-"119
-[; ;main.c: 119:     while (1)
-[e :U 395 ]
-"120
-[; ;main.c: 120:     {
+[e :U 380 ]
+"79
+[; ;main.c: 79:     uint16_t V_ADC = 0;
+[v _V_ADC `us ~T0 @X0 1 a ]
+[e = _V_ADC -> -> 0 `i `us ]
+"81
+[; ;main.c: 81:     ADC_SelectChannel(channel_AN10);
+[e ( _ADC_SelectChannel (1 . `E3527 0 ]
+"83
+[; ;main.c: 83:     while (1){
+[e :U 383 ]
 {
-"124
-[; ;main.c: 124:         TX_Whole_String(aNumber_str);
-[e ( _TX_Whole_String (1 &U _aNumber_str ]
-"125
-[; ;main.c: 125:         _delay((unsigned long)((1000)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"127
-[; ;main.c: 127:     }
+"85
+[; ;main.c: 85:         ADC_StartConversion();
+[e ( _ADC_StartConversion ..  ]
+"86
+[; ;main.c: 86:         V_ADC = V_ADC = ReadVoltage_ADC();
+[e = _V_ADC = _V_ADC ( _ReadVoltage_ADC ..  ]
+"87
+[; ;main.c: 87:         sprintf(Buff, "%d \n", V_ADC);
+[e ( _sprintf (1 , (. , -> &U _Buff `*uc :s 1C -> _V_ADC `ui ]
+"88
+[; ;main.c: 88:         TX_Whole_String(Buff);
+[e ( _TX_Whole_String (1 -> &U _Buff `*uc ]
+"89
+[; ;main.c: 89:         _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"92
+[; ;main.c: 92:     }
 }
-[e :U 394 ]
-[e $U 395  ]
-[e :U 396 ]
-"128
-[; ;main.c: 128: }
-[e :UE 390 ]
+[e :U 382 ]
+[e $U 383  ]
+[e :U 384 ]
+"93
+[; ;main.c: 93: }
+[e :UE 378 ]
 }
-[v F3184 `(v ~T0 @X0 1 tf1`*uc ]
-"131
-[; ;main.c: 131: __attribute__((inline)) void TX_Whole_String(char *input_string){
-[v _TX_Whole_String `TF3184 ~T0 @X0 1 e ]
+[v F3589 `(v ~T0 @X0 1 tf1`*uc ]
+"102
+[; ;main.c: 102: __attribute__((inline)) void TX_Whole_String(char *input_string){
+[v _TX_Whole_String `TF3589 ~T0 @X0 1 e ]
 {
 [e :U _TX_Whole_String ]
 [v _input_string `*uc ~T0 @X0 1 r1 ]
 [f ]
-"133
-[; ;main.c: 133:     uint8_t size_of_string = strlen(input_string);
-[v _size_of_string `uc ~T0 @X0 1 a ]
-[e = _size_of_string -> ( _strlen (1 -> _input_string `*Cuc `uc ]
-"135
-[; ;main.c: 135:     for (uint8_t i = 0; i < size_of_string; i++){
+"104
+[; ;main.c: 104:     uint16_t size_of_string = strlen(input_string);
+[v _size_of_string `us ~T0 @X0 1 a ]
+[e = _size_of_string -> ( _strlen (1 -> _input_string `*Cuc `us ]
+"106
+[; ;main.c: 106:     for (uint8_t i = 0; i < size_of_string; i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $U 401  ]
-[e :U 398 ]
+[e $U 389  ]
+[e :U 386 ]
 {
-"137
-[; ;main.c: 137:         TX_Command(input_string[i]);
+"108
+[; ;main.c: 108:         TX_Command(input_string[i]);
 [e ( _TX_Command (1 -> *U + _input_string * -> _i `ux -> -> # *U _input_string `ui `ux `uc ]
-"138
-[; ;main.c: 138:         _delay((unsigned long)((5)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"140
-[; ;main.c: 140:     }
+"109
+[; ;main.c: 109:         _delay((unsigned long)((5)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"111
+[; ;main.c: 111:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e :U 401 ]
-[e $ < -> _i `i -> _size_of_string `i 398  ]
-[e :U 399 ]
+[e :U 389 ]
+[e $ < -> _i `ui -> _size_of_string `ui 386  ]
+[e :U 387 ]
 }
-"142
-[; ;main.c: 142:     TX_Command(10);
+"113
+[; ;main.c: 113:     TX_Command(10);
 [e ( _TX_Command (1 -> -> 10 `i `uc ]
-"144
-[; ;main.c: 144: }
-[e :UE 397 ]
+"115
+[; ;main.c: 115: }
+[e :UE 385 ]
 }
-[v F3189 `(v ~T0 @X0 1 tf1`uc ]
-"147
-[; ;main.c: 147: __attribute__((inline)) void TX_Command(uint8_t txData) {
-[v _TX_Command `TF3189 ~T0 @X0 1 e ]
+[v F3594 `(v ~T0 @X0 1 tf1`uc ]
+"118
+[; ;main.c: 118: __attribute__((inline)) void TX_Command(uint8_t txData) {
+[v _TX_Command `TF3594 ~T0 @X0 1 e ]
 {
 [e :U _TX_Command ]
 [v _txData `uc ~T0 @X0 1 r1 ]
 [f ]
-"149
-[; ;main.c: 149:     if (EUSART_is_tx_ready()) {
-[e $ ! != -> ( _EUSART_is_tx_ready ..  `i -> 0 `i 403  ]
+"120
+[; ;main.c: 120:     if (EUSART_is_tx_ready()) {
+[e $ ! != -> ( _EUSART_is_tx_ready ..  `i -> 0 `i 391  ]
 {
-"151
-[; ;main.c: 151:         EUSART_Write(txData);
+"122
+[; ;main.c: 122:         EUSART_Write(txData);
 [e ( _EUSART_Write (1 _txData ]
-"152
-[; ;main.c: 152:     }
+"123
+[; ;main.c: 123:     }
 }
-[e :U 403 ]
-"153
-[; ;main.c: 153: }
-[e :UE 402 ]
+[e :U 391 ]
+"124
+[; ;main.c: 124: }
+[e :UE 390 ]
 }
-[v F3192 `(f ~T0 @X0 1 tf2`us`us ]
-"156
-[; ;main.c: 156: __attribute__((inline)) float _power(uint16_t base_num, uint16_t exp_num){
-[v __power `TF3192 ~T0 @X0 1 e ]
+[v F3597 `(v ~T0 @X0 1 tf1`us ]
+"127
+[; ;main.c: 127: __attribute__((inline)) void ReadTemperature(uint16_t R_PT100){
+[v _ReadTemperature `TF3597 ~T0 @X0 1 e ]
 {
-[e :U __power ]
-[v _base_num `us ~T0 @X0 1 r1 ]
-[v _exp_num `us ~T0 @X0 1 r2 ]
+[e :U _ReadTemperature ]
+[v _R_PT100 `us ~T0 @X0 1 r1 ]
 [f ]
-"158
-[; ;main.c: 158:     uint8_t result = 1;
-[v _result `uc ~T0 @X0 1 a ]
-[e = _result -> -> 1 `i `uc ]
-"160
-[; ;main.c: 160:     while (exp_num > 0) {
-[e $U 405  ]
-[e :U 406 ]
+"129
+[; ;main.c: 129:     uint16_t Temperature;
+[v _Temperature `us ~T0 @X0 1 a ]
+"131
+[; ;main.c: 131:     Temperature = (-3.9083E-03 + sqrtf(17.58480889E-06 + (-23.10E-09 * R_PT100))) / -1.155E-06;
+[e = _Temperature -> / + -U .3.9083e-03 -> ( _sqrtf (1 -> + .17.58480889e-06 * -U .23.10e-09 -> -> _R_PT100 `ui `d `f `d -U .1.155e-06 `us ]
+"133
+[; ;main.c: 133: }
+[e :UE 392 ]
+}
+[v F3601 `(us ~T0 @X0 1 tf ]
+"136
+[; ;main.c: 136: __attribute__((inline)) uint16_t ReadVoltage_ADC(void){
+[v _ReadVoltage_ADC `TF3601 ~T0 @X0 1 e ]
 {
-"161
-[; ;main.c: 161:         result *= base_num;
-[e =* _result -> _base_num `uc ]
-"162
-[; ;main.c: 162:         exp_num--;
-[e -- _exp_num -> -> 1 `i `us ]
-"163
-[; ;main.c: 163:     }
+[e :U _ReadVoltage_ADC ]
+[f ]
+"138
+[; ;main.c: 138:     uint16_t convertedValue;
+[v _convertedValue `us ~T0 @X0 1 a ]
+"140
+[; ;main.c: 140:     while(!ADC_IsConversionDone());
+[e $U 394  ]
+[e :U 395 ]
+[e :U 394 ]
+[e $ ! != -> ( _ADC_IsConversionDone ..  `i -> 0 `i 395  ]
+[e :U 396 ]
+"141
+[; ;main.c: 141:     convertedValue = ADC_GetConversionResult();
+[e = _convertedValue ( _ADC_GetConversionResult ..  ]
+"143
+[; ;main.c: 143:     return convertedValue;
+[e ) _convertedValue ]
+[e $UE 393  ]
+"145
+[; ;main.c: 145: }
+[e :UE 393 ]
 }
-[e :U 405 ]
-"160
-[; ;main.c: 160:     while (exp_num > 0) {
-[e $ > -> _exp_num `ui -> -> 0 `i `ui 406  ]
-[e :U 407 ]
-"165
-[; ;main.c: 165:     return result;
-[e ) -> _result `f ]
-[e $UE 404  ]
-"167
-[; ;main.c: 167: }
-[e :UE 404 ]
-}
+[p f _sprintf 8388736 ]
+[a 1C 37 100 32 10 0 ]

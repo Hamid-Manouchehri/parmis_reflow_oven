@@ -316,20 +316,6 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 46 "main.c" 2
 
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
-# 1 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 1 3
-# 18 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "/opt/microchip/xc8/v2.31/pic/include/c99/xc8debug.h" 1 3
-
-
-
 # 1 "/opt/microchip/xc8/v2.31/pic/include/c99/stdlib.h" 1 3
 # 21 "/opt/microchip/xc8/v2.31/pic/include/c99/stdlib.h" 3
 # 1 "/opt/microchip/xc8/v2.31/pic/include/c99/bits/alltypes.h" 1 3
@@ -387,7 +373,21 @@ uldiv_t uldiv (unsigned long, unsigned long);
 
 
 size_t __ctype_get_mb_cur_max(void);
-# 5 "/opt/microchip/xc8/v2.31/pic/include/c99/xc8debug.h" 2 3
+# 47 "main.c" 2
+
+# 1 "/opt/microchip/xc8/v2.31/pic/include/c99/math.h" 1 3
+# 15 "/opt/microchip/xc8/v2.31/pic/include/c99/math.h" 3
+# 1 "/opt/microchip/xc8/v2.31/pic/include/c99/bits/alltypes.h" 1 3
+# 33 "/opt/microchip/xc8/v2.31/pic/include/c99/bits/alltypes.h" 3
+typedef float float_t;
+
+
+
+
+typedef double double_t;
+# 16 "/opt/microchip/xc8/v2.31/pic/include/c99/math.h" 2 3
+# 42 "/opt/microchip/xc8/v2.31/pic/include/c99/math.h" 3
+int __fpclassifyf(float);
 
 
 
@@ -395,6 +395,372 @@ size_t __ctype_get_mb_cur_max(void);
 
 
 
+int __signbitf(float);
+# 59 "/opt/microchip/xc8/v2.31/pic/include/c99/math.h" 3
+double acos(double);
+float acosf(float);
+long double acosl(long double);
+
+
+
+double acosh(double);
+float acoshf(float);
+long double acoshl(long double);
+
+
+
+double asin(double);
+float asinf(float);
+long double asinl(long double);
+
+
+
+double asinh(double);
+float asinhf(float);
+long double asinhl(long double);
+
+
+
+double atan(double);
+float atanf(float);
+long double atanl(long double);
+
+
+
+double atan2(double, double);
+float atan2f(float, float);
+long double atan2l(long double, long double);
+
+
+
+double atanh(double);
+float atanhf(float);
+long double atanhl(long double);
+
+
+
+double cbrt(double);
+float cbrtf(float);
+long double cbrtl(long double);
+
+
+
+double ceil(double);
+float ceilf(float);
+long double ceill(long double);
+
+
+
+double copysign(double, double);
+float copysignf(float, float);
+long double copysignl(long double, long double);
+
+
+
+double cos(double);
+float cosf(float);
+long double cosl(long double);
+
+
+
+double cosh(double);
+float coshf(float);
+long double coshl(long double);
+
+
+
+double erf(double);
+float erff(float);
+long double erfl(long double);
+
+
+
+double erfc(double);
+float erfcf(float);
+long double erfcl(long double);
+
+
+
+double exp(double);
+float expf(float);
+long double expl(long double);
+
+
+
+double exp2(double);
+float exp2f(float);
+long double exp2l(long double);
+
+
+
+double expm1(double);
+float expm1f(float);
+long double expm1l(long double);
+
+
+
+double fabs(double);
+float fabsf(float);
+long double fabsl(long double);
+
+
+
+double fdim(double, double);
+float fdimf(float, float);
+long double fdiml(long double, long double);
+
+
+
+double floor(double);
+float floorf(float);
+long double floorl(long double);
+
+
+
+double fma(double, double, double);
+float fmaf(float, float, float);
+long double fmal(long double, long double, long double);
+
+
+
+double fmax(double, double);
+float fmaxf(float, float);
+long double fmaxl(long double, long double);
+
+
+
+double fmin(double, double);
+float fminf(float, float);
+long double fminl(long double, long double);
+
+
+
+double fmod(double, double);
+float fmodf(float, float);
+long double fmodl(long double, long double);
+
+
+
+double frexp(double, int *);
+float frexpf(float, int *);
+long double frexpl(long double, int *);
+
+
+
+double hypot(double, double);
+float hypotf(float, float);
+long double hypotl(long double, long double);
+
+
+
+int ilogb(double);
+int ilogbf(float);
+int ilogbl(long double);
+
+
+
+double ldexp(double, int);
+float ldexpf(float, int);
+long double ldexpl(long double, int);
+
+
+
+double lgamma(double);
+float lgammaf(float);
+long double lgammal(long double);
+
+
+
+long long llrint(double);
+long long llrintf(float);
+long long llrintl(long double);
+
+
+
+long long llround(double);
+long long llroundf(float);
+long long llroundl(long double);
+
+
+
+double log(double);
+float logf(float);
+long double logl(long double);
+
+
+
+double log10(double);
+float log10f(float);
+long double log10l(long double);
+
+
+
+double log1p(double);
+float log1pf(float);
+long double log1pl(long double);
+
+
+
+double log2(double);
+float log2f(float);
+long double log2l(long double);
+
+
+
+double logb(double);
+float logbf(float);
+long double logbl(long double);
+
+
+
+long lrint(double);
+long lrintf(float);
+long lrintl(long double);
+
+
+
+long lround(double);
+long lroundf(float);
+long lroundl(long double);
+
+
+
+double modf(double, double *);
+float modff(float, float *);
+long double modfl(long double, long double *);
+
+
+
+double nan(const char *);
+float nanf(const char *);
+long double nanl(const char *);
+
+
+
+double nearbyint(double);
+float nearbyintf(float);
+long double nearbyintl(long double);
+
+
+
+double nextafter(double, double);
+float nextafterf(float, float);
+long double nextafterl(long double, long double);
+
+
+
+double nexttoward(double, long double);
+float nexttowardf(float, long double);
+long double nexttowardl(long double, long double);
+
+
+
+
+double pow(double, double);
+__attribute__((nonreentrant)) float powf(float, float);
+long double powl(long double, long double);
+
+
+
+double remainder(double, double);
+float remainderf(float, float);
+long double remainderl(long double, long double);
+
+
+
+double remquo(double, double, int *);
+float remquof(float, float, int *);
+long double remquol(long double, long double, int *);
+
+
+
+double rint(double);
+float rintf(float);
+long double rintl(long double);
+
+
+
+double round(double);
+float roundf(float);
+long double roundl(long double);
+
+
+
+double scalbln(double, long);
+float scalblnf(float, long);
+long double scalblnl(long double, long);
+
+
+
+double scalbn(double, int);
+float scalbnf(float, int);
+long double scalbnl(long double, int);
+
+
+
+double sin(double);
+float sinf(float);
+long double sinl(long double);
+
+
+
+double sinh(double);
+float sinhf(float);
+long double sinhl(long double);
+
+
+
+double sqrt(double);
+float sqrtf(float);
+long double sqrtl(long double);
+
+
+
+double tan(double);
+float tanf(float);
+long double tanl(long double);
+
+
+
+double tanh(double);
+float tanhf(float);
+long double tanhl(long double);
+
+
+
+double tgamma(double);
+float tgammaf(float);
+long double tgammal(long double);
+
+
+
+double trunc(double);
+float truncf(float);
+long double truncl(long double);
+# 423 "/opt/microchip/xc8/v2.31/pic/include/c99/math.h" 3
+extern int signgam;
+
+double j0(double);
+double j1(double);
+double jn(int, double);
+
+double y0(double);
+double y1(double);
+double yn(int, double);
+# 48 "main.c" 2
+
+# 1 "./mcc_generated_files/mcc.h" 1
+# 49 "./mcc_generated_files/mcc.h"
+# 1 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 1 3
+# 18 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "/opt/microchip/xc8/v2.31/pic/include/c99/xc8debug.h" 1 3
+# 12 "/opt/microchip/xc8/v2.31/pic/include/c99/xc8debug.h" 3
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 # 24 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 2 3
@@ -4755,9 +5121,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 151 "./mcc_generated_files/pin_manager.h"
+# 182 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 163 "./mcc_generated_files/pin_manager.h"
+# 194 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -4796,21 +5162,40 @@ extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/spi1.h" 1
-# 59 "./mcc_generated_files/spi1.h"
-typedef enum {
-    SPI1_DEFAULT
-} spi1_modes_t;
+# 1 "./mcc_generated_files/adc.h" 1
+# 72 "./mcc_generated_files/adc.h"
+typedef uint16_t adc_result_t;
 
-void SPI1_Initialize(void);
-_Bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration);
-void SPI1_Close(void);
-uint8_t SPI1_ExchangeByte(uint8_t data);
-void SPI1_ExchangeBlock(void *block, size_t blockSize);
-void SPI1_WriteBlock(void *block, size_t blockSize);
-void SPI1_ReadBlock(void *block, size_t blockSize);
-void SPI1_WriteByte(uint8_t byte);
-uint8_t SPI1_ReadByte(void);
+
+
+
+typedef struct
+{
+    adc_result_t adcResult1;
+    adc_result_t adcResult2;
+} adc_sync_double_result_t;
+# 95 "./mcc_generated_files/adc.h"
+typedef enum
+{
+    channel_AN10 = 0xA,
+    channel_Temp = 0x1D,
+    channel_DAC = 0x1E,
+    channel_FVR = 0x1F
+} adc_channel_t;
+# 136 "./mcc_generated_files/adc.h"
+void ADC_Initialize(void);
+# 166 "./mcc_generated_files/adc.h"
+void ADC_SelectChannel(adc_channel_t channel);
+# 193 "./mcc_generated_files/adc.h"
+void ADC_StartConversion(void);
+# 225 "./mcc_generated_files/adc.h"
+_Bool ADC_IsConversionDone(void);
+# 258 "./mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversionResult(void);
+# 288 "./mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversion(adc_channel_t channel);
+# 316 "./mcc_generated_files/adc.h"
+void ADC_TemperatureAcquisitionDelay(void);
 # 55 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart.h" 1
@@ -4851,84 +5236,44 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 96 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 47 "main.c" 2
-
-
+# 49 "main.c" 2
+# 59 "main.c"
+unsigned char Buff[20];
 
 __attribute__((inline)) void TX_Command(uint8_t);
-__attribute__((inline)) float _power(uint16_t, uint16_t);
-__attribute__((inline)) void TX_Whole_String(char *);
-
-
-void reverse(char* str, int len) {
-  int i = 0, j = len - 1;
-  char temp;
-  while (i < j) {
-    temp = str[i];
-    str[i] = str[j];
-    str[j] = temp;
-    i++;
-    j--;
-  }
-}
-
-int intToStr(int x, char str[], int d) {
-  int i = 0;
-  while (x) {
-    str[i++] = (x % 10) + '0';
-    x = x / 10;
-  }
-  while (i < d)
-    str[i++] = '0';
-  reverse(str, i);
-  str[i] = '\0';
-  return i;
-}
-
-void ftoa(float n, char* res, int afterpoint) {
-  int ipart = (int)n;
-  float fpart = n - (float)ipart;
-  int i = intToStr(ipart, res, 0);
-  if (afterpoint != 0) {
-    res[i] = '.';
-    fpart = fpart * _power(10, afterpoint);
-    intToStr((int)fpart, res + i + 1, afterpoint);
-  }
-}
-
-
-
+__attribute__((inline)) void TX_Whole_String(char*);
+__attribute__((inline)) void ReadTemperature(uint16_t);
+__attribute__((inline)) uint16_t ReadVoltage_ADC(void);
+# 74 "main.c"
 void main(void)
 {
     SYSTEM_Initialize();
-# 112 "main.c"
     do { LATCbits.LATC2 = 1; } while(0);
 
-    uint8_t SPI1_read;
-    float aNumber_int = 321.98;
-    char aNumber_str[20];
-    ftoa(aNumber_int, aNumber_str, 2);
+    uint16_t V_ADC = 0;
 
-    while (1)
-    {
+    ADC_SelectChannel(channel_AN10);
 
+    while (1){
 
+        ADC_StartConversion();
+        V_ADC = V_ADC = ReadVoltage_ADC();
+        sprintf(Buff, "%d \n", V_ADC);
+        TX_Whole_String(Buff);
+        _delay((unsigned long)((500)*(8000000/4000.0)));
 
-        TX_Whole_String(aNumber_str);
-        _delay((unsigned long)((1000)*(16000000/4000.0)));
 
     }
 }
-
-
+# 102 "main.c"
 __attribute__((inline)) void TX_Whole_String(char *input_string){
 
-    uint8_t size_of_string = strlen(input_string);
+    uint16_t size_of_string = strlen(input_string);
 
     for (uint8_t i = 0; i < size_of_string; i++){
 
         TX_Command(input_string[i]);
-        _delay((unsigned long)((5)*(16000000/4000.0)));
+        _delay((unsigned long)((5)*(8000000/4000.0)));
 
     }
 
@@ -4946,15 +5291,22 @@ __attribute__((inline)) void TX_Command(uint8_t txData) {
 }
 
 
-__attribute__((inline)) float _power(uint16_t base_num, uint16_t exp_num){
+__attribute__((inline)) void ReadTemperature(uint16_t R_PT100){
 
-    uint8_t result = 1;
+    uint16_t Temperature;
 
-    while (exp_num > 0) {
-        result *= base_num;
-        exp_num--;
-    }
+    Temperature = (-3.9083E-03 + sqrtf(17.58480889E-06 + (-23.10E-09 * R_PT100))) / -1.155E-06;
 
-    return result;
+}
+
+
+__attribute__((inline)) uint16_t ReadVoltage_ADC(void){
+
+    uint16_t convertedValue;
+
+    while(!ADC_IsConversionDone());
+    convertedValue = ADC_GetConversionResult();
+
+    return convertedValue;
 
 }

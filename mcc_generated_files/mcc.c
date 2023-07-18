@@ -50,17 +50,17 @@
 void SYSTEM_Initialize(void)
 {
 
-    SPI1_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
+    ADC_Initialize();
     EUSART_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
 {
-    // SCS FOSC; SPLLEN disabled; IRCF 16MHz_HF; 
-    OSCCON = 0x78;
+    // SCS FOSC; SPLLEN disabled; IRCF 8MHz_HF; 
+    OSCCON = 0x70;
     // TUN 0; 
     OSCTUNE = 0x00;
     // SBOREN disabled; 

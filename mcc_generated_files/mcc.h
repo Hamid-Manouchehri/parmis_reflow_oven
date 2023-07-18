@@ -52,7 +52,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <conio.h>
-#include "spi1.h"
+#include "adc.h"
 #include "eusart.h"
 
 
