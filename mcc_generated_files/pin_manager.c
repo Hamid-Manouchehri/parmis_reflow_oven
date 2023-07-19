@@ -51,6 +51,8 @@
 
 
 
+void (*IOCAF2_InterruptHandler)(void);
+
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -66,22 +68,22 @@ void PIN_MANAGER_Initialize(void)
     */
     TRISA = 0x2F;
     TRISB = 0x70;
-    TRISC = 0xE3;
+    TRISC = 0x83;
 
     /**
     ANSELx registers
     */
-    ANSELC = 0xC3;
+    ANSELC = 0x83;
     ANSELB = 0x10;
-    ANSELA = 0x07;
+    ANSELA = 0x03;
 
     /**
     WPUx registers
     */
     WPUB = 0x00;
-    WPUA = 0x00;
+    WPUA = 0x04;
     WPUC = 0x00;
-    OPTION_REGbits.nWPUEN = 1;
+    OPTION_REGbits.nWPUEN = 0;
 
 
     /**
@@ -90,15 +92,63 @@ void PIN_MANAGER_Initialize(void)
     APFCON0 = 0x00;
     APFCON1 = 0x00;
 
+    /**
+    IOCx registers 
+    */
+    //interrupt on change for group IOCAF - flag
+    IOCAFbits.IOCAF2 = 0;
+    //interrupt on change for group IOCAN - negative
+    IOCANbits.IOCAN2 = 0;
+    //interrupt on change for group IOCAP - positive
+    IOCAPbits.IOCAP2 = 1;
 
 
 
+    // register default IOC callback functions at runtime; use these methods to register a custom function
+    IOCAF2_SetInterruptHandler(IOCAF2_DefaultInterruptHandler);
    
+    // Enable IOCI interrupt 
+    INTCONbits.IOCIE = 1; 
     
 }
   
 void PIN_MANAGER_IOC(void)
 {   
+	// interrupt on change for pin IOCAF2
+    if(IOCAFbits.IOCAF2 == 1)
+    {
+        IOCAF2_ISR();  
+    }	
+}
+
+/**
+   IOCAF2 Interrupt Service Routine
+*/
+void IOCAF2_ISR(void) {
+
+    // Add custom IOCAF2 code
+
+    // Call the interrupt handler for the callback registered at runtime
+    if(IOCAF2_InterruptHandler)
+    {
+        IOCAF2_InterruptHandler();
+    }
+    IOCAFbits.IOCAF2 = 0;
+}
+
+/**
+  Allows selecting an interrupt handler for IOCAF2 at application runtime
+*/
+void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IOCAF2_InterruptHandler = InterruptHandler;
+}
+
+/**
+  Default interrupt handler for IOCAF2
+*/
+void IOCAF2_DefaultInterruptHandler(void){
+    // add your IOCAF2 interrupt custom code
+    // or set custom function using IOCAF2_SetInterruptHandler()
 }
 
 /**

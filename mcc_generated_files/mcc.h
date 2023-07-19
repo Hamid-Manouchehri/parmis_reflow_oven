@@ -52,7 +52,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <conio.h>
+#include "interrupt_manager.h"
+#include "tmr2.h"
 #include "adc.h"
+#include "mtouch/mtouch.h"
 #include "eusart.h"
 
 

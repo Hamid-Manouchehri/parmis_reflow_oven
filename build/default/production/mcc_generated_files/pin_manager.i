@@ -4544,15 +4544,25 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 182 "mcc_generated_files/pin_manager.h"
+# 225 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 194 "mcc_generated_files/pin_manager.h"
+# 237 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
+# 250 "mcc_generated_files/pin_manager.h"
+void IOCAF2_ISR(void);
+# 273 "mcc_generated_files/pin_manager.h"
+void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 297 "mcc_generated_files/pin_manager.h"
+extern void (*IOCAF2_InterruptHandler)(void);
+# 321 "mcc_generated_files/pin_manager.h"
+void IOCAF2_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
 
 
 
+
+void (*IOCAF2_InterruptHandler)(void);
 
 
 void PIN_MANAGER_Initialize(void)
@@ -4569,22 +4579,22 @@ void PIN_MANAGER_Initialize(void)
 
     TRISA = 0x2F;
     TRISB = 0x70;
-    TRISC = 0xE3;
+    TRISC = 0x83;
 
 
 
 
-    ANSELC = 0xC3;
+    ANSELC = 0x83;
     ANSELB = 0x10;
-    ANSELA = 0x07;
+    ANSELA = 0x03;
 
 
 
 
     WPUB = 0x00;
-    WPUA = 0x00;
+    WPUA = 0x04;
     WPUC = 0x00;
-    OPTION_REGbits.nWPUEN = 1;
+    OPTION_REGbits.nWPUEN = 0;
 
 
 
@@ -4597,9 +4607,57 @@ void PIN_MANAGER_Initialize(void)
 
 
 
+    IOCAFbits.IOCAF2 = 0;
+
+    IOCANbits.IOCAN2 = 0;
+
+    IOCAPbits.IOCAP2 = 1;
+
+
+
+
+    IOCAF2_SetInterruptHandler(IOCAF2_DefaultInterruptHandler);
+
+
+    INTCONbits.IOCIE = 1;
 
 }
 
 void PIN_MANAGER_IOC(void)
 {
+
+    if(IOCAFbits.IOCAF2 == 1)
+    {
+        IOCAF2_ISR();
+    }
+}
+
+
+
+
+void IOCAF2_ISR(void) {
+
+
+
+
+    if(IOCAF2_InterruptHandler)
+    {
+        IOCAF2_InterruptHandler();
+    }
+    IOCAFbits.IOCAF2 = 0;
+}
+
+
+
+
+void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IOCAF2_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void IOCAF2_DefaultInterruptHandler(void){
+
+
 }

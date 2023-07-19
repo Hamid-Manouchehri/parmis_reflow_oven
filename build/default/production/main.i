@@ -375,6 +375,9 @@ uldiv_t uldiv (unsigned long, unsigned long);
 size_t __ctype_get_mb_cur_max(void);
 # 47 "main.c" 2
 
+# 1 "/opt/microchip/xc8/v2.31/pic/include/c99/stdbool.h" 1 3
+# 48 "main.c" 2
+
 # 1 "/opt/microchip/xc8/v2.31/pic/include/c99/math.h" 1 3
 # 15 "/opt/microchip/xc8/v2.31/pic/include/c99/math.h" 3
 # 1 "/opt/microchip/xc8/v2.31/pic/include/c99/bits/alltypes.h" 1 3
@@ -747,7 +750,7 @@ double jn(int, double);
 double y0(double);
 double y1(double);
 double yn(int, double);
-# 48 "main.c" 2
+# 49 "main.c" 2
 
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
@@ -5121,15 +5124,21 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 182 "./mcc_generated_files/pin_manager.h"
+# 225 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 194 "./mcc_generated_files/pin_manager.h"
+# 237 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
+# 250 "./mcc_generated_files/pin_manager.h"
+void IOCAF2_ISR(void);
+# 273 "./mcc_generated_files/pin_manager.h"
+void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 297 "./mcc_generated_files/pin_manager.h"
+extern void (*IOCAF2_InterruptHandler)(void);
+# 321 "./mcc_generated_files/pin_manager.h"
+void IOCAF2_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 
-# 1 "/opt/microchip/xc8/v2.31/pic/include/c99/stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
 
 # 1 "/opt/microchip/xc8/v2.31/pic/include/c99/conio.h" 1 3
 
@@ -5161,6 +5170,32 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/interrupt_manager.h" 1
+# 55 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/tmr2.h" 1
+# 103 "./mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "./mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "./mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "./mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "./mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "./mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 308 "./mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 326 "./mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "./mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 362 "./mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+# 56 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/adc.h" 1
 # 72 "./mcc_generated_files/adc.h"
@@ -5196,7 +5231,161 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 316 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 55 "./mcc_generated_files/mcc.h" 2
+# 57 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/mtouch/mtouch.h" 1
+# 41 "./mcc_generated_files/mtouch/mtouch.h"
+# 1 "./mcc_generated_files/mtouch/mtouch_config.h" 1
+# 41 "./mcc_generated_files/mtouch/mtouch_config.h"
+# 1 "./mcc_generated_files/mtouch/mtouch_sensor.h" 1
+# 41 "./mcc_generated_files/mtouch/mtouch_sensor.h"
+# 1 "./mcc_generated_files/mtouch/mtouch_config.h" 1
+# 41 "./mcc_generated_files/mtouch/mtouch_sensor.h" 2
+
+
+
+
+    enum mtouch_sensor_names
+    {
+        Sensor_AN8 = 0
+    };
+
+    enum mtouch_sensor_error
+    {
+        MTOUCH_SENSOR_ERROR_none = 0,
+        MTOUCH_SENSOR_ERROR_invalid_index = -1,
+        MTOUCH_SENSOR_ERROR_interrupt_notEnabled = -2,
+        MTOUCH_SENSOR_ERROR_invalid_calibrate= -3,
+        MTOUCH_SENSOR_ERROR_tooManyRetries = -4,
+        MTOUCH_SENSOR_ERROR_scanOverrun = -5,
+        MTOUCH_SENSOR_ERROR_interruptedScan = -6
+    };
+
+
+
+
+
+
+    typedef uint16_t mtouch_sensor_sample_t;
+
+
+
+    typedef uint8_t mtouch_sensor_mask_t;
+# 80 "./mcc_generated_files/mtouch/mtouch_sensor.h"
+    enum mtouch_sensor_error MTOUCH_Sensor_Initialize (enum mtouch_sensor_names sensor);
+    void MTOUCH_Sensor_Scan_Initialize (void);
+    void MTOUCH_Sensor_InitializeAll (void);
+    void MTOUCH_Sensor_SetSampledCallback(void (*callback)(enum mtouch_sensor_names sensor));
+    _Bool MTOUCH_Sensor_SampleAll (void);
+    _Bool MTOUCH_Sensor_isSamplingComplete(void);
+    void MTOUCH_Sensor_postAcquisitionProcess(void);
+    void MTOUCH_Sensor_startLowpower (void);
+    void MTOUCH_Sensor_exitLowpower (void);
+
+    _Bool MTOUCH_Sensor_isAnySensorActive (void);
+    _Bool MTOUCH_Sensor_isActive (enum mtouch_sensor_names sensor);
+    _Bool MTOUCH_Sensor_wasSampled (enum mtouch_sensor_names sensor);
+    _Bool MTOUCH_Sensor_isCalibrated (enum mtouch_sensor_names sensor);
+    _Bool MTOUCH_Sensor_isEnabled (enum mtouch_sensor_names sensor);
+    void MTOUCH_Sensor_Sampled_ResetAll (void);
+    void MTOUCH_Sensor_Disable (enum mtouch_sensor_names sensor);
+    void MTOUCH_Sensor_Enable (enum mtouch_sensor_names sensor);
+    void MTOUCH_Sensor_Calibrate (enum mtouch_sensor_names sensor);
+    mtouch_sensor_sample_t MTOUCH_Sensor_RawSample_Get (enum mtouch_sensor_names sensor);
+    mtouch_sensor_sample_t MTOUCH_Sensor_CVDSample_Get (enum mtouch_sensor_names sensor);
+    uint8_t MTOUCH_Sensor_Oversampling_Get (enum mtouch_sensor_names name);
+    void MTOUCH_Sensor_Oversampling_Set (enum mtouch_sensor_names name, uint8_t value);
+
+
+    void MTOUCH_Sensor_NotifyInterruptOccurred(void);
+# 41 "./mcc_generated_files/mtouch/mtouch_config.h" 2
+
+# 1 "./mcc_generated_files/mtouch/mtouch_button.h" 1
+# 41 "./mcc_generated_files/mtouch/mtouch_button.h"
+# 1 "./mcc_generated_files/mtouch/mtouch_config.h" 1
+# 41 "./mcc_generated_files/mtouch/mtouch_button.h" 2
+
+# 1 "./mcc_generated_files/mtouch/mtouch.h" 1
+# 42 "./mcc_generated_files/mtouch/mtouch_button.h" 2
+
+
+
+
+
+
+
+
+    enum mtouch_button_names
+    {
+        T_start = 0
+    };
+
+
+
+
+
+
+    typedef uint8_t mtouch_buttonmask_t;
+
+    typedef uint16_t mtouch_button_statecounter_t;
+
+
+
+    typedef uint16_t mtouch_button_baselinecounter_t;
+
+
+
+    typedef uint16_t mtouch_button_reading_t;
+
+
+
+
+    typedef uint32_t mtouch_button_baseline_t;
+
+
+
+
+    typedef int8_t mtouch_button_deviation_t;
+
+
+
+    typedef uint8_t mtouch_button_threshold_t;
+
+
+
+    typedef uint8_t mtouch_button_scaling_t;
+# 100 "./mcc_generated_files/mtouch/mtouch_button.h"
+    void MTOUCH_Button_SetPressedCallback (void (*callback)(enum mtouch_button_names button));
+    void MTOUCH_Button_SetNotPressedCallback(void (*callback)(enum mtouch_button_names button));
+
+    void MTOUCH_Button_Initialize (enum mtouch_button_names button);
+    void MTOUCH_Button_InitializeAll (void);
+    void MTOUCH_Button_ServiceAll (void);
+    void MTOUCH_Button_Tick (void);
+    mtouch_button_deviation_t MTOUCH_Button_Deviation_Get (enum mtouch_button_names button);
+    mtouch_button_reading_t MTOUCH_Button_Reading_Get (enum mtouch_button_names button);
+    mtouch_button_reading_t MTOUCH_Button_Baseline_Get (enum mtouch_button_names button);
+    mtouch_button_scaling_t MTOUCH_Button_Scaling_Get (enum mtouch_button_names button);
+    void MTOUCH_Button_Scaling_Set (enum mtouch_button_names button,mtouch_button_scaling_t scaling);
+    mtouch_button_threshold_t MTOUCH_Button_Threshold_Get (enum mtouch_button_names button);
+    void MTOUCH_Button_Threshold_Set (enum mtouch_button_names button,mtouch_button_threshold_t threshold);
+    uint8_t MTOUCH_Button_Oversampling_Get(enum mtouch_button_names button);
+    void MTOUCH_Button_Oversampling_Set(enum mtouch_button_names button,uint8_t oversampling);
+
+    _Bool MTOUCH_Button_isPressed (enum mtouch_button_names button);
+    _Bool MTOUCH_Button_isInitialized (enum mtouch_button_names button);
+    mtouch_buttonmask_t MTOUCH_Button_Buttonmask_Get(void);
+    uint8_t MTOUCH_Button_State_Get (enum mtouch_button_names button);
+# 42 "./mcc_generated_files/mtouch/mtouch_config.h" 2
+# 41 "./mcc_generated_files/mtouch/mtouch.h" 2
+# 54 "./mcc_generated_files/mtouch/mtouch.h"
+    void MTOUCH_Initialize (void);
+    _Bool MTOUCH_Service_Mainloop (void);
+    void MTOUCH_Tick (void);
+    _Bool MTOUCH_Service_isInProgress (void);
+    void MTOUCH_requestInitSet (void);
+    _Bool MTOUCH_requestInitGet (void);
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart.h" 1
 # 75 "./mcc_generated_files/eusart.h"
@@ -5229,55 +5418,86 @@ void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 397 "./mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 56 "./mcc_generated_files/mcc.h" 2
-# 71 "./mcc_generated_files/mcc.h"
+# 59 "./mcc_generated_files/mcc.h" 2
+# 74 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 84 "./mcc_generated_files/mcc.h"
+# 87 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 96 "./mcc_generated_files/mcc.h"
+# 99 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 49 "main.c" 2
-# 59 "main.c"
-unsigned char Buff[20];
+# 50 "main.c" 2
+# 65 "main.c"
+const float R_const = 100.0;
+const float V_cc_const = 5.0;
+const float Tolerance_Temp_const = 37.2;
+const float HalfCycleACDuration_const = 10.0;
+const float TMR2_Period_const = 100;
+unsigned char Buff_g[20];
+uint16_t required_delay_for_dim_ms_g = 0;
 
+
+__attribute__((inline)) void Init_Function(void);
 __attribute__((inline)) void TX_Command(uint8_t);
 __attribute__((inline)) void TX_Whole_String(char*);
 __attribute__((inline)) void ReadTemperature(uint16_t);
-__attribute__((inline)) uint16_t ReadVoltage_ADC(void);
-# 74 "main.c"
-void main(void)
-{
-    SYSTEM_Initialize();
-    do { LATCbits.LATC2 = 1; } while(0);
+__attribute__((inline)) uint16_t Read_ADC_Num(void);
+__attribute__((inline)) float ChangeADCtoVoltage(uint16_t);
+__attribute__((inline)) float Measure_R_PT100_2Wire(float);
+__attribute__((inline)) float Measure_Temp_PT100_2Wire(float);
+void Zero_Detection_isr(void);
+ void TMR2_Int_isr(void);
+__attribute__((inline)) void StartStop_AlarmLED(_Bool);
+__attribute__((inline)) void StartStop_Fan(_Bool);
+__attribute__((inline)) void StartStop_Buzzer(_Bool);
+__attribute__((inline)) void StartTouchDetection(void);
+__attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float);
+# 98 "main.c"
+void main(void){
 
-    uint16_t V_ADC = 0;
+    SYSTEM_Initialize();
+    Init_Function();
+    StartStop_AlarmLED(1);
+
+    required_delay_for_dim_ms_g = CalcRequiredDelayForTrigTRIAC(25);
+
+    (INTCONbits.GIE = 1);
+    (INTCONbits.PEIE = 1);
+
+    IOCAF2_SetInterruptHandler(Zero_Detection_isr);
+    TMR2_SetInterruptHandler(TMR2_Int_isr);
+
+    uint16_t ADC_num = 0;
+    float ADC_volt = 0;
+    float R_PT100 = 0;
+    float Temp_PT100 = 0;
 
     ADC_SelectChannel(channel_AN10);
+
 
     while (1){
 
         ADC_StartConversion();
-        V_ADC = V_ADC = ReadVoltage_ADC();
-        sprintf(Buff, "%d \n", V_ADC);
-        TX_Whole_String(Buff);
-        _delay((unsigned long)((500)*(8000000/4000.0)));
 
+        ADC_num = Read_ADC_Num();
+
+        ADC_volt = ChangeADCtoVoltage(ADC_num);
+
+        R_PT100 = Measure_R_PT100_2Wire(ADC_volt);
+
+        Temp_PT100 = Measure_Temp_PT100_2Wire(R_PT100);
+        sprintf(Buff_g, "%f Celsius\n", Temp_PT100);
+        TX_Whole_String(Buff_g);
+        _delay((unsigned long)((500)*(8000000/4000.0)));
 
     }
 }
-# 102 "main.c"
-__attribute__((inline)) void TX_Whole_String(char *input_string){
+# 145 "main.c"
+__attribute__((inline)) void Init_Function(void){
 
-    uint16_t size_of_string = strlen(input_string);
-
-    for (uint8_t i = 0; i < size_of_string; i++){
-
-        TX_Command(input_string[i]);
-        _delay((unsigned long)((5)*(8000000/4000.0)));
-
-    }
-
-    TX_Command(10);
+    StartStop_AlarmLED(0);
+    StartStop_Fan(0);
+    StartStop_Buzzer(0);
+    do { LATCbits.LATC5 = 0; } while(0);
 
 }
 
@@ -5291,6 +5511,22 @@ __attribute__((inline)) void TX_Command(uint8_t txData) {
 }
 
 
+__attribute__((inline)) void TX_Whole_String(char *input_string){
+
+    uint16_t size_of_string = strlen(input_string);
+
+    for (uint8_t i = 0; i < size_of_string; i++){
+
+        TX_Command(input_string[i]);
+        _delay((unsigned long)((5)*(8000000/4000.0)));
+
+    }
+
+
+
+}
+
+
 __attribute__((inline)) void ReadTemperature(uint16_t R_PT100){
 
     uint16_t Temperature;
@@ -5300,7 +5536,7 @@ __attribute__((inline)) void ReadTemperature(uint16_t R_PT100){
 }
 
 
-__attribute__((inline)) uint16_t ReadVoltage_ADC(void){
+__attribute__((inline)) uint16_t Read_ADC_Num(void){
 
     uint16_t convertedValue;
 
@@ -5309,4 +5545,133 @@ __attribute__((inline)) uint16_t ReadVoltage_ADC(void){
 
     return convertedValue;
 
+}
+
+
+__attribute__((inline)) float ChangeADCtoVoltage(uint16_t ADC_number){
+
+    return (float)(5.0 * ADC_number / 1023);
+
+}
+
+
+__attribute__((inline)) float Measure_R_PT100_2Wire(float ADC_volt){
+
+    float R_PT100 = 0;
+
+    R_PT100 = R_const * ADC_volt / (R_const - ADC_volt);
+
+    return R_PT100;
+
+}
+
+
+__attribute__((inline)) float Measure_Temp_PT100_2Wire(float R_PT100){
+
+    float Temp_PT100;
+
+    Temp_PT100 = ((-3.9083E-03 + sqrtf(17.58480889E-06 + -23.10E-09 * R_PT100)) / -1.155E-06) - Tolerance_Temp_const;
+
+    return Temp_PT100;
+
+}
+
+
+void Zero_Detection_isr(void){
+
+
+    TMR2_StartTimer();
+
+}
+
+
+void TMR2_Int_isr(void){
+
+    static uint16_t counter = 0;
+    counter ++;
+
+    if(counter >= required_delay_for_dim_ms_g){
+
+        counter = 0;
+        do { LATCbits.LATC5 = 1; } while(0);
+
+    }
+    else if (1 == PORTCbits.RC5){
+
+        counter = 0;
+        TMR2_StopTimer();
+        do { LATCbits.LATC5 = 0; } while(0);
+    }
+}
+
+
+__attribute__((inline)) void StartStop_AlarmLED(_Bool OnOff){
+
+    if (1 == OnOff){
+
+        do { LATCbits.LATC2 = 1; } while(0);
+    }
+    else{
+
+        do { LATCbits.LATC2 = 0; } while(0);
+    }
+
+}
+
+
+__attribute__((inline)) void StartStop_Fan(_Bool OnOff){
+
+    if (1 == OnOff){
+
+        do { LATCbits.LATC3 = 1; } while(0);
+    }
+    else{
+
+        do { LATCbits.LATC3 = 0; } while(0);
+    }
+
+}
+
+
+__attribute__((inline)) void StartStop_Buzzer(_Bool OnOff){
+
+    if (1 == OnOff){
+
+        do { LATCbits.LATC4 = 1; } while(0);
+    }
+    else{
+
+        do { LATCbits.LATC4 = 0; } while(0);
+    }
+
+}
+
+
+__attribute__((inline)) void StartTouchDetection(void){
+
+    if (1 == MTOUCH_Service_Mainloop()) {
+
+        if (1 == MTOUCH_Button_isPressed(T_start)){
+
+            StartStop_AlarmLED(1);
+
+        }
+        else{
+
+            StartStop_AlarmLED(0);
+
+        }
+    }
+}
+
+
+__attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float dim_percentage){
+
+    float delay;
+    uint16_t ret;
+
+    delay = HalfCycleACDuration_const - (5.0 * dim_percentage / 50.0);
+    ret = (delay * 1000) / TMR2_Period_const;
+
+    return ret;
 }

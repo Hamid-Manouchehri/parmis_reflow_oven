@@ -12,7 +12,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "55
 [p x CPD  =  OFF     ]
 "56
-[p x BOREN  =  ON     ]
+[p x BOREN  =  NSLEEP     ]
 "57
 [p x CLKOUTEN  =  OFF     ]
 "58
