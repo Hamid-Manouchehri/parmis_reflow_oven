@@ -4602,6 +4602,29 @@ extern void cputs(const char *);
 # 54 "mcc_generated_files/mcc.h" 2
 
 
+# 1 "mcc_generated_files/tmr4.h" 1
+# 103 "mcc_generated_files/tmr4.h"
+void TMR4_Initialize(void);
+# 132 "mcc_generated_files/tmr4.h"
+void TMR4_StartTimer(void);
+# 164 "mcc_generated_files/tmr4.h"
+void TMR4_StopTimer(void);
+# 199 "mcc_generated_files/tmr4.h"
+uint8_t TMR4_ReadTimer(void);
+# 238 "mcc_generated_files/tmr4.h"
+void TMR4_WriteTimer(uint8_t timerVal);
+# 290 "mcc_generated_files/tmr4.h"
+void TMR4_LoadPeriodRegister(uint8_t periodVal);
+# 308 "mcc_generated_files/tmr4.h"
+void TMR4_ISR(void);
+# 326 "mcc_generated_files/tmr4.h"
+ void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "mcc_generated_files/tmr4.h"
+extern void (*TMR4_InterruptHandler)(void);
+# 362 "mcc_generated_files/tmr4.h"
+void TMR4_DefaultInterruptHandler(void);
+# 56 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/tmr2.h" 1
 # 103 "mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
@@ -4623,7 +4646,7 @@ void TMR2_ISR(void);
 extern void (*TMR2_InterruptHandler)(void);
 # 362 "mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 56 "mcc_generated_files/mcc.h" 2
+# 57 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adc.h" 1
 # 72 "mcc_generated_files/adc.h"
@@ -4659,7 +4682,7 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 316 "mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 57 "mcc_generated_files/mcc.h" 2
+# 58 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/mtouch/mtouch.h" 1
 # 41 "mcc_generated_files/mtouch/mtouch.h"
@@ -4815,7 +4838,7 @@ void ADC_TemperatureAcquisitionDelay(void);
     _Bool MTOUCH_Service_isInProgress (void);
     void MTOUCH_requestInitSet (void);
     _Bool MTOUCH_requestInitGet (void);
-# 58 "mcc_generated_files/mcc.h" 2
+# 59 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart.h" 1
 # 75 "mcc_generated_files/eusart.h"
@@ -4848,12 +4871,12 @@ void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 397 "mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 59 "mcc_generated_files/mcc.h" 2
-# 74 "mcc_generated_files/mcc.h"
+# 60 "mcc_generated_files/mcc.h" 2
+# 75 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 87 "mcc_generated_files/mcc.h"
+# 88 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 99 "mcc_generated_files/mcc.h"
+# 100 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 50 "mcc_generated_files/interrupt_manager.c" 2
 
@@ -4867,7 +4890,11 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
     }
     else if(INTCONbits.PEIE == 1)
     {
-        if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
+        if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
+        {
+            TMR4_ISR();
+        }
+        else if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
         {
             TMR2_ISR();
         }

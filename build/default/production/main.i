@@ -5179,6 +5179,29 @@ extern void cputs(const char *);
 # 1 "./mcc_generated_files/interrupt_manager.h" 1
 # 55 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/tmr4.h" 1
+# 103 "./mcc_generated_files/tmr4.h"
+void TMR4_Initialize(void);
+# 132 "./mcc_generated_files/tmr4.h"
+void TMR4_StartTimer(void);
+# 164 "./mcc_generated_files/tmr4.h"
+void TMR4_StopTimer(void);
+# 199 "./mcc_generated_files/tmr4.h"
+uint8_t TMR4_ReadTimer(void);
+# 238 "./mcc_generated_files/tmr4.h"
+void TMR4_WriteTimer(uint8_t timerVal);
+# 290 "./mcc_generated_files/tmr4.h"
+void TMR4_LoadPeriodRegister(uint8_t periodVal);
+# 308 "./mcc_generated_files/tmr4.h"
+void TMR4_ISR(void);
+# 326 "./mcc_generated_files/tmr4.h"
+ void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "./mcc_generated_files/tmr4.h"
+extern void (*TMR4_InterruptHandler)(void);
+# 362 "./mcc_generated_files/tmr4.h"
+void TMR4_DefaultInterruptHandler(void);
+# 56 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/tmr2.h" 1
 # 103 "./mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
@@ -5200,7 +5223,7 @@ void TMR2_ISR(void);
 extern void (*TMR2_InterruptHandler)(void);
 # 362 "./mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 56 "./mcc_generated_files/mcc.h" 2
+# 57 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/adc.h" 1
 # 72 "./mcc_generated_files/adc.h"
@@ -5236,7 +5259,7 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 316 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/mtouch/mtouch.h" 1
 # 41 "./mcc_generated_files/mtouch/mtouch.h"
@@ -5392,7 +5415,7 @@ void ADC_TemperatureAcquisitionDelay(void);
     _Bool MTOUCH_Service_isInProgress (void);
     void MTOUCH_requestInitSet (void);
     _Bool MTOUCH_requestInitGet (void);
-# 58 "./mcc_generated_files/mcc.h" 2
+# 59 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart.h" 1
 # 75 "./mcc_generated_files/eusart.h"
@@ -5425,12 +5448,12 @@ void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 397 "./mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 59 "./mcc_generated_files/mcc.h" 2
-# 74 "./mcc_generated_files/mcc.h"
+# 60 "./mcc_generated_files/mcc.h" 2
+# 75 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 87 "./mcc_generated_files/mcc.h"
+# 88 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 99 "./mcc_generated_files/mcc.h"
+# 100 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 13 "main.c" 2
 # 28 "main.c"
@@ -5453,39 +5476,40 @@ __attribute__((inline)) float Measure_R_PT100_2Wire(float);
 __attribute__((inline)) float Measure_Temp_PT100_2Wire(float);
 __attribute__((inline)) float Read_PT100_Temp(void);
 void Zero_Detection_isr(void);
- void TMR2_Int_isr(void);
+void TMR2_Int_isr(void);
+void TMR4_Wroking_Blink_AlarmLED_isr(void);
 __attribute__((inline)) void StartStop_AlarmLED(_Bool);
 __attribute__((inline)) void StartStop_Fan(_Bool);
 __attribute__((inline)) void StartStop_Buzzer(_Bool);
 __attribute__((inline)) void StartTouchDetection(void);
 __attribute__((inline)) void StopTouchDetection(void);
 __attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float);
-# 63 "main.c"
+# 64 "main.c"
 void main(void){
 
     SYSTEM_Initialize();
     Init_Function();
-    StartStop_AlarmLED(1);
+
 
     (INTCONbits.GIE = 1);
     (INTCONbits.PEIE = 1);
 
-
-
+    IOCAF2_SetInterruptHandler(Zero_Detection_isr);
+    TMR2_SetInterruptHandler(TMR2_Int_isr);
+    TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr);
 
     float Temp_PT100 = 0.0;
 
     while (1){
 
-        StopTouchDetection();
-
-
-
-
+        Temp_PT100 = Read_PT100_Temp();
+        sprintf(Buff_g, "%f Celsius\n", Temp_PT100);
+        TX_Whole_String(Buff_g);
+        _delay((unsigned long)((500)*(8000000/4000.0)));
 
     }
 }
-# 95 "main.c"
+# 96 "main.c"
 __attribute__((inline)) void Init_Function(void){
 
     StartStop_AlarmLED(0);
@@ -5606,20 +5630,34 @@ void Zero_Detection_isr(void){
 
 void TMR2_Int_isr(void){
 
-    static uint16_t counter = 0;
-    counter ++;
+    static uint16_t counter_tmr2 = 0;
+    counter_tmr2 ++;
 
-    if(counter >= required_delay_for_dim_ms_g){
+    if(counter_tmr2 >= required_delay_for_dim_ms_g){
 
-        counter = 0;
+        counter_tmr2 = 0;
         do { LATCbits.LATC5 = 1; } while(0);
 
     }
     else if (1 == PORTCbits.RC5){
 
-        counter = 0;
+        counter_tmr2 = 0;
         TMR2_StopTimer();
         do { LATCbits.LATC5 = 0; } while(0);
+    }
+}
+
+
+void TMR4_Wroking_Blink_AlarmLED_isr(void){
+
+    static uint16_t counter_tmr4 = 0;
+    counter_tmr4 ++;
+
+    if(counter_tmr4 >= 1000){
+
+        counter_tmr4 = 0;
+        do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0);
+
     }
 }
 
@@ -5668,6 +5706,7 @@ __attribute__((inline)) void StartStop_Buzzer(_Bool OnOff){
 
 __attribute__((inline)) void StartTouchDetection(void){
 
+
     if (1 == MTOUCH_Service_Mainloop()) {
 
         if (1 == MTOUCH_Button_isPressed(T_start)){
@@ -5685,6 +5724,7 @@ __attribute__((inline)) void StartTouchDetection(void){
 
 
 __attribute__((inline)) void StopTouchDetection(void){
+
 
     if (1 == MTOUCH_Service_Mainloop()) {
 

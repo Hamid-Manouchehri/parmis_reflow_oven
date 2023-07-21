@@ -12,11 +12,11 @@
 #include <math.h>
 #include "mcc_generated_files/mcc.h"
 
+#define  DIM_PERCENT                   25 // range: 5-95 percent <TODO>
+#define  TMR4_REQUIRED_COUNTER_STEPS   1000 // TMR4_REQUIRED_COUNTER_STEPS * 1 (ms) <TODO>
 
 #define  ON              true
 #define  OFF             false
-
-#define  DIM_PERCENT     25 // range: 5-95 percent <TODO>
 
 #define  Z1  -3.9083E-03   /* Datasheet AN709-0 */
 #define  Z2  17.58480889E-06
@@ -44,7 +44,8 @@ inline float Measure_R_PT100_2Wire(float);
 inline float Measure_Temp_PT100_2Wire(float);
 inline float Read_PT100_Temp(void);
 void Zero_Detection_isr(void);
- void TMR2_Int_isr(void);
+void TMR2_Int_isr(void);
+void TMR4_Wroking_Blink_AlarmLED_isr(void);
 inline void StartStop_AlarmLED(bool);
 inline void StartStop_Fan(bool);
 inline void StartStop_Buzzer(bool);
@@ -64,23 +65,23 @@ void main(void){
     
     SYSTEM_Initialize();
     Init_Function();
-    StartStop_AlarmLED(ON); // to indicate PCB has power.
+//    StartStop_AlarmLED(ON); // to indicate PCB has power.
     
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
     
-//    IOCAF2_SetInterruptHandler(Zero_Detection_isr); // internal pull-up of the RA2 must be enabled.
-//    TMR2_SetInterruptHandler(TMR2_Int_isr); // For measuring the required delay for dim.
+    IOCAF2_SetInterruptHandler(Zero_Detection_isr); // internal pull-up of the RA2 must be enabled.
+    TMR2_SetInterruptHandler(TMR2_Int_isr); // For measuring the required delay for dim.
+    TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr); // to start blink Alarm LED uncomment this isr.
     
     float Temp_PT100 = 0.0;
     
     while (1){
        
-        StopTouchDetection();
-//        Temp_PT100 = Read_PT100_Temp();
-//        sprintf(Buff_g, "%f Celsius\n", Temp_PT100);
-//        TX_Whole_String(Buff_g);
-//        __delay_ms(500);
+        Temp_PT100 = Read_PT100_Temp();
+        sprintf(Buff_g, "%f Celsius\n", Temp_PT100);
+        TX_Whole_String(Buff_g);
+        __delay_ms(500);
         
     } // end of while(1)
 } // end of main()
@@ -212,21 +213,35 @@ void Zero_Detection_isr(void){
 
 void TMR2_Int_isr(void){
     
-    static uint16_t counter = 0;
-    counter ++;
+    static uint16_t counter_tmr2 = 0;
+    counter_tmr2 ++;
     
-    if(counter >= required_delay_for_dim_ms_g){
+    if(counter_tmr2 >= required_delay_for_dim_ms_g){
         
-        counter = 0;
+        counter_tmr2 = 0;
         IO_RC5_trig_TRIAC_SetHigh();
         
     }
     else if (1 == IO_RC5_trig_TRIAC_GetValue()){
         
-        counter = 0;
+        counter_tmr2 = 0;
         TMR2_StopTimer();
         IO_RC5_trig_TRIAC_SetLow();
     }    
+}
+
+
+void TMR4_Wroking_Blink_AlarmLED_isr(void){
+    
+    static uint16_t counter_tmr4 = 0;
+    counter_tmr4 ++;
+    
+    if(counter_tmr4 >= TMR4_REQUIRED_COUNTER_STEPS){
+        
+        counter_tmr4 = 0;
+        IO_RC2_alarm_LED_Toggle();
+        
+    }
 }
 
 
