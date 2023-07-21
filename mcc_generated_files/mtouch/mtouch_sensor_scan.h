@@ -41,4 +41,7 @@
     void MTOUCH_CVD_ScanA_0(void);
     void MTOUCH_CVD_ScanB_0(void);
 
+    void MTOUCH_CVD_ScanA_1(void);
+    void MTOUCH_CVD_ScanB_1(void);
+
 #endif

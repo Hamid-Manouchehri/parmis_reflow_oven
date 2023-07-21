@@ -133,7 +133,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="conversionTime"/>
-         <value>46.0 us</value>
+         <value>11.5 us</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="defaultTadValue"/>
@@ -149,7 +149,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="samplingFrequency"/>
-         <value>21.7391 kHz</value>
+         <value>86.9565 kHz</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="sysClock"/>
@@ -157,7 +157,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="tadValue"/>
-         <value>4.0 us</value>
+         <value>1.0 us</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="validateSignal"/>
@@ -301,7 +301,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADC" registerAlias="ADCON1"/>
-         <value>160</value>
+         <value>16</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADC" registerAlias="ADRESH"/>
@@ -325,11 +325,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADC" registerAlias="ADCON1" settingAlias="ADCS"/>
-         <value>FOSC/32</value>
+         <value>FOSC/8</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADC" registerAlias="ADCON1" settingAlias="ADFM"/>
-         <value>right</value>
+         <value>left</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADC" registerAlias="ADCON1" settingAlias="ADNREF"/>
@@ -2297,7 +2297,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ANSELC"/>
-         <value>131</value>
+         <value>3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="APFCON0"/>
@@ -2357,7 +2357,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="TRISC"/>
-         <value>131</value>
+         <value>3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="WPUA"/>
@@ -2417,7 +2417,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELC" settingAlias="ANSC7"/>
-         <value>analog</value>
+         <value>digital</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="APFCON0" settingAlias="RXDTSEL"/>
@@ -2729,7 +2729,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISC" settingAlias="TRISC7"/>
-         <value>input</value>
+         <value>output</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="WPUA" settingAlias="WPUA0"/>
@@ -3373,7 +3373,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="mTouch" name="AN9"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="mTouch" name="TxRow"/>
@@ -3497,6 +3497,78 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%0%timeout_timeUnit"/>
+         <value>mTouch Mainloop Task Calls</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%aks_group"/>
+         <value>No_AKS_Group</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%baseline_gain"/>
+         <value>4</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%baseline_update"/>
+         <value>64</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%deviationScaling"/>
+         <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%hysteresisValue"/>
+         <value>HYST_50_PERCENT</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%individualHysteresisEnable"/>
+         <value>false</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%interface_selection"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%name"/>
+         <value>T_stop</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%negativeCap_consecutiveDecodes"/>
+         <value>64</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%negativeCap_enabled"/>
+         <value>true</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%reading_gain"/>
+         <value>2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%sensor_name"/>
+         <value>Sensor_AN9</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%slider_group"/>
+         <value>No_Slider_Group</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%surface_group"/>
+         <value>No_Surface_Group</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%threshold"/>
+         <value>100</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%timeout_counts"/>
+         <value>1000</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%timeout_enabled"/>
+         <value>true</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%timeout_timeUnit"/>
          <value>mTouch Mainloop Task Calls</value>
       </entry>
       <entry>
@@ -3709,7 +3781,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="hostInterfaceConfig%rowList%2%count"/>
-         <value>1</value>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="hostInterfaceConfig%rowList%2%enabled"/>
@@ -3729,7 +3801,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="hostInterfaceConfig%rowList%3%count"/>
-         <value>1</value>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="hostInterfaceConfig%rowList%3%enabled"/>
@@ -3749,7 +3821,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="hostInterfaceConfig%rowList%4%count"/>
-         <value>1</value>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="hostInterfaceConfig%rowList%4%enabled"/>
@@ -4065,7 +4137,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%0%assignedToButton"/>
-         <value>false</value>
+         <value>true</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%0%name"/>
@@ -4097,6 +4169,62 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%0%sensorIndividualLowPowerMeasurementEnable"/>
+         <value>false</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%acquisitionTime"/>
+         <value>8</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%acquisitionTimeEnable"/>
+         <value>false</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%additionalCapEnable"/>
+         <value>false</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%additionalCapValue"/>
+         <value>0 pF</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%analogName"/>
+         <value>AN9</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%assignedToButton"/>
+         <value>false</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%name"/>
+         <value>Sensor_AN9</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%oversamplingEnable"/>
+         <value>false</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%oversamplingValue"/>
+         <value>32</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%pinName"/>
+         <value>RC7</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%preChargeTime"/>
+         <value>16</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%preChargeTimeEnable"/>
+         <value>false</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%secondaryChannels"/>
+         <value></value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%items%1%sensorIndividualLowPowerMeasurementEnable"/>
          <value>false</value>
       </entry>
       <entry>
@@ -4231,7 +4359,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_sensor_scan.h</file>
-         <hash>f3b62ed8699324f8d1742e281a96199783869c5bbc5b18bce5cdccbcad98c521</hash>
+         <hash>149760e252482a1850a98695d25352957118d462e7797e5eb8688d6bcf35eb23</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/adc.h</file>
@@ -4239,15 +4367,15 @@
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_sensor.h</file>
-         <hash>10630731d40df332964d90652a87dc6e25b1b05ab9be152d10856ec354bfe5f7</hash>
+         <hash>243eca95a2ef343bbb38677c34bf725821d9cff75667f7fb00867489e2e7fcde</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_sensor_scan.c</file>
-         <hash>9ac07de710a00b6f6c93d6fded99c115c6178586eb8a5e5af09b6c83435f00b9</hash>
+         <hash>1198299cd191a45ced35bb7237216dc815318c7f7e9fdc478b9694c4f9e4c82a</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_sensor.c</file>
-         <hash>92b55df51a1d0e7e92bd65ec26ce254f14478abe34cb6038c9fad12600547f73</hash>
+         <hash>f614aded53ae75b9823607f476be87bb8d72de794bb9001d3d0e0b11b0e8b1af</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.h</file>
@@ -4255,19 +4383,19 @@
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_button.c</file>
-         <hash>5579c7527415c98c2a6331b3a2f504fcdb190512b1802740f62abd66d5e42e18</hash>
+         <hash>d9280800a93d1ce5676774e13644c3a4c0adbaf1293e739060d992f0427e0d90</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_button.h</file>
-         <hash>923e67eb9c228125015babc25a77e6ff28fa08f51f8cc95b47961eda19f0ca32</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files/interrupt_manager.c</file>
-         <hash>eb03c2fbef2ef9cb4d36a5c217a3c19ad763a1322218ff7536f0b1ca9301e610</hash>
+         <hash>25ef0396459fe7bf88d7f8f53e5f7e16aefb5a7038c2f8d33834880d3fa027e6</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/eusart.h</file>
          <hash>57339ae7967c91590af820eeac26124a0516d9a730ef92282b17c73839887fb9</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/interrupt_manager.c</file>
+         <hash>eb03c2fbef2ef9cb4d36a5c217a3c19ad763a1322218ff7536f0b1ca9301e610</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.c</file>
@@ -4275,7 +4403,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/pin_manager.c</file>
-         <hash>d9e5cbd972dc6435b815207a40ccf186d09c8297be64a8bbe6081dc68464e57f</hash>
+         <hash>9a2081e963821b61019ee5f87c0fcd2170971d14f419b2d2fdf983705c871c72</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_random.c</file>
@@ -4283,7 +4411,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/pin_manager.h</file>
-         <hash>48cb3f379637eeced41e9d5ab541905fa360df0d94f70a472968081fd75736d7</hash>
+         <hash>7bd56a8a59a47e7afc301c53abe40568f0d9def5babf76942cd0e1202c26978a</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_random.h</file>
@@ -4295,7 +4423,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_config.h</file>
-         <hash>9d8d94dd08b2e49af32dc60b02cbda70fc6eade84d87d2d7c1af58cc8aee9daf</hash>
+         <hash>621e4d9192221ab0a84ffba5247b461ebeddc22b687b14d5f5cdd10c7d024335</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch.h</file>
@@ -4319,7 +4447,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/adc.c</file>
-         <hash>2c7261b52ff5e775a72db27446ec9aa42fe15f7bf4355a9d0f7358985b55fba2</hash>
+         <hash>b2589839589c40f70a08b2bf4c0067d49ddb68096c915da2023546b1cb432071</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/device_config.c</file>

@@ -3,18 +3,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "74 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 74: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F3720 `(v ~T0 @X0 1 tf ]
-"74 main.c
-[; ;main.c: 74: __attribute__((inline)) void Init_Function(void);
-[v _Init_Function `TF3720 ~T0 @X0 0 e ]
-[v F3744 `(v ~T0 @X0 1 tf1`a ]
-"84
-[; ;main.c: 84: __attribute__((inline)) void StartStop_AlarmLED(_Bool);
-[v _StartStop_AlarmLED `TF3744 ~T0 @X0 0 e ]
-[v F3755 `(us ~T0 @X0 1 tf1`f ]
-"88
-[; ;main.c: 88: __attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float);
-[v _CalcRequiredDelayForTrigTRIAC `TF3755 ~T0 @X0 0 e ]
+[v F3722 `(v ~T0 @X0 1 tf ]
+"37 main.c
+[; ;main.c: 37: __attribute__((inline)) void Init_Function(void);
+[v _Init_Function `TF3722 ~T0 @X0 0 e ]
+[v F3748 `(v ~T0 @X0 1 tf1`a ]
+"48
+[; ;main.c: 48: __attribute__((inline)) void StartStop_AlarmLED(_Bool);
+[v _StartStop_AlarmLED `TF3748 ~T0 @X0 0 e ]
 "358 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 358:     struct {
 [s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -30,64 +26,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "375
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 375: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS33 ~T0 @X0 0 e@11 ]
-[v F3511 `(v ~T0 @X0 0 tf ]
-"273 ./mcc_generated_files/pin_manager.h
-[; ;./mcc_generated_files/pin_manager.h: 273: void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _IOCAF2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3511 ]
-"82 main.c
-[; ;main.c: 82: void Zero_Detection_isr(void);
-[v _Zero_Detection_isr `(v ~T0 @X0 0 ef ]
-[v F3540 `(v ~T0 @X0 0 tf ]
-"326 ./mcc_generated_files/tmr2.h
-[; ;./mcc_generated_files/tmr2.h: 326:  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3540 ]
-"83 main.c
-[; ;main.c: 83:  void TMR2_Int_isr(void);
-[v _TMR2_Int_isr `(v ~T0 @X0 0 ef ]
-"117
-[; ;main.c: 117:     ADC_SelectChannel(channel_AN10);
-[c E3551 10 29 30 31 .. ]
-[n E3551 . channel_AN10 channel_Temp channel_DAC channel_FVR  ]
-"166 ./mcc_generated_files/adc.h
-[; ;./mcc_generated_files/adc.h: 166: void ADC_SelectChannel(adc_channel_t channel);
-[v _ADC_SelectChannel `(v ~T0 @X0 0 ef1`E3551 ]
-"193
-[; ;./mcc_generated_files/adc.h: 193: void ADC_StartConversion(void);
-[v _ADC_StartConversion `(v ~T0 @X0 0 ef ]
-[v F3731 `(us ~T0 @X0 1 tf ]
-"78 main.c
-[; ;main.c: 78: __attribute__((inline)) uint16_t Read_ADC_Num(void);
-[v _Read_ADC_Num `TF3731 ~T0 @X0 0 e ]
-[v F3733 `(f ~T0 @X0 1 tf1`us ]
-"79
-[; ;main.c: 79: __attribute__((inline)) float ChangeADCtoVoltage(uint16_t);
-[v _ChangeADCtoVoltage `TF3733 ~T0 @X0 0 e ]
-[v F3736 `(f ~T0 @X0 1 tf1`f ]
-"80
-[; ;main.c: 80: __attribute__((inline)) float Measure_R_PT100_2Wire(float);
-[v _Measure_R_PT100_2Wire `TF3736 ~T0 @X0 0 e ]
-[v F3739 `(f ~T0 @X0 1 tf1`f ]
-"81
-[; ;main.c: 81: __attribute__((inline)) float Measure_Temp_PT100_2Wire(float);
-[v _Measure_Temp_PT100_2Wire `TF3739 ~T0 @X0 0 e ]
-"113 /opt/microchip/xc8/v2.31/pic/include/c99/stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-[v F3725 `(v ~T0 @X0 1 tf1`*uc ]
-"76 main.c
-[; ;main.c: 76: __attribute__((inline)) void TX_Whole_String(char*);
-[v _TX_Whole_String `TF3725 ~T0 @X0 0 e ]
-[v F1092 `(v ~T0 @X0 1 tf1`ul ]
-"12 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/builtins.h
-[v __delay `JF1092 ~T0 @X0 0 e ]
-[p i __delay ]
-[v F3747 `(v ~T0 @X0 1 tf1`a ]
-"85 main.c
-[; ;main.c: 85: __attribute__((inline)) void StartStop_Fan(_Bool);
-[v _StartStop_Fan `TF3747 ~T0 @X0 0 e ]
-[v F3750 `(v ~T0 @X0 1 tf1`a ]
-"86
-[; ;main.c: 86: __attribute__((inline)) void StartStop_Buzzer(_Bool);
-[v _StartStop_Buzzer `TF3750 ~T0 @X0 0 e ]
+[v F3759 `(v ~T0 @X0 1 tf ]
+"52 main.c
+[; ;main.c: 52: __attribute__((inline)) void StopTouchDetection(void);
+[v _StopTouchDetection `TF3759 ~T0 @X0 0 e ]
+[v F3751 `(v ~T0 @X0 1 tf1`a ]
+"49
+[; ;main.c: 49: __attribute__((inline)) void StartStop_Fan(_Bool);
+[v _StartStop_Fan `TF3751 ~T0 @X0 0 e ]
+[v F3754 `(v ~T0 @X0 1 tf1`a ]
+"50
+[; ;main.c: 50: __attribute__((inline)) void StartStop_Buzzer(_Bool);
+[v _StartStop_Buzzer `TF3754 ~T0 @X0 0 e ]
 "2190 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 2190:     struct {
 [s S121 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -99,6 +49,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2201
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 2201: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
 [v _LATCbits `VS120 ~T0 @X0 0 e@270 ]
+"102 main.c
+[; ;main.c: 102:     ADC_SelectChannel(channel_AN10);
+[c E3551 10 29 30 31 .. ]
+[n E3551 . channel_AN10 channel_Temp channel_DAC channel_FVR  ]
+"166 ./mcc_generated_files/adc.h
+[; ;./mcc_generated_files/adc.h: 166: void ADC_SelectChannel(adc_channel_t channel);
+[v _ADC_SelectChannel `(v ~T0 @X0 0 ef1`E3551 ]
+[v F3761 `(us ~T0 @X0 1 tf1`f ]
+"53 main.c
+[; ;main.c: 53: __attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float);
+[v _CalcRequiredDelayForTrigTRIAC `TF3761 ~T0 @X0 0 e ]
 "158 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 158: _Bool EUSART_is_tx_ready(void);
 [v _EUSART_is_tx_ready `(a ~T0 @X0 0 ef ]
@@ -108,6 +69,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54 /opt/microchip/xc8/v2.31/pic/include/c99/string.h
 [; ;/opt/microchip/xc8/v2.31/pic/include/c99/string.h: 54: size_t strlen (const char *);
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+[v F1092 `(v ~T0 @X0 1 tf1`ul ]
+"12 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/builtins.h
+[v __delay `JF1092 ~T0 @X0 0 e ]
+[p i __delay ]
 "373 /opt/microchip/xc8/v2.31/pic/include/c99/math.h
 [; ;/opt/microchip/xc8/v2.31/pic/include/c99/math.h: 373: float sqrtf(float);
 [v _sqrtf `(f ~T0 @X0 0 ef1`f ]
@@ -117,6 +82,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "258
 [; ;./mcc_generated_files/adc.h: 258: adc_result_t ADC_GetConversionResult(void);
 [v _ADC_GetConversionResult `(us ~T0 @X0 0 ef ]
+"193
+[; ;./mcc_generated_files/adc.h: 193: void ADC_StartConversion(void);
+[v _ADC_StartConversion `(v ~T0 @X0 0 ef ]
 "132 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 132: void TMR2_StartTimer(void);
 [v _TMR2_StartTimer `(v ~T0 @X0 0 ef ]
@@ -137,13 +105,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "55 ./mcc_generated_files/mtouch/mtouch.h
 [; ;./mcc_generated_files/mtouch/mtouch.h: 55:     _Bool MTOUCH_Service_Mainloop (void);
 [v _MTOUCH_Service_Mainloop `(a ~T0 @X0 0 ef ]
-"304 main.c
-[; ;main.c: 304:         if (1 == MTOUCH_Button_isPressed(T_start)){
-[c E3619 0 .. ]
-[n E3619 mtouch_button_names T_start  ]
-"117 ./mcc_generated_files/mtouch/mtouch_button.h
-[; ;./mcc_generated_files/mtouch/mtouch_button.h: 117:     _Bool MTOUCH_Button_isPressed (enum mtouch_button_names button);
-[v _MTOUCH_Button_isPressed `(a ~T0 @X0 0 ef1`E3619 ]
+"279 main.c
+[; ;main.c: 279:         if (1 == MTOUCH_Button_isPressed(T_start)){
+[c E3620 0 1 .. ]
+[n E3620 mtouch_button_names T_start T_stop  ]
+"118 ./mcc_generated_files/mtouch/mtouch_button.h
+[; ;./mcc_generated_files/mtouch/mtouch_button.h: 118:     _Bool MTOUCH_Button_isPressed (enum mtouch_button_names button);
+[v _MTOUCH_Button_isPressed `(a ~T0 @X0 0 ef1`E3620 ]
 "55 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -636,595 +604,641 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7006
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 7006: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"65 main.c
-[; ;main.c: 65: const float R_const = 100.0;
+"28 main.c
+[; ;main.c: 28: const float R_const = 100.0;
 [v _R_const `Cf ~T0 @X0 1 e ]
 [i _R_const
 -> .100.0 `f
 ]
-"66
-[; ;main.c: 66: const float V_cc_const = 5.0;
+"29
+[; ;main.c: 29: const float V_cc_const = 5.0;
 [v _V_cc_const `Cf ~T0 @X0 1 e ]
 [i _V_cc_const
 -> .5.0 `f
 ]
-"67
-[; ;main.c: 67: const float Tolerance_Temp_const = 37.2;
+"30
+[; ;main.c: 30: const float Tolerance_Temp_const = 37.2;
 [v _Tolerance_Temp_const `Cf ~T0 @X0 1 e ]
 [i _Tolerance_Temp_const
 -> .37.2 `f
 ]
-"68
-[; ;main.c: 68: const float HalfCycleACDuration_const = 10.0;
+"31
+[; ;main.c: 31: const float HalfCycleACDuration_const = 10.0;
 [v _HalfCycleACDuration_const `Cf ~T0 @X0 1 e ]
 [i _HalfCycleACDuration_const
 -> .10.0 `f
 ]
-"69
-[; ;main.c: 69: const float TMR2_Period_const = 100;
+"32
+[; ;main.c: 32: const float TMR2_Period_const = 100;
 [v _TMR2_Period_const `Cf ~T0 @X0 1 e ]
 [i _TMR2_Period_const
 -> -> 100 `i `f
 ]
-"70
-[; ;main.c: 70: unsigned char Buff_g[20];
+"33
+[; ;main.c: 33: unsigned char Buff_g[20];
 [v _Buff_g `uc ~T0 @X0 -> 20 `i e ]
-"71
-[; ;main.c: 71: uint16_t required_delay_for_dim_ms_g = 0;
+"34
+[; ;main.c: 34: uint16_t required_delay_for_dim_ms_g = 0;
 [v _required_delay_for_dim_ms_g `us ~T0 @X0 1 e ]
 [i _required_delay_for_dim_ms_g
 -> -> 0 `i `us
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"98
-[; ;main.c: 98: void main(void){
+"63
+[; ;main.c: 63: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"100
-[; ;main.c: 100:     SYSTEM_Initialize();
+"65
+[; ;main.c: 65:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"101
-[; ;main.c: 101:     Init_Function();
+"66
+[; ;main.c: 66:     Init_Function();
 [e ( _Init_Function ..  ]
-"102
-[; ;main.c: 102:     StartStop_AlarmLED(1);
+"67
+[; ;main.c: 67:     StartStop_AlarmLED(1);
 [e ( _StartStop_AlarmLED (1 -> -> 1 `i `a ]
-"104
-[; ;main.c: 104:     required_delay_for_dim_ms_g = CalcRequiredDelayForTrigTRIAC(25);
-[e = _required_delay_for_dim_ms_g ( _CalcRequiredDelayForTrigTRIAC (1 -> -> 25 `i `f ]
-"106
-[; ;main.c: 106:     (INTCONbits.GIE = 1);
+"69
+[; ;main.c: 69:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"107
-[; ;main.c: 107:     (INTCONbits.PEIE = 1);
+"70
+[; ;main.c: 70:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"109
-[; ;main.c: 109:     IOCAF2_SetInterruptHandler(Zero_Detection_isr);
-[e ( _IOCAF2_SetInterruptHandler (1 &U _Zero_Detection_isr ]
-"110
-[; ;main.c: 110:     TMR2_SetInterruptHandler(TMR2_Int_isr);
-[e ( _TMR2_SetInterruptHandler (1 &U _TMR2_Int_isr ]
-"112
-[; ;main.c: 112:     uint16_t ADC_num = 0;
-[v _ADC_num `us ~T0 @X0 1 a ]
-[e = _ADC_num -> -> 0 `i `us ]
-"113
-[; ;main.c: 113:     float ADC_volt = 0;
-[v _ADC_volt `f ~T0 @X0 1 a ]
-[e = _ADC_volt -> -> 0 `i `f ]
-"114
-[; ;main.c: 114:     float R_PT100 = 0;
-[v _R_PT100 `f ~T0 @X0 1 a ]
-[e = _R_PT100 -> -> 0 `i `f ]
-"115
-[; ;main.c: 115:     float Temp_PT100 = 0;
+"75
+[; ;main.c: 75:     float Temp_PT100 = 0.0;
 [v _Temp_PT100 `f ~T0 @X0 1 a ]
-[e = _Temp_PT100 -> -> 0 `i `f ]
-"117
-[; ;main.c: 117:     ADC_SelectChannel(channel_AN10);
-[e ( _ADC_SelectChannel (1 . `E3551 0 ]
-"120
-[; ;main.c: 120:     while (1){
+[e = _Temp_PT100 -> .0.0 `f ]
+"77
+[; ;main.c: 77:     while (1){
 [e :U 380 ]
 {
-"122
-[; ;main.c: 122:         ADC_StartConversion();
-[e ( _ADC_StartConversion ..  ]
-"124
-[; ;main.c: 124:         ADC_num = Read_ADC_Num();
-[e = _ADC_num ( _Read_ADC_Num ..  ]
-"126
-[; ;main.c: 126:         ADC_volt = ChangeADCtoVoltage(ADC_num);
-[e = _ADC_volt ( _ChangeADCtoVoltage (1 _ADC_num ]
-"128
-[; ;main.c: 128:         R_PT100 = Measure_R_PT100_2Wire(ADC_volt);
-[e = _R_PT100 ( _Measure_R_PT100_2Wire (1 _ADC_volt ]
-"130
-[; ;main.c: 130:         Temp_PT100 = Measure_Temp_PT100_2Wire(R_PT100);
-[e = _Temp_PT100 ( _Measure_Temp_PT100_2Wire (1 _R_PT100 ]
-"131
-[; ;main.c: 131:         sprintf(Buff_g, "%f Celsius\n", Temp_PT100);
-[e ( _sprintf (1 , (. , -> &U _Buff_g `*uc :s 1C -> _Temp_PT100 `d ]
-"132
-[; ;main.c: 132:         TX_Whole_String(Buff_g);
-[e ( _TX_Whole_String (1 -> &U _Buff_g `*uc ]
-"133
-[; ;main.c: 133:         _delay((unsigned long)((500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"135
-[; ;main.c: 135:     }
+"79
+[; ;main.c: 79:         StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"85
+[; ;main.c: 85:     }
 }
 [e :U 379 ]
 [e $U 380  ]
 [e :U 381 ]
-"136
-[; ;main.c: 136: }
+"86
+[; ;main.c: 86: }
 [e :UE 378 ]
 }
-[v F3765 `(v ~T0 @X0 1 tf ]
-"145
-[; ;main.c: 145: __attribute__((inline)) void Init_Function(void){
-[v _Init_Function `TF3765 ~T0 @X0 1 e ]
+[v F3766 `(v ~T0 @X0 1 tf ]
+"95
+[; ;main.c: 95: __attribute__((inline)) void Init_Function(void){
+[v _Init_Function `TF3766 ~T0 @X0 1 e ]
 {
 [e :U _Init_Function ]
 [f ]
-"147
-[; ;main.c: 147:     StartStop_AlarmLED(0);
+"97
+[; ;main.c: 97:     StartStop_AlarmLED(0);
 [e ( _StartStop_AlarmLED (1 -> -> 0 `i `a ]
-"148
-[; ;main.c: 148:     StartStop_Fan(0);
+"98
+[; ;main.c: 98:     StartStop_Fan(0);
 [e ( _StartStop_Fan (1 -> -> 0 `i `a ]
-"149
-[; ;main.c: 149:     StartStop_Buzzer(0);
+"99
+[; ;main.c: 99:     StartStop_Buzzer(0);
 [e ( _StartStop_Buzzer (1 -> -> 0 `i `a ]
-"150
-[; ;main.c: 150:     do { LATCbits.LATC5 = 0; } while(0);
+"100
+[; ;main.c: 100:     do { LATCbits.LATC5 = 0; } while(0);
 [e :U 385 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 384 ]
-"152
-[; ;main.c: 152: }
+"102
+[; ;main.c: 102:     ADC_SelectChannel(channel_AN10);
+[e ( _ADC_SelectChannel (1 . `E3551 0 ]
+"104
+[; ;main.c: 104:     required_delay_for_dim_ms_g = CalcRequiredDelayForTrigTRIAC(25);
+[e = _required_delay_for_dim_ms_g ( _CalcRequiredDelayForTrigTRIAC (1 -> -> 25 `i `f ]
+"106
+[; ;main.c: 106: }
 [e :UE 382 ]
 }
-[v F3767 `(v ~T0 @X0 1 tf1`uc ]
-"155
-[; ;main.c: 155: __attribute__((inline)) void TX_Command(uint8_t txData) {
-[v _TX_Command `TF3767 ~T0 @X0 1 e ]
+[v F3768 `(v ~T0 @X0 1 tf1`uc ]
+"109
+[; ;main.c: 109: __attribute__((inline)) void TX_Command(uint8_t txData) {
+[v _TX_Command `TF3768 ~T0 @X0 1 e ]
 {
 [e :U _TX_Command ]
 [v _txData `uc ~T0 @X0 1 r1 ]
 [f ]
-"157
-[; ;main.c: 157:     if (EUSART_is_tx_ready()) {
+"111
+[; ;main.c: 111:     if (EUSART_is_tx_ready()) {
 [e $ ! != -> ( _EUSART_is_tx_ready ..  `i -> 0 `i 387  ]
 {
-"159
-[; ;main.c: 159:         EUSART_Write(txData);
+"113
+[; ;main.c: 113:         EUSART_Write(txData);
 [e ( _EUSART_Write (1 _txData ]
-"160
-[; ;main.c: 160:     }
+"114
+[; ;main.c: 114:     }
 }
 [e :U 387 ]
-"161
-[; ;main.c: 161: }
+"115
+[; ;main.c: 115: }
 [e :UE 386 ]
 }
-[v F3770 `(v ~T0 @X0 1 tf1`*uc ]
-"164
-[; ;main.c: 164: __attribute__((inline)) void TX_Whole_String(char *input_string){
-[v _TX_Whole_String `TF3770 ~T0 @X0 1 e ]
+[v F3771 `(v ~T0 @X0 1 tf1`*uc ]
+"118
+[; ;main.c: 118: __attribute__((inline)) void TX_Whole_String(char *input_string){
+[v _TX_Whole_String `TF3771 ~T0 @X0 1 e ]
 {
 [e :U _TX_Whole_String ]
 [v _input_string `*uc ~T0 @X0 1 r1 ]
 [f ]
-"166
-[; ;main.c: 166:     uint16_t size_of_string = strlen(input_string);
+"120
+[; ;main.c: 120:     uint16_t size_of_string = strlen(input_string);
 [v _size_of_string `us ~T0 @X0 1 a ]
 [e = _size_of_string -> ( _strlen (1 -> _input_string `*Cuc `us ]
-"168
-[; ;main.c: 168:     for (uint8_t i = 0; i < size_of_string; i++){
+"122
+[; ;main.c: 122:     for (uint8_t i = 0; i < size_of_string; i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 392  ]
 [e :U 389 ]
 {
-"170
-[; ;main.c: 170:         TX_Command(input_string[i]);
+"124
+[; ;main.c: 124:         TX_Command(input_string[i]);
 [e ( _TX_Command (1 -> *U + _input_string * -> _i `ux -> -> # *U _input_string `ui `ux `uc ]
-"171
-[; ;main.c: 171:         _delay((unsigned long)((5)*(8000000/4000.0)));
+"125
+[; ;main.c: 125:         _delay((unsigned long)((5)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"173
-[; ;main.c: 173:     }
+"127
+[; ;main.c: 127:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 392 ]
 [e $ < -> _i `ui -> _size_of_string `ui 389  ]
 [e :U 390 ]
 }
-"177
-[; ;main.c: 177: }
+"131
+[; ;main.c: 131: }
 [e :UE 388 ]
 }
-[v F3775 `(v ~T0 @X0 1 tf1`us ]
-"180
-[; ;main.c: 180: __attribute__((inline)) void ReadTemperature(uint16_t R_PT100){
-[v _ReadTemperature `TF3775 ~T0 @X0 1 e ]
+[v F3776 `(v ~T0 @X0 1 tf1`us ]
+"134
+[; ;main.c: 134: __attribute__((inline)) void ReadTemperature(uint16_t R_PT100){
+[v _ReadTemperature `TF3776 ~T0 @X0 1 e ]
 {
 [e :U _ReadTemperature ]
 [v _R_PT100 `us ~T0 @X0 1 r1 ]
 [f ]
-"182
-[; ;main.c: 182:     uint16_t Temperature;
+"136
+[; ;main.c: 136:     uint16_t Temperature;
 [v _Temperature `us ~T0 @X0 1 a ]
-"184
-[; ;main.c: 184:     Temperature = (-3.9083E-03 + sqrtf(17.58480889E-06 + (-23.10E-09 * R_PT100))) / -1.155E-06;
+"138
+[; ;main.c: 138:     Temperature = (-3.9083E-03 + sqrtf(17.58480889E-06 + (-23.10E-09 * R_PT100))) / -1.155E-06;
 [e = _Temperature -> / + -U .3.9083e-03 -> ( _sqrtf (1 -> + .17.58480889e-06 * -U .23.10e-09 -> -> _R_PT100 `ui `d `f `d -U .1.155e-06 `us ]
-"186
-[; ;main.c: 186: }
+"140
+[; ;main.c: 140: }
 [e :UE 393 ]
 }
-[v F3779 `(us ~T0 @X0 1 tf ]
-"189
-[; ;main.c: 189: __attribute__((inline)) uint16_t Read_ADC_Num(void){
-[v _Read_ADC_Num `TF3779 ~T0 @X0 1 e ]
+[v F3780 `(us ~T0 @X0 1 tf ]
+"143
+[; ;main.c: 143: __attribute__((inline)) uint16_t Read_ADC_Num(void){
+[v _Read_ADC_Num `TF3780 ~T0 @X0 1 e ]
 {
 [e :U _Read_ADC_Num ]
 [f ]
-"191
-[; ;main.c: 191:     uint16_t convertedValue;
+"145
+[; ;main.c: 145:     uint16_t convertedValue;
 [v _convertedValue `us ~T0 @X0 1 a ]
-"193
-[; ;main.c: 193:     while(!ADC_IsConversionDone());
+"147
+[; ;main.c: 147:     while(!ADC_IsConversionDone());
 [e $U 395  ]
 [e :U 396 ]
 [e :U 395 ]
 [e $ ! != -> ( _ADC_IsConversionDone ..  `i -> 0 `i 396  ]
 [e :U 397 ]
-"194
-[; ;main.c: 194:     convertedValue = ADC_GetConversionResult();
+"148
+[; ;main.c: 148:     convertedValue = ADC_GetConversionResult();
 [e = _convertedValue ( _ADC_GetConversionResult ..  ]
-"196
-[; ;main.c: 196:     return convertedValue;
+"150
+[; ;main.c: 150:     return convertedValue;
 [e ) _convertedValue ]
 [e $UE 394  ]
-"198
-[; ;main.c: 198: }
+"152
+[; ;main.c: 152: }
 [e :UE 394 ]
 }
-[v F3782 `(f ~T0 @X0 1 tf1`us ]
-"201
-[; ;main.c: 201: __attribute__((inline)) float ChangeADCtoVoltage(uint16_t ADC_number){
-[v _ChangeADCtoVoltage `TF3782 ~T0 @X0 1 e ]
+[v F3783 `(f ~T0 @X0 1 tf1`us ]
+"155
+[; ;main.c: 155: __attribute__((inline)) float ChangeADCtoVoltage(uint16_t ADC_number){
+[v _ChangeADCtoVoltage `TF3783 ~T0 @X0 1 e ]
 {
 [e :U _ChangeADCtoVoltage ]
 [v _ADC_number `us ~T0 @X0 1 r1 ]
 [f ]
-"203
-[; ;main.c: 203:     return (float)(5.0 * ADC_number / 1023);
+"157
+[; ;main.c: 157:     return (float)(5.0 * ADC_number / 1023);
 [e ) -> / * .5.0 -> -> _ADC_number `ui `d -> -> 1023 `i `d `f ]
 [e $UE 398  ]
-"205
-[; ;main.c: 205: }
+"159
+[; ;main.c: 159: }
 [e :UE 398 ]
 }
-[v F3785 `(f ~T0 @X0 1 tf1`f ]
-"208
-[; ;main.c: 208: __attribute__((inline)) float Measure_R_PT100_2Wire(float ADC_volt){
-[v _Measure_R_PT100_2Wire `TF3785 ~T0 @X0 1 e ]
+[v F3786 `(f ~T0 @X0 1 tf1`f ]
+"162
+[; ;main.c: 162: __attribute__((inline)) float Measure_R_PT100_2Wire(float ADC_volt){
+[v _Measure_R_PT100_2Wire `TF3786 ~T0 @X0 1 e ]
 {
 [e :U _Measure_R_PT100_2Wire ]
 [v _ADC_volt `f ~T0 @X0 1 r1 ]
 [f ]
-"210
-[; ;main.c: 210:     float R_PT100 = 0;
+"164
+[; ;main.c: 164:     float R_PT100 = 0;
 [v _R_PT100 `f ~T0 @X0 1 a ]
 [e = _R_PT100 -> -> 0 `i `f ]
-"212
-[; ;main.c: 212:     R_PT100 = R_const * ADC_volt / (R_const - ADC_volt);
-[e = _R_PT100 / * _R_const _ADC_volt - _R_const _ADC_volt ]
-"214
-[; ;main.c: 214:     return R_PT100;
+"166
+[; ;main.c: 166:     R_PT100 = R_const * ADC_volt / (V_cc_const - ADC_volt);
+[e = _R_PT100 / * _R_const _ADC_volt - _V_cc_const _ADC_volt ]
+"168
+[; ;main.c: 168:     return R_PT100;
 [e ) _R_PT100 ]
 [e $UE 399  ]
-"216
-[; ;main.c: 216: }
+"170
+[; ;main.c: 170: }
 [e :UE 399 ]
 }
-[v F3789 `(f ~T0 @X0 1 tf1`f ]
-"219
-[; ;main.c: 219: __attribute__((inline)) float Measure_Temp_PT100_2Wire(float R_PT100){
-[v _Measure_Temp_PT100_2Wire `TF3789 ~T0 @X0 1 e ]
+[v F3790 `(f ~T0 @X0 1 tf1`f ]
+"173
+[; ;main.c: 173: __attribute__((inline)) float Measure_Temp_PT100_2Wire(float R_PT100){
+[v _Measure_Temp_PT100_2Wire `TF3790 ~T0 @X0 1 e ]
 {
 [e :U _Measure_Temp_PT100_2Wire ]
 [v _R_PT100 `f ~T0 @X0 1 r1 ]
 [f ]
-"221
-[; ;main.c: 221:     float Temp_PT100;
+"175
+[; ;main.c: 175:     float Temp_PT100;
 [v _Temp_PT100 `f ~T0 @X0 1 a ]
-"223
-[; ;main.c: 223:     Temp_PT100 = ((-3.9083E-03 + sqrtf(17.58480889E-06 + -23.10E-09 * R_PT100)) / -1.155E-06) - Tolerance_Temp_const;
+"177
+[; ;main.c: 177:     Temp_PT100 = ((-3.9083E-03 + sqrtf(17.58480889E-06 + -23.10E-09 * R_PT100)) / -1.155E-06) - Tolerance_Temp_const;
 [e = _Temp_PT100 -> - / + -U .3.9083e-03 -> ( _sqrtf (1 -> + .17.58480889e-06 * -U .23.10e-09 -> _R_PT100 `d `f `d -U .1.155e-06 -> _Tolerance_Temp_const `d `f ]
-"225
-[; ;main.c: 225:     return Temp_PT100;
+"179
+[; ;main.c: 179:     return Temp_PT100;
 [e ) _Temp_PT100 ]
 [e $UE 400  ]
-"227
-[; ;main.c: 227: }
+"181
+[; ;main.c: 181: }
 [e :UE 400 ]
 }
-"230
-[; ;main.c: 230: void Zero_Detection_isr(void){
+[v F3794 `(f ~T0 @X0 1 tf ]
+"184
+[; ;main.c: 184: __attribute__((inline)) float Read_PT100_Temp(void){
+[v _Read_PT100_Temp `TF3794 ~T0 @X0 1 e ]
+{
+[e :U _Read_PT100_Temp ]
+[f ]
+"186
+[; ;main.c: 186:     uint16_t ADC_num = 0;
+[v _ADC_num `us ~T0 @X0 1 a ]
+[e = _ADC_num -> -> 0 `i `us ]
+"187
+[; ;main.c: 187:     float ADC_volt = 0;
+[v _ADC_volt `f ~T0 @X0 1 a ]
+[e = _ADC_volt -> -> 0 `i `f ]
+"188
+[; ;main.c: 188:     float R_PT100 = 0;
+[v _R_PT100 `f ~T0 @X0 1 a ]
+[e = _R_PT100 -> -> 0 `i `f ]
+"189
+[; ;main.c: 189:     float Temp_PT100 = 0;
+[v _Temp_PT100 `f ~T0 @X0 1 a ]
+[e = _Temp_PT100 -> -> 0 `i `f ]
+"191
+[; ;main.c: 191:     ADC_StartConversion();
+[e ( _ADC_StartConversion ..  ]
+"193
+[; ;main.c: 193:     ADC_num = Read_ADC_Num();
+[e = _ADC_num ( _Read_ADC_Num ..  ]
+"195
+[; ;main.c: 195:     ADC_volt = ChangeADCtoVoltage(ADC_num);
+[e = _ADC_volt ( _ChangeADCtoVoltage (1 _ADC_num ]
+"197
+[; ;main.c: 197:     R_PT100 = Measure_R_PT100_2Wire(ADC_volt);
+[e = _R_PT100 ( _Measure_R_PT100_2Wire (1 _ADC_volt ]
+"199
+[; ;main.c: 199:     Temp_PT100 = Measure_Temp_PT100_2Wire(R_PT100);
+[e = _Temp_PT100 ( _Measure_Temp_PT100_2Wire (1 _R_PT100 ]
+"201
+[; ;main.c: 201:     return Temp_PT100;
+[e ) _Temp_PT100 ]
+[e $UE 401  ]
+"202
+[; ;main.c: 202: }
+[e :UE 401 ]
+}
+"205
+[; ;main.c: 205: void Zero_Detection_isr(void){
 [v _Zero_Detection_isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _Zero_Detection_isr ]
 [f ]
-"233
-[; ;main.c: 233:     TMR2_StartTimer();
+"208
+[; ;main.c: 208:     TMR2_StartTimer();
 [e ( _TMR2_StartTimer ..  ]
-"235
-[; ;main.c: 235: }
-[e :UE 401 ]
+"210
+[; ;main.c: 210: }
+[e :UE 402 ]
 }
-"238
-[; ;main.c: 238: void TMR2_Int_isr(void){
+"213
+[; ;main.c: 213: void TMR2_Int_isr(void){
 [v _TMR2_Int_isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR2_Int_isr ]
 [f ]
-"240
-[; ;main.c: 240:     static uint16_t counter = 0;
-[v F3794 `us ~T0 @X0 1 s counter ]
-[i F3794
+"215
+[; ;main.c: 215:     static uint16_t counter = 0;
+[v F3801 `us ~T0 @X0 1 s counter ]
+[i F3801
 -> -> 0 `i `us
 ]
-"241
-[; ;main.c: 241:     counter ++;
-[e ++ F3794 -> -> 1 `i `us ]
-"243
-[; ;main.c: 243:     if(counter >= required_delay_for_dim_ms_g){
-[e $ ! >= -> F3794 `ui -> _required_delay_for_dim_ms_g `ui 403  ]
+"216
+[; ;main.c: 216:     counter ++;
+[e ++ F3801 -> -> 1 `i `us ]
+"218
+[; ;main.c: 218:     if(counter >= required_delay_for_dim_ms_g){
+[e $ ! >= -> F3801 `ui -> _required_delay_for_dim_ms_g `ui 404  ]
 {
-"245
-[; ;main.c: 245:         counter = 0;
-[e = F3794 -> -> 0 `i `us ]
-"246
-[; ;main.c: 246:         do { LATCbits.LATC5 = 1; } while(0);
-[e :U 406 ]
+"220
+[; ;main.c: 220:         counter = 0;
+[e = F3801 -> -> 0 `i `us ]
+"221
+[; ;main.c: 221:         do { LATCbits.LATC5 = 1; } while(0);
+[e :U 407 ]
 {
 [e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 405 ]
-"248
-[; ;main.c: 248:     }
+[e :U 406 ]
+"223
+[; ;main.c: 223:     }
 }
-[e $U 407  ]
-"249
-[; ;main.c: 249:     else if (1 == PORTCbits.RC5){
-[e :U 403 ]
-[e $ ! == -> 1 `i -> . . _PORTCbits 0 5 `i 408  ]
+[e $U 408  ]
+"224
+[; ;main.c: 224:     else if (1 == PORTCbits.RC5){
+[e :U 404 ]
+[e $ ! == -> 1 `i -> . . _PORTCbits 0 5 `i 409  ]
 {
-"251
-[; ;main.c: 251:         counter = 0;
-[e = F3794 -> -> 0 `i `us ]
-"252
-[; ;main.c: 252:         TMR2_StopTimer();
+"226
+[; ;main.c: 226:         counter = 0;
+[e = F3801 -> -> 0 `i `us ]
+"227
+[; ;main.c: 227:         TMR2_StopTimer();
 [e ( _TMR2_StopTimer ..  ]
-"253
-[; ;main.c: 253:         do { LATCbits.LATC5 = 0; } while(0);
-[e :U 411 ]
+"228
+[; ;main.c: 228:         do { LATCbits.LATC5 = 0; } while(0);
+[e :U 412 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 410 ]
-"254
-[; ;main.c: 254:     }
+[e :U 411 ]
+"229
+[; ;main.c: 229:     }
 }
+[e :U 409 ]
 [e :U 408 ]
-[e :U 407 ]
-"255
-[; ;main.c: 255: }
-[e :UE 402 ]
+"230
+[; ;main.c: 230: }
+[e :UE 403 ]
 }
-[v F3796 `(v ~T0 @X0 1 tf1`a ]
-"258
-[; ;main.c: 258: __attribute__((inline)) void StartStop_AlarmLED(_Bool OnOff){
-[v _StartStop_AlarmLED `TF3796 ~T0 @X0 1 e ]
+[v F3803 `(v ~T0 @X0 1 tf1`a ]
+"233
+[; ;main.c: 233: __attribute__((inline)) void StartStop_AlarmLED(_Bool OnOff){
+[v _StartStop_AlarmLED `TF3803 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_AlarmLED ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"260
-[; ;main.c: 260:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 413  ]
+"235
+[; ;main.c: 235:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 414  ]
 {
-"262
-[; ;main.c: 262:         do { LATCbits.LATC2 = 1; } while(0);
-[e :U 416 ]
+"237
+[; ;main.c: 237:         do { LATCbits.LATC2 = 1; } while(0);
+[e :U 417 ]
 {
 [e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 415 ]
-"263
-[; ;main.c: 263:     }
+[e :U 416 ]
+"238
+[; ;main.c: 238:     }
 }
-[e $U 417  ]
-"264
-[; ;main.c: 264:     else{
-[e :U 413 ]
+[e $U 418  ]
+"239
+[; ;main.c: 239:     else{
+[e :U 414 ]
 {
-"266
-[; ;main.c: 266:         do { LATCbits.LATC2 = 0; } while(0);
-[e :U 420 ]
+"241
+[; ;main.c: 241:         do { LATCbits.LATC2 = 0; } while(0);
+[e :U 421 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 419 ]
-"267
-[; ;main.c: 267:     }
+[e :U 420 ]
+"242
+[; ;main.c: 242:     }
 }
-[e :U 417 ]
-"269
-[; ;main.c: 269: }
-[e :UE 412 ]
+[e :U 418 ]
+"244
+[; ;main.c: 244: }
+[e :UE 413 ]
 }
-[v F3799 `(v ~T0 @X0 1 tf1`a ]
-"272
-[; ;main.c: 272: __attribute__((inline)) void StartStop_Fan(_Bool OnOff){
-[v _StartStop_Fan `TF3799 ~T0 @X0 1 e ]
+[v F3806 `(v ~T0 @X0 1 tf1`a ]
+"247
+[; ;main.c: 247: __attribute__((inline)) void StartStop_Fan(_Bool OnOff){
+[v _StartStop_Fan `TF3806 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_Fan ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"274
-[; ;main.c: 274:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 422  ]
+"249
+[; ;main.c: 249:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 423  ]
 {
-"276
-[; ;main.c: 276:         do { LATCbits.LATC3 = 1; } while(0);
-[e :U 425 ]
+"251
+[; ;main.c: 251:         do { LATCbits.LATC3 = 1; } while(0);
+[e :U 426 ]
 {
 [e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
 }
-[e :U 424 ]
-"277
-[; ;main.c: 277:     }
+[e :U 425 ]
+"252
+[; ;main.c: 252:     }
 }
-[e $U 426  ]
-"278
-[; ;main.c: 278:     else{
-[e :U 422 ]
+[e $U 427  ]
+"253
+[; ;main.c: 253:     else{
+[e :U 423 ]
 {
-"280
-[; ;main.c: 280:         do { LATCbits.LATC3 = 0; } while(0);
-[e :U 429 ]
+"255
+[; ;main.c: 255:         do { LATCbits.LATC3 = 0; } while(0);
+[e :U 430 ]
 {
 [e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
 }
-[e :U 428 ]
-"281
-[; ;main.c: 281:     }
+[e :U 429 ]
+"256
+[; ;main.c: 256:     }
 }
-[e :U 426 ]
-"283
-[; ;main.c: 283: }
-[e :UE 421 ]
+[e :U 427 ]
+"258
+[; ;main.c: 258: }
+[e :UE 422 ]
 }
-[v F3802 `(v ~T0 @X0 1 tf1`a ]
-"286
-[; ;main.c: 286: __attribute__((inline)) void StartStop_Buzzer(_Bool OnOff){
-[v _StartStop_Buzzer `TF3802 ~T0 @X0 1 e ]
+[v F3809 `(v ~T0 @X0 1 tf1`a ]
+"261
+[; ;main.c: 261: __attribute__((inline)) void StartStop_Buzzer(_Bool OnOff){
+[v _StartStop_Buzzer `TF3809 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_Buzzer ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"288
-[; ;main.c: 288:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 431  ]
+"263
+[; ;main.c: 263:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 432  ]
 {
-"290
-[; ;main.c: 290:         do { LATCbits.LATC4 = 1; } while(0);
-[e :U 434 ]
+"265
+[; ;main.c: 265:         do { LATCbits.LATC4 = 1; } while(0);
+[e :U 435 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 433 ]
-"291
-[; ;main.c: 291:     }
+[e :U 434 ]
+"266
+[; ;main.c: 266:     }
 }
-[e $U 435  ]
-"292
-[; ;main.c: 292:     else{
-[e :U 431 ]
+[e $U 436  ]
+"267
+[; ;main.c: 267:     else{
+[e :U 432 ]
 {
-"294
-[; ;main.c: 294:         do { LATCbits.LATC4 = 0; } while(0);
-[e :U 438 ]
+"269
+[; ;main.c: 269:         do { LATCbits.LATC4 = 0; } while(0);
+[e :U 439 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 437 ]
-"295
-[; ;main.c: 295:     }
+[e :U 438 ]
+"270
+[; ;main.c: 270:     }
 }
-[e :U 435 ]
-"297
-[; ;main.c: 297: }
-[e :UE 430 ]
+[e :U 436 ]
+"272
+[; ;main.c: 272: }
+[e :UE 431 ]
 }
-[v F3805 `(v ~T0 @X0 1 tf ]
-"300
-[; ;main.c: 300: __attribute__((inline)) void StartTouchDetection(void){
-[v _StartTouchDetection `TF3805 ~T0 @X0 1 e ]
+[v F3812 `(v ~T0 @X0 1 tf ]
+"275
+[; ;main.c: 275: __attribute__((inline)) void StartTouchDetection(void){
+[v _StartTouchDetection `TF3812 ~T0 @X0 1 e ]
 {
 [e :U _StartTouchDetection ]
 [f ]
+"277
+[; ;main.c: 277:     if (1 == MTOUCH_Service_Mainloop()) {
+[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 441  ]
+{
+"279
+[; ;main.c: 279:         if (1 == MTOUCH_Button_isPressed(T_start)){
+[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3620 0 `i 442  ]
+{
+"281
+[; ;main.c: 281:             StartStop_AlarmLED(1);
+[e ( _StartStop_AlarmLED (1 -> -> 1 `i `a ]
+"283
+[; ;main.c: 283:         }
+}
+[e $U 443  ]
+"284
+[; ;main.c: 284:         else{
+[e :U 442 ]
+{
+"286
+[; ;main.c: 286:             StartStop_AlarmLED(0);
+[e ( _StartStop_AlarmLED (1 -> -> 0 `i `a ]
+"288
+[; ;main.c: 288:         }
+}
+[e :U 443 ]
+"289
+[; ;main.c: 289:     }
+}
+[e :U 441 ]
+"290
+[; ;main.c: 290: }
+[e :UE 440 ]
+}
+[v F3814 `(v ~T0 @X0 1 tf ]
+"293
+[; ;main.c: 293: __attribute__((inline)) void StopTouchDetection(void){
+[v _StopTouchDetection `TF3814 ~T0 @X0 1 e ]
+{
+[e :U _StopTouchDetection ]
+[f ]
+"295
+[; ;main.c: 295:     if (1 == MTOUCH_Service_Mainloop()) {
+[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 445  ]
+{
+"297
+[; ;main.c: 297:         if (1 == MTOUCH_Button_isPressed(T_stop)){
+[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3620 1 `i 446  ]
+{
+"299
+[; ;main.c: 299:             StartStop_AlarmLED(1);
+[e ( _StartStop_AlarmLED (1 -> -> 1 `i `a ]
+"301
+[; ;main.c: 301:         }
+}
+[e $U 447  ]
 "302
-[; ;main.c: 302:     if (1 == MTOUCH_Service_Mainloop()) {
-[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 440  ]
+[; ;main.c: 302:         else{
+[e :U 446 ]
 {
 "304
-[; ;main.c: 304:         if (1 == MTOUCH_Button_isPressed(T_start)){
-[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3619 0 `i 441  ]
-{
-"306
-[; ;main.c: 306:             StartStop_AlarmLED(1);
-[e ( _StartStop_AlarmLED (1 -> -> 1 `i `a ]
-"308
-[; ;main.c: 308:         }
-}
-[e $U 442  ]
-"309
-[; ;main.c: 309:         else{
-[e :U 441 ]
-{
-"311
-[; ;main.c: 311:             StartStop_AlarmLED(0);
+[; ;main.c: 304:             StartStop_AlarmLED(0);
 [e ( _StartStop_AlarmLED (1 -> -> 0 `i `a ]
-"313
-[; ;main.c: 313:         }
+"306
+[; ;main.c: 306:         }
 }
-[e :U 442 ]
-"314
-[; ;main.c: 314:     }
+[e :U 447 ]
+"307
+[; ;main.c: 307:     }
 }
-[e :U 440 ]
-"315
-[; ;main.c: 315: }
-[e :UE 439 ]
+[e :U 445 ]
+"309
+[; ;main.c: 309: }
+[e :UE 444 ]
 }
-[v F3807 `(us ~T0 @X0 1 tf1`f ]
-"318
-[; ;main.c: 318: __attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float dim_percentage){
-[v _CalcRequiredDelayForTrigTRIAC `TF3807 ~T0 @X0 1 e ]
+[v F3816 `(us ~T0 @X0 1 tf1`f ]
+"312
+[; ;main.c: 312: __attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float dim_percentage){
+[v _CalcRequiredDelayForTrigTRIAC `TF3816 ~T0 @X0 1 e ]
 {
 [e :U _CalcRequiredDelayForTrigTRIAC ]
 [v _dim_percentage `f ~T0 @X0 1 r1 ]
 [f ]
-"320
-[; ;main.c: 320:     float delay;
+"314
+[; ;main.c: 314:     float delay;
 [v _delay `f ~T0 @X0 1 a ]
-"321
-[; ;main.c: 321:     uint16_t ret;
+"315
+[; ;main.c: 315:     uint16_t ret;
 [v _ret `us ~T0 @X0 1 a ]
-"323
-[; ;main.c: 323:     delay = HalfCycleACDuration_const - (5.0 * dim_percentage / 50.0);
+"317
+[; ;main.c: 317:     delay = HalfCycleACDuration_const - (5.0 * dim_percentage / 50.0);
 [e = _delay -> - -> _HalfCycleACDuration_const `d / * .5.0 -> _dim_percentage `d .50.0 `f ]
-"324
-[; ;main.c: 324:     ret = (delay * 1000) / TMR2_Period_const;
+"318
+[; ;main.c: 318:     ret = (delay * 1000) / TMR2_Period_const;
 [e = _ret -> / * _delay -> -> 1000 `i `f _TMR2_Period_const `us ]
-"326
-[; ;main.c: 326:     return ret;
+"320
+[; ;main.c: 320:     return ret;
 [e ) _ret ]
-[e $UE 443  ]
-"327
-[; ;main.c: 327: }
-[e :UE 443 ]
+[e $UE 448  ]
+"321
+[; ;main.c: 321: }
+[e :UE 448 ]
 }
-[p f _sprintf 8396800 ]
-[a 1C 37 102 32 67 101 108 115 105 117 115 10 0 ]

@@ -88,6 +88,14 @@ enum mtouch_button_state
             0,0,0,0,0, /* non-const variables */
             (mtouch_button_deviation_t)MTOUCH_BUTTON_THRESHOLD_T_start, /* threshold */
             (mtouch_button_scaling_t)MTOUCH_BUTTON_SCALING_T_start /* scaling */
+        },
+        /* T_stop */
+        {   T_stop, 
+            MTOUCH_BUTTON_SENSOR_T_stop,
+            MTOUCH_BUTTON_STATE_initializing,
+            0,0,0,0,0, /* non-const variables */
+            (mtouch_button_deviation_t)MTOUCH_BUTTON_THRESHOLD_T_stop, /* threshold */
+            (mtouch_button_scaling_t)MTOUCH_BUTTON_SCALING_T_stop /* scaling */
         }
     };
     
@@ -280,7 +288,11 @@ static void Button_State_Pressed(mtouch_button_t* button)
  */
 void MTOUCH_Button_Tick(void)
 {
-    Button_Tick_helper(&mtouch_button[0]);
+    uint8_t i;
+    for (i = 0; i < MTOUCH_BUTTONS; i++)
+    {
+        Button_Tick_helper(&mtouch_button[i]);
+    }
 }
 static void Button_Tick_helper(mtouch_button_t* button)
 {

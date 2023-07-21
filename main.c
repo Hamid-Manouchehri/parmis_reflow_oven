@@ -1,44 +1,7 @@
 /**
-  Generated Main Source File
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    main.c
-
-  Summary:
-    This is the main file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
-
-  Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
-    Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
-        Device            :  PIC16F1829
-        Driver Version    :  2.00
-*/
-
-/*
-    (c) 2018 Microchip Technology Inc. and its subsidiaries. 
-    
-    Subject to your compliance with these terms, you may use Microchip software and any 
-    derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
-    license terms applicable to your use of third party software (including open source software) that 
-    may accompany Microchip software.
-    
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
-    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
-    FOR A PARTICULAR PURPOSE.
-    
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP 
-    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO 
-    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL 
-    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
-    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
-    SOFTWARE.
+  Author: Hamid Manouchehri
+  Date: July 14, 2023
+  
 */
 
 #include <stdint.h>
@@ -53,7 +16,7 @@
 #define  ON              true
 #define  OFF             false
 
-#define DIM_PERCENT      25 // range: 5-95 percent <TODO>
+#define  DIM_PERCENT     25 // range: 5-95 percent <TODO>
 
 #define  Z1  -3.9083E-03   /* Datasheet AN709-0 */
 #define  Z2  17.58480889E-06
@@ -79,12 +42,14 @@ inline uint16_t Read_ADC_Num(void);
 inline float ChangeADCtoVoltage(uint16_t);
 inline float Measure_R_PT100_2Wire(float);
 inline float Measure_Temp_PT100_2Wire(float);
+inline float Read_PT100_Temp(void);
 void Zero_Detection_isr(void);
  void TMR2_Int_isr(void);
 inline void StartStop_AlarmLED(bool);
 inline void StartStop_Fan(bool);
 inline void StartStop_Buzzer(bool);
 inline void StartTouchDetection(void);
+inline void StopTouchDetection(void);
 inline uint16_t CalcRequiredDelayForTrigTRIAC(float);
 
 
@@ -101,36 +66,21 @@ void main(void){
     Init_Function();
     StartStop_AlarmLED(ON); // to indicate PCB has power.
     
-    required_delay_for_dim_ms_g = CalcRequiredDelayForTrigTRIAC(DIM_PERCENT);
-    
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
     
-    IOCAF2_SetInterruptHandler(Zero_Detection_isr);
-    TMR2_SetInterruptHandler(TMR2_Int_isr);
+//    IOCAF2_SetInterruptHandler(Zero_Detection_isr); // internal pull-up of the RA2 must be enabled.
+//    TMR2_SetInterruptHandler(TMR2_Int_isr); // For measuring the required delay for dim.
     
-    uint16_t ADC_num = 0;
-    float ADC_volt = 0;
-    float R_PT100 = 0;
-    float Temp_PT100 = 0;
-    
-    ADC_SelectChannel(channel_AN10);
-
+    float Temp_PT100 = 0.0;
     
     while (1){
        
-        ADC_StartConversion();
-//        
-        ADC_num = Read_ADC_Num();
-////        sprintf(Buff_g, "ADC number: %d \n", ADC_num);
-        ADC_volt = ChangeADCtoVoltage(ADC_num);
-////        sprintf(Buff_g, "ADC number: %f v\n", ADC_volt);
-        R_PT100 = Measure_R_PT100_2Wire(ADC_volt);
-//        sprintf(Buff_g, "R PT100: %f ohm\n", R_PT100);
-        Temp_PT100 = Measure_Temp_PT100_2Wire(R_PT100);
-        sprintf(Buff_g, "%f Celsius\n", Temp_PT100);
-        TX_Whole_String(Buff_g);
-        __delay_ms(500);
+        StopTouchDetection();
+//        Temp_PT100 = Read_PT100_Temp();
+//        sprintf(Buff_g, "%f Celsius\n", Temp_PT100);
+//        TX_Whole_String(Buff_g);
+//        __delay_ms(500);
         
     } // end of while(1)
 } // end of main()
@@ -148,6 +98,10 @@ inline void Init_Function(void){
     StartStop_Fan(OFF);
     StartStop_Buzzer(OFF);
     IO_RC5_trig_TRIAC_SetLow();
+    
+    ADC_SelectChannel(channel_AN10);
+    
+    required_delay_for_dim_ms_g = CalcRequiredDelayForTrigTRIAC(DIM_PERCENT);
     
 }
 
@@ -209,7 +163,7 @@ inline float Measure_R_PT100_2Wire(float ADC_volt){
     
     float R_PT100 = 0;
     
-    R_PT100 = R_const * ADC_volt / (R_const - ADC_volt);
+    R_PT100 = R_const * ADC_volt / (V_cc_const - ADC_volt);
     
     return R_PT100;
     
@@ -224,6 +178,27 @@ inline float Measure_Temp_PT100_2Wire(float R_PT100){
     
     return Temp_PT100;
     
+}
+
+
+inline float Read_PT100_Temp(void){
+    
+    uint16_t ADC_num = 0;
+    float ADC_volt = 0;
+    float R_PT100 = 0;
+    float Temp_PT100 = 0;
+    
+    ADC_StartConversion();
+
+    ADC_num = Read_ADC_Num();
+//    sprintf(Buff_g, "ADC number: %d \n", ADC_num);
+    ADC_volt = ChangeADCtoVoltage(ADC_num);
+//    sprintf(Buff_g, "V-adc: %f v\n", ADC_volt);
+    R_PT100 = Measure_R_PT100_2Wire(ADC_volt);
+//    sprintf(Buff_g, "R PT100: %f ohm\n", R_PT100);
+    Temp_PT100 = Measure_Temp_PT100_2Wire(R_PT100);
+    
+    return Temp_PT100;    
 }
 
 
@@ -298,6 +273,7 @@ inline void StartStop_Buzzer(bool OnOff){
 
 
 inline void StartTouchDetection(void){
+    /* To use; just call this function where ever you want to detect touch*/
    
     if (true == MTOUCH_Service_Mainloop()) {
 
@@ -312,6 +288,26 @@ inline void StartTouchDetection(void){
 
         }
     }    
+}
+
+
+inline void StopTouchDetection(void){
+    /* To use; just call this function where ever you want to detect touch*/
+    
+    if (true == MTOUCH_Service_Mainloop()) {
+
+        if (true == MTOUCH_Button_isPressed(T_stop)){ // touch pressed:
+
+            StartStop_AlarmLED(ON);
+
+        }            
+        else{
+
+            StartStop_AlarmLED(OFF);
+
+        }
+    }
+    
 }
 
 

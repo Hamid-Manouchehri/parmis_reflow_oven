@@ -44,7 +44,8 @@
     
     enum mtouch_sensor_names
     {
-        Sensor_AN8 = 0
+        Sensor_AN8 = 0,
+        Sensor_AN9 = 1
     };
     
     enum mtouch_sensor_error

@@ -4562,7 +4562,8 @@ extern __bank0 __bit __timeout;
 
     enum mtouch_sensor_names
     {
-        Sensor_AN8 = 0
+        Sensor_AN8 = 0,
+        Sensor_AN9 = 1
     };
 
     enum mtouch_sensor_error
@@ -4586,7 +4587,7 @@ extern __bank0 __bit __timeout;
 
 
     typedef uint8_t mtouch_sensor_mask_t;
-# 80 "mcc_generated_files/mtouch/mtouch_sensor.h"
+# 81 "mcc_generated_files/mtouch/mtouch_sensor.h"
     enum mtouch_sensor_error MTOUCH_Sensor_Initialize (enum mtouch_sensor_names sensor);
     void MTOUCH_Sensor_Scan_Initialize (void);
     void MTOUCH_Sensor_InitializeAll (void);
@@ -4632,7 +4633,8 @@ extern __bank0 __bit __timeout;
 
     enum mtouch_button_names
     {
-        T_start = 0
+        T_start = 0,
+        T_stop = 1
     };
 
 
@@ -4669,7 +4671,7 @@ extern __bank0 __bit __timeout;
 
 
     typedef uint8_t mtouch_button_scaling_t;
-# 100 "mcc_generated_files/mtouch/mtouch_button.h"
+# 101 "mcc_generated_files/mtouch/mtouch_button.h"
     void MTOUCH_Button_SetPressedCallback (void (*callback)(enum mtouch_button_names button));
     void MTOUCH_Button_SetNotPressedCallback(void (*callback)(enum mtouch_button_names button));
 
@@ -4708,17 +4710,17 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/mtouch/../mcc.h" 2
 
 # 1 "mcc_generated_files/mtouch/../pin_manager.h" 1
-# 225 "mcc_generated_files/mtouch/../pin_manager.h"
-void PIN_MANAGER_Initialize (void);
 # 237 "mcc_generated_files/mtouch/../pin_manager.h"
+void PIN_MANAGER_Initialize (void);
+# 249 "mcc_generated_files/mtouch/../pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 250 "mcc_generated_files/mtouch/../pin_manager.h"
+# 262 "mcc_generated_files/mtouch/../pin_manager.h"
 void IOCAF2_ISR(void);
-# 273 "mcc_generated_files/mtouch/../pin_manager.h"
+# 285 "mcc_generated_files/mtouch/../pin_manager.h"
 void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 297 "mcc_generated_files/mtouch/../pin_manager.h"
+# 309 "mcc_generated_files/mtouch/../pin_manager.h"
 extern void (*IOCAF2_InterruptHandler)(void);
-# 321 "mcc_generated_files/mtouch/../pin_manager.h"
+# 333 "mcc_generated_files/mtouch/../pin_manager.h"
 void IOCAF2_DefaultInterruptHandler(void);
 # 51 "mcc_generated_files/mtouch/../mcc.h" 2
 

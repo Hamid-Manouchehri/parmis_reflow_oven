@@ -507,195 +507,339 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 53:     __asm("BANKSEL        " "LATC");
 [; <" BANKSEL        LATC ;# ">
 "54
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 54:     __asm("bsf            " "LATC" " & 0x7F," "6");
-[; <" bsf            LATC & 0x7F,6 ;# ">
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 54:     __asm("bsf            " "LATC" "& 0x7F," "7");
+[; <" bsf            LATC& 0x7F,7 ;# ">
 "57
 [; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 57:     __asm("BANKSEL        ADCON0");
 [; <" BANKSEL        ADCON0 ;# ">
 "58
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 58:     __asm("movlw          " "( 0x8<<2 | 0x1 )");
-[; <" movlw          ( 0x8<<2 | 0x1 ) ;# ">
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 58:     __asm("movlw          " "( 0x9<<2 | 0x1 )");
+[; <" movlw          ( 0x9<<2 | 0x1 ) ;# ">
 "59
 [; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 59:     __asm("movwf          ADCON0 & 0x7F");
 [; <" movwf          ADCON0 & 0x7F ;# ">
 "62
 [; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 62:     _delay(16u);
 [e ( __delay (1 -> -> 16 `ui `ul ]
-"65
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 65:     __asm("movlw          113");
-[; <" movlw          113 ;# ">
 "66
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 66:     __asm("movwf          ADCON0 & 0x7F");
-[; <" movwf          ADCON0 & 0x7F ;# ">
-"67
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 67:     __asm("BANKSEL        " "LATC");
-[; <" BANKSEL        LATC ;# ">
-"68
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 68:     __asm("bcf            " "LATC" " & 0x7F," "6");
-[; <" bcf            LATC & 0x7F,6 ;# ">
-"69
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 69:     __asm("BANKSEL        ADCON0");
-[; <" BANKSEL        ADCON0 ;# ">
-"72
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 72:     __asm("movlw LOW      " "TRISC");
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 66:     __asm("movlw LOW      " "TRISC");
 [; <" movlw LOW      TRISC ;# ">
-"73
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 73:     __asm("movwf          FSR0L & 0x7F");
+"67
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 67:     __asm("movwf          FSR0L & 0x7F");
 [; <" movwf          FSR0L & 0x7F ;# ">
-"74
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 74:     __asm("movlw HIGH     " "TRISC");
+"68
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 68:     __asm("movlw HIGH     " "TRISC");
 [; <" movlw HIGH     TRISC ;# ">
-"75
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 75:     __asm("movwf          FSR0H & 0x7F");
+"69
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 69:     __asm("movwf          FSR0H & 0x7F");
 [; <" movwf          FSR0H & 0x7F ;# ">
-"78
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 78:     __asm("movlw LOW      " "LATC");
+"72
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 72:     __asm("movlw LOW      " "LATC");
 [; <" movlw LOW      LATC ;# ">
-"79
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 79:     __asm("movwf          FSR1L & 0x7F");
+"73
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 73:     __asm("movwf          FSR1L & 0x7F");
 [; <" movwf          FSR1L & 0x7F ;# ">
-"80
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 80:     __asm("movlw HIGH     " "LATC");
+"74
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 74:     __asm("movlw HIGH     " "LATC");
 [; <" movlw HIGH     LATC ;# ">
-"81
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 81:     __asm("movwf          FSR1H & 0x7F");
+"75
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 75:     __asm("movwf          FSR1H & 0x7F");
 [; <" movwf          FSR1H & 0x7F ;# ">
-"84
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 84:     __asm("movlw          " "( 0x8<<2 | 0x1 )");
+"78
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 78:     __asm("movlw          " "( 0x8<<2 | 0x1 )");
 [; <" movlw          ( 0x8<<2 | 0x1 ) ;# ">
-"85
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 85:     __asm("bsf            INDF0 & 0x7F, " "6");
+"79
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 79:     __asm("bsf            INDF0 & 0x7F, " "6");
 [; <" bsf            INDF0 & 0x7F, 6 ;# ">
-"86
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 86:     _delay(0u);
+"80
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 80:     _delay(0u);
 [e ( __delay (1 -> -> 0 `ui `ul ]
-"87
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 87:     __asm("movwf          ADCON0 & 0x7F");
+"81
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 81:     __asm("movwf          ADCON0 & 0x7F");
 [; <" movwf          ADCON0 & 0x7F ;# ">
-"92
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 92:     _delay(8u);
+"86
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 86:     _delay(8u);
 [e ( __delay (1 -> -> 8 `ui `ul ]
-"95
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 95:     __asm("BANKSEL        ADCON0");
+"89
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 89:     __asm("BANKSEL        ADCON0");
 [; <" BANKSEL        ADCON0 ;# ">
-"96
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 96:     __asm("bsf            ADCON0 & 0x7F, 1");
+"90
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 90:     __asm("bsf            ADCON0 & 0x7F, 1");
 [; <" bsf            ADCON0 & 0x7F, 1 ;# ">
-"99
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 99:     _delay(3u);
+"93
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 93:     _delay(3u);
 [e ( __delay (1 -> -> 3 `ui `ul ]
-"102
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 102:     __asm("BANKSEL        " "LATC");
+"96
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 96:     __asm("BANKSEL        " "LATC");
 [; <" BANKSEL        LATC ;# ">
-"103
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 103:     __asm("bsf            " "LATC" " & 0x7F, " "6");
+"97
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 97:     __asm("bsf            " "LATC" " & 0x7F, " "6");
 [; <" bsf            LATC & 0x7F, 6 ;# ">
-"104
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 104:     __asm("bcf            INDF0 & 0x7F, " "6");
+"98
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 98:     __asm("bcf            INDF0 & 0x7F, " "6");
 [; <" bcf            INDF0 & 0x7F, 6 ;# ">
-"106
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 106: }
+"100
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 100: }
 [e :UE 372 ]
 }
-"119
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 119: void MTOUCH_CVD_ScanB_0(void)
+"113
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 113: void MTOUCH_CVD_ScanB_0(void)
 [v _MTOUCH_CVD_ScanB_0 `(v ~T0 @X0 1 ef ]
-"120
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 120: {
+"114
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 114: {
 {
 [e :U _MTOUCH_CVD_ScanB_0 ]
 [f ]
+"116
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 116:     __asm("BANKSEL        " "LATC");
+[; <" BANKSEL        LATC ;# ">
+"117
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 117:     __asm("bcf            " "LATC" " & 0x7F," "7");
+[; <" bcf            LATC & 0x7F,7 ;# ">
+"120
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 120:     __asm("BANKSEL        ADCON0");
+[; <" BANKSEL        ADCON0 ;# ">
+"121
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 121:     __asm("movlw          " "( 0x9<<2 | 0x1 )");
+[; <" movlw          ( 0x9<<2 | 0x1 ) ;# ">
 "122
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 122:     __asm("BANKSEL        " "LATC");
-[; <" BANKSEL        LATC ;# ">
-"123
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 123:     __asm("bcf            " "LATC" " & 0x7F," "6");
-[; <" bcf            LATC & 0x7F,6 ;# ">
-"126
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 126:     __asm("BANKSEL        ADCON0");
-[; <" BANKSEL        ADCON0 ;# ">
-"127
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 127:     __asm("movlw          " "( 0x8<<2 | 0x1 )");
-[; <" movlw          ( 0x8<<2 | 0x1 ) ;# ">
-"128
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 128:     __asm("movwf          ADCON0 & 0x7F");
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 122:     __asm("movwf          ADCON0 & 0x7F");
 [; <" movwf          ADCON0 & 0x7F ;# ">
-"131
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 131:     _delay(16u);
+"125
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 125:     _delay(16u);
 [e ( __delay (1 -> -> 16 `ui `ul ]
-"134
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 134:     __asm("movlw          113");
-[; <" movlw          113 ;# ">
-"135
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 135:     __asm("movwf          ADCON0 & 0x7F");
-[; <" movwf          ADCON0 & 0x7F ;# ">
-"136
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 136:     __asm("BANKSEL        " "LATC");
-[; <" BANKSEL        LATC ;# ">
-"137
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 137:     __asm("bsf            " "LATC" " & 0x7F," "6");
-[; <" bsf            LATC & 0x7F,6 ;# ">
-"138
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 138:     __asm("BANKSEL        ADCON0");
-[; <" BANKSEL        ADCON0 ;# ">
-"141
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 141:     __asm("movlw LOW      " "TRISC");
+"129
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 129:     __asm("movlw LOW      " "TRISC");
 [; <" movlw LOW      TRISC ;# ">
-"142
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 142:     __asm("movwf          FSR0L & 0x7F");
+"130
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 130:     __asm("movwf          FSR0L & 0x7F");
 [; <" movwf          FSR0L & 0x7F ;# ">
-"143
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 143:     __asm("movlw HIGH     " "TRISC");
+"131
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 131:     __asm("movlw HIGH     " "TRISC");
 [; <" movlw HIGH     TRISC ;# ">
-"144
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 144:     __asm("movwf          FSR0H & 0x7F");
+"132
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 132:     __asm("movwf          FSR0H & 0x7F");
 [; <" movwf          FSR0H & 0x7F ;# ">
-"147
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 147:     __asm("movlw LOW      " "LATC");
+"135
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 135:     __asm("movlw LOW      " "LATC");
 [; <" movlw LOW      LATC ;# ">
-"148
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 148:     __asm("movwf          FSR1L & 0x7F");
+"136
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 136:     __asm("movwf          FSR1L & 0x7F");
 [; <" movwf          FSR1L & 0x7F ;# ">
-"149
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 149:     __asm("movlw HIGH     " "LATC");
+"137
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 137:     __asm("movlw HIGH     " "LATC");
 [; <" movlw HIGH     LATC ;# ">
-"150
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 150:     __asm("movwf          FSR1H & 0x7F");
+"138
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 138:     __asm("movwf          FSR1H & 0x7F");
 [; <" movwf          FSR1H & 0x7F ;# ">
-"153
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 153:     __asm("movlw          " "( 0x8<<2 | 0x1 )");
+"141
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 141:     __asm("movlw          " "( 0x8<<2 | 0x1 )");
 [; <" movlw          ( 0x8<<2 | 0x1 ) ;# ">
-"154
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 154:     __asm("bsf            INDF0 & 0x7F, " "6");
+"142
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 142:     __asm("bsf            INDF0 & 0x7F, " "6");
 [; <" bsf            INDF0 & 0x7F, 6 ;# ">
-"155
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 155:     _delay(0u);
+"143
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 143:     _delay(0u);
 [e ( __delay (1 -> -> 0 `ui `ul ]
-"156
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 156:     __asm("movwf          ADCON0 & 0x7F");
+"144
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 144:     __asm("movwf          ADCON0 & 0x7F");
 [; <" movwf          ADCON0 & 0x7F ;# ">
-"162
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 162:     _delay(8u);
+"150
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 150:     _delay(8u);
 [e ( __delay (1 -> -> 8 `ui `ul ]
-"165
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 165:     __asm("BANKSEL        ADCON0");
+"153
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 153:     __asm("BANKSEL        ADCON0");
 [; <" BANKSEL        ADCON0 ;# ">
-"166
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 166:     __asm("bsf            ADCON0 & 0x7F, 1");
+"154
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 154:     __asm("bsf            ADCON0 & 0x7F, 1");
 [; <" bsf            ADCON0 & 0x7F, 1 ;# ">
-"169
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 169:     _delay(3u);
+"157
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 157:     _delay(3u);
 [e ( __delay (1 -> -> 3 `ui `ul ]
-"172
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 172:     __asm("BANKSEL        " "LATC");
+"160
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 160:     __asm("BANKSEL        " "LATC");
 [; <" BANKSEL        LATC ;# ">
-"173
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 173:     __asm("bcf            " "LATC" " & 0x7F, " "6");
+"161
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 161:     __asm("bcf            " "LATC" " & 0x7F, " "6");
 [; <" bcf            LATC & 0x7F, 6 ;# ">
-"174
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 174:     __asm("bcf            INDF0 & 0x7F, " "6");
+"162
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 162:     __asm("bcf            INDF0 & 0x7F, " "6");
 [; <" bcf            INDF0 & 0x7F, 6 ;# ">
-"176
-[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 176: }
+"164
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 164: }
 [e :UE 373 ]
+}
+"177
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 177: void MTOUCH_CVD_ScanA_1(void)
+[v _MTOUCH_CVD_ScanA_1 `(v ~T0 @X0 1 ef ]
+"178
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 178: {
+{
+[e :U _MTOUCH_CVD_ScanA_1 ]
+[f ]
+"180
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 180:     __asm("BANKSEL        " "LATC");
+[; <" BANKSEL        LATC ;# ">
+"181
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 181:     __asm("bsf            " "LATC" "& 0x7F," "6");
+[; <" bsf            LATC& 0x7F,6 ;# ">
+"184
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 184:     __asm("BANKSEL        ADCON0");
+[; <" BANKSEL        ADCON0 ;# ">
+"185
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 185:     __asm("movlw          " "( 0x8<<2 | 0x1 )");
+[; <" movlw          ( 0x8<<2 | 0x1 ) ;# ">
+"186
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 186:     __asm("movwf          ADCON0 & 0x7F");
+[; <" movwf          ADCON0 & 0x7F ;# ">
+"189
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 189:     _delay(16u);
+[e ( __delay (1 -> -> 16 `ui `ul ]
+"193
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 193:     __asm("movlw LOW      " "TRISC");
+[; <" movlw LOW      TRISC ;# ">
+"194
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 194:     __asm("movwf          FSR0L & 0x7F");
+[; <" movwf          FSR0L & 0x7F ;# ">
+"195
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 195:     __asm("movlw HIGH     " "TRISC");
+[; <" movlw HIGH     TRISC ;# ">
+"196
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 196:     __asm("movwf          FSR0H & 0x7F");
+[; <" movwf          FSR0H & 0x7F ;# ">
+"199
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 199:     __asm("movlw LOW      " "LATC");
+[; <" movlw LOW      LATC ;# ">
+"200
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 200:     __asm("movwf          FSR1L & 0x7F");
+[; <" movwf          FSR1L & 0x7F ;# ">
+"201
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 201:     __asm("movlw HIGH     " "LATC");
+[; <" movlw HIGH     LATC ;# ">
+"202
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 202:     __asm("movwf          FSR1H & 0x7F");
+[; <" movwf          FSR1H & 0x7F ;# ">
+"205
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 205:     __asm("movlw          " "( 0x9<<2 | 0x1 )");
+[; <" movlw          ( 0x9<<2 | 0x1 ) ;# ">
+"206
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 206:     __asm("bsf            INDF0 & 0x7F, " "7");
+[; <" bsf            INDF0 & 0x7F, 7 ;# ">
+"207
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 207:     _delay(0u);
+[e ( __delay (1 -> -> 0 `ui `ul ]
+"208
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 208:     __asm("movwf          ADCON0 & 0x7F");
+[; <" movwf          ADCON0 & 0x7F ;# ">
+"213
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 213:     _delay(8u);
+[e ( __delay (1 -> -> 8 `ui `ul ]
+"216
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 216:     __asm("BANKSEL        ADCON0");
+[; <" BANKSEL        ADCON0 ;# ">
+"217
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 217:     __asm("bsf            ADCON0 & 0x7F, 1");
+[; <" bsf            ADCON0 & 0x7F, 1 ;# ">
+"220
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 220:     _delay(3u);
+[e ( __delay (1 -> -> 3 `ui `ul ]
+"223
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 223:     __asm("BANKSEL        " "LATC");
+[; <" BANKSEL        LATC ;# ">
+"224
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 224:     __asm("bsf            " "LATC" " & 0x7F, " "7");
+[; <" bsf            LATC & 0x7F, 7 ;# ">
+"225
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 225:     __asm("bcf            INDF0 & 0x7F, " "7");
+[; <" bcf            INDF0 & 0x7F, 7 ;# ">
+"227
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 227: }
+[e :UE 374 ]
+}
+"240
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 240: void MTOUCH_CVD_ScanB_1(void)
+[v _MTOUCH_CVD_ScanB_1 `(v ~T0 @X0 1 ef ]
+"241
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 241: {
+{
+[e :U _MTOUCH_CVD_ScanB_1 ]
+[f ]
+"243
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 243:     __asm("BANKSEL        " "LATC");
+[; <" BANKSEL        LATC ;# ">
+"244
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 244:     __asm("bcf            " "LATC" " & 0x7F," "6");
+[; <" bcf            LATC & 0x7F,6 ;# ">
+"247
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 247:     __asm("BANKSEL        ADCON0");
+[; <" BANKSEL        ADCON0 ;# ">
+"248
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 248:     __asm("movlw          " "( 0x8<<2 | 0x1 )");
+[; <" movlw          ( 0x8<<2 | 0x1 ) ;# ">
+"249
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 249:     __asm("movwf          ADCON0 & 0x7F");
+[; <" movwf          ADCON0 & 0x7F ;# ">
+"252
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 252:     _delay(16u);
+[e ( __delay (1 -> -> 16 `ui `ul ]
+"256
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 256:     __asm("movlw LOW      " "TRISC");
+[; <" movlw LOW      TRISC ;# ">
+"257
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 257:     __asm("movwf          FSR0L & 0x7F");
+[; <" movwf          FSR0L & 0x7F ;# ">
+"258
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 258:     __asm("movlw HIGH     " "TRISC");
+[; <" movlw HIGH     TRISC ;# ">
+"259
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 259:     __asm("movwf          FSR0H & 0x7F");
+[; <" movwf          FSR0H & 0x7F ;# ">
+"262
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 262:     __asm("movlw LOW      " "LATC");
+[; <" movlw LOW      LATC ;# ">
+"263
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 263:     __asm("movwf          FSR1L & 0x7F");
+[; <" movwf          FSR1L & 0x7F ;# ">
+"264
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 264:     __asm("movlw HIGH     " "LATC");
+[; <" movlw HIGH     LATC ;# ">
+"265
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 265:     __asm("movwf          FSR1H & 0x7F");
+[; <" movwf          FSR1H & 0x7F ;# ">
+"268
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 268:     __asm("movlw          " "( 0x9<<2 | 0x1 )");
+[; <" movlw          ( 0x9<<2 | 0x1 ) ;# ">
+"269
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 269:     __asm("bsf            INDF0 & 0x7F, " "7");
+[; <" bsf            INDF0 & 0x7F, 7 ;# ">
+"270
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 270:     _delay(0u);
+[e ( __delay (1 -> -> 0 `ui `ul ]
+"271
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 271:     __asm("movwf          ADCON0 & 0x7F");
+[; <" movwf          ADCON0 & 0x7F ;# ">
+"277
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 277:     _delay(8u);
+[e ( __delay (1 -> -> 8 `ui `ul ]
+"280
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 280:     __asm("BANKSEL        ADCON0");
+[; <" BANKSEL        ADCON0 ;# ">
+"281
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 281:     __asm("bsf            ADCON0 & 0x7F, 1");
+[; <" bsf            ADCON0 & 0x7F, 1 ;# ">
+"284
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 284:     _delay(3u);
+[e ( __delay (1 -> -> 3 `ui `ul ]
+"287
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 287:     __asm("BANKSEL        " "LATC");
+[; <" BANKSEL        LATC ;# ">
+"288
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 288:     __asm("bcf            " "LATC" " & 0x7F, " "7");
+[; <" bcf            LATC & 0x7F, 7 ;# ">
+"289
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 289:     __asm("bcf            INDF0 & 0x7F, " "7");
+[; <" bcf            INDF0 & 0x7F, 7 ;# ">
+"291
+[; ;mcc_generated_files/mtouch/mtouch_sensor_scan.c: 291: }
+[e :UE 375 ]
 }

@@ -132,7 +132,8 @@ typedef uint32_t uint_fast32_t;
 
     enum mtouch_sensor_names
     {
-        Sensor_AN8 = 0
+        Sensor_AN8 = 0,
+        Sensor_AN9 = 1
     };
 
     enum mtouch_sensor_error
@@ -156,7 +157,7 @@ typedef uint32_t uint_fast32_t;
 
 
     typedef uint8_t mtouch_sensor_mask_t;
-# 80 "mcc_generated_files/mtouch/mtouch_sensor.h"
+# 81 "mcc_generated_files/mtouch/mtouch_sensor.h"
     enum mtouch_sensor_error MTOUCH_Sensor_Initialize (enum mtouch_sensor_names sensor);
     void MTOUCH_Sensor_Scan_Initialize (void);
     void MTOUCH_Sensor_InitializeAll (void);
@@ -202,7 +203,8 @@ typedef uint32_t uint_fast32_t;
 
     enum mtouch_button_names
     {
-        T_start = 0
+        T_start = 0,
+        T_stop = 1
     };
 
 
@@ -239,7 +241,7 @@ typedef uint32_t uint_fast32_t;
 
 
     typedef uint8_t mtouch_button_scaling_t;
-# 100 "mcc_generated_files/mtouch/mtouch_button.h"
+# 101 "mcc_generated_files/mtouch/mtouch_button.h"
     void MTOUCH_Button_SetPressedCallback (void (*callback)(enum mtouch_button_names button));
     void MTOUCH_Button_SetNotPressedCallback(void (*callback)(enum mtouch_button_names button));
 

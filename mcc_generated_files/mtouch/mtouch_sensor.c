@@ -132,6 +132,7 @@ static scanFunction                     Sensor_scanB = MTOUCH_CVD_ScanB_0;
  */
 static mtouch_sensor_t mtouch_sensor[MTOUCH_SENSORS] ={
     {Sensor_AN8,MTOUCH_CVD_ScanA_0,MTOUCH_CVD_ScanB_0, MTOUCH_S0_OVERSAMPLING,0,0,0,0},
+    {Sensor_AN9,MTOUCH_CVD_ScanA_1,MTOUCH_CVD_ScanB_1, MTOUCH_S1_OVERSAMPLING,0,0,0,0},
 };
 
 /*

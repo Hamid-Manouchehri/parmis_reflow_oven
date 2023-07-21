@@ -49,7 +49,7 @@
     #define MTOUCH_BUTTONS_ENABLE   1u
 
 #if (MTOUCH_BUTTONS_ENABLE == 1u)    
-    #define MTOUCH_BUTTONS          1u
+    #define MTOUCH_BUTTONS          2u
 #else
     #define MTOUCH_BUTTONS          0u
 #endif
@@ -67,12 +67,12 @@
  
     /*** Sensor_AN8 ***/
     #define MTOUCH_S0_ADCON0_SENSOR              ( 0x8<<2 | 0x1 )
-    #define MTOUCH_S0_REF_ADCON0                 ( 0x8<<2 | 0x1 )
+    #define MTOUCH_S0_REF_ADCON0                 ( 0x9<<2 | 0x1 )
     #define MTOUCH_S0_LAT                        LATC
     #define MTOUCH_S0_TRIS                       TRISC
     #define MTOUCH_S0_PIN                        6
     #define MTOUCH_S0_REF_LAT                    LATC
-    #define MTOUCH_S0_REF_PIN                    6
+    #define MTOUCH_S0_REF_PIN                    7
     #define MTOUCH_S0_GUARD_LAT                  LAT
     #define MTOUCH_S0_GUARD_PIN                  
     #define MTOUCH_S0_PRECHARGE_TIME             16u
@@ -81,6 +81,22 @@
     #define MTOUCH_S0_DISCON_TIME                3u
     /*-----------------------------------------------------------------------------*/
     #define MTOUCH_S0_OVERSAMPLING               32u
+    /*** Sensor_AN9 ***/
+    #define MTOUCH_S1_ADCON0_SENSOR              ( 0x9<<2 | 0x1 )
+    #define MTOUCH_S1_REF_ADCON0                 ( 0x8<<2 | 0x1 )
+    #define MTOUCH_S1_LAT                        LATC
+    #define MTOUCH_S1_TRIS                       TRISC
+    #define MTOUCH_S1_PIN                        7
+    #define MTOUCH_S1_REF_LAT                    LATC
+    #define MTOUCH_S1_REF_PIN                    6
+    #define MTOUCH_S1_GUARD_LAT                  LAT
+    #define MTOUCH_S1_GUARD_PIN                  
+    #define MTOUCH_S1_PRECHARGE_TIME             16u
+    #define MTOUCH_S1_ACQUISITION_TIME           8u
+    #define MTOUCH_S1_SWITCH_TIME                0u
+    #define MTOUCH_S1_DISCON_TIME                3u
+    /*-----------------------------------------------------------------------------*/
+    #define MTOUCH_S1_OVERSAMPLING               32u
     #define MTOUCH_SENSOR_ACTIVE_THRESHOLD               100u  
 
     /* 
@@ -98,10 +114,13 @@
     #define MTOUCH_BUTTON_PRESSTIMEOUT              ((mtouch_button_statecounter_t)1000u)
 
     #define MTOUCH_BUTTON_SENSOR_T_start             Sensor_AN8
+    #define MTOUCH_BUTTON_SENSOR_T_stop             Sensor_AN9
 
     #define MTOUCH_BUTTON_THRESHOLD_T_start          100u
+    #define MTOUCH_BUTTON_THRESHOLD_T_stop          100u
     
     #define MTOUCH_BUTTON_SCALING_T_start            1u
+    #define MTOUCH_BUTTON_SCALING_T_stop            1u
 
     #define MTOUCH_BUTTON_COMMON_HYSTERESIS         HYST_50_PERCENT
     

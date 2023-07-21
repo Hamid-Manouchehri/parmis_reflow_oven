@@ -4603,7 +4603,7 @@ void ADC_Initialize(void)
 
 
 
-    ADCON1 = 0xA0;
+    ADCON1 = 0x10;
 
 
     ADRESL = 0x00;

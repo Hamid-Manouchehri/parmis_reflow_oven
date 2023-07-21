@@ -4560,7 +4560,8 @@ extern __bank0 __bit __timeout;
 
     enum mtouch_sensor_names
     {
-        Sensor_AN8 = 0
+        Sensor_AN8 = 0,
+        Sensor_AN9 = 1
     };
 
     enum mtouch_sensor_error
@@ -4584,7 +4585,7 @@ extern __bank0 __bit __timeout;
 
 
     typedef uint8_t mtouch_sensor_mask_t;
-# 80 "mcc_generated_files/mtouch/mtouch_sensor.h"
+# 81 "mcc_generated_files/mtouch/mtouch_sensor.h"
     enum mtouch_sensor_error MTOUCH_Sensor_Initialize (enum mtouch_sensor_names sensor);
     void MTOUCH_Sensor_Scan_Initialize (void);
     void MTOUCH_Sensor_InitializeAll (void);
@@ -4644,7 +4645,8 @@ extern __bank0 __bit __timeout;
 
     enum mtouch_button_names
     {
-        T_start = 0
+        T_start = 0,
+        T_stop = 1
     };
 
 
@@ -4681,7 +4683,7 @@ extern __bank0 __bit __timeout;
 
 
     typedef uint8_t mtouch_button_scaling_t;
-# 100 "mcc_generated_files/mtouch/mtouch_button.h"
+# 101 "mcc_generated_files/mtouch/mtouch_button.h"
     void MTOUCH_Button_SetPressedCallback (void (*callback)(enum mtouch_button_names button));
     void MTOUCH_Button_SetNotPressedCallback(void (*callback)(enum mtouch_button_names button));
 
@@ -4709,28 +4711,25 @@ extern __bank0 __bit __timeout;
 
     void MTOUCH_CVD_ScanA_0(void);
     void MTOUCH_CVD_ScanB_0(void);
+
+    void MTOUCH_CVD_ScanA_1(void);
+    void MTOUCH_CVD_ScanB_1(void);
 # 37 "mcc_generated_files/mtouch/mtouch_sensor_scan.c" 2
 # 50 "mcc_generated_files/mtouch/mtouch_sensor_scan.c"
 void MTOUCH_CVD_ScanA_0(void)
 {
 
     __asm("BANKSEL        " "LATC");
-    __asm("bsf            " "LATC" " & 0x7F," "6");
+    __asm("bsf            " "LATC" "& 0x7F," "7");
 
 
     __asm("BANKSEL        ADCON0");
-    __asm("movlw          " "( 0x8<<2 | 0x1 )");
+    __asm("movlw          " "( 0x9<<2 | 0x1 )");
     __asm("movwf          ADCON0 & 0x7F");
 
 
     _delay(16u);
 
-
-    __asm("movlw          113");
-    __asm("movwf          ADCON0 & 0x7F");
-    __asm("BANKSEL        " "LATC");
-    __asm("bcf            " "LATC" " & 0x7F," "6");
-    __asm("BANKSEL        ADCON0");
 
 
     __asm("movlw LOW      " "TRISC");
@@ -4768,27 +4767,21 @@ void MTOUCH_CVD_ScanA_0(void)
     __asm("bcf            INDF0 & 0x7F, " "6");
 
 }
-# 119 "mcc_generated_files/mtouch/mtouch_sensor_scan.c"
+# 113 "mcc_generated_files/mtouch/mtouch_sensor_scan.c"
 void MTOUCH_CVD_ScanB_0(void)
 {
 
     __asm("BANKSEL        " "LATC");
-    __asm("bcf            " "LATC" " & 0x7F," "6");
+    __asm("bcf            " "LATC" " & 0x7F," "7");
 
 
     __asm("BANKSEL        ADCON0");
-    __asm("movlw          " "( 0x8<<2 | 0x1 )");
+    __asm("movlw          " "( 0x9<<2 | 0x1 )");
     __asm("movwf          ADCON0 & 0x7F");
 
 
     _delay(16u);
 
-
-    __asm("movlw          113");
-    __asm("movwf          ADCON0 & 0x7F");
-    __asm("BANKSEL        " "LATC");
-    __asm("bsf            " "LATC" " & 0x7F," "6");
-    __asm("BANKSEL        ADCON0");
 
 
     __asm("movlw LOW      " "TRISC");
@@ -4825,5 +4818,110 @@ void MTOUCH_CVD_ScanB_0(void)
     __asm("BANKSEL        " "LATC");
     __asm("bcf            " "LATC" " & 0x7F, " "6");
     __asm("bcf            INDF0 & 0x7F, " "6");
+
+}
+# 177 "mcc_generated_files/mtouch/mtouch_sensor_scan.c"
+void MTOUCH_CVD_ScanA_1(void)
+{
+
+    __asm("BANKSEL        " "LATC");
+    __asm("bsf            " "LATC" "& 0x7F," "6");
+
+
+    __asm("BANKSEL        ADCON0");
+    __asm("movlw          " "( 0x8<<2 | 0x1 )");
+    __asm("movwf          ADCON0 & 0x7F");
+
+
+    _delay(16u);
+
+
+
+    __asm("movlw LOW      " "TRISC");
+    __asm("movwf          FSR0L & 0x7F");
+    __asm("movlw HIGH     " "TRISC");
+    __asm("movwf          FSR0H & 0x7F");
+
+
+    __asm("movlw LOW      " "LATC");
+    __asm("movwf          FSR1L & 0x7F");
+    __asm("movlw HIGH     " "LATC");
+    __asm("movwf          FSR1H & 0x7F");
+
+
+    __asm("movlw          " "( 0x9<<2 | 0x1 )");
+    __asm("bsf            INDF0 & 0x7F, " "7");
+    _delay(0u);
+    __asm("movwf          ADCON0 & 0x7F");
+
+
+
+
+    _delay(8u);
+
+
+    __asm("BANKSEL        ADCON0");
+    __asm("bsf            ADCON0 & 0x7F, 1");
+
+
+    _delay(3u);
+
+
+    __asm("BANKSEL        " "LATC");
+    __asm("bsf            " "LATC" " & 0x7F, " "7");
+    __asm("bcf            INDF0 & 0x7F, " "7");
+
+}
+# 240 "mcc_generated_files/mtouch/mtouch_sensor_scan.c"
+void MTOUCH_CVD_ScanB_1(void)
+{
+
+    __asm("BANKSEL        " "LATC");
+    __asm("bcf            " "LATC" " & 0x7F," "6");
+
+
+    __asm("BANKSEL        ADCON0");
+    __asm("movlw          " "( 0x8<<2 | 0x1 )");
+    __asm("movwf          ADCON0 & 0x7F");
+
+
+    _delay(16u);
+
+
+
+    __asm("movlw LOW      " "TRISC");
+    __asm("movwf          FSR0L & 0x7F");
+    __asm("movlw HIGH     " "TRISC");
+    __asm("movwf          FSR0H & 0x7F");
+
+
+    __asm("movlw LOW      " "LATC");
+    __asm("movwf          FSR1L & 0x7F");
+    __asm("movlw HIGH     " "LATC");
+    __asm("movwf          FSR1H & 0x7F");
+
+
+    __asm("movlw          " "( 0x9<<2 | 0x1 )");
+    __asm("bsf            INDF0 & 0x7F, " "7");
+    _delay(0u);
+    __asm("movwf          ADCON0 & 0x7F");
+
+
+
+
+
+    _delay(8u);
+
+
+    __asm("BANKSEL        ADCON0");
+    __asm("bsf            ADCON0 & 0x7F, 1");
+
+
+    _delay(3u);
+
+
+    __asm("BANKSEL        " "LATC");
+    __asm("bcf            " "LATC" " & 0x7F, " "7");
+    __asm("bcf            INDF0 & 0x7F, " "7");
 
 }

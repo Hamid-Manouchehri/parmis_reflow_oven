@@ -49,7 +49,8 @@
  
     enum mtouch_button_names
     {
-        T_start = 0
+        T_start = 0,
+        T_stop = 1
     };
     
 /*
