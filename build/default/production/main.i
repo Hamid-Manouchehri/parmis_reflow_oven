@@ -5456,14 +5456,22 @@ void OSCILLATOR_Initialize(void);
 # 100 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 13 "main.c" 2
-# 28 "main.c"
+# 30 "main.c"
 const float R_const = 100.0;
 const float V_cc_const = 5.0;
 const float Tolerance_Temp_const = 37.2;
 const float HalfCycleACDuration_const = 10.0;
-const float TMR2_Period_const = 100;
+const float TMR2_Timer_Period_const = 100;
+const float TMR6_Timer_Period_const = 1;
 unsigned char Buff_g[20];
-uint16_t required_delay_for_dim_ms_g = 0;
+uint16_t tmr2_required_counter_steps_g;
+uint16_t tmr2_required_counter_steps_Arr_g[3];
+uint16_t tmr6_required_counter_steps_Arr_g[3];
+_Bool DimmerStatusFlag_g = 0;
+uint16_t required_steps_for_delay_of_dim_g = 0;
+
+float dim_value_Arr_g [3] = {10, 20, 50};
+float dim_duration_ms_Arr_g [3] = {5000, 5000, 5000};
 
 
 __attribute__((inline)) void Init_Function(void);
@@ -5476,15 +5484,18 @@ __attribute__((inline)) float Measure_R_PT100_2Wire(float);
 __attribute__((inline)) float Measure_Temp_PT100_2Wire(float);
 __attribute__((inline)) float Read_PT100_Temp(void);
 void Zero_Detection_isr(void);
-void TMR2_Int_isr(void);
+void TMR2_Drive_TRIAC_isr(void);
 void TMR4_Wroking_Blink_AlarmLED_isr(void);
 __attribute__((inline)) void StartStop_AlarmLED(_Bool);
+__attribute__((inline)) void StartStop_AlarmLED_Blink(_Bool);
 __attribute__((inline)) void StartStop_Fan(_Bool);
 __attribute__((inline)) void StartStop_Buzzer(_Bool);
+__attribute__((inline)) void StartStop_Dimmer(_Bool);
 __attribute__((inline)) void StartTouchDetection(void);
 __attribute__((inline)) void StopTouchDetection(void);
-__attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float);
-# 64 "main.c"
+void SetDimmer(float);
+__attribute__((inline)) void Config_Heater(void);
+# 77 "main.c"
 void main(void){
 
     SYSTEM_Initialize();
@@ -5495,32 +5506,34 @@ void main(void){
     (INTCONbits.PEIE = 1);
 
     IOCAF2_SetInterruptHandler(Zero_Detection_isr);
-    TMR2_SetInterruptHandler(TMR2_Int_isr);
+    TMR2_SetInterruptHandler(TMR2_Drive_TRIAC_isr);
     TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr);
 
     float Temp_PT100 = 0.0;
 
+    Config_Heater();
+
+
     while (1){
 
-        Temp_PT100 = Read_PT100_Temp();
-        sprintf(Buff_g, "%f Celsius\n", Temp_PT100);
-        TX_Whole_String(Buff_g);
-        _delay((unsigned long)((500)*(8000000/4000.0)));
+
+
+
+
 
     }
 }
-# 96 "main.c"
+# 112 "main.c"
 __attribute__((inline)) void Init_Function(void){
 
     StartStop_AlarmLED(0);
+    StartStop_AlarmLED_Blink(0);
     StartStop_Fan(0);
     StartStop_Buzzer(0);
+    StartStop_Dimmer(0);
     do { LATCbits.LATC5 = 0; } while(0);
 
     ADC_SelectChannel(channel_AN10);
-
-    required_delay_for_dim_ms_g = CalcRequiredDelayForTrigTRIAC(25);
-
 }
 
 
@@ -5623,27 +5636,40 @@ __attribute__((inline)) float Read_PT100_Temp(void){
 void Zero_Detection_isr(void){
 
 
-    TMR2_StartTimer();
+
+
+    if (1 == DimmerStatusFlag_g){
+
+        TMR2_StartTimer();
+    }
 
 }
 
 
-void TMR2_Int_isr(void){
+void TMR2_Drive_TRIAC_isr(void){
 
     static uint16_t counter_tmr2 = 0;
-    counter_tmr2 ++;
 
-    if(counter_tmr2 >= required_delay_for_dim_ms_g){
+    if (1 == DimmerStatusFlag_g){
 
-        counter_tmr2 = 0;
-        do { LATCbits.LATC5 = 1; } while(0);
+        counter_tmr2 ++;
 
+        if(counter_tmr2 >= tmr2_required_counter_steps_g){
+
+            counter_tmr2 = 0;
+            do { LATCbits.LATC5 = 1; } while(0);
+
+        }
+        else if (1 == PORTCbits.RC5){
+
+            counter_tmr2 = 0;
+            TMR2_StopTimer();
+            do { LATCbits.LATC5 = 0; } while(0);
+        }
     }
-    else if (1 == PORTCbits.RC5){
+    else{
 
         counter_tmr2 = 0;
-        TMR2_StopTimer();
-        do { LATCbits.LATC5 = 0; } while(0);
     }
 }
 
@@ -5657,7 +5683,6 @@ void TMR4_Wroking_Blink_AlarmLED_isr(void){
 
         counter_tmr4 = 0;
         do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0);
-
     }
 }
 
@@ -5673,6 +5698,19 @@ __attribute__((inline)) void StartStop_AlarmLED(_Bool OnOff){
         do { LATCbits.LATC2 = 0; } while(0);
     }
 
+}
+
+
+__attribute__((inline)) void StartStop_AlarmLED_Blink(_Bool OnOff){
+
+    if (1 == OnOff){
+
+        TMR4_StartTimer();
+    }
+    else{
+
+        TMR4_StopTimer();
+    }
 }
 
 
@@ -5701,6 +5739,20 @@ __attribute__((inline)) void StartStop_Buzzer(_Bool OnOff){
         do { LATCbits.LATC4 = 0; } while(0);
     }
 
+}
+
+
+__attribute__((inline)) void StartStop_Dimmer(_Bool OnOff){
+
+    if (1 == OnOff){
+
+        DimmerStatusFlag_g = 1;
+    }
+    else{
+
+        SetDimmer(3);
+        DimmerStatusFlag_g = 0;
+    }
 }
 
 
@@ -5743,13 +5795,193 @@ __attribute__((inline)) void StopTouchDetection(void){
 }
 
 
-__attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float dim_percentage){
 
-    float delay;
-    uint16_t ret;
+void SetDimmer(float dim_percentage){
 
-    delay = HalfCycleACDuration_const - (5.0 * dim_percentage / 50.0);
-    ret = (delay * 1000) / TMR2_Period_const;
 
-    return ret;
+
+
+    float TRIAC_off_duration_ms = 0;
+
+    TRIAC_off_duration_ms = HalfCycleACDuration_const - (5.0 * dim_percentage / 50.0);
+    tmr2_required_counter_steps_g = (TRIAC_off_duration_ms * 1000) / TMR2_Timer_Period_const;
+
+}
+
+
+__attribute__((inline)) void Config_Heater(void){
+
+    StartStop_AlarmLED_Blink(1);
+    StartStop_Dimmer(1);
+
+
+
+    SetDimmer(10);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(11);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(12);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(13);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(14);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(15);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(16);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(17);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(18);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(19);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(20);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(21);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(22);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(23);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(24);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(25);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(26);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(27);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(28);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(29);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+    SetDimmer(30);
+    _delay((unsigned long)((3000)*(8000000/4000.0)));
+
+
+
+    SetDimmer(30.5);
+    _delay((unsigned long)((9000)*(8000000/4000.0)));
+
+    SetDimmer(31);
+    _delay((unsigned long)((9000)*(8000000/4000.0)));
+
+    SetDimmer(31.5);
+    _delay((unsigned long)((9000)*(8000000/4000.0)));
+
+    SetDimmer(32);
+    _delay((unsigned long)((9000)*(8000000/4000.0)));
+
+    SetDimmer(32.5);
+    _delay((unsigned long)((9000)*(8000000/4000.0)));
+
+    SetDimmer(33);
+    _delay((unsigned long)((9000)*(8000000/4000.0)));
+
+    SetDimmer(33.5);
+    _delay((unsigned long)((9000)*(8000000/4000.0)));
+
+    SetDimmer(34);
+    _delay((unsigned long)((9000)*(8000000/4000.0)));
+
+    SetDimmer(34.5);
+    _delay((unsigned long)((9000)*(8000000/4000.0)));
+
+    SetDimmer(35);
+    _delay((unsigned long)((9000)*(8000000/4000.0)));
+
+
+
+    SetDimmer(35.5);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(36);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(36.5);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(37);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(37.5);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(38);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(38.5);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(39);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(39.5);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(40);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(40.5);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(41);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(41.5);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(42);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(42.5);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(43);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(43.5);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(44);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(44.5);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+    SetDimmer(45);
+    _delay((unsigned long)((2500)*(8000000/4000.0)));
+
+
+
+    StartStop_Fan(1);
+
+    StartStop_Buzzer(1);
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
+    StartStop_Buzzer(0);
+
+
+    StartStop_Dimmer(0);
+    StartStop_AlarmLED_Blink(0);
 }

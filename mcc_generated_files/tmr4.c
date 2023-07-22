@@ -80,8 +80,8 @@ void TMR4_Initialize(void)
     // Set Default Interrupt Handler
     TMR4_SetInterruptHandler(TMR4_DefaultInterruptHandler);
 
-    // T4CKPS 1:16; T4OUTPS 1:1; TMR4ON on; 
-    T4CON = 0x06;
+    // T4CKPS 1:16; T4OUTPS 1:1; TMR4ON off; 
+    T4CON = 0x02;
 }
 
 void TMR4_StartTimer(void)

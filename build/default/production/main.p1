@@ -3,10 +3,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "75 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 75: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F3738 `(v ~T0 @X0 1 tf ]
-"37 main.c
-[; ;main.c: 37: __attribute__((inline)) void Init_Function(void);
-[v _Init_Function `TF3738 ~T0 @X0 0 e ]
+[v F3745 `(v ~T0 @X0 1 tf ]
+"47 main.c
+[; ;main.c: 47: __attribute__((inline)) void Init_Function(void);
+[v _Init_Function `TF3745 ~T0 @X0 0 e ]
 "358 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 358:     struct {
 [s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -26,49 +26,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 "285 ./mcc_generated_files/pin_manager.h
 [; ;./mcc_generated_files/pin_manager.h: 285: void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _IOCAF2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3511 ]
-"46 main.c
-[; ;main.c: 46: void Zero_Detection_isr(void);
+"56 main.c
+[; ;main.c: 56: void Zero_Detection_isr(void);
 [v _Zero_Detection_isr `(v ~T0 @X0 0 ef ]
 [v F3556 `(v ~T0 @X0 0 tf ]
 "326 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 326:  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3556 ]
-"47 main.c
-[; ;main.c: 47: void TMR2_Int_isr(void);
-[v _TMR2_Int_isr `(v ~T0 @X0 0 ef ]
+"57 main.c
+[; ;main.c: 57: void TMR2_Drive_TRIAC_isr(void);
+[v _TMR2_Drive_TRIAC_isr `(v ~T0 @X0 0 ef ]
 [v F3540 `(v ~T0 @X0 0 tf ]
 "326 ./mcc_generated_files/tmr4.h
 [; ;./mcc_generated_files/tmr4.h: 326:  void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _TMR4_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3540 ]
-"48 main.c
-[; ;main.c: 48: void TMR4_Wroking_Blink_AlarmLED_isr(void);
+"58 main.c
+[; ;main.c: 58: void TMR4_Wroking_Blink_AlarmLED_isr(void);
 [v _TMR4_Wroking_Blink_AlarmLED_isr `(v ~T0 @X0 0 ef ]
-[v F3760 `(f ~T0 @X0 1 tf ]
-"45
-[; ;main.c: 45: __attribute__((inline)) float Read_PT100_Temp(void);
-[v _Read_PT100_Temp `TF3760 ~T0 @X0 0 e ]
-"113 /opt/microchip/xc8/v2.31/pic/include/c99/stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-[v F3743 `(v ~T0 @X0 1 tf1`*uc ]
-"39 main.c
-[; ;main.c: 39: __attribute__((inline)) void TX_Whole_String(char*);
-[v _TX_Whole_String `TF3743 ~T0 @X0 0 e ]
-[v F1092 `(v ~T0 @X0 1 tf1`ul ]
-"12 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/builtins.h
-[v __delay `JF1092 ~T0 @X0 0 e ]
-[p i __delay ]
-[v F3765 `(v ~T0 @X0 1 tf1`a ]
-"49 main.c
-[; ;main.c: 49: __attribute__((inline)) void StartStop_AlarmLED(_Bool);
-[v _StartStop_AlarmLED `TF3765 ~T0 @X0 0 e ]
-[v F3768 `(v ~T0 @X0 1 tf1`a ]
-"50
-[; ;main.c: 50: __attribute__((inline)) void StartStop_Fan(_Bool);
-[v _StartStop_Fan `TF3768 ~T0 @X0 0 e ]
-[v F3771 `(v ~T0 @X0 1 tf1`a ]
-"51
-[; ;main.c: 51: __attribute__((inline)) void StartStop_Buzzer(_Bool);
-[v _StartStop_Buzzer `TF3771 ~T0 @X0 0 e ]
+[v F3793 `(v ~T0 @X0 1 tf ]
+"67
+[; ;main.c: 67: __attribute__((inline)) void Config_Heater(void);
+[v _Config_Heater `TF3793 ~T0 @X0 0 e ]
+[v F3772 `(v ~T0 @X0 1 tf1`a ]
+"59
+[; ;main.c: 59: __attribute__((inline)) void StartStop_AlarmLED(_Bool);
+[v _StartStop_AlarmLED `TF3772 ~T0 @X0 0 e ]
+[v F3775 `(v ~T0 @X0 1 tf1`a ]
+"60
+[; ;main.c: 60: __attribute__((inline)) void StartStop_AlarmLED_Blink(_Bool);
+[v _StartStop_AlarmLED_Blink `TF3775 ~T0 @X0 0 e ]
+[v F3778 `(v ~T0 @X0 1 tf1`a ]
+"61
+[; ;main.c: 61: __attribute__((inline)) void StartStop_Fan(_Bool);
+[v _StartStop_Fan `TF3778 ~T0 @X0 0 e ]
+[v F3781 `(v ~T0 @X0 1 tf1`a ]
+"62
+[; ;main.c: 62: __attribute__((inline)) void StartStop_Buzzer(_Bool);
+[v _StartStop_Buzzer `TF3781 ~T0 @X0 0 e ]
+[v F3784 `(v ~T0 @X0 1 tf1`a ]
+"63
+[; ;main.c: 63: __attribute__((inline)) void StartStop_Dimmer(_Bool);
+[v _StartStop_Dimmer `TF3784 ~T0 @X0 0 e ]
 "2190 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 2190:     struct {
 [s S121 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -80,17 +78,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2201
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 2201: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
 [v _LATCbits `VS120 ~T0 @X0 0 e@270 ]
-"103 main.c
-[; ;main.c: 103:     ADC_SelectChannel(channel_AN10);
+"121 main.c
+[; ;main.c: 121:     ADC_SelectChannel(channel_AN10);
 [c E3567 10 29 30 31 .. ]
 [n E3567 . channel_AN10 channel_Temp channel_DAC channel_FVR  ]
 "166 ./mcc_generated_files/adc.h
 [; ;./mcc_generated_files/adc.h: 166: void ADC_SelectChannel(adc_channel_t channel);
 [v _ADC_SelectChannel `(v ~T0 @X0 0 ef1`E3567 ]
-[v F3778 `(us ~T0 @X0 1 tf1`f ]
-"54 main.c
-[; ;main.c: 54: __attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float);
-[v _CalcRequiredDelayForTrigTRIAC `TF3778 ~T0 @X0 0 e ]
 "158 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 158: _Bool EUSART_is_tx_ready(void);
 [v _EUSART_is_tx_ready `(a ~T0 @X0 0 ef ]
@@ -100,6 +94,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54 /opt/microchip/xc8/v2.31/pic/include/c99/string.h
 [; ;/opt/microchip/xc8/v2.31/pic/include/c99/string.h: 54: size_t strlen (const char *);
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+[v F1092 `(v ~T0 @X0 1 tf1`ul ]
+"12 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/builtins.h
+[v __delay `JF1092 ~T0 @X0 0 e ]
+[p i __delay ]
 "373 /opt/microchip/xc8/v2.31/pic/include/c99/math.h
 [; ;/opt/microchip/xc8/v2.31/pic/include/c99/math.h: 373: float sqrtf(float);
 [v _sqrtf `(f ~T0 @X0 0 ef1`f ]
@@ -129,11 +127,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "164 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 164: void TMR2_StopTimer(void);
 [v _TMR2_StopTimer `(v ~T0 @X0 0 ef ]
+"132 ./mcc_generated_files/tmr4.h
+[; ;./mcc_generated_files/tmr4.h: 132: void TMR4_StartTimer(void);
+[v _TMR4_StartTimer `(v ~T0 @X0 0 ef ]
+"164
+[; ;./mcc_generated_files/tmr4.h: 164: void TMR4_StopTimer(void);
+[v _TMR4_StopTimer `(v ~T0 @X0 0 ef ]
+"66 main.c
+[; ;main.c: 66: void SetDimmer(float);
+[v _SetDimmer `(v ~T0 @X0 0 ef1`f ]
 "55 ./mcc_generated_files/mtouch/mtouch.h
 [; ;./mcc_generated_files/mtouch/mtouch.h: 55:     _Bool MTOUCH_Service_Mainloop (void);
 [v _MTOUCH_Service_Mainloop `(a ~T0 @X0 0 ef ]
-"295 main.c
-[; ;main.c: 295:         if (1 == MTOUCH_Button_isPressed(T_start)){
+"349 main.c
+[; ;main.c: 349:         if (1 == MTOUCH_Button_isPressed(T_start)){
 [c E3636 0 1 .. ]
 [n E3636 mtouch_button_names T_start T_stop  ]
 "118 ./mcc_generated_files/mtouch/mtouch_button.h
@@ -631,695 +638,1160 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7006
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 7006: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"28 main.c
-[; ;main.c: 28: const float R_const = 100.0;
+"30 main.c
+[; ;main.c: 30: const float R_const = 100.0;
 [v _R_const `Cf ~T0 @X0 1 e ]
 [i _R_const
 -> .100.0 `f
 ]
-"29
-[; ;main.c: 29: const float V_cc_const = 5.0;
+"31
+[; ;main.c: 31: const float V_cc_const = 5.0;
 [v _V_cc_const `Cf ~T0 @X0 1 e ]
 [i _V_cc_const
 -> .5.0 `f
 ]
-"30
-[; ;main.c: 30: const float Tolerance_Temp_const = 37.2;
+"32
+[; ;main.c: 32: const float Tolerance_Temp_const = 37.2;
 [v _Tolerance_Temp_const `Cf ~T0 @X0 1 e ]
 [i _Tolerance_Temp_const
 -> .37.2 `f
 ]
-"31
-[; ;main.c: 31: const float HalfCycleACDuration_const = 10.0;
+"33
+[; ;main.c: 33: const float HalfCycleACDuration_const = 10.0;
 [v _HalfCycleACDuration_const `Cf ~T0 @X0 1 e ]
 [i _HalfCycleACDuration_const
 -> .10.0 `f
 ]
-"32
-[; ;main.c: 32: const float TMR2_Period_const = 100;
-[v _TMR2_Period_const `Cf ~T0 @X0 1 e ]
-[i _TMR2_Period_const
+"34
+[; ;main.c: 34: const float TMR2_Timer_Period_const = 100;
+[v _TMR2_Timer_Period_const `Cf ~T0 @X0 1 e ]
+[i _TMR2_Timer_Period_const
 -> -> 100 `i `f
 ]
-"33
-[; ;main.c: 33: unsigned char Buff_g[20];
+"35
+[; ;main.c: 35: const float TMR6_Timer_Period_const = 1;
+[v _TMR6_Timer_Period_const `Cf ~T0 @X0 1 e ]
+[i _TMR6_Timer_Period_const
+-> -> 1 `i `f
+]
+"36
+[; ;main.c: 36: unsigned char Buff_g[20];
 [v _Buff_g `uc ~T0 @X0 -> 20 `i e ]
-"34
-[; ;main.c: 34: uint16_t required_delay_for_dim_ms_g = 0;
-[v _required_delay_for_dim_ms_g `us ~T0 @X0 1 e ]
-[i _required_delay_for_dim_ms_g
+"37
+[; ;main.c: 37: uint16_t tmr2_required_counter_steps_g;
+[v _tmr2_required_counter_steps_g `us ~T0 @X0 1 e ]
+"38
+[; ;main.c: 38: uint16_t tmr2_required_counter_steps_Arr_g[3];
+[v _tmr2_required_counter_steps_Arr_g `us ~T0 @X0 -> 3 `i e ]
+"39
+[; ;main.c: 39: uint16_t tmr6_required_counter_steps_Arr_g[3];
+[v _tmr6_required_counter_steps_Arr_g `us ~T0 @X0 -> 3 `i e ]
+"40
+[; ;main.c: 40: _Bool DimmerStatusFlag_g = 0;
+[v _DimmerStatusFlag_g `a ~T0 @X0 1 e ]
+[i _DimmerStatusFlag_g
+-> -> 0 `i `a
+]
+"41
+[; ;main.c: 41: uint16_t required_steps_for_delay_of_dim_g = 0;
+[v _required_steps_for_delay_of_dim_g `us ~T0 @X0 1 e ]
+[i _required_steps_for_delay_of_dim_g
 -> -> 0 `i `us
 ]
+"43
+[; ;main.c: 43: float dim_value_Arr_g [3] = {10, 20, 50};
+[v _dim_value_Arr_g `f ~T0 @X0 -> 3 `i e ]
+[i _dim_value_Arr_g
+:U ..
+-> -> 10 `i `f
+-> -> 20 `i `f
+-> -> 50 `i `f
+..
+]
+"44
+[; ;main.c: 44: float dim_duration_ms_Arr_g [3] = {5000, 5000, 5000};
+[v _dim_duration_ms_Arr_g `f ~T0 @X0 -> 3 `i e ]
+[i _dim_duration_ms_Arr_g
+:U ..
+-> -> 5000 `i `f
+-> -> 5000 `i `f
+-> -> 5000 `i `f
+..
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"64
-[; ;main.c: 64: void main(void){
+"77
+[; ;main.c: 77: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"66
-[; ;main.c: 66:     SYSTEM_Initialize();
+"79
+[; ;main.c: 79:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"67
-[; ;main.c: 67:     Init_Function();
+"80
+[; ;main.c: 80:     Init_Function();
 [e ( _Init_Function ..  ]
-"70
-[; ;main.c: 70:     (INTCONbits.GIE = 1);
+"83
+[; ;main.c: 83:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"71
-[; ;main.c: 71:     (INTCONbits.PEIE = 1);
+"84
+[; ;main.c: 84:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"73
-[; ;main.c: 73:     IOCAF2_SetInterruptHandler(Zero_Detection_isr);
+"86
+[; ;main.c: 86:     IOCAF2_SetInterruptHandler(Zero_Detection_isr);
 [e ( _IOCAF2_SetInterruptHandler (1 &U _Zero_Detection_isr ]
-"74
-[; ;main.c: 74:     TMR2_SetInterruptHandler(TMR2_Int_isr);
-[e ( _TMR2_SetInterruptHandler (1 &U _TMR2_Int_isr ]
-"75
-[; ;main.c: 75:     TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr);
+"87
+[; ;main.c: 87:     TMR2_SetInterruptHandler(TMR2_Drive_TRIAC_isr);
+[e ( _TMR2_SetInterruptHandler (1 &U _TMR2_Drive_TRIAC_isr ]
+"88
+[; ;main.c: 88:     TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr);
 [e ( _TMR4_SetInterruptHandler (1 &U _TMR4_Wroking_Blink_AlarmLED_isr ]
-"77
-[; ;main.c: 77:     float Temp_PT100 = 0.0;
+"90
+[; ;main.c: 90:     float Temp_PT100 = 0.0;
 [v _Temp_PT100 `f ~T0 @X0 1 a ]
 [e = _Temp_PT100 -> .0.0 `f ]
-"79
-[; ;main.c: 79:     while (1){
+"92
+[; ;main.c: 92:     Config_Heater();
+[e ( _Config_Heater ..  ]
+"95
+[; ;main.c: 95:     while (1){
 [e :U 380 ]
 {
-"81
-[; ;main.c: 81:         Temp_PT100 = Read_PT100_Temp();
-[e = _Temp_PT100 ( _Read_PT100_Temp ..  ]
-"82
-[; ;main.c: 82:         sprintf(Buff_g, "%f Celsius\n", Temp_PT100);
-[e ( _sprintf (1 , (. , -> &U _Buff_g `*uc :s 1C -> _Temp_PT100 `d ]
-"83
-[; ;main.c: 83:         TX_Whole_String(Buff_g);
-[e ( _TX_Whole_String (1 -> &U _Buff_g `*uc ]
-"84
-[; ;main.c: 84:         _delay((unsigned long)((500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"86
-[; ;main.c: 86:     }
+"102
+[; ;main.c: 102:     }
 }
 [e :U 379 ]
 [e $U 380  ]
 [e :U 381 ]
-"87
-[; ;main.c: 87: }
+"103
+[; ;main.c: 103: }
 [e :UE 378 ]
 }
-[v F3786 `(v ~T0 @X0 1 tf ]
-"96
-[; ;main.c: 96: __attribute__((inline)) void Init_Function(void){
-[v _Init_Function `TF3786 ~T0 @X0 1 e ]
+[v F3800 `(v ~T0 @X0 1 tf ]
+"112
+[; ;main.c: 112: __attribute__((inline)) void Init_Function(void){
+[v _Init_Function `TF3800 ~T0 @X0 1 e ]
 {
 [e :U _Init_Function ]
 [f ]
-"98
-[; ;main.c: 98:     StartStop_AlarmLED(0);
+"114
+[; ;main.c: 114:     StartStop_AlarmLED(0);
 [e ( _StartStop_AlarmLED (1 -> -> 0 `i `a ]
-"99
-[; ;main.c: 99:     StartStop_Fan(0);
+"115
+[; ;main.c: 115:     StartStop_AlarmLED_Blink(0);
+[e ( _StartStop_AlarmLED_Blink (1 -> -> 0 `i `a ]
+"116
+[; ;main.c: 116:     StartStop_Fan(0);
 [e ( _StartStop_Fan (1 -> -> 0 `i `a ]
-"100
-[; ;main.c: 100:     StartStop_Buzzer(0);
+"117
+[; ;main.c: 117:     StartStop_Buzzer(0);
 [e ( _StartStop_Buzzer (1 -> -> 0 `i `a ]
-"101
-[; ;main.c: 101:     do { LATCbits.LATC5 = 0; } while(0);
+"118
+[; ;main.c: 118:     StartStop_Dimmer(0);
+[e ( _StartStop_Dimmer (1 -> -> 0 `i `a ]
+"119
+[; ;main.c: 119:     do { LATCbits.LATC5 = 0; } while(0);
 [e :U 385 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 384 ]
-"103
-[; ;main.c: 103:     ADC_SelectChannel(channel_AN10);
+"121
+[; ;main.c: 121:     ADC_SelectChannel(channel_AN10);
 [e ( _ADC_SelectChannel (1 . `E3567 0 ]
-"105
-[; ;main.c: 105:     required_delay_for_dim_ms_g = CalcRequiredDelayForTrigTRIAC(25);
-[e = _required_delay_for_dim_ms_g ( _CalcRequiredDelayForTrigTRIAC (1 -> -> 25 `i `f ]
-"107
-[; ;main.c: 107: }
+"122
+[; ;main.c: 122: }
 [e :UE 382 ]
 }
-[v F3788 `(v ~T0 @X0 1 tf1`uc ]
-"110
-[; ;main.c: 110: __attribute__((inline)) void TX_Command(uint8_t txData) {
-[v _TX_Command `TF3788 ~T0 @X0 1 e ]
+[v F3802 `(v ~T0 @X0 1 tf1`uc ]
+"125
+[; ;main.c: 125: __attribute__((inline)) void TX_Command(uint8_t txData) {
+[v _TX_Command `TF3802 ~T0 @X0 1 e ]
 {
 [e :U _TX_Command ]
 [v _txData `uc ~T0 @X0 1 r1 ]
 [f ]
-"112
-[; ;main.c: 112:     if (EUSART_is_tx_ready()) {
+"127
+[; ;main.c: 127:     if (EUSART_is_tx_ready()) {
 [e $ ! != -> ( _EUSART_is_tx_ready ..  `i -> 0 `i 387  ]
 {
-"114
-[; ;main.c: 114:         EUSART_Write(txData);
+"129
+[; ;main.c: 129:         EUSART_Write(txData);
 [e ( _EUSART_Write (1 _txData ]
-"115
-[; ;main.c: 115:     }
+"130
+[; ;main.c: 130:     }
 }
 [e :U 387 ]
-"116
-[; ;main.c: 116: }
+"131
+[; ;main.c: 131: }
 [e :UE 386 ]
 }
-[v F3791 `(v ~T0 @X0 1 tf1`*uc ]
-"119
-[; ;main.c: 119: __attribute__((inline)) void TX_Whole_String(char *input_string){
-[v _TX_Whole_String `TF3791 ~T0 @X0 1 e ]
+[v F3805 `(v ~T0 @X0 1 tf1`*uc ]
+"134
+[; ;main.c: 134: __attribute__((inline)) void TX_Whole_String(char *input_string){
+[v _TX_Whole_String `TF3805 ~T0 @X0 1 e ]
 {
 [e :U _TX_Whole_String ]
 [v _input_string `*uc ~T0 @X0 1 r1 ]
 [f ]
-"121
-[; ;main.c: 121:     uint16_t size_of_string = strlen(input_string);
+"136
+[; ;main.c: 136:     uint16_t size_of_string = strlen(input_string);
 [v _size_of_string `us ~T0 @X0 1 a ]
 [e = _size_of_string -> ( _strlen (1 -> _input_string `*Cuc `us ]
-"123
-[; ;main.c: 123:     for (uint8_t i = 0; i < size_of_string; i++){
+"138
+[; ;main.c: 138:     for (uint8_t i = 0; i < size_of_string; i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 392  ]
 [e :U 389 ]
 {
-"125
-[; ;main.c: 125:         TX_Command(input_string[i]);
+"140
+[; ;main.c: 140:         TX_Command(input_string[i]);
 [e ( _TX_Command (1 -> *U + _input_string * -> _i `ux -> -> # *U _input_string `ui `ux `uc ]
-"126
-[; ;main.c: 126:         _delay((unsigned long)((5)*(8000000/4000.0)));
+"141
+[; ;main.c: 141:         _delay((unsigned long)((5)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"128
-[; ;main.c: 128:     }
+"143
+[; ;main.c: 143:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 392 ]
 [e $ < -> _i `ui -> _size_of_string `ui 389  ]
 [e :U 390 ]
 }
-"132
-[; ;main.c: 132: }
+"147
+[; ;main.c: 147: }
 [e :UE 388 ]
 }
-[v F3796 `(v ~T0 @X0 1 tf1`us ]
-"135
-[; ;main.c: 135: __attribute__((inline)) void ReadTemperature(uint16_t R_PT100){
-[v _ReadTemperature `TF3796 ~T0 @X0 1 e ]
+[v F3810 `(v ~T0 @X0 1 tf1`us ]
+"150
+[; ;main.c: 150: __attribute__((inline)) void ReadTemperature(uint16_t R_PT100){
+[v _ReadTemperature `TF3810 ~T0 @X0 1 e ]
 {
 [e :U _ReadTemperature ]
 [v _R_PT100 `us ~T0 @X0 1 r1 ]
 [f ]
-"137
-[; ;main.c: 137:     uint16_t Temperature;
+"152
+[; ;main.c: 152:     uint16_t Temperature;
 [v _Temperature `us ~T0 @X0 1 a ]
-"139
-[; ;main.c: 139:     Temperature = (-3.9083E-03 + sqrtf(17.58480889E-06 + (-23.10E-09 * R_PT100))) / -1.155E-06;
+"154
+[; ;main.c: 154:     Temperature = (-3.9083E-03 + sqrtf(17.58480889E-06 + (-23.10E-09 * R_PT100))) / -1.155E-06;
 [e = _Temperature -> / + -U .3.9083e-03 -> ( _sqrtf (1 -> + .17.58480889e-06 * -U .23.10e-09 -> -> _R_PT100 `ui `d `f `d -U .1.155e-06 `us ]
-"141
-[; ;main.c: 141: }
+"156
+[; ;main.c: 156: }
 [e :UE 393 ]
 }
-[v F3800 `(us ~T0 @X0 1 tf ]
-"144
-[; ;main.c: 144: __attribute__((inline)) uint16_t Read_ADC_Num(void){
-[v _Read_ADC_Num `TF3800 ~T0 @X0 1 e ]
+[v F3814 `(us ~T0 @X0 1 tf ]
+"159
+[; ;main.c: 159: __attribute__((inline)) uint16_t Read_ADC_Num(void){
+[v _Read_ADC_Num `TF3814 ~T0 @X0 1 e ]
 {
 [e :U _Read_ADC_Num ]
 [f ]
-"146
-[; ;main.c: 146:     uint16_t convertedValue;
+"161
+[; ;main.c: 161:     uint16_t convertedValue;
 [v _convertedValue `us ~T0 @X0 1 a ]
-"148
-[; ;main.c: 148:     while(!ADC_IsConversionDone());
+"163
+[; ;main.c: 163:     while(!ADC_IsConversionDone());
 [e $U 395  ]
 [e :U 396 ]
 [e :U 395 ]
 [e $ ! != -> ( _ADC_IsConversionDone ..  `i -> 0 `i 396  ]
 [e :U 397 ]
-"149
-[; ;main.c: 149:     convertedValue = ADC_GetConversionResult();
+"164
+[; ;main.c: 164:     convertedValue = ADC_GetConversionResult();
 [e = _convertedValue ( _ADC_GetConversionResult ..  ]
-"151
-[; ;main.c: 151:     return convertedValue;
+"166
+[; ;main.c: 166:     return convertedValue;
 [e ) _convertedValue ]
 [e $UE 394  ]
-"153
-[; ;main.c: 153: }
+"168
+[; ;main.c: 168: }
 [e :UE 394 ]
 }
-[v F3803 `(f ~T0 @X0 1 tf1`us ]
-"156
-[; ;main.c: 156: __attribute__((inline)) float ChangeADCtoVoltage(uint16_t ADC_number){
-[v _ChangeADCtoVoltage `TF3803 ~T0 @X0 1 e ]
+[v F3817 `(f ~T0 @X0 1 tf1`us ]
+"171
+[; ;main.c: 171: __attribute__((inline)) float ChangeADCtoVoltage(uint16_t ADC_number){
+[v _ChangeADCtoVoltage `TF3817 ~T0 @X0 1 e ]
 {
 [e :U _ChangeADCtoVoltage ]
 [v _ADC_number `us ~T0 @X0 1 r1 ]
 [f ]
-"158
-[; ;main.c: 158:     return (float)(5.0 * ADC_number / 1023);
+"173
+[; ;main.c: 173:     return (float)(5.0 * ADC_number / 1023);
 [e ) -> / * .5.0 -> -> _ADC_number `ui `d -> -> 1023 `i `d `f ]
 [e $UE 398  ]
-"160
-[; ;main.c: 160: }
+"175
+[; ;main.c: 175: }
 [e :UE 398 ]
 }
-[v F3806 `(f ~T0 @X0 1 tf1`f ]
-"163
-[; ;main.c: 163: __attribute__((inline)) float Measure_R_PT100_2Wire(float ADC_volt){
-[v _Measure_R_PT100_2Wire `TF3806 ~T0 @X0 1 e ]
+[v F3820 `(f ~T0 @X0 1 tf1`f ]
+"178
+[; ;main.c: 178: __attribute__((inline)) float Measure_R_PT100_2Wire(float ADC_volt){
+[v _Measure_R_PT100_2Wire `TF3820 ~T0 @X0 1 e ]
 {
 [e :U _Measure_R_PT100_2Wire ]
 [v _ADC_volt `f ~T0 @X0 1 r1 ]
 [f ]
-"165
-[; ;main.c: 165:     float R_PT100 = 0;
+"180
+[; ;main.c: 180:     float R_PT100 = 0;
 [v _R_PT100 `f ~T0 @X0 1 a ]
 [e = _R_PT100 -> -> 0 `i `f ]
-"167
-[; ;main.c: 167:     R_PT100 = R_const * ADC_volt / (V_cc_const - ADC_volt);
+"182
+[; ;main.c: 182:     R_PT100 = R_const * ADC_volt / (V_cc_const - ADC_volt);
 [e = _R_PT100 / * _R_const _ADC_volt - _V_cc_const _ADC_volt ]
-"169
-[; ;main.c: 169:     return R_PT100;
+"184
+[; ;main.c: 184:     return R_PT100;
 [e ) _R_PT100 ]
 [e $UE 399  ]
-"171
-[; ;main.c: 171: }
+"186
+[; ;main.c: 186: }
 [e :UE 399 ]
 }
-[v F3810 `(f ~T0 @X0 1 tf1`f ]
-"174
-[; ;main.c: 174: __attribute__((inline)) float Measure_Temp_PT100_2Wire(float R_PT100){
-[v _Measure_Temp_PT100_2Wire `TF3810 ~T0 @X0 1 e ]
+[v F3824 `(f ~T0 @X0 1 tf1`f ]
+"189
+[; ;main.c: 189: __attribute__((inline)) float Measure_Temp_PT100_2Wire(float R_PT100){
+[v _Measure_Temp_PT100_2Wire `TF3824 ~T0 @X0 1 e ]
 {
 [e :U _Measure_Temp_PT100_2Wire ]
 [v _R_PT100 `f ~T0 @X0 1 r1 ]
 [f ]
-"176
-[; ;main.c: 176:     float Temp_PT100;
+"191
+[; ;main.c: 191:     float Temp_PT100;
 [v _Temp_PT100 `f ~T0 @X0 1 a ]
-"178
-[; ;main.c: 178:     Temp_PT100 = ((-3.9083E-03 + sqrtf(17.58480889E-06 + -23.10E-09 * R_PT100)) / -1.155E-06) - Tolerance_Temp_const;
+"193
+[; ;main.c: 193:     Temp_PT100 = ((-3.9083E-03 + sqrtf(17.58480889E-06 + -23.10E-09 * R_PT100)) / -1.155E-06) - Tolerance_Temp_const;
 [e = _Temp_PT100 -> - / + -U .3.9083e-03 -> ( _sqrtf (1 -> + .17.58480889e-06 * -U .23.10e-09 -> _R_PT100 `d `f `d -U .1.155e-06 -> _Tolerance_Temp_const `d `f ]
-"180
-[; ;main.c: 180:     return Temp_PT100;
+"195
+[; ;main.c: 195:     return Temp_PT100;
 [e ) _Temp_PT100 ]
 [e $UE 400  ]
-"182
-[; ;main.c: 182: }
+"197
+[; ;main.c: 197: }
 [e :UE 400 ]
 }
-[v F3814 `(f ~T0 @X0 1 tf ]
-"185
-[; ;main.c: 185: __attribute__((inline)) float Read_PT100_Temp(void){
-[v _Read_PT100_Temp `TF3814 ~T0 @X0 1 e ]
+[v F3828 `(f ~T0 @X0 1 tf ]
+"200
+[; ;main.c: 200: __attribute__((inline)) float Read_PT100_Temp(void){
+[v _Read_PT100_Temp `TF3828 ~T0 @X0 1 e ]
 {
 [e :U _Read_PT100_Temp ]
 [f ]
-"187
-[; ;main.c: 187:     uint16_t ADC_num = 0;
+"202
+[; ;main.c: 202:     uint16_t ADC_num = 0;
 [v _ADC_num `us ~T0 @X0 1 a ]
 [e = _ADC_num -> -> 0 `i `us ]
-"188
-[; ;main.c: 188:     float ADC_volt = 0;
+"203
+[; ;main.c: 203:     float ADC_volt = 0;
 [v _ADC_volt `f ~T0 @X0 1 a ]
 [e = _ADC_volt -> -> 0 `i `f ]
-"189
-[; ;main.c: 189:     float R_PT100 = 0;
+"204
+[; ;main.c: 204:     float R_PT100 = 0;
 [v _R_PT100 `f ~T0 @X0 1 a ]
 [e = _R_PT100 -> -> 0 `i `f ]
-"190
-[; ;main.c: 190:     float Temp_PT100 = 0;
+"205
+[; ;main.c: 205:     float Temp_PT100 = 0;
 [v _Temp_PT100 `f ~T0 @X0 1 a ]
 [e = _Temp_PT100 -> -> 0 `i `f ]
-"192
-[; ;main.c: 192:     ADC_StartConversion();
+"207
+[; ;main.c: 207:     ADC_StartConversion();
 [e ( _ADC_StartConversion ..  ]
-"194
-[; ;main.c: 194:     ADC_num = Read_ADC_Num();
+"209
+[; ;main.c: 209:     ADC_num = Read_ADC_Num();
 [e = _ADC_num ( _Read_ADC_Num ..  ]
-"196
-[; ;main.c: 196:     ADC_volt = ChangeADCtoVoltage(ADC_num);
+"211
+[; ;main.c: 211:     ADC_volt = ChangeADCtoVoltage(ADC_num);
 [e = _ADC_volt ( _ChangeADCtoVoltage (1 _ADC_num ]
-"198
-[; ;main.c: 198:     R_PT100 = Measure_R_PT100_2Wire(ADC_volt);
+"213
+[; ;main.c: 213:     R_PT100 = Measure_R_PT100_2Wire(ADC_volt);
 [e = _R_PT100 ( _Measure_R_PT100_2Wire (1 _ADC_volt ]
-"200
-[; ;main.c: 200:     Temp_PT100 = Measure_Temp_PT100_2Wire(R_PT100);
+"215
+[; ;main.c: 215:     Temp_PT100 = Measure_Temp_PT100_2Wire(R_PT100);
 [e = _Temp_PT100 ( _Measure_Temp_PT100_2Wire (1 _R_PT100 ]
-"202
-[; ;main.c: 202:     return Temp_PT100;
+"217
+[; ;main.c: 217:     return Temp_PT100;
 [e ) _Temp_PT100 ]
 [e $UE 401  ]
-"203
-[; ;main.c: 203: }
+"218
+[; ;main.c: 218: }
 [e :UE 401 ]
 }
-"206
-[; ;main.c: 206: void Zero_Detection_isr(void){
+"221
+[; ;main.c: 221: void Zero_Detection_isr(void){
 [v _Zero_Detection_isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _Zero_Detection_isr ]
 [f ]
-"209
-[; ;main.c: 209:     TMR2_StartTimer();
+"226
+[; ;main.c: 226:     if (1 == DimmerStatusFlag_g){
+[e $ ! == -> 1 `i -> _DimmerStatusFlag_g `i 403  ]
+{
+"228
+[; ;main.c: 228:         TMR2_StartTimer();
 [e ( _TMR2_StartTimer ..  ]
-"211
-[; ;main.c: 211: }
+"229
+[; ;main.c: 229:     }
+}
+[e :U 403 ]
+"231
+[; ;main.c: 231: }
 [e :UE 402 ]
 }
-"214
-[; ;main.c: 214: void TMR2_Int_isr(void){
-[v _TMR2_Int_isr `(v ~T0 @X0 1 ef ]
+"234
+[; ;main.c: 234: void TMR2_Drive_TRIAC_isr(void){
+[v _TMR2_Drive_TRIAC_isr `(v ~T0 @X0 1 ef ]
 {
-[e :U _TMR2_Int_isr ]
+[e :U _TMR2_Drive_TRIAC_isr ]
 [f ]
-"216
-[; ;main.c: 216:     static uint16_t counter_tmr2 = 0;
-[v F3821 `us ~T0 @X0 1 s counter_tmr2 ]
-[i F3821
+"236
+[; ;main.c: 236:     static uint16_t counter_tmr2 = 0;
+[v F3835 `us ~T0 @X0 1 s counter_tmr2 ]
+[i F3835
 -> -> 0 `i `us
 ]
-"217
-[; ;main.c: 217:     counter_tmr2 ++;
-[e ++ F3821 -> -> 1 `i `us ]
-"219
-[; ;main.c: 219:     if(counter_tmr2 >= required_delay_for_dim_ms_g){
-[e $ ! >= -> F3821 `ui -> _required_delay_for_dim_ms_g `ui 404  ]
+"238
+[; ;main.c: 238:     if (1 == DimmerStatusFlag_g){
+[e $ ! == -> 1 `i -> _DimmerStatusFlag_g `i 405  ]
 {
-"221
-[; ;main.c: 221:         counter_tmr2 = 0;
-[e = F3821 -> -> 0 `i `us ]
-"222
-[; ;main.c: 222:         do { LATCbits.LATC5 = 1; } while(0);
-[e :U 407 ]
+"240
+[; ;main.c: 240:         counter_tmr2 ++;
+[e ++ F3835 -> -> 1 `i `us ]
+"242
+[; ;main.c: 242:         if(counter_tmr2 >= tmr2_required_counter_steps_g){
+[e $ ! >= -> F3835 `ui -> _tmr2_required_counter_steps_g `ui 406  ]
+{
+"244
+[; ;main.c: 244:             counter_tmr2 = 0;
+[e = F3835 -> -> 0 `i `us ]
+"245
+[; ;main.c: 245:             do { LATCbits.LATC5 = 1; } while(0);
+[e :U 409 ]
 {
 [e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 406 ]
-"224
-[; ;main.c: 224:     }
+[e :U 408 ]
+"247
+[; ;main.c: 247:         }
 }
-[e $U 408  ]
-"225
-[; ;main.c: 225:     else if (1 == PORTCbits.RC5){
-[e :U 404 ]
-[e $ ! == -> 1 `i -> . . _PORTCbits 0 5 `i 409  ]
+[e $U 410  ]
+"248
+[; ;main.c: 248:         else if (1 == PORTCbits.RC5){
+[e :U 406 ]
+[e $ ! == -> 1 `i -> . . _PORTCbits 0 5 `i 411  ]
 {
-"227
-[; ;main.c: 227:         counter_tmr2 = 0;
-[e = F3821 -> -> 0 `i `us ]
-"228
-[; ;main.c: 228:         TMR2_StopTimer();
+"250
+[; ;main.c: 250:             counter_tmr2 = 0;
+[e = F3835 -> -> 0 `i `us ]
+"251
+[; ;main.c: 251:             TMR2_StopTimer();
 [e ( _TMR2_StopTimer ..  ]
-"229
-[; ;main.c: 229:         do { LATCbits.LATC5 = 0; } while(0);
-[e :U 412 ]
+"252
+[; ;main.c: 252:             do { LATCbits.LATC5 = 0; } while(0);
+[e :U 414 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
+[e :U 413 ]
+"253
+[; ;main.c: 253:         }
+}
 [e :U 411 ]
-"230
-[; ;main.c: 230:     }
+[e :U 410 ]
+"254
+[; ;main.c: 254:     }
 }
-[e :U 409 ]
-[e :U 408 ]
-"231
-[; ;main.c: 231: }
-[e :UE 403 ]
+[e $U 415  ]
+"255
+[; ;main.c: 255:     else{
+[e :U 405 ]
+{
+"257
+[; ;main.c: 257:         counter_tmr2 = 0;
+[e = F3835 -> -> 0 `i `us ]
+"258
+[; ;main.c: 258:     }
 }
-"234
-[; ;main.c: 234: void TMR4_Wroking_Blink_AlarmLED_isr(void){
+[e :U 415 ]
+"259
+[; ;main.c: 259: }
+[e :UE 404 ]
+}
+"262
+[; ;main.c: 262: void TMR4_Wroking_Blink_AlarmLED_isr(void){
 [v _TMR4_Wroking_Blink_AlarmLED_isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR4_Wroking_Blink_AlarmLED_isr ]
 [f ]
-"236
-[; ;main.c: 236:     static uint16_t counter_tmr4 = 0;
-[v F3823 `us ~T0 @X0 1 s counter_tmr4 ]
-[i F3823
+"264
+[; ;main.c: 264:     static uint16_t counter_tmr4 = 0;
+[v F3837 `us ~T0 @X0 1 s counter_tmr4 ]
+[i F3837
 -> -> 0 `i `us
 ]
-"237
-[; ;main.c: 237:     counter_tmr4 ++;
-[e ++ F3823 -> -> 1 `i `us ]
-"239
-[; ;main.c: 239:     if(counter_tmr4 >= 1000){
-[e $ ! >= -> F3823 `ui -> -> 1000 `i `ui 414  ]
+"265
+[; ;main.c: 265:     counter_tmr4 ++;
+[e ++ F3837 -> -> 1 `i `us ]
+"267
+[; ;main.c: 267:     if(counter_tmr4 >= 1000){
+[e $ ! >= -> F3837 `ui -> -> 1000 `i `ui 417  ]
 {
-"241
-[; ;main.c: 241:         counter_tmr4 = 0;
-[e = F3823 -> -> 0 `i `us ]
-"242
-[; ;main.c: 242:         do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0);
-[e :U 417 ]
+"269
+[; ;main.c: 269:         counter_tmr4 = 0;
+[e = F3837 -> -> 0 `i `us ]
+"270
+[; ;main.c: 270:         do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0);
+[e :U 420 ]
 {
 [e = . . _LATCbits 0 2 -> ~ -> . . _LATCbits 0 2 `i `uc ]
 }
-[e :U 416 ]
-"244
-[; ;main.c: 244:     }
+[e :U 419 ]
+"271
+[; ;main.c: 271:     }
 }
-[e :U 414 ]
-"245
-[; ;main.c: 245: }
-[e :UE 413 ]
+[e :U 417 ]
+"272
+[; ;main.c: 272: }
+[e :UE 416 ]
 }
-[v F3825 `(v ~T0 @X0 1 tf1`a ]
-"248
-[; ;main.c: 248: __attribute__((inline)) void StartStop_AlarmLED(_Bool OnOff){
-[v _StartStop_AlarmLED `TF3825 ~T0 @X0 1 e ]
+[v F3839 `(v ~T0 @X0 1 tf1`a ]
+"275
+[; ;main.c: 275: __attribute__((inline)) void StartStop_AlarmLED(_Bool OnOff){
+[v _StartStop_AlarmLED `TF3839 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_AlarmLED ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"250
-[; ;main.c: 250:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 419  ]
+"277
+[; ;main.c: 277:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 422  ]
 {
-"252
-[; ;main.c: 252:         do { LATCbits.LATC2 = 1; } while(0);
-[e :U 422 ]
+"279
+[; ;main.c: 279:         do { LATCbits.LATC2 = 1; } while(0);
+[e :U 425 ]
 {
 [e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 421 ]
-"253
-[; ;main.c: 253:     }
+[e :U 424 ]
+"280
+[; ;main.c: 280:     }
 }
-[e $U 423  ]
-"254
-[; ;main.c: 254:     else{
-[e :U 419 ]
+[e $U 426  ]
+"281
+[; ;main.c: 281:     else{
+[e :U 422 ]
 {
-"256
-[; ;main.c: 256:         do { LATCbits.LATC2 = 0; } while(0);
-[e :U 426 ]
+"283
+[; ;main.c: 283:         do { LATCbits.LATC2 = 0; } while(0);
+[e :U 429 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 425 ]
-"257
-[; ;main.c: 257:     }
+[e :U 428 ]
+"284
+[; ;main.c: 284:     }
 }
-[e :U 423 ]
-"259
-[; ;main.c: 259: }
-[e :UE 418 ]
+[e :U 426 ]
+"286
+[; ;main.c: 286: }
+[e :UE 421 ]
 }
-[v F3828 `(v ~T0 @X0 1 tf1`a ]
-"262
-[; ;main.c: 262: __attribute__((inline)) void StartStop_Fan(_Bool OnOff){
-[v _StartStop_Fan `TF3828 ~T0 @X0 1 e ]
+[v F3842 `(v ~T0 @X0 1 tf1`a ]
+"289
+[; ;main.c: 289: __attribute__((inline)) void StartStop_AlarmLED_Blink(_Bool OnOff){
+[v _StartStop_AlarmLED_Blink `TF3842 ~T0 @X0 1 e ]
+{
+[e :U _StartStop_AlarmLED_Blink ]
+[v _OnOff `a ~T0 @X0 1 r1 ]
+[f ]
+"291
+[; ;main.c: 291:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 431  ]
+{
+"293
+[; ;main.c: 293:         TMR4_StartTimer();
+[e ( _TMR4_StartTimer ..  ]
+"294
+[; ;main.c: 294:     }
+}
+[e $U 432  ]
+"295
+[; ;main.c: 295:     else{
+[e :U 431 ]
+{
+"297
+[; ;main.c: 297:         TMR4_StopTimer();
+[e ( _TMR4_StopTimer ..  ]
+"298
+[; ;main.c: 298:     }
+}
+[e :U 432 ]
+"299
+[; ;main.c: 299: }
+[e :UE 430 ]
+}
+[v F3845 `(v ~T0 @X0 1 tf1`a ]
+"302
+[; ;main.c: 302: __attribute__((inline)) void StartStop_Fan(_Bool OnOff){
+[v _StartStop_Fan `TF3845 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_Fan ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"264
-[; ;main.c: 264:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 428  ]
+"304
+[; ;main.c: 304:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 434  ]
 {
-"266
-[; ;main.c: 266:         do { LATCbits.LATC3 = 1; } while(0);
-[e :U 431 ]
+"306
+[; ;main.c: 306:         do { LATCbits.LATC3 = 1; } while(0);
+[e :U 437 ]
 {
 [e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
 }
-[e :U 430 ]
-"267
-[; ;main.c: 267:     }
+[e :U 436 ]
+"307
+[; ;main.c: 307:     }
 }
-[e $U 432  ]
-"268
-[; ;main.c: 268:     else{
-[e :U 428 ]
+[e $U 438  ]
+"308
+[; ;main.c: 308:     else{
+[e :U 434 ]
 {
-"270
-[; ;main.c: 270:         do { LATCbits.LATC3 = 0; } while(0);
-[e :U 435 ]
+"310
+[; ;main.c: 310:         do { LATCbits.LATC3 = 0; } while(0);
+[e :U 441 ]
 {
 [e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
 }
-[e :U 434 ]
-"271
-[; ;main.c: 271:     }
+[e :U 440 ]
+"311
+[; ;main.c: 311:     }
 }
-[e :U 432 ]
-"273
-[; ;main.c: 273: }
-[e :UE 427 ]
+[e :U 438 ]
+"313
+[; ;main.c: 313: }
+[e :UE 433 ]
 }
-[v F3831 `(v ~T0 @X0 1 tf1`a ]
-"276
-[; ;main.c: 276: __attribute__((inline)) void StartStop_Buzzer(_Bool OnOff){
-[v _StartStop_Buzzer `TF3831 ~T0 @X0 1 e ]
+[v F3848 `(v ~T0 @X0 1 tf1`a ]
+"316
+[; ;main.c: 316: __attribute__((inline)) void StartStop_Buzzer(_Bool OnOff){
+[v _StartStop_Buzzer `TF3848 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_Buzzer ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"278
-[; ;main.c: 278:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 437  ]
+"318
+[; ;main.c: 318:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 443  ]
 {
-"280
-[; ;main.c: 280:         do { LATCbits.LATC4 = 1; } while(0);
-[e :U 440 ]
+"320
+[; ;main.c: 320:         do { LATCbits.LATC4 = 1; } while(0);
+[e :U 446 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 439 ]
-"281
-[; ;main.c: 281:     }
+[e :U 445 ]
+"321
+[; ;main.c: 321:     }
 }
-[e $U 441  ]
-"282
-[; ;main.c: 282:     else{
-[e :U 437 ]
+[e $U 447  ]
+"322
+[; ;main.c: 322:     else{
+[e :U 443 ]
 {
-"284
-[; ;main.c: 284:         do { LATCbits.LATC4 = 0; } while(0);
-[e :U 444 ]
+"324
+[; ;main.c: 324:         do { LATCbits.LATC4 = 0; } while(0);
+[e :U 450 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 443 ]
-"285
-[; ;main.c: 285:     }
+[e :U 449 ]
+"325
+[; ;main.c: 325:     }
 }
-[e :U 441 ]
-"287
-[; ;main.c: 287: }
-[e :UE 436 ]
+[e :U 447 ]
+"327
+[; ;main.c: 327: }
+[e :UE 442 ]
 }
-[v F3834 `(v ~T0 @X0 1 tf ]
-"290
-[; ;main.c: 290: __attribute__((inline)) void StartTouchDetection(void){
-[v _StartTouchDetection `TF3834 ~T0 @X0 1 e ]
+[v F3851 `(v ~T0 @X0 1 tf1`a ]
+"330
+[; ;main.c: 330: __attribute__((inline)) void StartStop_Dimmer(_Bool OnOff){
+[v _StartStop_Dimmer `TF3851 ~T0 @X0 1 e ]
+{
+[e :U _StartStop_Dimmer ]
+[v _OnOff `a ~T0 @X0 1 r1 ]
+[f ]
+"332
+[; ;main.c: 332:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 452  ]
+{
+"334
+[; ;main.c: 334:         DimmerStatusFlag_g = 1;
+[e = _DimmerStatusFlag_g -> -> 1 `i `a ]
+"335
+[; ;main.c: 335:     }
+}
+[e $U 453  ]
+"336
+[; ;main.c: 336:     else{
+[e :U 452 ]
+{
+"338
+[; ;main.c: 338:         SetDimmer(3);
+[e ( _SetDimmer (1 -> -> 3 `i `f ]
+"339
+[; ;main.c: 339:         DimmerStatusFlag_g = 0;
+[e = _DimmerStatusFlag_g -> -> 0 `i `a ]
+"340
+[; ;main.c: 340:     }
+}
+[e :U 453 ]
+"341
+[; ;main.c: 341: }
+[e :UE 451 ]
+}
+[v F3854 `(v ~T0 @X0 1 tf ]
+"344
+[; ;main.c: 344: __attribute__((inline)) void StartTouchDetection(void){
+[v _StartTouchDetection `TF3854 ~T0 @X0 1 e ]
 {
 [e :U _StartTouchDetection ]
 [f ]
-"293
-[; ;main.c: 293:     if (1 == MTOUCH_Service_Mainloop()) {
-[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 446  ]
+"347
+[; ;main.c: 347:     if (1 == MTOUCH_Service_Mainloop()) {
+[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 455  ]
 {
-"295
-[; ;main.c: 295:         if (1 == MTOUCH_Button_isPressed(T_start)){
-[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3636 0 `i 447  ]
+"349
+[; ;main.c: 349:         if (1 == MTOUCH_Button_isPressed(T_start)){
+[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3636 0 `i 456  ]
 {
-"297
-[; ;main.c: 297:             StartStop_AlarmLED(1);
+"351
+[; ;main.c: 351:             StartStop_AlarmLED(1);
 [e ( _StartStop_AlarmLED (1 -> -> 1 `i `a ]
-"299
-[; ;main.c: 299:         }
+"353
+[; ;main.c: 353:         }
 }
-[e $U 448  ]
-"300
-[; ;main.c: 300:         else{
-[e :U 447 ]
+[e $U 457  ]
+"354
+[; ;main.c: 354:         else{
+[e :U 456 ]
 {
-"302
-[; ;main.c: 302:             StartStop_AlarmLED(0);
+"356
+[; ;main.c: 356:             StartStop_AlarmLED(0);
 [e ( _StartStop_AlarmLED (1 -> -> 0 `i `a ]
-"304
-[; ;main.c: 304:         }
+"358
+[; ;main.c: 358:         }
 }
-[e :U 448 ]
-"305
-[; ;main.c: 305:     }
+[e :U 457 ]
+"359
+[; ;main.c: 359:     }
 }
-[e :U 446 ]
-"306
-[; ;main.c: 306: }
-[e :UE 445 ]
+[e :U 455 ]
+"360
+[; ;main.c: 360: }
+[e :UE 454 ]
 }
-[v F3836 `(v ~T0 @X0 1 tf ]
-"309
-[; ;main.c: 309: __attribute__((inline)) void StopTouchDetection(void){
-[v _StopTouchDetection `TF3836 ~T0 @X0 1 e ]
+[v F3856 `(v ~T0 @X0 1 tf ]
+"363
+[; ;main.c: 363: __attribute__((inline)) void StopTouchDetection(void){
+[v _StopTouchDetection `TF3856 ~T0 @X0 1 e ]
 {
 [e :U _StopTouchDetection ]
 [f ]
-"312
-[; ;main.c: 312:     if (1 == MTOUCH_Service_Mainloop()) {
-[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 450  ]
+"366
+[; ;main.c: 366:     if (1 == MTOUCH_Service_Mainloop()) {
+[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 459  ]
 {
-"314
-[; ;main.c: 314:         if (1 == MTOUCH_Button_isPressed(T_stop)){
-[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3636 1 `i 451  ]
+"368
+[; ;main.c: 368:         if (1 == MTOUCH_Button_isPressed(T_stop)){
+[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3636 1 `i 460  ]
 {
-"316
-[; ;main.c: 316:             StartStop_AlarmLED(1);
+"370
+[; ;main.c: 370:             StartStop_AlarmLED(1);
 [e ( _StartStop_AlarmLED (1 -> -> 1 `i `a ]
-"318
-[; ;main.c: 318:         }
+"372
+[; ;main.c: 372:         }
 }
-[e $U 452  ]
-"319
-[; ;main.c: 319:         else{
-[e :U 451 ]
+[e $U 461  ]
+"373
+[; ;main.c: 373:         else{
+[e :U 460 ]
 {
-"321
-[; ;main.c: 321:             StartStop_AlarmLED(0);
+"375
+[; ;main.c: 375:             StartStop_AlarmLED(0);
 [e ( _StartStop_AlarmLED (1 -> -> 0 `i `a ]
-"323
-[; ;main.c: 323:         }
+"377
+[; ;main.c: 377:         }
 }
-[e :U 452 ]
-"324
-[; ;main.c: 324:     }
+[e :U 461 ]
+"378
+[; ;main.c: 378:     }
 }
-[e :U 450 ]
-"326
-[; ;main.c: 326: }
-[e :UE 449 ]
+[e :U 459 ]
+"380
+[; ;main.c: 380: }
+[e :UE 458 ]
 }
-[v F3838 `(us ~T0 @X0 1 tf1`f ]
-"329
-[; ;main.c: 329: __attribute__((inline)) uint16_t CalcRequiredDelayForTrigTRIAC(float dim_percentage){
-[v _CalcRequiredDelayForTrigTRIAC `TF3838 ~T0 @X0 1 e ]
+"384
+[; ;main.c: 384: void SetDimmer(float dim_percentage){
+[v _SetDimmer `(v ~T0 @X0 1 ef1`f ]
 {
-[e :U _CalcRequiredDelayForTrigTRIAC ]
+[e :U _SetDimmer ]
 [v _dim_percentage `f ~T0 @X0 1 r1 ]
 [f ]
-"331
-[; ;main.c: 331:     float delay;
-[v _delay `f ~T0 @X0 1 a ]
-"332
-[; ;main.c: 332:     uint16_t ret;
-[v _ret `us ~T0 @X0 1 a ]
-"334
-[; ;main.c: 334:     delay = HalfCycleACDuration_const - (5.0 * dim_percentage / 50.0);
-[e = _delay -> - -> _HalfCycleACDuration_const `d / * .5.0 -> _dim_percentage `d .50.0 `f ]
-"335
-[; ;main.c: 335:     ret = (delay * 1000) / TMR2_Period_const;
-[e = _ret -> / * _delay -> -> 1000 `i `f _TMR2_Period_const `us ]
-"337
-[; ;main.c: 337:     return ret;
-[e ) _ret ]
-[e $UE 453  ]
-"338
-[; ;main.c: 338: }
-[e :UE 453 ]
+"389
+[; ;main.c: 389:     float TRIAC_off_duration_ms = 0;
+[v _TRIAC_off_duration_ms `f ~T0 @X0 1 a ]
+[e = _TRIAC_off_duration_ms -> -> 0 `i `f ]
+"391
+[; ;main.c: 391:     TRIAC_off_duration_ms = HalfCycleACDuration_const - (5.0 * dim_percentage / 50.0);
+[e = _TRIAC_off_duration_ms -> - -> _HalfCycleACDuration_const `d / * .5.0 -> _dim_percentage `d .50.0 `f ]
+"392
+[; ;main.c: 392:     tmr2_required_counter_steps_g = (TRIAC_off_duration_ms * 1000) / TMR2_Timer_Period_const;
+[e = _tmr2_required_counter_steps_g -> / * _TRIAC_off_duration_ms -> -> 1000 `i `f _TMR2_Timer_Period_const `us ]
+"394
+[; ;main.c: 394: }
+[e :UE 462 ]
 }
-[p f _sprintf 8396800 ]
-[a 1C 37 102 32 67 101 108 115 105 117 115 10 0 ]
+[v F3861 `(v ~T0 @X0 1 tf ]
+"397
+[; ;main.c: 397: __attribute__((inline)) void Config_Heater(void){
+[v _Config_Heater `TF3861 ~T0 @X0 1 e ]
+{
+[e :U _Config_Heater ]
+[f ]
+"399
+[; ;main.c: 399:     StartStop_AlarmLED_Blink(1);
+[e ( _StartStop_AlarmLED_Blink (1 -> -> 1 `i `a ]
+"400
+[; ;main.c: 400:     StartStop_Dimmer(1);
+[e ( _StartStop_Dimmer (1 -> -> 1 `i `a ]
+"404
+[; ;main.c: 404:     SetDimmer(10);
+[e ( _SetDimmer (1 -> -> 10 `i `f ]
+"405
+[; ;main.c: 405:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"407
+[; ;main.c: 407:     SetDimmer(11);
+[e ( _SetDimmer (1 -> -> 11 `i `f ]
+"408
+[; ;main.c: 408:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"410
+[; ;main.c: 410:     SetDimmer(12);
+[e ( _SetDimmer (1 -> -> 12 `i `f ]
+"411
+[; ;main.c: 411:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"413
+[; ;main.c: 413:     SetDimmer(13);
+[e ( _SetDimmer (1 -> -> 13 `i `f ]
+"414
+[; ;main.c: 414:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"416
+[; ;main.c: 416:     SetDimmer(14);
+[e ( _SetDimmer (1 -> -> 14 `i `f ]
+"417
+[; ;main.c: 417:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"419
+[; ;main.c: 419:     SetDimmer(15);
+[e ( _SetDimmer (1 -> -> 15 `i `f ]
+"420
+[; ;main.c: 420:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"422
+[; ;main.c: 422:     SetDimmer(16);
+[e ( _SetDimmer (1 -> -> 16 `i `f ]
+"423
+[; ;main.c: 423:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"425
+[; ;main.c: 425:     SetDimmer(17);
+[e ( _SetDimmer (1 -> -> 17 `i `f ]
+"426
+[; ;main.c: 426:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"428
+[; ;main.c: 428:     SetDimmer(18);
+[e ( _SetDimmer (1 -> -> 18 `i `f ]
+"429
+[; ;main.c: 429:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"431
+[; ;main.c: 431:     SetDimmer(19);
+[e ( _SetDimmer (1 -> -> 19 `i `f ]
+"432
+[; ;main.c: 432:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"434
+[; ;main.c: 434:     SetDimmer(20);
+[e ( _SetDimmer (1 -> -> 20 `i `f ]
+"435
+[; ;main.c: 435:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"437
+[; ;main.c: 437:     SetDimmer(21);
+[e ( _SetDimmer (1 -> -> 21 `i `f ]
+"438
+[; ;main.c: 438:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"440
+[; ;main.c: 440:     SetDimmer(22);
+[e ( _SetDimmer (1 -> -> 22 `i `f ]
+"441
+[; ;main.c: 441:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"443
+[; ;main.c: 443:     SetDimmer(23);
+[e ( _SetDimmer (1 -> -> 23 `i `f ]
+"444
+[; ;main.c: 444:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"446
+[; ;main.c: 446:     SetDimmer(24);
+[e ( _SetDimmer (1 -> -> 24 `i `f ]
+"447
+[; ;main.c: 447:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"449
+[; ;main.c: 449:     SetDimmer(25);
+[e ( _SetDimmer (1 -> -> 25 `i `f ]
+"450
+[; ;main.c: 450:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"452
+[; ;main.c: 452:     SetDimmer(26);
+[e ( _SetDimmer (1 -> -> 26 `i `f ]
+"453
+[; ;main.c: 453:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"455
+[; ;main.c: 455:     SetDimmer(27);
+[e ( _SetDimmer (1 -> -> 27 `i `f ]
+"456
+[; ;main.c: 456:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"458
+[; ;main.c: 458:     SetDimmer(28);
+[e ( _SetDimmer (1 -> -> 28 `i `f ]
+"459
+[; ;main.c: 459:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"461
+[; ;main.c: 461:     SetDimmer(29);
+[e ( _SetDimmer (1 -> -> 29 `i `f ]
+"462
+[; ;main.c: 462:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"464
+[; ;main.c: 464:     SetDimmer(30);
+[e ( _SetDimmer (1 -> -> 30 `i `f ]
+"465
+[; ;main.c: 465:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"469
+[; ;main.c: 469:     SetDimmer(30.5);
+[e ( _SetDimmer (1 -> .30.5 `f ]
+"470
+[; ;main.c: 470:     _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"472
+[; ;main.c: 472:     SetDimmer(31);
+[e ( _SetDimmer (1 -> -> 31 `i `f ]
+"473
+[; ;main.c: 473:     _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"475
+[; ;main.c: 475:     SetDimmer(31.5);
+[e ( _SetDimmer (1 -> .31.5 `f ]
+"476
+[; ;main.c: 476:     _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"478
+[; ;main.c: 478:     SetDimmer(32);
+[e ( _SetDimmer (1 -> -> 32 `i `f ]
+"479
+[; ;main.c: 479:     _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"481
+[; ;main.c: 481:     SetDimmer(32.5);
+[e ( _SetDimmer (1 -> .32.5 `f ]
+"482
+[; ;main.c: 482:     _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"484
+[; ;main.c: 484:     SetDimmer(33);
+[e ( _SetDimmer (1 -> -> 33 `i `f ]
+"485
+[; ;main.c: 485:     _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"487
+[; ;main.c: 487:     SetDimmer(33.5);
+[e ( _SetDimmer (1 -> .33.5 `f ]
+"488
+[; ;main.c: 488:     _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"490
+[; ;main.c: 490:     SetDimmer(34);
+[e ( _SetDimmer (1 -> -> 34 `i `f ]
+"491
+[; ;main.c: 491:     _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"493
+[; ;main.c: 493:     SetDimmer(34.5);
+[e ( _SetDimmer (1 -> .34.5 `f ]
+"494
+[; ;main.c: 494:     _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"496
+[; ;main.c: 496:     SetDimmer(35);
+[e ( _SetDimmer (1 -> -> 35 `i `f ]
+"497
+[; ;main.c: 497:     _delay((unsigned long)((9000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 9000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"501
+[; ;main.c: 501:     SetDimmer(35.5);
+[e ( _SetDimmer (1 -> .35.5 `f ]
+"502
+[; ;main.c: 502:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"504
+[; ;main.c: 504:     SetDimmer(36);
+[e ( _SetDimmer (1 -> -> 36 `i `f ]
+"505
+[; ;main.c: 505:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"507
+[; ;main.c: 507:     SetDimmer(36.5);
+[e ( _SetDimmer (1 -> .36.5 `f ]
+"508
+[; ;main.c: 508:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"510
+[; ;main.c: 510:     SetDimmer(37);
+[e ( _SetDimmer (1 -> -> 37 `i `f ]
+"511
+[; ;main.c: 511:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"513
+[; ;main.c: 513:     SetDimmer(37.5);
+[e ( _SetDimmer (1 -> .37.5 `f ]
+"514
+[; ;main.c: 514:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"516
+[; ;main.c: 516:     SetDimmer(38);
+[e ( _SetDimmer (1 -> -> 38 `i `f ]
+"517
+[; ;main.c: 517:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"519
+[; ;main.c: 519:     SetDimmer(38.5);
+[e ( _SetDimmer (1 -> .38.5 `f ]
+"520
+[; ;main.c: 520:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"522
+[; ;main.c: 522:     SetDimmer(39);
+[e ( _SetDimmer (1 -> -> 39 `i `f ]
+"523
+[; ;main.c: 523:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"525
+[; ;main.c: 525:     SetDimmer(39.5);
+[e ( _SetDimmer (1 -> .39.5 `f ]
+"526
+[; ;main.c: 526:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"528
+[; ;main.c: 528:     SetDimmer(40);
+[e ( _SetDimmer (1 -> -> 40 `i `f ]
+"529
+[; ;main.c: 529:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"531
+[; ;main.c: 531:     SetDimmer(40.5);
+[e ( _SetDimmer (1 -> .40.5 `f ]
+"532
+[; ;main.c: 532:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"534
+[; ;main.c: 534:     SetDimmer(41);
+[e ( _SetDimmer (1 -> -> 41 `i `f ]
+"535
+[; ;main.c: 535:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"537
+[; ;main.c: 537:     SetDimmer(41.5);
+[e ( _SetDimmer (1 -> .41.5 `f ]
+"538
+[; ;main.c: 538:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"540
+[; ;main.c: 540:     SetDimmer(42);
+[e ( _SetDimmer (1 -> -> 42 `i `f ]
+"541
+[; ;main.c: 541:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"543
+[; ;main.c: 543:     SetDimmer(42.5);
+[e ( _SetDimmer (1 -> .42.5 `f ]
+"544
+[; ;main.c: 544:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"546
+[; ;main.c: 546:     SetDimmer(43);
+[e ( _SetDimmer (1 -> -> 43 `i `f ]
+"547
+[; ;main.c: 547:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"549
+[; ;main.c: 549:     SetDimmer(43.5);
+[e ( _SetDimmer (1 -> .43.5 `f ]
+"550
+[; ;main.c: 550:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"552
+[; ;main.c: 552:     SetDimmer(44);
+[e ( _SetDimmer (1 -> -> 44 `i `f ]
+"553
+[; ;main.c: 553:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"555
+[; ;main.c: 555:     SetDimmer(44.5);
+[e ( _SetDimmer (1 -> .44.5 `f ]
+"556
+[; ;main.c: 556:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"558
+[; ;main.c: 558:     SetDimmer(45);
+[e ( _SetDimmer (1 -> -> 45 `i `f ]
+"559
+[; ;main.c: 559:     _delay((unsigned long)((2500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"563
+[; ;main.c: 563:     StartStop_Fan(1);
+[e ( _StartStop_Fan (1 -> -> 1 `i `a ]
+"565
+[; ;main.c: 565:     StartStop_Buzzer(1);
+[e ( _StartStop_Buzzer (1 -> -> 1 `i `a ]
+"566
+[; ;main.c: 566:     _delay((unsigned long)((2000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"567
+[; ;main.c: 567:     StartStop_Buzzer(0);
+[e ( _StartStop_Buzzer (1 -> -> 0 `i `a ]
+"570
+[; ;main.c: 570:     StartStop_Dimmer(0);
+[e ( _StartStop_Dimmer (1 -> -> 0 `i `a ]
+"571
+[; ;main.c: 571:     StartStop_AlarmLED_Blink(0);
+[e ( _StartStop_AlarmLED_Blink (1 -> -> 0 `i `a ]
+"572
+[; ;main.c: 572: }
+[e :UE 463 ]
+}

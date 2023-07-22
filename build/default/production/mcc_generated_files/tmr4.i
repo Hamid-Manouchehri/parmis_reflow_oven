@@ -4600,7 +4600,7 @@ void TMR4_Initialize(void)
     TMR4_SetInterruptHandler(TMR4_DefaultInterruptHandler);
 
 
-    T4CON = 0x06;
+    T4CON = 0x02;
 }
 
 void TMR4_StartTimer(void)
