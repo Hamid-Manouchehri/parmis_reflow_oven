@@ -54,6 +54,7 @@
 #include <conio.h>
 #include "interrupt_manager.h"
 #include "tmr4.h"
+#include "tmr1.h"
 #include "tmr2.h"
 #include "adc.h"
 #include "mtouch/mtouch.h"

@@ -56,6 +56,7 @@ void SYSTEM_Initialize(void)
     ADC_Initialize();
     TMR4_Initialize();
     TMR2_Initialize();
+    TMR1_Initialize();
     EUSART_Initialize();
     MTOUCH_Initialize();
 }

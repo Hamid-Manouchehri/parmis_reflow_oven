@@ -4783,6 +4783,33 @@ extern void (*TMR4_InterruptHandler)(void);
 void TMR4_DefaultInterruptHandler(void);
 # 56 "mcc_generated_files/mtouch/../mcc.h" 2
 
+# 1 "mcc_generated_files/mtouch/../tmr1.h" 1
+# 100 "mcc_generated_files/mtouch/../tmr1.h"
+void TMR1_Initialize(void);
+# 129 "mcc_generated_files/mtouch/../tmr1.h"
+void TMR1_StartTimer(void);
+# 161 "mcc_generated_files/mtouch/../tmr1.h"
+void TMR1_StopTimer(void);
+# 196 "mcc_generated_files/mtouch/../tmr1.h"
+uint16_t TMR1_ReadTimer(void);
+# 235 "mcc_generated_files/mtouch/../tmr1.h"
+void TMR1_WriteTimer(uint16_t timerVal);
+# 271 "mcc_generated_files/mtouch/../tmr1.h"
+void TMR1_Reload(void);
+# 310 "mcc_generated_files/mtouch/../tmr1.h"
+void TMR1_StartSinglePulseAcquisition(void);
+# 349 "mcc_generated_files/mtouch/../tmr1.h"
+uint8_t TMR1_CheckGateValueStatus(void);
+# 367 "mcc_generated_files/mtouch/../tmr1.h"
+void TMR1_ISR(void);
+# 385 "mcc_generated_files/mtouch/../tmr1.h"
+ void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+# 403 "mcc_generated_files/mtouch/../tmr1.h"
+extern void (*TMR1_InterruptHandler)(void);
+# 421 "mcc_generated_files/mtouch/../tmr1.h"
+void TMR1_DefaultInterruptHandler(void);
+# 57 "mcc_generated_files/mtouch/../mcc.h" 2
+
 # 1 "mcc_generated_files/mtouch/../tmr2.h" 1
 # 103 "mcc_generated_files/mtouch/../tmr2.h"
 void TMR2_Initialize(void);
@@ -4804,7 +4831,7 @@ void TMR2_ISR(void);
 extern void (*TMR2_InterruptHandler)(void);
 # 362 "mcc_generated_files/mtouch/../tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 57 "mcc_generated_files/mtouch/../mcc.h" 2
+# 58 "mcc_generated_files/mtouch/../mcc.h" 2
 
 # 1 "mcc_generated_files/mtouch/../adc.h" 1
 # 72 "mcc_generated_files/mtouch/../adc.h"
@@ -4840,7 +4867,7 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 316 "mcc_generated_files/mtouch/../adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 58 "mcc_generated_files/mtouch/../mcc.h" 2
+# 59 "mcc_generated_files/mtouch/../mcc.h" 2
 
 
 # 1 "mcc_generated_files/mtouch/../eusart.h" 1
@@ -4874,12 +4901,12 @@ void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 397 "mcc_generated_files/mtouch/../eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 60 "mcc_generated_files/mtouch/../mcc.h" 2
-# 75 "mcc_generated_files/mtouch/../mcc.h"
+# 61 "mcc_generated_files/mtouch/../mcc.h" 2
+# 76 "mcc_generated_files/mtouch/../mcc.h"
 void SYSTEM_Initialize(void);
-# 88 "mcc_generated_files/mtouch/../mcc.h"
+# 89 "mcc_generated_files/mtouch/../mcc.h"
 void OSCILLATOR_Initialize(void);
-# 100 "mcc_generated_files/mtouch/../mcc.h"
+# 101 "mcc_generated_files/mtouch/../mcc.h"
 void WDT_Initialize(void);
 # 41 "mcc_generated_files/mtouch/mtouch.c" 2
 # 52 "mcc_generated_files/mtouch/mtouch.c"

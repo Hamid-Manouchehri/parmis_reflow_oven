@@ -5202,6 +5202,33 @@ extern void (*TMR4_InterruptHandler)(void);
 void TMR4_DefaultInterruptHandler(void);
 # 56 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/tmr1.h" 1
+# 100 "./mcc_generated_files/tmr1.h"
+void TMR1_Initialize(void);
+# 129 "./mcc_generated_files/tmr1.h"
+void TMR1_StartTimer(void);
+# 161 "./mcc_generated_files/tmr1.h"
+void TMR1_StopTimer(void);
+# 196 "./mcc_generated_files/tmr1.h"
+uint16_t TMR1_ReadTimer(void);
+# 235 "./mcc_generated_files/tmr1.h"
+void TMR1_WriteTimer(uint16_t timerVal);
+# 271 "./mcc_generated_files/tmr1.h"
+void TMR1_Reload(void);
+# 310 "./mcc_generated_files/tmr1.h"
+void TMR1_StartSinglePulseAcquisition(void);
+# 349 "./mcc_generated_files/tmr1.h"
+uint8_t TMR1_CheckGateValueStatus(void);
+# 367 "./mcc_generated_files/tmr1.h"
+void TMR1_ISR(void);
+# 385 "./mcc_generated_files/tmr1.h"
+ void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+# 403 "./mcc_generated_files/tmr1.h"
+extern void (*TMR1_InterruptHandler)(void);
+# 421 "./mcc_generated_files/tmr1.h"
+void TMR1_DefaultInterruptHandler(void);
+# 57 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/tmr2.h" 1
 # 103 "./mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
@@ -5223,7 +5250,7 @@ void TMR2_ISR(void);
 extern void (*TMR2_InterruptHandler)(void);
 # 362 "./mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/adc.h" 1
 # 72 "./mcc_generated_files/adc.h"
@@ -5259,7 +5286,7 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 316 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 58 "./mcc_generated_files/mcc.h" 2
+# 59 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/mtouch/mtouch.h" 1
 # 41 "./mcc_generated_files/mtouch/mtouch.h"
@@ -5415,7 +5442,7 @@ void ADC_TemperatureAcquisitionDelay(void);
     _Bool MTOUCH_Service_isInProgress (void);
     void MTOUCH_requestInitSet (void);
     _Bool MTOUCH_requestInitGet (void);
-# 59 "./mcc_generated_files/mcc.h" 2
+# 60 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart.h" 1
 # 75 "./mcc_generated_files/eusart.h"
@@ -5448,32 +5475,33 @@ void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 397 "./mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 60 "./mcc_generated_files/mcc.h" 2
-# 75 "./mcc_generated_files/mcc.h"
+# 61 "./mcc_generated_files/mcc.h" 2
+# 76 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 88 "./mcc_generated_files/mcc.h"
+# 89 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 100 "./mcc_generated_files/mcc.h"
+# 101 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 13 "main.c" 2
-# 30 "main.c"
-const float R_const = 100.0;
-const float V_cc_const = 5.0;
+# 29 "main.c"
+const uint8_t R_const = 100;
+const uint8_t V_cc_const = 5;
 const float Tolerance_Temp_const = 37.2;
 const float HalfCycleACDuration_const = 10.0;
 const float TMR2_Timer_Period_const = 100;
 const float TMR6_Timer_Period_const = 1;
 unsigned char Buff_g[20];
 uint16_t tmr2_required_counter_steps_g;
-uint16_t tmr2_required_counter_steps_Arr_g[3];
-uint16_t tmr6_required_counter_steps_Arr_g[3];
 _Bool DimmerStatusFlag_g = 0;
-uint16_t required_steps_for_delay_of_dim_g = 0;
-
-float dim_value_Arr_g [3] = {10, 20, 50};
-float dim_duration_ms_Arr_g [3] = {5000, 5000, 5000};
+_Bool onceFlag = 1;
 
 
+typedef uint16_t delay;
+uint16_t ticker_g = 0;
+const uint16_t ticker_max = 0xffff;
+const uint16_t tmr1_period = 250;
+
+delay get_delay (delay ms);
 __attribute__((inline)) void Init_Function(void);
 __attribute__((inline)) void TX_Command(uint8_t);
 __attribute__((inline)) void TX_Whole_String(char*);
@@ -5484,6 +5512,7 @@ __attribute__((inline)) float Measure_R_PT100_2Wire(float);
 __attribute__((inline)) float Measure_Temp_PT100_2Wire(float);
 __attribute__((inline)) float Read_PT100_Temp(void);
 void Zero_Detection_isr(void);
+void TMR1_Generate_Delay_ms_isr(void);
 void TMR2_Drive_TRIAC_isr(void);
 void TMR4_Wroking_Blink_AlarmLED_isr(void);
 __attribute__((inline)) void StartStop_AlarmLED(_Bool);
@@ -5495,8 +5524,11 @@ __attribute__((inline)) void StartTouchDetection(void);
 __attribute__((inline)) void StopTouchDetection(void);
 void SetDimmer(float);
 __attribute__((inline)) void Config_Heater(void);
-# 77 "main.c"
+__attribute__((inline)) void StartHeater(void);
+# 79 "main.c"
 void main(void){
+
+    delay del = get_delay(0);
 
     SYSTEM_Initialize();
     Init_Function();
@@ -5506,24 +5538,29 @@ void main(void){
     (INTCONbits.PEIE = 1);
 
     IOCAF2_SetInterruptHandler(Zero_Detection_isr);
+    TMR1_SetInterruptHandler(TMR1_Generate_Delay_ms_isr);
     TMR2_SetInterruptHandler(TMR2_Drive_TRIAC_isr);
     TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr);
 
-    float Temp_PT100 = 0.0;
+    uint16_t Temp_PT100 = 0.0;
 
-    Config_Heater();
 
 
     while (1){
 
+        Config_Heater();
 
+        if (del == ticker_g){
 
-
-
+            Temp_PT100 = Read_PT100_Temp();
+            sprintf(Buff_g, "%d Celsius\n", Temp_PT100);
+            TX_Whole_String(Buff_g);
+            del = get_delay(500);
+        }
 
     }
 }
-# 112 "main.c"
+# 121 "main.c"
 __attribute__((inline)) void Init_Function(void){
 
     StartStop_AlarmLED(0);
@@ -5646,6 +5683,12 @@ void Zero_Detection_isr(void){
 }
 
 
+void TMR1_Generate_Delay_ms_isr (void){
+
+    ticker_g++;
+}
+
+
 void TMR2_Drive_TRIAC_isr(void){
 
     static uint16_t counter_tmr2 = 0;
@@ -5710,6 +5753,7 @@ __attribute__((inline)) void StartStop_AlarmLED_Blink(_Bool OnOff){
     else{
 
         TMR4_StopTimer();
+        do { LATCbits.LATC2 = 0; } while(0);
     }
 }
 
@@ -5811,177 +5855,276 @@ void SetDimmer(float dim_percentage){
 
 __attribute__((inline)) void Config_Heater(void){
 
+    static uint8_t count = 0;
+    static delay del = 0;
+    static _Bool once = 0;
+
+    if (0 == once)
+    {
+
+        once = 1;
+        del = get_delay (0);
+    }
+
     StartStop_AlarmLED_Blink(1);
     StartStop_Dimmer(1);
 
+    if (del != ticker_g){
+
+        return;
+    }
+
+    if (1 == onceFlag){
+
+        switch (count++){
 
 
-    SetDimmer(10);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(11);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(12);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(13);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(14);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(15);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(16);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(17);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(18);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(19);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(20);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(21);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(22);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(23);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(24);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(25);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(26);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(27);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(28);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(29);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-    SetDimmer(30);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
-
-
-
-    SetDimmer(30.5);
-    _delay((unsigned long)((9000)*(8000000/4000.0)));
-
-    SetDimmer(31);
-    _delay((unsigned long)((9000)*(8000000/4000.0)));
-
-    SetDimmer(31.5);
-    _delay((unsigned long)((9000)*(8000000/4000.0)));
-
-    SetDimmer(32);
-    _delay((unsigned long)((9000)*(8000000/4000.0)));
-
-    SetDimmer(32.5);
-    _delay((unsigned long)((9000)*(8000000/4000.0)));
-
-    SetDimmer(33);
-    _delay((unsigned long)((9000)*(8000000/4000.0)));
-
-    SetDimmer(33.5);
-    _delay((unsigned long)((9000)*(8000000/4000.0)));
-
-    SetDimmer(34);
-    _delay((unsigned long)((9000)*(8000000/4000.0)));
-
-    SetDimmer(34.5);
-    _delay((unsigned long)((9000)*(8000000/4000.0)));
-
-    SetDimmer(35);
-    _delay((unsigned long)((9000)*(8000000/4000.0)));
+            case 0:
+                SetDimmer(10);
+                del = get_delay(1500);
+                break;
+            case 1:
+                SetDimmer(11);
+                del = get_delay(1500);
+                break;
+            case 2:
+                SetDimmer(12);
+                del = get_delay(1500);
+                break;
+            case 3:
+                SetDimmer(13);
+                del = get_delay(1500);
+                break;
+            case 4:
+                SetDimmer(14);
+                del = get_delay(1500);
+                break;
+            case 5:
+                SetDimmer(15);
+                del = get_delay(1500);
+                break;
+            case 6:
+                SetDimmer(16);
+                del = get_delay(1500);
+                break;
+            case 7:
+                SetDimmer(17);
+                del = get_delay(1500);
+                break;
+            case 8:
+                SetDimmer(18);
+                del = get_delay(1500);
+                break;
+            case 9:
+                SetDimmer(19);
+                del = get_delay(1500);
+                break;
+            case 10:
+                SetDimmer(20);
+                del = get_delay(1500);
+                break;
+            case 11:
+                SetDimmer(21);
+                del = get_delay(1500);
+                break;
+            case 12:
+                SetDimmer(22);
+                del = get_delay(1500);
+                break;
+            case 13:
+                SetDimmer(23);
+                del = get_delay(1500);
+                break;
+            case 14:
+                SetDimmer(24);
+                del = get_delay(1500);
+                break;
+            case 15:
+                SetDimmer(25);
+                del = get_delay(1500);
+                break;
+            case 16:
+                SetDimmer(26);
+                del = get_delay(1500);
+                break;
+            case 17:
+                SetDimmer(27);
+                del = get_delay(1500);
+                break;
+            case 18:
+                SetDimmer(28);
+                del = get_delay(1500);
+                break;
+            case 19:
+                SetDimmer(29);
+                del = get_delay(1500);
+                break;
+            case 20:
+                SetDimmer(30);
+                del = get_delay(1500);
+                break;
 
 
-
-    SetDimmer(35.5);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(36);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(36.5);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(37);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(37.5);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(38);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(38.5);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(39);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(39.5);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(40);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(40.5);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(41);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(41.5);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(42);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(42.5);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(43);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(43.5);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(44);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(44.5);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
-
-    SetDimmer(45);
-    _delay((unsigned long)((2500)*(8000000/4000.0)));
+            case 21:
+                SetDimmer(30.5);
+                del = get_delay(5000);
+                break;
+            case 22:
+                SetDimmer(31);
+                del = get_delay(5000);
+                break;
+            case 23:
+                SetDimmer(31.5);
+                del = get_delay(5000);
+                break;
+            case 24:
+                SetDimmer(32);
+                del = get_delay(5000);
+                break;
+            case 25:
+                SetDimmer(32.5);
+                del = get_delay(5000);
+                break;
+            case 26:
+                SetDimmer(33);
+                del = get_delay(5000);
+                break;
+            case 27:
+                SetDimmer(33.5);
+                del = get_delay(5000);
+                break;
+            case 28:
+                SetDimmer(34);
+                del = get_delay(5000);
+                break;
+            case 29:
+                SetDimmer(34.5);
+                del = get_delay(5000);
+                break;
+            case 30:
+                SetDimmer(35);
+                del = get_delay(5000);
+                break;
 
 
 
-    StartStop_Fan(1);
+            case 31:
+                SetDimmer(37);
+                del = get_delay(2500);
+                break;
+            case 32:
+                SetDimmer(39);
+                del = get_delay(2500);
+                break;
+            case 33:
+                SetDimmer(41);
+                del = get_delay(2500);
+                break;
+            case 34:
+                SetDimmer(43);
+                del = get_delay(2500);
+                break;
+            case 35:
+                SetDimmer(45);
+                del = get_delay(2500);
+                break;
+            case 36:
+                SetDimmer(47);
+                del = get_delay(2500);
+                break;
+            case 37:
+                SetDimmer(49);
+                del = get_delay(2500);
+                break;
+            case 38:
+                SetDimmer(51);
+                del = get_delay(2500);
+                break;
+            case 39:
+                SetDimmer(53);
+                del = get_delay(2500);
+                break;
+            case 40:
+                SetDimmer(55);
+                del = get_delay(2500);
+                break;
+            case 41:
+                SetDimmer(57);
+                del = get_delay(2500);
+                break;
+            case 42:
+                SetDimmer(59);
+                del = get_delay(2500);
+                break;
 
-    StartStop_Buzzer(1);
-    _delay((unsigned long)((2000)*(8000000/4000.0)));
-    StartStop_Buzzer(0);
 
 
-    StartStop_Dimmer(0);
-    StartStop_AlarmLED_Blink(0);
+            case 43:
+                SetDimmer(61);
+                del = get_delay(500);
+                break;
+            case 44:
+                SetDimmer(63);
+                del = get_delay(500);
+                break;
+            case 45:
+                SetDimmer(65);
+                del = get_delay(500);
+                break;
+            case 46:
+                SetDimmer(67);
+                del = get_delay(500);
+                break;
+            case 47:
+                SetDimmer(69);
+                del = get_delay(500);
+                break;
+            case 48:
+                SetDimmer(71);
+                del = get_delay(500);
+                break;
+            case 49:
+                SetDimmer(73);
+                del = get_delay(500);
+                break;
+            case 50:
+                SetDimmer(75);
+                del = get_delay(500);
+                break;
+            case 51:
+                SetDimmer(77);
+                del = get_delay(500);
+                break;
+            case 52:
+                SetDimmer(79);
+                del = get_delay(500);
+                break;
+
+
+            case 53:
+                StartStop_Fan(1);
+                StartStop_Buzzer(1);
+                _delay((unsigned long)((1000)*(8000000/4000.0)));
+                StartStop_Buzzer(0);
+                StartStop_Dimmer(0);
+                StartStop_AlarmLED_Blink(0);
+                onceFlag = 0;
+                break;
+
+        }
+    }
+}
+# 847 "main.c"
+delay get_delay (delay ms){
+
+    uint32_t buf = ms / tmr1_period;
+
+    if ((ticker_g + buf) > ticker_max){
+
+        return (ticker_g + buf) - ticker_max;
+    }
+    else{
+
+        return ticker_g + buf;
+    }
 }

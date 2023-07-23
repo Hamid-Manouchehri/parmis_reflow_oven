@@ -15,7 +15,6 @@
 
 
 #define  TMR4_REQUIRED_COUNTER_STEPS   1000 // TMR4_REQUIRED_COUNTER_STEPS * 1 (ms) <TODO>
-#define  NUM_OF_DIM_VALUE                    3  // <TODO>
 
 #define  ON   true
 #define  OFF  false
@@ -27,23 +26,24 @@
 // T(r)=(Z1+sqrt(Z2+Z3*r))/Z4
 
 
-const float R_const = 100.0; // ohm
-const float V_cc_const = 5.0; // volt
+const uint8_t R_const = 100; // ohm
+const uint8_t V_cc_const = 5; // volt
 const float Tolerance_Temp_const = 37.2;  // Celsius
 const float HalfCycleACDuration_const = 10.0; // ms
 const float TMR2_Timer_Period_const = 100; // us  <TODO>
 const float TMR6_Timer_Period_const = 1; // ms  <TODO>
 unsigned char Buff_g[20]; // size of the number
 uint16_t tmr2_required_counter_steps_g;
-uint16_t tmr2_required_counter_steps_Arr_g[NUM_OF_DIM_VALUE];
-uint16_t tmr6_required_counter_steps_Arr_g[NUM_OF_DIM_VALUE];
 bool DimmerStatusFlag_g = false;
-uint16_t required_steps_for_delay_of_dim_g = 0;
+bool onceFlag = true;
 
-float dim_value_Arr_g [NUM_OF_DIM_VALUE] = {10, 20, 50}; // percentage; Defining the amount of dim for each stage. <TODO>
-float dim_duration_ms_Arr_g [NUM_OF_DIM_VALUE] = {5000, 5000, 5000}; // ms; Defining the duration of corresponding dim. <TODO>
-// Note: dim_duration_ms_Arr_g must have the same Unit as TMR6_Timer_Period_const.
 
+typedef uint16_t delay;
+uint16_t ticker_g = 0;
+const uint16_t ticker_max = 0xffff;
+const uint16_t tmr1_period = 250; // ms
+
+delay get_delay (delay ms);
 inline void Init_Function(void);
 inline void TX_Command(uint8_t);
 inline void TX_Whole_String(char*);
@@ -54,6 +54,7 @@ inline float Measure_R_PT100_2Wire(float);
 inline float Measure_Temp_PT100_2Wire(float);
 inline float Read_PT100_Temp(void);
 void Zero_Detection_isr(void);
+void TMR1_Generate_Delay_ms_isr(void);
 void TMR2_Drive_TRIAC_isr(void);
 void TMR4_Wroking_Blink_AlarmLED_isr(void);
 inline void StartStop_AlarmLED(bool);
@@ -65,6 +66,7 @@ inline void StartTouchDetection(void);
 inline void StopTouchDetection(void);
 void SetDimmer(float);
 inline void Config_Heater(void);
+inline void StartHeater(void);
 
 
 /*
@@ -76,6 +78,8 @@ inline void Config_Heater(void);
 
 void main(void){
     
+    delay del = get_delay(0);
+    
     SYSTEM_Initialize();
     Init_Function();
 //    StartStop_AlarmLED(ON); // to indicate PCB has power.
@@ -84,20 +88,23 @@ void main(void){
     INTERRUPT_PeripheralInterruptEnable();
     
     IOCAF2_SetInterruptHandler(Zero_Detection_isr);
+    TMR1_SetInterruptHandler(TMR1_Generate_Delay_ms_isr);
     TMR2_SetInterruptHandler(TMR2_Drive_TRIAC_isr);
     TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr);
     
-    float Temp_PT100 = 0.0;
-    
-    Config_Heater();
-    
+    uint16_t Temp_PT100 = 0.0;
     
     while (1){
         
-//        Temp_PT100 = Read_PT100_Temp();
-//        sprintf(Buff_g, "%f Celsius\n", Temp_PT100);
-//        TX_Whole_String(Buff_g);
-//        __delay_ms(500);
+        Config_Heater();
+
+        if (del == ticker_g){
+            
+            Temp_PT100 = Read_PT100_Temp();
+            sprintf(Buff_g, "%d Celsius\n", Temp_PT100); // if use "%f" it would occupy the whole flash.
+            TX_Whole_String(Buff_g);
+            del = get_delay(500);
+        }
         
     } // end of while(1)
 } // end of main()
@@ -228,6 +235,12 @@ void Zero_Detection_isr(void){
         TMR2_StartTimer();
     }
     
+}
+
+
+void TMR1_Generate_Delay_ms_isr (void){
+
+    ticker_g++;
 }
 
 
@@ -397,177 +410,277 @@ void SetDimmer(float dim_percentage){
 
 inline void Config_Heater(void){
 
+    static uint8_t count = 0;
+    static delay del = 0;
+    static bool once = false;
+    
+    if (false == once)
+    {
+        
+        once = true;
+        del = get_delay (0);
+    }
+    
     StartStop_AlarmLED_Blink(ON);
     StartStop_Dimmer(ON);
     
-    // <section #1>
+    if (del != ticker_g){
+        
+        return;
+    }
     
-    SetDimmer(10);
-    __delay_ms(3000);
-    
-    SetDimmer(11);
-    __delay_ms(3000);
-    
-    SetDimmer(12);
-    __delay_ms(3000);
-    
-    SetDimmer(13);
-    __delay_ms(3000);
-    
-    SetDimmer(14);
-    __delay_ms(3000);
-    
-    SetDimmer(15);
-    __delay_ms(3000);
-    
-    SetDimmer(16);
-    __delay_ms(3000);
-    
-    SetDimmer(17);
-    __delay_ms(3000);
-    
-    SetDimmer(18);
-    __delay_ms(3000);
-    
-    SetDimmer(19);
-    __delay_ms(3000);
-    
-    SetDimmer(20);
-    __delay_ms(3000);
-    
-    SetDimmer(21);
-    __delay_ms(3000);
-    
-    SetDimmer(22);
-    __delay_ms(3000);
-    
-    SetDimmer(23);
-    __delay_ms(3000);
-    
-    SetDimmer(24);
-    __delay_ms(3000);
-    
-    SetDimmer(25);
-    __delay_ms(3000);
-    
-    SetDimmer(26);
-    __delay_ms(3000);
-    
-    SetDimmer(27);
-    __delay_ms(3000);
-    
-    SetDimmer(28);
-    __delay_ms(3000);
-    
-    SetDimmer(29);
-    __delay_ms(3000);
-    
-    SetDimmer(30);
-    __delay_ms(3000);
-    
-    // <section #2>
-    
-    SetDimmer(30.5);
-    __delay_ms(9000);
-    
-    SetDimmer(31);
-    __delay_ms(9000);
-    
-    SetDimmer(31.5);
-    __delay_ms(9000);
-    
-    SetDimmer(32);
-    __delay_ms(9000);
-    
-    SetDimmer(32.5);
-    __delay_ms(9000);
-    
-    SetDimmer(33);
-    __delay_ms(9000);
-    
-    SetDimmer(33.5);
-    __delay_ms(9000);
-    
-    SetDimmer(34);
-    __delay_ms(9000);
-    
-    SetDimmer(34.5);
-    __delay_ms(9000);
-    
-    SetDimmer(35);
-    __delay_ms(9000);
-    
-    // <section #3>
-    
-    SetDimmer(35.5);
-    __delay_ms(2500);
-    
-    SetDimmer(36);
-    __delay_ms(2500);
-    
-    SetDimmer(36.5);
-    __delay_ms(2500);
-    
-    SetDimmer(37);
-    __delay_ms(2500);
-    
-    SetDimmer(37.5);
-    __delay_ms(2500);
-    
-    SetDimmer(38);
-    __delay_ms(2500);
-    
-    SetDimmer(38.5);
-    __delay_ms(2500);
-    
-    SetDimmer(39);
-    __delay_ms(2500);
-    
-    SetDimmer(39.5);
-    __delay_ms(2500);
-    
-    SetDimmer(40);
-    __delay_ms(2500);
-    
-    SetDimmer(40.5);
-    __delay_ms(2500);
-    
-    SetDimmer(41);
-    __delay_ms(2500);
-    
-    SetDimmer(41.5);
-    __delay_ms(2500);
-    
-    SetDimmer(42);
-    __delay_ms(2500);
-    
-    SetDimmer(42.5);
-    __delay_ms(2500);
-    
-    SetDimmer(43);
-    __delay_ms(2500);
-    
-    SetDimmer(43.5);
-    __delay_ms(2500);
-    
-    SetDimmer(44);
-    __delay_ms(2500);
-    
-    SetDimmer(44.5);
-    __delay_ms(2500);
-    
-    SetDimmer(45);
-    __delay_ms(2500);
-    
-    // <section #4>
+    if (true == onceFlag){
+        
+        switch (count++){
 
-    StartStop_Fan(ON);
+            // <section #1>
+            case 0:
+                SetDimmer(10);
+                del = get_delay(1500);
+                break;
+            case 1:
+                SetDimmer(11);
+                del = get_delay(1500);
+                break;
+            case 2:
+                SetDimmer(12);
+                del = get_delay(1500);
+                break;
+            case 3:
+                SetDimmer(13);
+                del = get_delay(1500);
+                break;
+            case 4:
+                SetDimmer(14);
+                del = get_delay(1500);
+                break;
+            case 5:
+                SetDimmer(15);
+                del = get_delay(1500);
+                break;
+            case 6:
+                SetDimmer(16);
+                del = get_delay(1500);
+                break;
+            case 7:
+                SetDimmer(17);
+                del = get_delay(1500);
+                break;
+            case 8:
+                SetDimmer(18);
+                del = get_delay(1500);
+                break;
+            case 9:
+                SetDimmer(19);
+                del = get_delay(1500);
+                break;
+            case 10:
+                SetDimmer(20);
+                del = get_delay(1500);
+                break;
+            case 11:
+                SetDimmer(21);
+                del = get_delay(1500);
+                break;
+            case 12:
+                SetDimmer(22);
+                del = get_delay(1500);
+                break;
+            case 13:
+                SetDimmer(23);
+                del = get_delay(1500);
+                break;
+            case 14:
+                SetDimmer(24);
+                del = get_delay(1500);
+                break;
+            case 15:
+                SetDimmer(25);
+                del = get_delay(1500);
+                break;
+            case 16:
+                SetDimmer(26);
+                del = get_delay(1500);
+                break;
+            case 17:
+                SetDimmer(27);
+                del = get_delay(1500);
+                break;
+            case 18:
+                SetDimmer(28);
+                del = get_delay(1500);
+                break;
+            case 19:
+                SetDimmer(29);
+                del = get_delay(1500);
+                break;
+            case 20:
+                SetDimmer(30);
+                del = get_delay(1500);
+                break;    
+
+            // <section #2>    
+            case 21:
+                SetDimmer(30.5);
+                del = get_delay(5000);
+                break;
+            case 22:
+                SetDimmer(31);
+                del = get_delay(5000);
+                break;
+            case 23:
+                SetDimmer(31.5);
+                del = get_delay(5000);
+                break;
+            case 24:
+                SetDimmer(32);
+                del = get_delay(5000);
+                break;
+            case 25:
+                SetDimmer(32.5);
+                del = get_delay(5000);
+                break;
+            case 26:
+                SetDimmer(33);
+                del = get_delay(5000);
+                break;
+            case 27:
+                SetDimmer(33.5);
+                del = get_delay(5000);
+                break;
+            case 28:
+                SetDimmer(34);
+                del = get_delay(5000);
+                break;
+            case 29:
+                SetDimmer(34.5);
+                del = get_delay(5000);
+                break;
+            case 30:
+                SetDimmer(35);
+                del = get_delay(5000);
+                break;
+
+
+            // <section #3>
+            case 31:
+                SetDimmer(37);
+                del = get_delay(2500);
+                break;
+            case 32:
+                SetDimmer(39);
+                del = get_delay(2500);
+                break;
+            case 33:
+                SetDimmer(41);
+                del = get_delay(2500);
+                break;
+            case 34:
+                SetDimmer(43);
+                del = get_delay(2500);
+                break;
+            case 35:
+                SetDimmer(45);
+                del = get_delay(2500);
+                break;
+            case 36:
+                SetDimmer(47);
+                del = get_delay(2500);
+                break;
+            case 37:
+                SetDimmer(49);
+                del = get_delay(2500);
+                break;
+            case 38:
+                SetDimmer(51);
+                del = get_delay(2500);
+                break;
+            case 39:
+                SetDimmer(53);
+                del = get_delay(2500);
+                break;
+            case 40:
+                SetDimmer(55);
+                del = get_delay(2500);
+                break;
+            case 41:
+                SetDimmer(57);
+                del = get_delay(2500);
+                break;
+            case 42:
+                SetDimmer(59);
+                del = get_delay(2500);
+                break;
+                
+                
+                
+            case 43:
+                SetDimmer(61);
+                del = get_delay(500);
+                break;
+            case 44:
+                SetDimmer(63);
+                del = get_delay(500);
+                break;
+            case 45:
+                SetDimmer(65);
+                del = get_delay(500);
+                break;
+            case 46:
+                SetDimmer(67);
+                del = get_delay(500);
+                break;
+            case 47:
+                SetDimmer(69);
+                del = get_delay(500);
+                break;
+            case 48:
+                SetDimmer(71);
+                del = get_delay(500);
+                break;
+            case 49:
+                SetDimmer(73);
+                del = get_delay(500);
+                break;
+            case 50:
+                SetDimmer(75);
+                del = get_delay(500);
+                break;
+            case 51:
+                SetDimmer(77);
+                del = get_delay(500);
+                break;
+            case 52:
+                SetDimmer(79);
+                del = get_delay(500);
+                break;
+
+            // <section #4>
+            case 53:           
+                StartStop_Fan(ON);
+                StartStop_Buzzer(ON);
+                __delay_ms(1000);
+                StartStop_Buzzer(OFF);
+                StartStop_Dimmer(OFF);
+                StartStop_AlarmLED_Blink(OFF);
+                onceFlag = false;
+                break;
+
+        }// end of switch 
+    }// end of if()
+}
+
+
+delay get_delay (delay ms){
     
-    StartStop_Buzzer(ON);
-    __delay_ms(2000);
-    StartStop_Buzzer(OFF);
+    uint32_t buf = ms / tmr1_period;
     
-    
-    StartStop_Dimmer(OFF);
-    StartStop_AlarmLED_Blink(OFF);
+    if ((ticker_g + buf) > ticker_max){
+        
+        return (ticker_g + buf) - ticker_max;
+    }
+    else{
+        
+        return ticker_g + buf;
+    }
 }
