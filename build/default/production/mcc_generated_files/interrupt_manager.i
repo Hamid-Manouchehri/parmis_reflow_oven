@@ -4552,17 +4552,17 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 237 "mcc_generated_files/pin_manager.h"
+# 198 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 249 "mcc_generated_files/pin_manager.h"
+# 210 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 262 "mcc_generated_files/pin_manager.h"
+# 223 "mcc_generated_files/pin_manager.h"
 void IOCAF2_ISR(void);
-# 285 "mcc_generated_files/pin_manager.h"
+# 246 "mcc_generated_files/pin_manager.h"
 void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 309 "mcc_generated_files/pin_manager.h"
+# 270 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF2_InterruptHandler)(void);
-# 333 "mcc_generated_files/pin_manager.h"
+# 294 "mcc_generated_files/pin_manager.h"
 void IOCAF2_DefaultInterruptHandler(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -4602,6 +4602,29 @@ extern void cputs(const char *);
 # 54 "mcc_generated_files/mcc.h" 2
 
 
+# 1 "mcc_generated_files/tmr6.h" 1
+# 103 "mcc_generated_files/tmr6.h"
+void TMR6_Initialize(void);
+# 132 "mcc_generated_files/tmr6.h"
+void TMR6_StartTimer(void);
+# 164 "mcc_generated_files/tmr6.h"
+void TMR6_StopTimer(void);
+# 199 "mcc_generated_files/tmr6.h"
+uint8_t TMR6_ReadTimer(void);
+# 238 "mcc_generated_files/tmr6.h"
+void TMR6_WriteTimer(uint8_t timerVal);
+# 290 "mcc_generated_files/tmr6.h"
+void TMR6_LoadPeriodRegister(uint8_t periodVal);
+# 308 "mcc_generated_files/tmr6.h"
+void TMR6_ISR(void);
+# 326 "mcc_generated_files/tmr6.h"
+ void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "mcc_generated_files/tmr6.h"
+extern void (*TMR6_InterruptHandler)(void);
+# 362 "mcc_generated_files/tmr6.h"
+void TMR6_DefaultInterruptHandler(void);
+# 56 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/tmr4.h" 1
 # 103 "mcc_generated_files/tmr4.h"
 void TMR4_Initialize(void);
@@ -4623,33 +4646,6 @@ void TMR4_ISR(void);
 extern void (*TMR4_InterruptHandler)(void);
 # 362 "mcc_generated_files/tmr4.h"
 void TMR4_DefaultInterruptHandler(void);
-# 56 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/tmr1.h" 1
-# 100 "mcc_generated_files/tmr1.h"
-void TMR1_Initialize(void);
-# 129 "mcc_generated_files/tmr1.h"
-void TMR1_StartTimer(void);
-# 161 "mcc_generated_files/tmr1.h"
-void TMR1_StopTimer(void);
-# 196 "mcc_generated_files/tmr1.h"
-uint16_t TMR1_ReadTimer(void);
-# 235 "mcc_generated_files/tmr1.h"
-void TMR1_WriteTimer(uint16_t timerVal);
-# 271 "mcc_generated_files/tmr1.h"
-void TMR1_Reload(void);
-# 310 "mcc_generated_files/tmr1.h"
-void TMR1_StartSinglePulseAcquisition(void);
-# 349 "mcc_generated_files/tmr1.h"
-uint8_t TMR1_CheckGateValueStatus(void);
-# 367 "mcc_generated_files/tmr1.h"
-void TMR1_ISR(void);
-# 385 "mcc_generated_files/tmr1.h"
- void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 403 "mcc_generated_files/tmr1.h"
-extern void (*TMR1_InterruptHandler)(void);
-# 421 "mcc_generated_files/tmr1.h"
-void TMR1_DefaultInterruptHandler(void);
 # 57 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr2.h" 1
@@ -4674,42 +4670,6 @@ extern void (*TMR2_InterruptHandler)(void);
 # 362 "mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
 # 58 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/adc.h" 1
-# 72 "mcc_generated_files/adc.h"
-typedef uint16_t adc_result_t;
-
-
-
-
-typedef struct
-{
-    adc_result_t adcResult1;
-    adc_result_t adcResult2;
-} adc_sync_double_result_t;
-# 95 "mcc_generated_files/adc.h"
-typedef enum
-{
-    channel_AN10 = 0xA,
-    channel_Temp = 0x1D,
-    channel_DAC = 0x1E,
-    channel_FVR = 0x1F
-} adc_channel_t;
-# 136 "mcc_generated_files/adc.h"
-void ADC_Initialize(void);
-# 166 "mcc_generated_files/adc.h"
-void ADC_SelectChannel(adc_channel_t channel);
-# 193 "mcc_generated_files/adc.h"
-void ADC_StartConversion(void);
-# 225 "mcc_generated_files/adc.h"
-_Bool ADC_IsConversionDone(void);
-# 258 "mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversionResult(void);
-# 288 "mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 316 "mcc_generated_files/adc.h"
-void ADC_TemperatureAcquisitionDelay(void);
-# 59 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/mtouch/mtouch.h" 1
 # 41 "mcc_generated_files/mtouch/mtouch.h"
@@ -4865,45 +4825,12 @@ void ADC_TemperatureAcquisitionDelay(void);
     _Bool MTOUCH_Service_isInProgress (void);
     void MTOUCH_requestInitSet (void);
     _Bool MTOUCH_requestInitGet (void);
-# 60 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/eusart.h" 1
-# 75 "mcc_generated_files/eusart.h"
-typedef union {
-    struct {
-        unsigned perr : 1;
-        unsigned ferr : 1;
-        unsigned oerr : 1;
-        unsigned reserved : 5;
-    };
-    uint8_t status;
-}eusart_status_t;
-# 110 "mcc_generated_files/eusart.h"
-void EUSART_Initialize(void);
-# 158 "mcc_generated_files/eusart.h"
-_Bool EUSART_is_tx_ready(void);
-# 206 "mcc_generated_files/eusart.h"
-_Bool EUSART_is_rx_ready(void);
-# 253 "mcc_generated_files/eusart.h"
-_Bool EUSART_is_tx_done(void);
-# 301 "mcc_generated_files/eusart.h"
-eusart_status_t EUSART_get_last_status(void);
-# 321 "mcc_generated_files/eusart.h"
-uint8_t EUSART_Read(void);
-# 341 "mcc_generated_files/eusart.h"
-void EUSART_Write(uint8_t txData);
-# 361 "mcc_generated_files/eusart.h"
-void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 379 "mcc_generated_files/eusart.h"
-void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 397 "mcc_generated_files/eusart.h"
-void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 61 "mcc_generated_files/mcc.h" 2
-# 76 "mcc_generated_files/mcc.h"
+# 59 "mcc_generated_files/mcc.h" 2
+# 74 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 89 "mcc_generated_files/mcc.h"
+# 87 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 101 "mcc_generated_files/mcc.h"
+# 99 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 50 "mcc_generated_files/interrupt_manager.c" 2
 
@@ -4917,17 +4844,17 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
     }
     else if(INTCONbits.PEIE == 1)
     {
-        if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
+        if(PIE3bits.TMR6IE == 1 && PIR3bits.TMR6IF == 1)
+        {
+            TMR6_ISR();
+        }
+        else if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
         {
             TMR4_ISR();
         }
         else if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
         {
             TMR2_ISR();
-        }
-        else if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
-        {
-            TMR1_ISR();
         }
         else
         {

@@ -99,45 +99,6 @@
 #define out_CS_SetAnalogMode()      do { ANSELAbits.ANSA4 = 1; } while(0)
 #define out_CS_SetDigitalMode()     do { ANSELAbits.ANSA4 = 0; } while(0)
 
-// get/set channel_AN10 aliases
-#define channel_AN10_TRIS                 TRISBbits.TRISB4
-#define channel_AN10_LAT                  LATBbits.LATB4
-#define channel_AN10_PORT                 PORTBbits.RB4
-#define channel_AN10_WPU                  WPUBbits.WPUB4
-#define channel_AN10_ANS                  ANSELBbits.ANSB4
-#define channel_AN10_SetHigh()            do { LATBbits.LATB4 = 1; } while(0)
-#define channel_AN10_SetLow()             do { LATBbits.LATB4 = 0; } while(0)
-#define channel_AN10_Toggle()             do { LATBbits.LATB4 = ~LATBbits.LATB4; } while(0)
-#define channel_AN10_GetValue()           PORTBbits.RB4
-#define channel_AN10_SetDigitalInput()    do { TRISBbits.TRISB4 = 1; } while(0)
-#define channel_AN10_SetDigitalOutput()   do { TRISBbits.TRISB4 = 0; } while(0)
-#define channel_AN10_SetPullup()          do { WPUBbits.WPUB4 = 1; } while(0)
-#define channel_AN10_ResetPullup()        do { WPUBbits.WPUB4 = 0; } while(0)
-#define channel_AN10_SetAnalogMode()      do { ANSELBbits.ANSB4 = 1; } while(0)
-#define channel_AN10_SetDigitalMode()     do { ANSELBbits.ANSB4 = 0; } while(0)
-
-// get/set RB5 procedures
-#define RB5_SetHigh()            do { LATBbits.LATB5 = 1; } while(0)
-#define RB5_SetLow()             do { LATBbits.LATB5 = 0; } while(0)
-#define RB5_Toggle()             do { LATBbits.LATB5 = ~LATBbits.LATB5; } while(0)
-#define RB5_GetValue()              PORTBbits.RB5
-#define RB5_SetDigitalInput()    do { TRISBbits.TRISB5 = 1; } while(0)
-#define RB5_SetDigitalOutput()   do { TRISBbits.TRISB5 = 0; } while(0)
-#define RB5_SetPullup()             do { WPUBbits.WPUB5 = 1; } while(0)
-#define RB5_ResetPullup()           do { WPUBbits.WPUB5 = 0; } while(0)
-#define RB5_SetAnalogMode()         do { ANSELBbits.ANSB5 = 1; } while(0)
-#define RB5_SetDigitalMode()        do { ANSELBbits.ANSB5 = 0; } while(0)
-
-// get/set RB7 procedures
-#define RB7_SetHigh()            do { LATBbits.LATB7 = 1; } while(0)
-#define RB7_SetLow()             do { LATBbits.LATB7 = 0; } while(0)
-#define RB7_Toggle()             do { LATBbits.LATB7 = ~LATBbits.LATB7; } while(0)
-#define RB7_GetValue()              PORTBbits.RB7
-#define RB7_SetDigitalInput()    do { TRISBbits.TRISB7 = 1; } while(0)
-#define RB7_SetDigitalOutput()   do { TRISBbits.TRISB7 = 0; } while(0)
-#define RB7_SetPullup()             do { WPUBbits.WPUB7 = 1; } while(0)
-#define RB7_ResetPullup()           do { WPUBbits.WPUB7 = 0; } while(0)
-
 // get/set IO_RC2_alarm_LED aliases
 #define IO_RC2_alarm_LED_TRIS                 TRISCbits.TRISC2
 #define IO_RC2_alarm_LED_LAT                  LATCbits.LATC2

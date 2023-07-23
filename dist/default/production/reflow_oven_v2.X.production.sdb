@@ -45,57 +45,17 @@ HYST_12_5_PERCENT 3
 HYST_6_25_PERCENT 4
 HYST_MAX 5
 ]
-"85 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/adc.c
-[e E2603 . `uc
-channel_AN10 10
-channel_Temp 29
-channel_DAC 30
-channel_FVR 31
-]
-"130 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[e E3584 . `uc
-channel_AN10 10
-channel_Temp 29
-channel_DAC 30
-channel_FVR 31
-]
-"365
-[e E3653 mtouch_button_names `uc
+"227 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+[e E3632 mtouch_button_names `uc
 T_start 0
 T_stop 1
 ]
 "1 /opt/microchip/xc8/v2.31/pic/sources/c99/common/abs.c
 [v _abs abs `(i  1 e 2 0 ]
-"7 /opt/microchip/xc8/v2.31/pic/sources/c99/common/aodiv.c
-[v ___aodiv __aodiv `(o  1 e 8 0 ]
-"7 /opt/microchip/xc8/v2.31/pic/sources/c99/common/aomod.c
-[v ___aomod __aomod `(o  1 e 8 0 ]
-"72 /opt/microchip/xc8/v2.31/pic/sources/c99/common/doprnt.c
-[v _pad pad `(i  1 s 2 pad ]
-"287
-[v _dtoa dtoa `(i  1 s 2 dtoa ]
-"692
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
-"1390
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
-"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
 "43 /opt/microchip/xc8/v2.31/pic/sources/c99/common/fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
-"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/memcpy.c
-[v _memcpy memcpy `(*.6v  1 e 1 0 ]
-"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nanf.c
-[v _nanf nanf `(f  1 e 4 0 ]
-"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
-"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
-"9 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nf_sprintf.c
-[v _sprintf sprintf `(i  1 e 2 0 ]
-"7 /opt/microchip/xc8/v2.31/pic/sources/c99/common/putch.c
-[v _putch putch `(v  1 e 1 0 ]
+[v _memcpy memcpy `(*.5v  1 e 1 0 ]
 "10 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "242
@@ -104,97 +64,49 @@ T_stop 1
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"22 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sqrtf.c
-[v _sqrtf sqrtf `(f  1 e 4 0 ]
-"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
 "4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
 "4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"10 /opt/microchip/xc8/v2.31/pic/sources/c99/common/xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 "6 /opt/microchip/xc8/v2.31/pic/sources/c99/pic/__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"79 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"50 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"121
+"78
 [v _Init_Function Init_Function `T(v  1 e 1 0 ]
-"134
-[v _TX_Command TX_Command `T(v  1 e 1 0 ]
-"143
-[v _TX_Whole_String TX_Whole_String `T(v  1 e 1 0 ]
-"168
-[v _Read_ADC_Num Read_ADC_Num `T(us  1 e 2 0 ]
-"180
-[v _ChangeADCtoVoltage ChangeADCtoVoltage `T(f  1 e 4 0 ]
-"187
-[v _Measure_R_PT100_2Wire Measure_R_PT100_2Wire `T(f  1 e 4 0 ]
-"198
-[v _Measure_Temp_PT100_2Wire Measure_Temp_PT100_2Wire `T(f  1 e 4 0 ]
-"209
-[v _Read_PT100_Temp Read_PT100_Temp `T(f  1 e 4 0 ]
-"230
+"90
 [v _Zero_Detection_isr Zero_Detection_isr `(v  1 e 1 0 ]
-"243
-[v _TMR1_Generate_Delay_ms_isr TMR1_Generate_Delay_ms_isr `(v  1 e 1 0 ]
-"249
+"103
 [v _TMR2_Drive_TRIAC_isr TMR2_Drive_TRIAC_isr `(v  1 e 1 0 ]
-"277
+"131
 [v _TMR4_Wroking_Blink_AlarmLED_isr TMR4_Wroking_Blink_AlarmLED_isr `(v  1 e 1 0 ]
-"290
+"152
 [v _StartStop_AlarmLED StartStop_AlarmLED `T(v  1 e 1 0 ]
-"304
+"166
 [v _StartStop_AlarmLED_Blink StartStop_AlarmLED_Blink `T(v  1 e 1 0 ]
-"318
+"180
 [v _StartStop_Fan StartStop_Fan `T(v  1 e 1 0 ]
-"332
+"194
 [v _StartStop_Buzzer StartStop_Buzzer `T(v  1 e 1 0 ]
-"346
+"208
 [v _StartStop_Dimmer StartStop_Dimmer `T(v  1 e 1 0 ]
-"400
+"222
+[v _StartTouchDetection StartTouchDetection `T(v  1 e 1 0 ]
+"242
+[v _StopTouchDetection StopTouchDetection `(v  1 e 1 0 ]
+"262
 [v _SetDimmer SetDimmer `(v  1 e 1 0 ]
-"413
-[v _Config_Heater Config_Heater `T(v  1 e 1 0 ]
-"847
-[v _get_delay get_delay `(us  1 e 2 0 ]
-"67 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/adc.c
-[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
-"85
-[v _ADC_SelectChannel ADC_SelectChannel `(v  1 e 1 0 ]
-"93
-[v _ADC_StartConversion ADC_StartConversion `(v  1 e 1 0 ]
-"100
-[v _ADC_IsConversionDone ADC_IsConversionDone `(a  1 e 1 0 ]
-"106
-[v _ADC_GetConversionResult ADC_GetConversionResult `(us  1 e 2 0 ]
-"66 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/eusart.c
-[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
-"94
-[v _EUSART_is_tx_ready EUSART_is_tx_ready `(a  1 e 1 0 ]
-"132
-[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
-"144
-[v _EUSART_DefaultFramingErrorHandler EUSART_DefaultFramingErrorHandler `(v  1 e 1 0 ]
-"146
-[v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
-"154
-[v _EUSART_DefaultErrorHandler EUSART_DefaultErrorHandler `(v  1 e 1 0 ]
-"157
-[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
-"161
-[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
-"165
-[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+"275
+[v _StartHeater StartHeater `T(v  1 e 1 0 ]
 "52 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"64
+"62
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"74
+"72
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "81 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch.c
 [v _MTOUCH_Initialize MTOUCH_Initialize `(v  1 e 1 0 ]
@@ -308,16 +220,6 @@ T_stop 1
 [v _IOCAF2_SetInterruptHandler IOCAF2_SetInterruptHandler `(v  1 e 1 0 ]
 "149
 [v _IOCAF2_DefaultInterruptHandler IOCAF2_DefaultInterruptHandler `(v  1 e 1 0 ]
-"64 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr1.c
-[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
-"120
-[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
-"157
-[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
-"171
-[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
-"175
-[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
 "64 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "87
@@ -342,6 +244,14 @@ T_stop 1
 [v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
 "136
 [v _TMR4_DefaultInterruptHandler TMR4_DefaultInterruptHandler `(v  1 e 1 0 ]
+"64 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr6.c
+[v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
+"119
+[v _TMR6_ISR TMR6_ISR `(v  1 e 1 0 ]
+"132
+[v _TMR6_SetInterruptHandler TMR6_SetInterruptHandler `(v  1 e 1 0 ]
+"136
+[v _TMR6_DefaultInterruptHandler TMR6_DefaultInterruptHandler `(v  1 e 1 0 ]
 [s S136 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -359,7 +269,7 @@ T_stop 1
 ]
 [u S150 . 1 `S136 1 . 1 0 `S145 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES150  1 e 1 @11 ]
-[s S1699 . 1 `uc 1 RC0 1 0 :1:0 
+[s S1439 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -369,9 +279,9 @@ T_stop 1
 `uc 1 RC7 1 0 :1:7 
 ]
 "536
-[u S1708 . 1 `S1699 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES1708  1 e 1 @14 ]
-[s S1075 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S1448 . 1 `S1439 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES1448  1 e 1 @14 ]
+[s S1103 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -381,9 +291,9 @@ T_stop 1
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "598
-[u S1084 . 1 `S1075 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES1084  1 e 1 @17 ]
-[s S1279 . 1 `uc 1 . 1 0 :1:0 
+[u S1112 . 1 `S1103 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES1112  1 e 1 @17 ]
+[s S1057 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 TMR4IF 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 TMR6IF 1 0 :1:3 
@@ -391,39 +301,15 @@ T_stop 1
 `uc 1 CCP4IF 1 0 :1:5 
 ]
 "709
-[u S1286 . 1 `S1279 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES1286  1 e 1 @19 ]
-"787
-[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
-"807
-[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
-"827
-[v _T1CON T1CON `VEuc  1 e 1 @24 ]
-[s S1891 . 1 `uc 1 TMR1ON 1 0 :1:0 
-`uc 1 . 1 0 :1:1 
-`uc 1 nT1SYNC 1 0 :1:2 
-`uc 1 T1OSCEN 1 0 :1:3 
-`uc 1 T1CKPS0 1 0 :1:4 
-`uc 1 T1CKPS1 1 0 :1:5 
-`uc 1 TMR1CS0 1 0 :1:6 
-`uc 1 TMR1CS1 1 0 :1:7 
-]
-"849
-[s S1900 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 T1CKPS 1 0 :2:4 
-`uc 1 TMR1CS 1 0 :2:6 
-]
-[u S1904 . 1 `S1891 1 . 1 0 `S1900 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES1904  1 e 1 @24 ]
-"899
-[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+[u S1064 . 1 `S1057 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES1064  1 e 1 @19 ]
 "969
 [v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
 "989
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
 "1009
 [v _T2CON T2CON `VEuc  1 e 1 @28 ]
-[s S1405 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S1200 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -432,19 +318,19 @@ T_stop 1
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
 "1030
-[s S1413 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S1208 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
-[u S1417 . 1 `S1405 1 . 1 0 `S1413 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES1417  1 e 1 @28 ]
+[u S1212 . 1 `S1200 1 . 1 0 `S1208 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES1212  1 e 1 @28 ]
 "1186
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1236
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 "1275
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S1300 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S1082 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -454,9 +340,9 @@ T_stop 1
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1354
-[u S1309 . 1 `S1300 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES1309  1 e 1 @145 ]
-[s S1262 . 1 `uc 1 . 1 0 :1:0 
+[u S1091 . 1 `S1082 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES1091  1 e 1 @145 ]
+[s S1040 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 TMR4IE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 TMR6IE 1 0 :1:3 
@@ -464,9 +350,9 @@ T_stop 1
 `uc 1 CCP4IE 1 0 :1:5 
 ]
 "1465
-[u S1269 . 1 `S1262 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES1269  1 e 1 @147 ]
-[s S856 . 1 `uc 1 PS0 1 0 :1:0 
+[u S1047 . 1 `S1040 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES1047  1 e 1 @147 ]
+[s S848 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -476,23 +362,21 @@ T_stop 1
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1539
-[s S865 . 1 `uc 1 PS 1 0 :3:0 
+[s S857 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S870 . 1 `S856 1 . 1 0 `S865 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES870  1 e 1 @149 ]
+[u S862 . 1 `S848 1 . 1 0 `S857 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES862  1 e 1 @149 ]
 "1650
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1709
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
 "1767
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
-"1908
-[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
-"1928
-[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1901
+[v _ADRES ADRES `VEus  1 e 2 @155 ]
 "1948
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
 [s S182 . 1 `uc 1 ADON 1 0 :1:0 
@@ -521,7 +405,7 @@ T_stop 1
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2184
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S1654 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S1417 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -531,8 +415,8 @@ T_stop 1
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2201
-[u S1663 . 1 `S1654 1 . 1 0 ]
-[v _LATCbits LATCbits `VES1663  1 e 1 @270 ]
+[u S1426 . 1 `S1417 1 . 1 0 ]
+[v _LATCbits LATCbits `VES1426  1 e 1 @270 ]
 "2518
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
 "2867
@@ -545,37 +429,13 @@ T_stop 1
 [v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
 "3034
 [v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
-"3307
-[v _TXREG TXREG `VEuc  1 e 1 @410 ]
-"3334
-[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
-"3354
-[v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
-"3374
-[v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
-"3436
-[v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
-[s S1096 . 1 `uc 1 TX9D 1 0 :1:0 
-`uc 1 TRMT 1 0 :1:1 
-`uc 1 BRGH 1 0 :1:2 
-`uc 1 SENDB 1 0 :1:3 
-`uc 1 SYNC 1 0 :1:4 
-`uc 1 TXEN 1 0 :1:5 
-`uc 1 TX9 1 0 :1:6 
-`uc 1 CSRC 1 0 :1:7 
-]
-"3453
-[u S1105 . 1 `S1096 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES1105  1 e 1 @414 ]
-"3498
-[v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
 "3550
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
 "3608
 [v _WPUB WPUB `VEuc  1 e 1 @525 ]
 "3656
 [v _WPUC WPUC `VEuc  1 e 1 @526 ]
-[s S934 . 1 `uc 1 IOCAP0 1 0 :1:0 
+[s S926 . 1 `uc 1 IOCAP0 1 0 :1:0 
 `uc 1 IOCAP1 1 0 :1:1 
 `uc 1 IOCAP2 1 0 :1:2 
 `uc 1 IOCAP3 1 0 :1:3 
@@ -583,11 +443,11 @@ T_stop 1
 `uc 1 IOCAP5 1 0 :1:5 
 ]
 "5960
-[s S941 . 1 `uc 1 IOCAP 1 0 :6:0 
+[s S933 . 1 `uc 1 IOCAP 1 0 :6:0 
 ]
-[u S943 . 1 `S934 1 . 1 0 `S941 1 . 1 0 ]
-[v _IOCAPbits IOCAPbits `VES943  1 e 1 @913 ]
-[s S912 . 1 `uc 1 IOCAN0 1 0 :1:0 
+[u S935 . 1 `S926 1 . 1 0 `S933 1 . 1 0 ]
+[v _IOCAPbits IOCAPbits `VES935  1 e 1 @913 ]
+[s S904 . 1 `uc 1 IOCAN0 1 0 :1:0 
 `uc 1 IOCAN1 1 0 :1:1 
 `uc 1 IOCAN2 1 0 :1:2 
 `uc 1 IOCAN3 1 0 :1:3 
@@ -595,11 +455,11 @@ T_stop 1
 `uc 1 IOCAN5 1 0 :1:5 
 ]
 "6018
-[s S919 . 1 `uc 1 IOCAN 1 0 :6:0 
+[s S911 . 1 `uc 1 IOCAN 1 0 :6:0 
 ]
-[u S921 . 1 `S912 1 . 1 0 `S919 1 . 1 0 ]
-[v _IOCANbits IOCANbits `VES921  1 e 1 @914 ]
-[s S890 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[u S913 . 1 `S904 1 . 1 0 `S911 1 . 1 0 ]
+[v _IOCANbits IOCANbits `VES913  1 e 1 @914 ]
+[s S882 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -607,17 +467,17 @@ T_stop 1
 `uc 1 IOCAF5 1 0 :1:5 
 ]
 "6076
-[s S897 . 1 `uc 1 IOCAF 1 0 :6:0 
+[s S889 . 1 `uc 1 IOCAF 1 0 :6:0 
 ]
-[u S899 . 1 `S890 1 . 1 0 `S897 1 . 1 0 ]
-[v _IOCAFbits IOCAFbits `VES899  1 e 1 @915 ]
+[u S891 . 1 `S882 1 . 1 0 `S889 1 . 1 0 ]
+[v _IOCAFbits IOCAFbits `VES891  1 e 1 @915 ]
 "6570
 [v _TMR4 TMR4 `VEuc  1 e 1 @1045 ]
 "6590
 [v _PR4 PR4 `VEuc  1 e 1 @1046 ]
 "6610
 [v _T4CON T4CON `VEuc  1 e 1 @1047 ]
-[s S1492 . 1 `uc 1 T4CKPS0 1 0 :1:0 
+[s S1287 . 1 `uc 1 T4CKPS0 1 0 :1:0 
 `uc 1 T4CKPS1 1 0 :1:1 
 `uc 1 TMR4ON 1 0 :1:2 
 `uc 1 T4OUTPS0 1 0 :1:3 
@@ -626,58 +486,52 @@ T_stop 1
 `uc 1 T4OUTPS3 1 0 :1:6 
 ]
 "6631
-[s S1500 . 1 `uc 1 T4CKPS 1 0 :2:0 
+[s S1295 . 1 `uc 1 T4CKPS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 T4OUTPS 1 0 :4:3 
 ]
-[u S1504 . 1 `S1492 1 . 1 0 `S1500 1 . 1 0 ]
-[v _T4CONbits T4CONbits `VES1504  1 e 1 @1047 ]
+[u S1299 . 1 `S1287 1 . 1 0 `S1295 1 . 1 0 ]
+[v _T4CONbits T4CONbits `VES1299  1 e 1 @1047 ]
+"6681
+[v _TMR6 TMR6 `VEuc  1 e 1 @1052 ]
+"6701
+[v _PR6 PR6 `VEuc  1 e 1 @1053 ]
+"6721
+[v _T6CON T6CON `VEuc  1 e 1 @1054 ]
 "7538
 [v _GIE GIE `VEb  1 e 0 @95 ]
-"55 /opt/microchip/xc8/v2.31/pic/sources/c99/common/doprnt.c
-[v _flags flags `i  1 s 2 flags ]
-[v _prec prec `i  1 s 2 prec ]
-[v _width width `i  1 s 2 width ]
-"66
-[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
-"69
-[v _nout nout `i  1 s 2 nout ]
-"3 /opt/microchip/xc8/v2.31/pic/sources/c99/common/errno.c
-[v _errno errno `i  1 e 2 0 ]
-"35 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _Buff_g Buff_g `[20]uc  1 e 20 0 ]
-"36
+"23 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _tmr2_required_counter_steps_g tmr2_required_counter_steps_g `us  1 e 2 0 ]
-"37
+"24
 [v _DimmerStatusFlag_g DimmerStatusFlag_g `a  1 e 1 0 ]
-"38
-[v _onceFlag onceFlag `a  1 e 1 0 ]
-"42
-[v _ticker_g ticker_g `us  1 e 2 0 ]
-[s S1029 . 1 `uc 1 perr 1 0 :1:0 
-`uc 1 ferr 1 0 :1:1 
-`uc 1 oerr 1 0 :1:2 
-`uc 1 reserved 1 0 :5:3 
-]
-"52 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/eusart.c
-[u S1034 . 1 `S1029 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusartRxLastError eusartRxLastError `VES1034  1 e 1 0 ]
-"58
-[v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
-"59
-[v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
-"60
-[v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
+"52 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch.c
+[v _mtouch_time_toScan mtouch_time_toScan `a  1 s 1 mtouch_time_toScan ]
+"53
+[v _mtouch_request_init mtouch_request_init `a  1 s 1 mtouch_request_init ]
 [s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
 "82 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_button.c
 [v _mtouch_button_init mtouch_button_init `DC[2]S448  1 e 32 0 ]
 "102
 [v _mtouch_button mtouch_button `[2]S448  1 s 32 mtouch_button ]
+"138
+[v _Button_StateMachine Button_StateMachine `[3]*.37(v  1 e 6 0 ]
 [s S33 . 1 `uc 1 packet_done 1 0 :1:0 
 `uc 1 interrupted 1 0 :1:1 
 ]
 "120 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_sensor.c
 [v _sensor_globalFlags sensor_globalFlags `VES33  1 s 1 sensor_globalFlags ]
+"121
+[v _currentScannSensor currentScannSensor `E2661  1 s 1 currentScannSensor ]
+"122
+[v _packet_counter packet_counter `uc  1 s 1 packet_counter ]
+"123
+[v _packet_sample packet_sample `us  1 s 2 packet_sample ]
+"124
+[v _sample_delay sample_delay `uc  1 s 1 sample_delay ]
+"126
+[v _Sensor_scanA Sensor_scanA `*.37(v  1 s 2 Sensor_scanA ]
+"127
+[v _Sensor_scanB Sensor_scanB `*.37(v  1 s 2 Sensor_scanB ]
 [s S50 . 9 `DCE2661 1 sensor_name 1 0 `DC*.37(v 1 scanA 2 1 `DC*.37(v 1 scanB 2 3 `uc 1 oversampling 1 5 `us 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 active 1 8 :1:2 
@@ -686,221 +540,585 @@ T_stop 1
 [v _mtouch_sensor mtouch_sensor `[2]S50  1 s 18 mtouch_sensor ]
 "54 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/pin_manager.c
 [v _IOCAF2_InterruptHandler IOCAF2_InterruptHandler `*.37(v  1 e 2 0 ]
-"57 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr1.c
-[v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
-"58
-[v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
 "58 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr2.c
 [v _TMR2_InterruptHandler TMR2_InterruptHandler `*.37(v  1 e 2 0 ]
 "58 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr4.c
 [v _TMR4_InterruptHandler TMR4_InterruptHandler `*.37(v  1 e 2 0 ]
-"79 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"58 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr6.c
+[v _TMR6_InterruptHandler TMR6_InterruptHandler `*.37(v  1 e 2 0 ]
+"50 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"95
-[v main@Temp_PT100 Temp_PT100 `us  1 a 2 33 ]
-"81
-[v main@del del `us  1 a 2 31 ]
-"112
+"69
 } 0
-"9 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nf_sprintf.c
-[v _sprintf sprintf `(i  1 e 2 0 ]
+"222
+[v _StartTouchDetection StartTouchDetection `T(v  1 e 1 0 ]
 {
-[v sprintf@s s `*.5uc  1 a 1 wreg ]
-[s S2439 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-"13
-[v sprintf@f f `S2439  1 a 5 9 ]
-"12
-[v sprintf@ap ap `[1]*.4v  1 a 1 7 ]
-"9
-[v sprintf@s s `*.5uc  1 a 1 wreg ]
-[v sprintf@fmt fmt `*.25DCuc  1 p 2 0 ]
-"15
-[v sprintf@s s `*.5uc  1 a 1 8 ]
-"23
+"239
 } 0
-"1390 /opt/microchip/xc8/v2.31/pic/sources/c99/common/doprnt.c
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"275
+[v _StartHeater StartHeater `T(v  1 e 1 0 ]
 {
-[s S2465 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.4S2465  1 a 1 wreg ]
-"1393
-[v vfprintf@cfmt cfmt `*.25uc  1 a 2 78 ]
-"1390
-[v vfprintf@fp fp `*.4S2465  1 a 1 wreg ]
-[v vfprintf@fmt fmt `*.25DCuc  1 p 2 72 ]
-[v vfprintf@ap ap `*.4*.4v  1 p 1 74 ]
-"1395
-"1390
-[v vfprintf@fp fp `*.4S2465  1 a 1 77 ]
-"1404
+"485
+[v StartHeater@i i `uc  1 a 1 69 ]
+"493
 } 0
-"692
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+"242
+[v _StopTouchDetection StopTouchDetection `(v  1 e 1 0 ]
 {
-[s S2465 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.4S2465  1 a 1 wreg ]
-"696
-[v vfpfcnvrt@ll ll `o  1 a 8 63 ]
-"692
-[v vfpfcnvrt@fp fp `*.4S2465  1 a 1 wreg ]
-[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 56 ]
-[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 57 ]
-"702
-"692
-[v vfpfcnvrt@fp fp `*.4S2465  1 a 1 71 ]
-"1387
+"259
 } 0
-"287
-[v _dtoa dtoa `(i  1 s 2 dtoa ]
+"96 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch.c
+[v _MTOUCH_Service_Mainloop MTOUCH_Service_Mainloop `(a  1 e 1 0 ]
 {
-[s S2465 _IO_FILE 0 ]
-[v dtoa@fp fp `*.4S2465  1 a 1 wreg ]
-"290
-[v dtoa@n n `o  1 a 8 46 ]
-"289
-[v dtoa@i i `i  1 a 2 54 ]
-[v dtoa@s s `i  1 a 2 44 ]
-[v dtoa@w w `i  1 a 2 42 ]
-[v dtoa@p p `i  1 a 2 40 ]
-"287
-[v dtoa@fp fp `*.4S2465  1 a 1 wreg ]
-[v dtoa@d d `o  1 p 8 26 ]
-"293
-"287
-[v dtoa@fp fp `*.4S2465  1 a 1 37 ]
-"328
+"123
 } 0
-"72
-[v _pad pad `(i  1 s 2 pad ]
+"140
+[v _MTOUCH_needReburst MTOUCH_needReburst `(a  1 s 1 MTOUCH_needReburst ]
 {
-[s S2465 _IO_FILE 0 ]
-[v pad@fp fp `*.4S2465  1 a 1 wreg ]
-"74
-[v pad@w w `i  1 a 2 14 ]
-[v pad@i i `i  1 a 2 12 ]
-"72
-[v pad@fp fp `*.4S2465  1 a 1 wreg ]
-[v pad@buf buf `*.6uc  1 p 1 8 ]
-[v pad@p p `i  1 p 2 9 ]
-"77
-"72
-[v pad@fp fp `*.4S2465  1 a 1 16 ]
-"95
+"145
 } 0
-"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
+"130
+[v _MTOUCH_Tick MTOUCH_Tick `(v  1 e 1 0 ]
 {
-[v fputs@s s `*.6DCuc  1 a 1 wreg ]
-"11
-[v fputs@i i `i  1 a 2 5 ]
-"10
-[v fputs@c c `uc  1 a 1 4 ]
-"8
-[v fputs@s s `*.6DCuc  1 a 1 wreg ]
-[s S2439 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputs@fp fp `*.4S2439  1 p 1 0 ]
-"13
-[v fputs@s s `*.6DCuc  1 a 1 7 ]
-"19
+"133
 } 0
-"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
+"289 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_button.c
+[v _MTOUCH_Button_Tick MTOUCH_Button_Tick `(v  1 e 1 0 ]
 {
-[v fputc@c c `i  1 p 2 2 ]
-[s S2439 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.4S2439  1 p 1 4 ]
-"24
+"291
+[v MTOUCH_Button_Tick@i i `uc  1 a 1 4 ]
+"296
 } 0
-"7 /opt/microchip/xc8/v2.31/pic/sources/c99/common/putch.c
-[v _putch putch `(v  1 e 1 0 ]
+"297
+[v _Button_Tick_helper Button_Tick_helper `(v  1 s 1 Button_Tick_helper ]
 {
-"9
+[s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Tick_helper@button button `*.5S448  1 a 1 wreg ]
+[v Button_Tick_helper@button button `*.5S448  1 a 1 wreg ]
+"300
+"297
+[v Button_Tick_helper@button button `*.5S448  1 a 1 2 ]
+"308
+} 0
+"187 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Sensor_SampleAll MTOUCH_Sensor_SampleAll `(a  1 e 1 0 ]
+{
+"189
+[v MTOUCH_Sensor_SampleAll@sensor sensor `E2661  1 a 1 9 ]
+"196
+} 0
+"233
+[v _Sensor_Service Sensor_Service `(E2664  1 s 1 Sensor_Service ]
+{
+[v Sensor_Service@name name `E2661  1 a 1 wreg ]
+[s S50 . 9 `DCE2661 1 sensor_name 1 0 `DC*.37(v 1 scanA 2 1 `DC*.37(v 1 scanB 2 3 `uc 1 oversampling 1 5 `us 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 active 1 8 :1:2 
+]
+"235
+[v Sensor_Service@sensor sensor `*.4S50  1 a 1 7 ]
+"236
+[v Sensor_Service@error error `E2664  1 a 1 6 ]
+"233
+[v Sensor_Service@name name `E2661  1 a 1 wreg ]
+"235
+[v Sensor_Service@name name `E2661  1 a 1 5 ]
+"267
+} 0
+"569
+[v _Sensor_setSampled Sensor_setSampled `T(v  1 s 1 Sensor_setSampled ]
+{
+[s S50 . 9 `DCE2661 1 sensor_name 1 0 `DC*.37(v 1 scanA 2 1 `DC*.37(v 1 scanB 2 3 `uc 1 oversampling 1 5 `us 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 active 1 8 :1:2 
+]
+[v Sensor_setSampled@sensor sensor `*.4S50  1 a 1 wreg ]
+[v Sensor_setSampled@sensor sensor `*.4S50  1 a 1 wreg ]
+"571
+"569
+[v Sensor_setSampled@sensor sensor `*.4S50  1 a 1 0 ]
+"572
+} 0
+"430
+[v _Sensor_RawSample_Update Sensor_RawSample_Update `(v  1 s 1 Sensor_RawSample_Update ]
+{
+[s S50 . 9 `DCE2661 1 sensor_name 1 0 `DC*.37(v 1 scanA 2 1 `DC*.37(v 1 scanB 2 3 `uc 1 oversampling 1 5 `us 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 active 1 8 :1:2 
+]
+[v Sensor_RawSample_Update@sensor sensor `*.4S50  1 a 1 wreg ]
+[v Sensor_RawSample_Update@sensor sensor `*.4S50  1 a 1 wreg ]
+"432
+"430
+[v Sensor_RawSample_Update@sensor sensor `*.4S50  1 a 1 0 ]
+"442
+} 0
+"450
+[v _Sensor_DefaultCallback Sensor_DefaultCallback `(v  1 s 1 Sensor_DefaultCallback ]
+{
+[v Sensor_DefaultCallback@sensor sensor `E2661  1 p 1 0 ]
+} 0
+"280
+[v _Sensor_Acquisition Sensor_Acquisition `(E2664  1 s 1 Sensor_Acquisition ]
+{
+[s S50 . 9 `DCE2661 1 sensor_name 1 0 `DC*.37(v 1 scanA 2 1 `DC*.37(v 1 scanB 2 3 `uc 1 oversampling 1 5 `us 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 active 1 8 :1:2 
+]
+[v Sensor_Acquisition@sensor sensor `*.4S50  1 a 1 wreg ]
+"283
+[v Sensor_Acquisition@retry retry `uc  1 a 1 1 ]
+"280
+[v Sensor_Acquisition@sensor sensor `*.4S50  1 a 1 wreg ]
+"283
+"280
+[v Sensor_Acquisition@sensor sensor `*.4S50  1 a 1 2 ]
+"307
 } 0
 "1 /opt/microchip/xc8/v2.31/pic/sources/c99/common/abs.c
 [v _abs abs `(i  1 e 2 0 ]
 {
-[v abs@a a `i  1 p 2 5 ]
+[v abs@a a `i  1 p 2 0 ]
 "4
 } 0
-"7 /opt/microchip/xc8/v2.31/pic/sources/c99/common/aomod.c
-[v ___aomod __aomod `(o  1 e 8 0 ]
+"515 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_sensor.c
+[v _Sensor_setInactive Sensor_setInactive `T(v  1 s 1 Sensor_setInactive ]
 {
-"12
-[v ___aomod@sign sign `uc  1 a 1 4 ]
-[v ___aomod@counter counter `uc  1 a 1 3 ]
-"7
-[v ___aomod@divisor divisor `o  1 p 8 0 ]
-[v ___aomod@dividend dividend `o  1 p 8 8 ]
-"36
+[s S50 . 9 `DCE2661 1 sensor_name 1 0 `DC*.37(v 1 scanA 2 1 `DC*.37(v 1 scanB 2 3 `uc 1 oversampling 1 5 `us 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 active 1 8 :1:2 
+]
+[v Sensor_setInactive@sensor sensor `*.4S50  1 a 1 wreg ]
+[v Sensor_setInactive@sensor sensor `*.4S50  1 a 1 wreg ]
+"517
+"515
+[v Sensor_setInactive@sensor sensor `*.4S50  1 a 1 0 ]
+"518
 } 0
-"7 /opt/microchip/xc8/v2.31/pic/sources/c99/common/aodiv.c
-[v ___aodiv __aodiv `(o  1 e 8 0 ]
+"510
+[v _Sensor_setActive Sensor_setActive `T(v  1 s 1 Sensor_setActive ]
 {
-"12
-[v ___aodiv@quotient quotient `o  1 a 8 18 ]
-"13
-[v ___aodiv@sign sign `uc  1 a 1 17 ]
-[v ___aodiv@counter counter `uc  1 a 1 16 ]
-"7
-[v ___aodiv@divisor divisor `o  1 p 8 0 ]
-[v ___aodiv@dividend dividend `o  1 p 8 8 ]
+[s S50 . 9 `DCE2661 1 sensor_name 1 0 `DC*.37(v 1 scanA 2 1 `DC*.37(v 1 scanB 2 3 `uc 1 oversampling 1 5 `us 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 active 1 8 :1:2 
+]
+[v Sensor_setActive@sensor sensor `*.4S50  1 a 1 wreg ]
+[v Sensor_setActive@sensor sensor `*.4S50  1 a 1 wreg ]
+"512
+"510
+[v Sensor_setActive@sensor sensor `*.4S50  1 a 1 0 ]
+"513
+} 0
+"495
+[v _Sensor_isEnabled Sensor_isEnabled `(a  1 s 1 Sensor_isEnabled ]
+{
+[s S50 . 9 `DCE2661 1 sensor_name 1 0 `DC*.37(v 1 scanA 2 1 `DC*.37(v 1 scanB 2 3 `uc 1 oversampling 1 5 `us 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 active 1 8 :1:2 
+]
+[v Sensor_isEnabled@sensor sensor `*.4S50  1 a 1 wreg ]
+[v Sensor_isEnabled@sensor sensor `*.4S50  1 a 1 wreg ]
+"497
+"495
+[v Sensor_isEnabled@sensor sensor `*.4S50  1 a 1 0 ]
+"501
+} 0
+"315
+[v _Sensor_Acq_ExecutePacket Sensor_Acq_ExecutePacket `(E2664  1 s 1 Sensor_Acq_ExecutePacket ]
+{
+[s S50 . 9 `DCE2661 1 sensor_name 1 0 `DC*.37(v 1 scanA 2 1 `DC*.37(v 1 scanB 2 3 `uc 1 oversampling 1 5 `us 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 active 1 8 :1:2 
+]
+[v Sensor_Acq_ExecutePacket@sensor sensor `*.4S50  1 a 1 wreg ]
+"318
+[v Sensor_Acq_ExecutePacket@error error `E2664  1 a 1 12 ]
+"322
+[v Sensor_Acq_ExecutePacket@GIE_state GIE_state `uc  1 a 1 11 ]
+"320
+[v Sensor_Acq_ExecutePacket@ADCON1_temp ADCON1_temp `uc  1 a 1 10 ]
+"319
+[v Sensor_Acq_ExecutePacket@ADCON0_temp ADCON0_temp `uc  1 a 1 9 ]
+"315
+[v Sensor_Acq_ExecutePacket@sensor sensor `*.4S50  1 a 1 wreg ]
+"318
+"315
+[v Sensor_Acq_ExecutePacket@sensor sensor `*.4S50  1 a 1 13 ]
+"361
+} 0
+"462
+[v _Sensor_setScanFunction Sensor_setScanFunction `(v  1 s 1 Sensor_setScanFunction ]
+{
+[s S50 . 9 `DCE2661 1 sensor_name 1 0 `DC*.37(v 1 scanA 2 1 `DC*.37(v 1 scanB 2 3 `uc 1 oversampling 1 5 `us 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 active 1 8 :1:2 
+]
+[v Sensor_setScanFunction@sensor sensor `*.4S50  1 a 1 wreg ]
+[v Sensor_setScanFunction@sensor sensor `*.4S50  1 a 1 wreg ]
+"464
+"462
+[v Sensor_setScanFunction@sensor sensor `*.4S50  1 a 1 0 ]
+"466
+} 0
+"379
+[v _Sensor_Acq_ExecuteScan Sensor_Acq_ExecuteScan `(v  1 s 1 Sensor_Acq_ExecuteScan ]
+{
+"382
+[v Sensor_Acq_ExecuteScan@result result `us  1 a 2 6 ]
+"412
+} 0
+"113 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_sensor_scan.c
+[v _MTOUCH_CVD_ScanB_0 MTOUCH_CVD_ScanB_0 `(v  1 e 1 0 ]
+{
+"164
+} 0
+"240
+[v _MTOUCH_CVD_ScanB_1 MTOUCH_CVD_ScanB_1 `(v  1 e 1 0 ]
+{
+"291
+} 0
+"50
+[v _MTOUCH_CVD_ScanA_0 MTOUCH_CVD_ScanA_0 `(v  1 e 1 0 ]
+{
+"100
+} 0
+"177
+[v _MTOUCH_CVD_ScanA_1 MTOUCH_CVD_ScanA_1 `(v  1 e 1 0 ]
+{
+"227
+} 0
+"66 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_random.c
+[v _MTOUCH_Random MTOUCH_Random `(uc  1 e 1 0 ]
+{
+"68
+[v MTOUCH_Random@seed seed `uc  1 s 1 seed ]
+"86
+} 0
+"363 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Delay MTOUCH_Delay `(v  1 s 1 MTOUCH_Delay ]
+{
+"365
+[v MTOUCH_Delay@i i `uc  1 a 1 1 ]
+"367
+} 0
+"181 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_button.c
+[v _MTOUCH_Button_ServiceAll MTOUCH_Button_ServiceAll `(v  1 e 1 0 ]
+{
+"183
+[v MTOUCH_Button_ServiceAll@button button `E2819  1 a 1 10 ]
+"190
+} 0
+"192
+[v _Button_Service Button_Service `(v  1 s 1 Button_Service ]
+{
+[v Button_Service@name name `E2819  1 a 1 wreg ]
+[s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
+"194
+[v Button_Service@button button `*.5S448  1 a 1 8 ]
+"192
+[v Button_Service@name name `E2819  1 a 1 wreg ]
+"194
+[v Button_Service@name name `E2819  1 a 1 7 ]
+"207
+} 0
+"556 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Sensor_wasSampled MTOUCH_Sensor_wasSampled `(a  1 e 1 0 ]
+{
+[v MTOUCH_Sensor_wasSampled@sensor sensor `E2661  1 a 1 wreg ]
+[v MTOUCH_Sensor_wasSampled@sensor sensor `E2661  1 a 1 wreg ]
+"558
+[v MTOUCH_Sensor_wasSampled@sensor sensor `E2661  1 a 1 5 ]
+"562
+} 0
+"529
+[v _MTOUCH_Sensor_isCalibrated MTOUCH_Sensor_isCalibrated `(a  1 e 1 0 ]
+{
+"533
+} 0
+"229 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_button.c
+[v _Button_State_NotPressed Button_State_NotPressed `(v  1 s 1 Button_State_NotPressed ]
+{
+[s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_State_NotPressed@button button `*.5S448  1 p 1 13 ]
+"263
+} 0
+"209
+[v _Button_State_Initializing Button_State_Initializing `(v  1 s 1 Button_State_Initializing ]
+{
+[s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_State_Initializing@button button `*.5S448  1 p 1 13 ]
+"228
+} 0
+"265
+[v _Button_State_Pressed Button_State_Pressed `(v  1 s 1 Button_State_Pressed ]
+{
+[s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_State_Pressed@button button `*.5S448  1 p 1 13 ]
+"282
+} 0
+"519
+[v _Button_DefaultCallback Button_DefaultCallback `(v  1 s 1 Button_DefaultCallback ]
+{
+[v Button_DefaultCallback@button button `E2819  1 p 1 0 ]
+} 0
+"473
+[v _Button_Baseline_Update Button_Baseline_Update `(v  1 s 1 Button_Baseline_Update ]
+{
+[s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Baseline_Update@button button `*.5S448  1 a 1 wreg ]
+[v Button_Baseline_Update@button button `*.5S448  1 a 1 wreg ]
+"475
+"473
+[v Button_Baseline_Update@button button `*.5S448  1 a 1 6 ]
+"487
+} 0
+"467
+[v _Button_Baseline_Initialize Button_Baseline_Initialize `(v  1 s 1 Button_Baseline_Initialize ]
+{
+[s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Baseline_Initialize@button button `*.5S448  1 a 1 wreg ]
+[v Button_Baseline_Initialize@button button `*.5S448  1 a 1 wreg ]
+"469
+"467
+[v Button_Baseline_Initialize@button button `*.5S448  1 a 1 12 ]
+"471
+} 0
+"440
+[v _Button_Reading_Update Button_Reading_Update `(v  1 s 1 Button_Reading_Update ]
+{
+[s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Reading_Update@button button `*.5S448  1 a 1 wreg ]
+[v Button_Reading_Update@button button `*.5S448  1 a 1 wreg ]
+"442
+"440
+[v Button_Reading_Update@button button `*.5S448  1 a 1 11 ]
+"452
+} 0
+"454
+[v _Button_Reading_Update_Helper Button_Reading_Update_Helper `(v  1 s 1 Button_Reading_Update_Helper ]
+{
+[s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Reading_Update_Helper@button button `*.5S448  1 a 1 wreg ]
+[v Button_Reading_Update_Helper@button button `*.5S448  1 a 1 wreg ]
+"456
+"454
+[v Button_Reading_Update_Helper@button button `*.5S448  1 a 1 10 ]
+"465
+} 0
+"420 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Sensor_RawSample_Get MTOUCH_Sensor_RawSample_Get `(us  1 e 2 0 ]
+{
+[v MTOUCH_Sensor_RawSample_Get@name name `E2661  1 a 1 wreg ]
+[v MTOUCH_Sensor_RawSample_Get@name name `E2661  1 a 1 wreg ]
+"422
+[v MTOUCH_Sensor_RawSample_Get@name name `E2661  1 a 1 7 ]
+"428
+} 0
+"391 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_button.c
+[v _Button_Deviation_Update Button_Deviation_Update `(v  1 s 1 Button_Deviation_Update ]
+{
+[s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Deviation_Update@button button `*.5S448  1 a 1 wreg ]
+"393
+[v Button_Deviation_Update@deviation deviation `l  1 a 4 1 ]
+"391
+[v Button_Deviation_Update@button button `*.5S448  1 a 1 wreg ]
+"395
+"391
+[v Button_Deviation_Update@button button `*.5S448  1 a 1 0 ]
+"411
+} 0
+"366
+[v _MTOUCH_Button_isPressed MTOUCH_Button_isPressed `(a  1 e 1 0 ]
+{
+[v MTOUCH_Button_isPressed@name name `E2819  1 a 1 wreg ]
+[v MTOUCH_Button_isPressed@name name `E2819  1 a 1 wreg ]
+"368
+[v MTOUCH_Button_isPressed@name name `E2819  1 a 1 1 ]
+"372
+} 0
+"78 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+[v _Init_Function Init_Function `T(v  1 e 1 0 ]
+{
+"87
+} 0
+"180
+[v _StartStop_Fan StartStop_Fan `T(v  1 e 1 0 ]
+{
+[v StartStop_Fan@OnOff OnOff `a  1 a 1 wreg ]
+[v StartStop_Fan@OnOff OnOff `a  1 a 1 wreg ]
+"182
+[v StartStop_Fan@OnOff OnOff `a  1 a 1 0 ]
+"191
+} 0
+"208
+[v _StartStop_Dimmer StartStop_Dimmer `T(v  1 e 1 0 ]
+{
+[v StartStop_Dimmer@OnOff OnOff `a  1 a 1 wreg ]
+[v StartStop_Dimmer@OnOff OnOff `a  1 a 1 wreg ]
+"210
+[v StartStop_Dimmer@OnOff OnOff `a  1 a 1 66 ]
+"219
+} 0
+"262
+[v _SetDimmer SetDimmer `(v  1 e 1 0 ]
+{
+"267
+[v SetDimmer@TRIAC_off_duration_ms TRIAC_off_duration_ms `f  1 a 4 62 ]
+"262
+[v SetDimmer@dim_percentage dim_percentage `f  1 p 4 58 ]
+"272
+} 0
+"43 /opt/microchip/xc8/v2.31/pic/sources/c99/common/fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 57 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 56 ]
 "43
+[v ___fltol@f1 f1 `d  1 p 4 47 ]
+"70
 } 0
-"143 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _TX_Whole_String TX_Whole_String `T(v  1 e 1 0 ]
+"242 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
 {
-[v TX_Whole_String@input_string input_string `*.5uc  1 a 1 wreg ]
-"147
-[v TX_Whole_String@i i `uc  1 a 1 3 ]
-"145
-[v TX_Whole_String@size_of_string size_of_string `us  1 a 2 0 ]
-"143
-[v TX_Whole_String@input_string input_string `*.5uc  1 a 1 wreg ]
-"145
-[v TX_Whole_String@input_string input_string `*.5uc  1 a 1 2 ]
-"156
+[v ___flsub@a a `d  1 p 4 47 ]
+[v ___flsub@b b `d  1 p 4 51 ]
+"250
 } 0
-"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
+"10
+[v ___fladd __fladd `(d  1 e 4 0 ]
 {
-"7
-[v strlen@a a `*.39DCuc  1 a 2 4 ]
-"5
-[v strlen@s s `*.39DCuc  1 p 2 2 ]
+"17
+[v ___fladd@grs grs `uc  1 a 1 11 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 10 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 9 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 8 ]
+"10
+[v ___fladd@b b `d  1 p 4 0 ]
+[v ___fladd@a a `d  1 p 4 4 ]
+"237
+} 0
+"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1931 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1936 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1939 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1931 1 fAsBytes 4 0 `S1936 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1939  1 a 4 15 ]
 "12
+[v ___flmul@grs grs `ul  1 a 4 10 ]
+[s S2008 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S2011 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S2008 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S2011  1 a 2 19 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 14 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 9 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 8 ]
+"8
+[v ___flmul@b b `d  1 p 4 0 ]
+[v ___flmul@a a `d  1 p 4 4 ]
+"205
 } 0
-"134 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _TX_Command TX_Command `T(v  1 e 1 0 ]
+"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 {
-[v TX_Command@txData txData `uc  1 a 1 wreg ]
-[v TX_Command@txData txData `uc  1 a 1 wreg ]
-"136
-[v TX_Command@txData txData `uc  1 a 1 3 ]
-"140
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
 } 0
-"94 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/eusart.c
-[v _EUSART_is_tx_ready EUSART_is_tx_ready `(a  1 e 1 0 ]
+"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 41 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 34 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 39 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 46 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 45 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 38 ]
+"8
+[v ___fldiv@a a `d  1 p 4 21 ]
+[v ___fldiv@b b `d  1 p 4 25 ]
+"185
+} 0
+"194 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+[v _StartStop_Buzzer StartStop_Buzzer `T(v  1 e 1 0 ]
+{
+[v StartStop_Buzzer@OnOff OnOff `a  1 a 1 wreg ]
+[v StartStop_Buzzer@OnOff OnOff `a  1 a 1 wreg ]
+"196
+[v StartStop_Buzzer@OnOff OnOff `a  1 a 1 0 ]
+"205
+} 0
+"166
+[v _StartStop_AlarmLED_Blink StartStop_AlarmLED_Blink `T(v  1 e 1 0 ]
+{
+[v StartStop_AlarmLED_Blink@OnOff OnOff `a  1 a 1 wreg ]
+[v StartStop_AlarmLED_Blink@OnOff OnOff `a  1 a 1 wreg ]
+"168
+[v StartStop_AlarmLED_Blink@OnOff OnOff `a  1 a 1 0 ]
+"177
+} 0
+"93 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr4.c
+[v _TMR4_StopTimer TMR4_StopTimer `(v  1 e 1 0 ]
 {
 "97
 } 0
-"132
-[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"87
+[v _TMR4_StartTimer TMR4_StartTimer `(v  1 e 1 0 ]
 {
-[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART_Write@txData txData `uc  1 a 1 2 ]
-"139
+"91
+} 0
+"152 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+[v _StartStop_AlarmLED StartStop_AlarmLED `T(v  1 e 1 0 ]
+{
+[v StartStop_AlarmLED@OnOff OnOff `a  1 a 1 wreg ]
+[v StartStop_AlarmLED@OnOff OnOff `a  1 a 1 wreg ]
+"154
+[v StartStop_AlarmLED@OnOff OnOff `a  1 a 1 0 ]
+"163
 } 0
 "50 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"62
+"60
 } 0
-"74
+"72
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 {
-"78
+"76
+} 0
+"64 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr6.c
+[v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
+{
+"85
+} 0
+"132
+[v _TMR6_SetInterruptHandler TMR6_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR6_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"134
 } 0
 "64 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr4.c
 [v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
@@ -910,7 +1128,7 @@ T_stop 1
 "132
 [v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR4_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+[v TMR4_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
 "134
 } 0
 "64 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr2.c
@@ -921,19 +1139,8 @@ T_stop 1
 "132
 [v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
 "134
-} 0
-"64 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr1.c
-[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
-{
-"91
-} 0
-"171
-[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
-{
-[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
-"173
 } 0
 "57 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
@@ -943,13 +1150,13 @@ T_stop 1
 "142
 [v _IOCAF2_SetInterruptHandler IOCAF2_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v IOCAF2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+[v IOCAF2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
 "144
 } 0
-"64 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mcc.c
+"62 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"72
+"70
 } 0
 "81 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch.c
 [v _MTOUCH_Initialize MTOUCH_Initialize `(v  1 e 1 0 ]
@@ -969,14 +1176,14 @@ T_stop 1
 `uc 1 active 1 8 :1:2 
 ]
 "549
-[v MTOUCH_Sensor_Sampled_ResetAll@sensor sensor `*.5S50  1 a 1 4 ]
+[v MTOUCH_Sensor_Sampled_ResetAll@sensor sensor `*.4S50  1 a 1 2 ]
 "554
 } 0
 "157
 [v _MTOUCH_Sensor_InitializeAll MTOUCH_Sensor_InitializeAll `(v  1 e 1 0 ]
 {
 "159
-[v MTOUCH_Sensor_InitializeAll@sensor sensor `E2661  1 a 1 1 ]
+[v MTOUCH_Sensor_InitializeAll@sensor sensor `E2661  1 a 1 9 ]
 "164
 } 0
 "143
@@ -985,7 +1192,7 @@ T_stop 1
 [v MTOUCH_Sensor_Initialize@sensor sensor `E2661  1 a 1 wreg ]
 [v MTOUCH_Sensor_Initialize@sensor sensor `E2661  1 a 1 wreg ]
 "145
-[v MTOUCH_Sensor_Initialize@sensor sensor `E2661  1 a 1 9 ]
+[v MTOUCH_Sensor_Initialize@sensor sensor `E2661  1 a 1 7 ]
 "149
 } 0
 "564
@@ -995,11 +1202,11 @@ T_stop 1
 `uc 1 sampled 1 8 :1:1 
 `uc 1 active 1 8 :1:2 
 ]
-[v Sensor_Sampled_Reset@sensor sensor `*.5S50  1 a 1 wreg ]
-[v Sensor_Sampled_Reset@sensor sensor `*.5S50  1 a 1 wreg ]
+[v Sensor_Sampled_Reset@sensor sensor `*.4S50  1 a 1 wreg ]
+[v Sensor_Sampled_Reset@sensor sensor `*.4S50  1 a 1 wreg ]
 "566
 "564
-[v Sensor_Sampled_Reset@sensor sensor `*.5S50  1 a 1 2 ]
+[v Sensor_Sampled_Reset@sensor sensor `*.4S50  1 a 1 0 ]
 "567
 } 0
 "481
@@ -1008,7 +1215,7 @@ T_stop 1
 [v MTOUCH_Sensor_Enable@sensor sensor `E2661  1 a 1 wreg ]
 [v MTOUCH_Sensor_Enable@sensor sensor `E2661  1 a 1 wreg ]
 "483
-[v MTOUCH_Sensor_Enable@sensor sensor `E2661  1 a 1 7 ]
+[v MTOUCH_Sensor_Enable@sensor sensor `E2661  1 a 1 5 ]
 "485
 } 0
 "4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8.c
@@ -1016,37 +1223,37 @@ T_stop 1
 {
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
 "6
-[v ___bmul@product product `uc  1 a 1 4 ]
+[v ___bmul@product product `uc  1 a 1 2 ]
 "4
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
-[v ___bmul@multiplicand multiplicand `uc  1 p 1 2 ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
 "6
-[v ___bmul@multiplier multiplier `uc  1 a 1 5 ]
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
 "51
 } 0
 "163 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_button.c
 [v _MTOUCH_Button_InitializeAll MTOUCH_Button_InitializeAll `(v  1 e 1 0 ]
 {
 "165
-[v MTOUCH_Button_InitializeAll@button button `E2819  1 a 1 8 ]
+[v MTOUCH_Button_InitializeAll@button button `E2819  1 a 1 11 ]
 "173
 } 0
 "4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/memcpy.c
-[v _memcpy memcpy `(*.6v  1 e 1 0 ]
+[v _memcpy memcpy `(*.5v  1 e 1 0 ]
 {
-[v memcpy@d1 d1 `*.6v  1 a 1 wreg ]
+[v memcpy@d1 d1 `*.5v  1 a 1 wreg ]
 "8
-[v memcpy@s s `*.25DCuc  1 a 2 1 ]
+[v memcpy@s s `*.25DCuc  1 a 2 5 ]
 "7
-[v memcpy@d d `*.6uc  1 a 1 4 ]
+[v memcpy@d d `*.5uc  1 a 1 9 ]
 "9
-[v memcpy@tmp tmp `uc  1 a 1 0 ]
+[v memcpy@tmp tmp `uc  1 a 1 7 ]
 "4
-[v memcpy@d1 d1 `*.6v  1 a 1 wreg ]
-[v memcpy@s1 s1 `*.25DCv  1 p 2 2 ]
-[v memcpy@n n `ui  1 p 2 4 ]
+[v memcpy@d1 d1 `*.5v  1 a 1 wreg ]
+[v memcpy@s1 s1 `*.25DCv  1 p 2 0 ]
+[v memcpy@n n `ui  1 p 2 2 ]
 "11
-[v memcpy@d1 d1 `*.6v  1 a 1 3 ]
+[v memcpy@d1 d1 `*.5v  1 a 1 8 ]
 "18
 } 0
 "151 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_button.c
@@ -1055,11 +1262,11 @@ T_stop 1
 [v MTOUCH_Button_Initialize@name name `E2819  1 a 1 wreg ]
 [s S448 . 16 `DCE2819 1 name 1 0 `DCE2765 1 sensor 1 1 `E2881 1 state 1 2 `us 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `us 1 counter 2 10 `us 1 baseline_count 2 12 `uc 1 threshold 1 14 `uc 1 scaling 1 15 ]
 "153
-[v MTOUCH_Button_Initialize@button button `*.6S448  1 a 1 5 ]
+[v MTOUCH_Button_Initialize@button button `*.5S448  1 a 1 3 ]
 "151
 [v MTOUCH_Button_Initialize@name name `E2819  1 a 1 wreg ]
 "153
-[v MTOUCH_Button_Initialize@name name `E2819  1 a 1 4 ]
+[v MTOUCH_Button_Initialize@name name `E2819  1 a 1 2 ]
 "161
 } 0
 "535 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch_sensor.c
@@ -1067,355 +1274,20 @@ T_stop 1
 {
 "538
 } 0
-"66 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/eusart.c
-[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
-{
-"92
-} 0
-"161
-[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
-"163
-} 0
-"157
-[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
-"159
-} 0
-"165
-[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
-"167
-} 0
-"67 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/adc.c
-[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
-{
-"83
-} 0
-"209 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _Read_PT100_Temp Read_PT100_Temp `T(f  1 e 4 0 ]
-{
-"214
-[v Read_PT100_Temp@Temp_PT100 Temp_PT100 `f  1 a 4 8 ]
-"213
-[v Read_PT100_Temp@R_PT100 R_PT100 `f  1 a 4 4 ]
-"212
-[v Read_PT100_Temp@ADC_volt ADC_volt `f  1 a 4 0 ]
-"211
-[v Read_PT100_Temp@ADC_num ADC_num `us  1 a 2 12 ]
-"227
-} 0
-"168
-[v _Read_ADC_Num Read_ADC_Num `T(us  1 e 2 0 ]
-{
-"170
-[v Read_ADC_Num@convertedValue convertedValue `us  1 a 2 6 ]
-"177
-} 0
-"100 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/adc.c
-[v _ADC_IsConversionDone ADC_IsConversionDone `(a  1 e 1 0 ]
-{
-"104
-} 0
-"106
-[v _ADC_GetConversionResult ADC_GetConversionResult `(us  1 e 2 0 ]
-{
-"110
-} 0
-"198 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _Measure_Temp_PT100_2Wire Measure_Temp_PT100_2Wire `T(f  1 e 4 0 ]
-{
-"200
-[v Measure_Temp_PT100_2Wire@Temp_PT100 Temp_PT100 `f  1 a 4 57 ]
-"198
-[v Measure_Temp_PT100_2Wire@R_PT100 R_PT100 `f  1 p 4 53 ]
-"206
-} 0
-"22 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sqrtf.c
-[v _sqrtf sqrtf `(f  1 e 4 0 ]
-{
-"26
-[v sqrtf@ix ix `l  1 a 4 36 ]
-"27
-[v sqrtf@r r `ul  1 a 4 32 ]
-"26
-[v sqrtf@m m `l  1 a 4 28 ]
-"24
-[v sqrtf@z z `f  1 a 4 24 ]
-"26
-[v sqrtf@t t `l  1 a 4 20 ]
-[v sqrtf@q q `l  1 a 4 16 ]
-[u S2553 . 4 `f 1 f 4 0 `l 1 s 4 0 `ul 1 u 4 0 ]
-"28
-[v sqrtf@__xc8_float_word __xc8_float_word `S2553  1 a 4 12 ]
-"26
-[v sqrtf@i i `l  1 a 4 8 ]
-[v sqrtf@s s `l  1 a 4 4 ]
-"22
-[v sqrtf@x x `f  1 p 4 52 ]
-"89
-} 0
-"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nanf.c
-[v _nanf nanf `(f  1 e 4 0 ]
-{
-[u S2581 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"6
-[v nanf@u u `S2581  1 a 4 6 ]
-"4
-[v nanf@s s `*.25DCuc  1 p 2 2 ]
-"9
-} 0
-"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
-{
-[v ___flge@ff1 ff1 `d  1 p 4 2 ]
-[v ___flge@ff2 ff2 `d  1 p 4 6 ]
-"19
-} 0
-"187 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _Measure_R_PT100_2Wire Measure_R_PT100_2Wire `T(f  1 e 4 0 ]
-{
-"189
-[v Measure_R_PT100_2Wire@R_PT100 R_PT100 `f  1 a 4 57 ]
-"187
-[v Measure_R_PT100_2Wire@ADC_volt ADC_volt `f  1 p 4 53 ]
-"195
-} 0
-"180
-[v _ChangeADCtoVoltage ChangeADCtoVoltage `T(f  1 e 4 0 ]
-{
-[v ChangeADCtoVoltage@ADC_number ADC_number `us  1 p 2 53 ]
-"184
-} 0
-"10 /opt/microchip/xc8/v2.31/pic/sources/c99/common/xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 2 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 1 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 2 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 0 ]
-"44
-} 0
-"93 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/adc.c
-[v _ADC_StartConversion ADC_StartConversion `(v  1 e 1 0 ]
-{
-"97
-} 0
-"121 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _Init_Function Init_Function `T(v  1 e 1 0 ]
-{
-"131
-} 0
-"290
-[v _StartStop_AlarmLED StartStop_AlarmLED `T(v  1 e 1 0 ]
-{
-[v StartStop_AlarmLED@OnOff OnOff `a  1 a 1 wreg ]
-[v StartStop_AlarmLED@OnOff OnOff `a  1 a 1 wreg ]
-"292
-[v StartStop_AlarmLED@OnOff OnOff `a  1 a 1 2 ]
-"301
-} 0
-"85 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/adc.c
-[v _ADC_SelectChannel ADC_SelectChannel `(v  1 e 1 0 ]
-{
-[v ADC_SelectChannel@channel channel `E2603  1 a 1 wreg ]
-[v ADC_SelectChannel@channel channel `E2603  1 a 1 wreg ]
-"88
-[v ADC_SelectChannel@channel channel `E2603  1 a 1 3 ]
-"91
-} 0
-"413 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _Config_Heater Config_Heater `T(v  1 e 1 0 ]
-{
-"415
-[v Config_Heater@count count `uc  1 s 1 count ]
-"416
-[v Config_Heater@del del `us  1 s 2 del ]
-"417
-[v Config_Heater@once once `a  1 s 1 once ]
-"673
-} 0
-"847
-[v _get_delay get_delay `(us  1 e 2 0 ]
-{
-"849
-[v get_delay@buf buf `ul  1 a 4 10 ]
-"847
-[v get_delay@ms ms `us  1 p 2 0 ]
-"859
-} 0
-"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"10
-[v ___lwdiv@quotient quotient `ui  1 a 2 7 ]
-"11
-[v ___lwdiv@counter counter `uc  1 a 1 9 ]
-"5
-[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
-[v ___lwdiv@dividend dividend `ui  1 p 2 4 ]
-"30
-} 0
-"318 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _StartStop_Fan StartStop_Fan `T(v  1 e 1 0 ]
-{
-[v StartStop_Fan@OnOff OnOff `a  1 a 1 wreg ]
-[v StartStop_Fan@OnOff OnOff `a  1 a 1 wreg ]
-"320
-[v StartStop_Fan@OnOff OnOff `a  1 a 1 2 ]
-"329
-} 0
-"346
-[v _StartStop_Dimmer StartStop_Dimmer `T(v  1 e 1 0 ]
-{
-[v StartStop_Dimmer@OnOff OnOff `a  1 a 1 wreg ]
-[v StartStop_Dimmer@OnOff OnOff `a  1 a 1 wreg ]
-"348
-[v StartStop_Dimmer@OnOff OnOff `a  1 a 1 79 ]
-"357
-} 0
-"400
-[v _SetDimmer SetDimmer `(v  1 e 1 0 ]
-{
-"405
-[v SetDimmer@TRIAC_off_duration_ms TRIAC_off_duration_ms `f  1 a 4 27 ]
-"400
-[v SetDimmer@dim_percentage dim_percentage `f  1 p 4 23 ]
-"410
-} 0
-"43 /opt/microchip/xc8/v2.31/pic/sources/c99/common/fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-{
-"45
-[v ___fltol@exp1 exp1 `uc  1 a 1 78 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 77 ]
-"43
-[v ___fltol@f1 f1 `d  1 p 4 14 ]
-"70
-} 0
-"242 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcadd.c
-[v ___flsub __flsub `(d  1 e 4 0 ]
-{
-[v ___flsub@a a `d  1 p 4 52 ]
-[v ___flsub@b b `d  1 p 4 56 ]
-"250
-} 0
-"10
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 51 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 50 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 49 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 48 ]
-"10
-[v ___fladd@b b `d  1 p 4 32 ]
-[v ___fladd@a a `d  1 p 4 36 ]
-"237
-} 0
-"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcmul.c
-[v ___flmul __flmul `(d  1 e 4 0 ]
-{
-[s S2283 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-"13
-[s S2288 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S2291 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2283 1 fAsBytes 4 0 `S2288 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S2291  1 a 4 26 ]
-"12
-[v ___flmul@grs grs `ul  1 a 4 22 ]
-[s S2360 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-"14
-[u S2363 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S2360 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S2363  1 a 2 30 ]
-"10
-[v ___flmul@bexp bexp `uc  1 a 1 21 ]
-"11
-[v ___flmul@aexp aexp `uc  1 a 1 20 ]
-"9
-[v ___flmul@sign sign `uc  1 a 1 19 ]
-"8
-[v ___flmul@b b `d  1 p 4 6 ]
-[v ___flmul@a a `d  1 p 4 10 ]
-"205
-} 0
-"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8_16.c
-[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-{
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-"6
-[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 2 ]
-"5
-[v __Umul8_16@product product `ui  1 a 2 0 ]
-"4
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 2 ]
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 4 ]
-"60
-} 0
-"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 47 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 40 ]
-"20
-[v ___fldiv@new_exp new_exp `i  1 a 2 45 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 52 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 51 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 44 ]
-"8
-[v ___fldiv@a a `d  1 p 4 64 ]
-[v ___fldiv@b b `d  1 p 4 68 ]
-"185
-} 0
-"332 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _StartStop_Buzzer StartStop_Buzzer `T(v  1 e 1 0 ]
-{
-[v StartStop_Buzzer@OnOff OnOff `a  1 a 1 wreg ]
-[v StartStop_Buzzer@OnOff OnOff `a  1 a 1 wreg ]
-"334
-[v StartStop_Buzzer@OnOff OnOff `a  1 a 1 2 ]
-"343
-} 0
-"304
-[v _StartStop_AlarmLED_Blink StartStop_AlarmLED_Blink `T(v  1 e 1 0 ]
-{
-[v StartStop_AlarmLED_Blink@OnOff OnOff `a  1 a 1 wreg ]
-[v StartStop_AlarmLED_Blink@OnOff OnOff `a  1 a 1 wreg ]
-"306
-[v StartStop_AlarmLED_Blink@OnOff OnOff `a  1 a 1 2 ]
-"315
-} 0
-"93 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr4.c
-[v _TMR4_StopTimer TMR4_StopTimer `(v  1 e 1 0 ]
-{
-"97
-} 0
-"87
-[v _TMR4_StartTimer TMR4_StartTimer `(v  1 e 1 0 ]
-{
-"91
-} 0
 "52 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
 "82
+} 0
+"119 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr6.c
+[v _TMR6_ISR TMR6_ISR `(v  1 e 1 0 ]
+{
+"129
+} 0
+"136
+[v _TMR6_DefaultInterruptHandler TMR6_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"139
 } 0
 "119 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr4.c
 [v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
@@ -1427,12 +1299,12 @@ T_stop 1
 {
 "139
 } 0
-"277 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"131 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _TMR4_Wroking_Blink_AlarmLED_isr TMR4_Wroking_Blink_AlarmLED_isr `(v  1 e 1 0 ]
 {
-"279
+"133
 [v TMR4_Wroking_Blink_AlarmLED_isr@counter_tmr4 counter_tmr4 `us  1 s 2 counter_tmr4 ]
-"287
+"141
 } 0
 "119 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr2.c
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
@@ -1444,38 +1316,17 @@ T_stop 1
 {
 "139
 } 0
-"249 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"103 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _TMR2_Drive_TRIAC_isr TMR2_Drive_TRIAC_isr `(v  1 e 1 0 ]
 {
-"251
+"105
 [v TMR2_Drive_TRIAC_isr@counter_tmr2 counter_tmr2 `us  1 s 2 counter_tmr2 ]
-"274
+"128
 } 0
 "93 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr2.c
 [v _TMR2_StopTimer TMR2_StopTimer `(v  1 e 1 0 ]
 {
 "97
-} 0
-"157 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr1.c
-[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
-{
-"168
-} 0
-"120
-[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
-{
-[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
-"140
-} 0
-"175
-[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
-{
-"178
-} 0
-"243 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
-[v _TMR1_Generate_Delay_ms_isr TMR1_Generate_Delay_ms_isr `(v  1 e 1 0 ]
-{
-"246
 } 0
 "115 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
@@ -1492,10 +1343,10 @@ T_stop 1
 {
 "152
 } 0
-"230 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"90 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _Zero_Detection_isr Zero_Detection_isr `(v  1 e 1 0 ]
 {
-"240
+"100
 } 0
 "87 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr2.c
 [v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]

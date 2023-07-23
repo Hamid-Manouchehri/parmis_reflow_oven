@@ -4544,17 +4544,17 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 237 "mcc_generated_files/pin_manager.h"
+# 198 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 249 "mcc_generated_files/pin_manager.h"
+# 210 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 262 "mcc_generated_files/pin_manager.h"
+# 223 "mcc_generated_files/pin_manager.h"
 void IOCAF2_ISR(void);
-# 285 "mcc_generated_files/pin_manager.h"
+# 246 "mcc_generated_files/pin_manager.h"
 void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 309 "mcc_generated_files/pin_manager.h"
+# 270 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF2_InterruptHandler)(void);
-# 333 "mcc_generated_files/pin_manager.h"
+# 294 "mcc_generated_files/pin_manager.h"
 void IOCAF2_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
@@ -4585,7 +4585,7 @@ void PIN_MANAGER_Initialize(void)
 
 
     ANSELC = 0x03;
-    ANSELB = 0x10;
+    ANSELB = 0x30;
     ANSELA = 0x03;
 
 

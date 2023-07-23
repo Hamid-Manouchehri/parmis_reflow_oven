@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/tmr1.c"
+# 1 "mcc_generated_files/tmr6.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/tmr1.c" 2
-# 51 "mcc_generated_files/tmr1.c"
+# 1 "mcc_generated_files/tmr6.c" 2
+# 51 "mcc_generated_files/tmr6.c"
 # 1 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 1 3
 # 18 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4541,161 +4541,118 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 2 3
-# 51 "mcc_generated_files/tmr1.c" 2
+# 51 "mcc_generated_files/tmr6.c" 2
 
-# 1 "mcc_generated_files/tmr1.h" 1
-# 54 "mcc_generated_files/tmr1.h"
+# 1 "mcc_generated_files/tmr6.h" 1
+# 55 "mcc_generated_files/tmr6.h"
 # 1 "/opt/microchip/xc8/v2.31/pic/include/c99/stdbool.h" 1 3
-# 54 "mcc_generated_files/tmr1.h" 2
-# 100 "mcc_generated_files/tmr1.h"
-void TMR1_Initialize(void);
-# 129 "mcc_generated_files/tmr1.h"
-void TMR1_StartTimer(void);
-# 161 "mcc_generated_files/tmr1.h"
-void TMR1_StopTimer(void);
-# 196 "mcc_generated_files/tmr1.h"
-uint16_t TMR1_ReadTimer(void);
-# 235 "mcc_generated_files/tmr1.h"
-void TMR1_WriteTimer(uint16_t timerVal);
-# 271 "mcc_generated_files/tmr1.h"
-void TMR1_Reload(void);
-# 310 "mcc_generated_files/tmr1.h"
-void TMR1_StartSinglePulseAcquisition(void);
-# 349 "mcc_generated_files/tmr1.h"
-uint8_t TMR1_CheckGateValueStatus(void);
-# 367 "mcc_generated_files/tmr1.h"
-void TMR1_ISR(void);
-# 385 "mcc_generated_files/tmr1.h"
- void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 403 "mcc_generated_files/tmr1.h"
-extern void (*TMR1_InterruptHandler)(void);
-# 421 "mcc_generated_files/tmr1.h"
-void TMR1_DefaultInterruptHandler(void);
-# 52 "mcc_generated_files/tmr1.c" 2
+# 55 "mcc_generated_files/tmr6.h" 2
+# 103 "mcc_generated_files/tmr6.h"
+void TMR6_Initialize(void);
+# 132 "mcc_generated_files/tmr6.h"
+void TMR6_StartTimer(void);
+# 164 "mcc_generated_files/tmr6.h"
+void TMR6_StopTimer(void);
+# 199 "mcc_generated_files/tmr6.h"
+uint8_t TMR6_ReadTimer(void);
+# 238 "mcc_generated_files/tmr6.h"
+void TMR6_WriteTimer(uint8_t timerVal);
+# 290 "mcc_generated_files/tmr6.h"
+void TMR6_LoadPeriodRegister(uint8_t periodVal);
+# 308 "mcc_generated_files/tmr6.h"
+void TMR6_ISR(void);
+# 326 "mcc_generated_files/tmr6.h"
+ void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "mcc_generated_files/tmr6.h"
+extern void (*TMR6_InterruptHandler)(void);
+# 362 "mcc_generated_files/tmr6.h"
+void TMR6_DefaultInterruptHandler(void);
+# 52 "mcc_generated_files/tmr6.c" 2
 
 
 
 
 
-volatile uint16_t timer1ReloadVal;
-void (*TMR1_InterruptHandler)(void);
+
+void (*TMR6_InterruptHandler)(void);
 
 
 
 
 
-void TMR1_Initialize(void)
+void TMR6_Initialize(void)
 {
 
 
 
-    T1GCON = 0x00;
+    PR6 = 0xC7;
 
 
-    TMR1H = 0x0B;
+    TMR6 = 0x00;
 
 
-    TMR1L = 0xDC;
+    PIR3bits.TMR6IF = 0;
 
 
-    PIR1bits.TMR1IF = 0;
+    PIE3bits.TMR6IE = 1;
 
 
-    timer1ReloadVal=(uint16_t)((TMR1H << 8) | TMR1L);
+    TMR6_SetInterruptHandler(TMR6_DefaultInterruptHandler);
 
 
-    PIE1bits.TMR1IE = 1;
-
-
-    TMR1_SetInterruptHandler(TMR1_DefaultInterruptHandler);
-
-
-    T1CON = 0x31;
+    T6CON = 0x04;
 }
 
-void TMR1_StartTimer(void)
+void TMR6_StartTimer(void)
 {
 
-    T1CONbits.TMR1ON = 1;
+    T6CONbits.TMR6ON = 1;
 }
 
-void TMR1_StopTimer(void)
+void TMR6_StopTimer(void)
 {
 
-    T1CONbits.TMR1ON = 0;
+    T6CONbits.TMR6ON = 0;
 }
 
-uint16_t TMR1_ReadTimer(void)
+uint8_t TMR6_ReadTimer(void)
 {
-    uint16_t readVal;
-    uint8_t readValHigh;
-    uint8_t readValLow;
+    uint8_t readVal;
 
-
-    readValLow = TMR1L;
-    readValHigh = TMR1H;
-
-    readVal = ((uint16_t)readValHigh << 8) | readValLow;
+    readVal = TMR6;
 
     return readVal;
 }
 
-void TMR1_WriteTimer(uint16_t timerVal)
+void TMR6_WriteTimer(uint8_t timerVal)
 {
-    if (T1CONbits.nT1SYNC == 1)
+
+    TMR6 = timerVal;
+}
+
+void TMR6_LoadPeriodRegister(uint8_t periodVal)
+{
+   PR6 = periodVal;
+}
+
+void TMR6_ISR(void)
+{
+
+
+    PIR3bits.TMR6IF = 0;
+
+    if(TMR6_InterruptHandler)
     {
-
-        T1CONbits.TMR1ON = 0;
-
-
-        TMR1H = (uint8_t)(timerVal >> 8);
-        TMR1L = (uint8_t)timerVal;
-
-
-        T1CONbits.TMR1ON =1;
-    }
-    else
-    {
-
-        TMR1H = (uint8_t)(timerVal >> 8);
-        TMR1L = (uint8_t)timerVal;
-    }
-}
-
-void TMR1_Reload(void)
-{
-    TMR1_WriteTimer(timer1ReloadVal);
-}
-
-void TMR1_StartSinglePulseAcquisition(void)
-{
-    T1GCONbits.T1GGO = 1;
-}
-
-uint8_t TMR1_CheckGateValueStatus(void)
-{
-    return (T1GCONbits.T1GVAL);
-}
-
-void TMR1_ISR(void)
-{
-
-
-    PIR1bits.TMR1IF = 0;
-    TMR1_WriteTimer(timer1ReloadVal);
-
-    if(TMR1_InterruptHandler)
-    {
-        TMR1_InterruptHandler();
+        TMR6_InterruptHandler();
     }
 }
 
 
-void TMR1_SetInterruptHandler(void (* InterruptHandler)(void)){
-    TMR1_InterruptHandler = InterruptHandler;
+void TMR6_SetInterruptHandler(void (* InterruptHandler)(void)){
+    TMR6_InterruptHandler = InterruptHandler;
 }
 
-void TMR1_DefaultInterruptHandler(void){
+void TMR6_DefaultInterruptHandler(void){
 
 
 }

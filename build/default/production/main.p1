@@ -1,15 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"46 main.c
-[; ;main.c: 46: delay get_delay (delay ms);
-[v _get_delay `(us ~T0 @X0 0 ef1`us ]
-"76 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 76: void SYSTEM_Initialize(void);
+"74 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 74: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F3764 `(v ~T0 @X0 1 tf ]
-"47 main.c
-[; ;main.c: 47: __attribute__((inline)) void Init_Function(void);
-[v _Init_Function `TF3764 ~T0 @X0 0 e ]
+[v F3703 `(v ~T0 @X0 1 tf ]
+"27 main.c
+[; ;main.c: 27: __attribute__((inline)) void Init_Function(void);
+[v _Init_Function `TF3703 ~T0 @X0 0 e ]
 "358 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 358:     struct {
 [s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -26,67 +23,50 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 375: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS33 ~T0 @X0 0 e@11 ]
 [v F3511 `(v ~T0 @X0 0 tf ]
-"285 ./mcc_generated_files/pin_manager.h
-[; ;./mcc_generated_files/pin_manager.h: 285: void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void));
+"246 ./mcc_generated_files/pin_manager.h
+[; ;./mcc_generated_files/pin_manager.h: 246: void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _IOCAF2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3511 ]
-"56 main.c
-[; ;main.c: 56: void Zero_Detection_isr(void);
+"28 main.c
+[; ;main.c: 28: void Zero_Detection_isr(void);
 [v _Zero_Detection_isr `(v ~T0 @X0 0 ef ]
-[v F3557 `(v ~T0 @X0 0 tf ]
-"385 ./mcc_generated_files/tmr1.h
-[; ;./mcc_generated_files/tmr1.h: 385:  void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3557 ]
-"57 main.c
-[; ;main.c: 57: void TMR1_Generate_Delay_ms_isr(void);
-[v _TMR1_Generate_Delay_ms_isr `(v ~T0 @X0 0 ef ]
-[v F3573 `(v ~T0 @X0 0 tf ]
+[v F3572 `(v ~T0 @X0 0 tf ]
 "326 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 326:  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3573 ]
-"58 main.c
-[; ;main.c: 58: void TMR2_Drive_TRIAC_isr(void);
+[v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3572 ]
+"29 main.c
+[; ;main.c: 29: void TMR2_Drive_TRIAC_isr(void);
 [v _TMR2_Drive_TRIAC_isr `(v ~T0 @X0 0 ef ]
-[v F3540 `(v ~T0 @X0 0 tf ]
+[v F3556 `(v ~T0 @X0 0 tf ]
 "326 ./mcc_generated_files/tmr4.h
 [; ;./mcc_generated_files/tmr4.h: 326:  void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR4_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3540 ]
-"59 main.c
-[; ;main.c: 59: void TMR4_Wroking_Blink_AlarmLED_isr(void);
+[v _TMR4_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3556 ]
+"30 main.c
+[; ;main.c: 30: void TMR4_Wroking_Blink_AlarmLED_isr(void);
 [v _TMR4_Wroking_Blink_AlarmLED_isr `(v ~T0 @X0 0 ef ]
-[v F3813 `(v ~T0 @X0 1 tf ]
-"68
-[; ;main.c: 68: __attribute__((inline)) void Config_Heater(void);
-[v _Config_Heater `TF3813 ~T0 @X0 0 e ]
-[v F3786 `(f ~T0 @X0 1 tf ]
-"55
-[; ;main.c: 55: __attribute__((inline)) float Read_PT100_Temp(void);
-[v _Read_PT100_Temp `TF3786 ~T0 @X0 0 e ]
-"113 /opt/microchip/xc8/v2.31/pic/include/c99/stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-[v F3769 `(v ~T0 @X0 1 tf1`*uc ]
-"49 main.c
-[; ;main.c: 49: __attribute__((inline)) void TX_Whole_String(char*);
-[v _TX_Whole_String `TF3769 ~T0 @X0 0 e ]
-[v F3792 `(v ~T0 @X0 1 tf1`a ]
-"60
-[; ;main.c: 60: __attribute__((inline)) void StartStop_AlarmLED(_Bool);
-[v _StartStop_AlarmLED `TF3792 ~T0 @X0 0 e ]
-[v F3795 `(v ~T0 @X0 1 tf1`a ]
-"61
-[; ;main.c: 61: __attribute__((inline)) void StartStop_AlarmLED_Blink(_Bool);
-[v _StartStop_AlarmLED_Blink `TF3795 ~T0 @X0 0 e ]
-[v F3798 `(v ~T0 @X0 1 tf1`a ]
-"62
-[; ;main.c: 62: __attribute__((inline)) void StartStop_Fan(_Bool);
-[v _StartStop_Fan `TF3798 ~T0 @X0 0 e ]
-[v F3801 `(v ~T0 @X0 1 tf1`a ]
-"63
-[; ;main.c: 63: __attribute__((inline)) void StartStop_Buzzer(_Bool);
-[v _StartStop_Buzzer `TF3801 ~T0 @X0 0 e ]
-[v F3804 `(v ~T0 @X0 1 tf1`a ]
-"64
-[; ;main.c: 64: __attribute__((inline)) void StartStop_Dimmer(_Bool);
-[v _StartStop_Dimmer `TF3804 ~T0 @X0 0 e ]
+[v F3724 `(v ~T0 @X0 1 tf ]
+"37
+[; ;main.c: 37: __attribute__((inline)) void StartTouchDetection(void);
+[v _StartTouchDetection `TF3724 ~T0 @X0 0 e ]
+[v F3709 `(v ~T0 @X0 1 tf1`a ]
+"32
+[; ;main.c: 32: __attribute__((inline)) void StartStop_AlarmLED(_Bool);
+[v _StartStop_AlarmLED `TF3709 ~T0 @X0 0 e ]
+[v F3712 `(v ~T0 @X0 1 tf1`a ]
+"33
+[; ;main.c: 33: __attribute__((inline)) void StartStop_AlarmLED_Blink(_Bool);
+[v _StartStop_AlarmLED_Blink `TF3712 ~T0 @X0 0 e ]
+[v F3715 `(v ~T0 @X0 1 tf1`a ]
+"34
+[; ;main.c: 34: __attribute__((inline)) void StartStop_Fan(_Bool);
+[v _StartStop_Fan `TF3715 ~T0 @X0 0 e ]
+[v F3718 `(v ~T0 @X0 1 tf1`a ]
+"35
+[; ;main.c: 35: __attribute__((inline)) void StartStop_Buzzer(_Bool);
+[v _StartStop_Buzzer `TF3718 ~T0 @X0 0 e ]
+[v F3721 `(v ~T0 @X0 1 tf1`a ]
+"36
+[; ;main.c: 36: __attribute__((inline)) void StartStop_Dimmer(_Bool);
+[v _StartStop_Dimmer `TF3721 ~T0 @X0 0 e ]
 "2190 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 2190:     struct {
 [s S121 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -98,38 +78,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2201
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 2201: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
 [v _LATCbits `VS120 ~T0 @X0 0 e@270 ]
-"130 main.c
-[; ;main.c: 130:     ADC_SelectChannel(channel_AN10);
-[c E3584 10 29 30 31 .. ]
-[n E3584 . channel_AN10 channel_Temp channel_DAC channel_FVR  ]
-"166 ./mcc_generated_files/adc.h
-[; ;./mcc_generated_files/adc.h: 166: void ADC_SelectChannel(adc_channel_t channel);
-[v _ADC_SelectChannel `(v ~T0 @X0 0 ef1`E3584 ]
-"158 ./mcc_generated_files/eusart.h
-[; ;./mcc_generated_files/eusart.h: 158: _Bool EUSART_is_tx_ready(void);
-[v _EUSART_is_tx_ready `(a ~T0 @X0 0 ef ]
-"341
-[; ;./mcc_generated_files/eusart.h: 341: void EUSART_Write(uint8_t txData);
-[v _EUSART_Write `(v ~T0 @X0 0 ef1`uc ]
-"54 /opt/microchip/xc8/v2.31/pic/include/c99/string.h
-[; ;/opt/microchip/xc8/v2.31/pic/include/c99/string.h: 54: size_t strlen (const char *);
-[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
-[v F1092 `(v ~T0 @X0 1 tf1`ul ]
-"12 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/builtins.h
-[v __delay `JF1092 ~T0 @X0 0 e ]
-[p i __delay ]
-"373 /opt/microchip/xc8/v2.31/pic/include/c99/math.h
-[; ;/opt/microchip/xc8/v2.31/pic/include/c99/math.h: 373: float sqrtf(float);
-[v _sqrtf `(f ~T0 @X0 0 ef1`f ]
-"225 ./mcc_generated_files/adc.h
-[; ;./mcc_generated_files/adc.h: 225: _Bool ADC_IsConversionDone(void);
-[v _ADC_IsConversionDone `(a ~T0 @X0 0 ef ]
-"258
-[; ;./mcc_generated_files/adc.h: 258: adc_result_t ADC_GetConversionResult(void);
-[v _ADC_GetConversionResult `(us ~T0 @X0 0 ef ]
-"193
-[; ;./mcc_generated_files/adc.h: 193: void ADC_StartConversion(void);
-[v _ADC_StartConversion `(v ~T0 @X0 0 ef ]
 "132 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 132: void TMR2_StartTimer(void);
 [v _TMR2_StartTimer `(v ~T0 @X0 0 ef ]
@@ -147,25 +95,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 "164 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 164: void TMR2_StopTimer(void);
 [v _TMR2_StopTimer `(v ~T0 @X0 0 ef ]
+"38 main.c
+[; ;main.c: 38: void StopTouchDetection(void);
+[v _StopTouchDetection `(v ~T0 @X0 0 ef ]
 "132 ./mcc_generated_files/tmr4.h
 [; ;./mcc_generated_files/tmr4.h: 132: void TMR4_StartTimer(void);
 [v _TMR4_StartTimer `(v ~T0 @X0 0 ef ]
 "164
 [; ;./mcc_generated_files/tmr4.h: 164: void TMR4_StopTimer(void);
 [v _TMR4_StopTimer `(v ~T0 @X0 0 ef ]
-"67 main.c
-[; ;main.c: 67: void SetDimmer(float);
+"39 main.c
+[; ;main.c: 39: void SetDimmer(float);
 [v _SetDimmer `(v ~T0 @X0 0 ef1`f ]
 "55 ./mcc_generated_files/mtouch/mtouch.h
 [; ;./mcc_generated_files/mtouch/mtouch.h: 55:     _Bool MTOUCH_Service_Mainloop (void);
 [v _MTOUCH_Service_Mainloop `(a ~T0 @X0 0 ef ]
-"365 main.c
-[; ;main.c: 365:         if (1 == MTOUCH_Button_isPressed(T_start)){
-[c E3653 0 1 .. ]
-[n E3653 mtouch_button_names T_start T_stop  ]
+"227 main.c
+[; ;main.c: 227:         if (1 == MTOUCH_Button_isPressed(T_start)){
+[c E3632 0 1 .. ]
+[n E3632 mtouch_button_names T_start T_stop  ]
 "118 ./mcc_generated_files/mtouch/mtouch_button.h
 [; ;./mcc_generated_files/mtouch/mtouch_button.h: 118:     _Bool MTOUCH_Button_isPressed (enum mtouch_button_names button);
-[v _MTOUCH_Button_isPressed `(a ~T0 @X0 0 ef1`E3653 ]
+[v _MTOUCH_Button_isPressed `(a ~T0 @X0 0 ef1`E3632 ]
+[v F3729 `(v ~T0 @X0 1 tf ]
+"40 main.c
+[; ;main.c: 40: __attribute__((inline)) void StartHeater(void);
+[v _StartHeater `TF3729 ~T0 @X0 0 e ]
+[v F1092 `(v ~T0 @X0 1 tf1`ul ]
+"12 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/builtins.h
+[v __delay `JF1092 ~T0 @X0 0 e ]
+[p i __delay ]
 "55 /opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -658,1697 +617,1056 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7006
 [; ;/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/proc/pic16f1829.h: 7006: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"29 main.c
-[; ;main.c: 29: const uint8_t R_const = 100;
-[v _R_const `Cuc ~T0 @X0 1 e ]
-[i _R_const
--> -> 100 `i `uc
-]
-"30
-[; ;main.c: 30: const uint8_t V_cc_const = 5;
-[v _V_cc_const `Cuc ~T0 @X0 1 e ]
-[i _V_cc_const
--> -> 5 `i `uc
-]
-"31
-[; ;main.c: 31: const float Tolerance_Temp_const = 37.2;
-[v _Tolerance_Temp_const `Cf ~T0 @X0 1 e ]
-[i _Tolerance_Temp_const
--> .37.2 `f
-]
-"32
-[; ;main.c: 32: const float HalfCycleACDuration_const = 10.0;
+"21 main.c
+[; ;main.c: 21: const float HalfCycleACDuration_const = 10.0;
 [v _HalfCycleACDuration_const `Cf ~T0 @X0 1 e ]
 [i _HalfCycleACDuration_const
 -> .10.0 `f
 ]
-"33
-[; ;main.c: 33: const float TMR2_Timer_Period_const = 100;
+"22
+[; ;main.c: 22: const float TMR2_Timer_Period_const = 100;
 [v _TMR2_Timer_Period_const `Cf ~T0 @X0 1 e ]
 [i _TMR2_Timer_Period_const
 -> -> 100 `i `f
 ]
-"34
-[; ;main.c: 34: const float TMR6_Timer_Period_const = 1;
-[v _TMR6_Timer_Period_const `Cf ~T0 @X0 1 e ]
-[i _TMR6_Timer_Period_const
--> -> 1 `i `f
-]
-"35
-[; ;main.c: 35: unsigned char Buff_g[20];
-[v _Buff_g `uc ~T0 @X0 -> 20 `i e ]
-"36
-[; ;main.c: 36: uint16_t tmr2_required_counter_steps_g;
+"23
+[; ;main.c: 23: uint16_t tmr2_required_counter_steps_g;
 [v _tmr2_required_counter_steps_g `us ~T0 @X0 1 e ]
-"37
-[; ;main.c: 37: _Bool DimmerStatusFlag_g = 0;
+"24
+[; ;main.c: 24: _Bool DimmerStatusFlag_g = 0;
 [v _DimmerStatusFlag_g `a ~T0 @X0 1 e ]
 [i _DimmerStatusFlag_g
 -> -> 0 `i `a
 ]
-"38
-[; ;main.c: 38: _Bool onceFlag = 1;
-[v _onceFlag `a ~T0 @X0 1 e ]
-[i _onceFlag
--> -> 1 `i `a
-]
-"42
-[; ;main.c: 42: uint16_t ticker_g = 0;
-[v _ticker_g `us ~T0 @X0 1 e ]
-[i _ticker_g
--> -> 0 `i `us
-]
-"43
-[; ;main.c: 43: const uint16_t ticker_max = 0xffff;
-[v _ticker_max `Cus ~T0 @X0 1 e ]
-[i _ticker_max
--> -> 65535 `ui `us
-]
-"44
-[; ;main.c: 44: const uint16_t tmr1_period = 250;
-[v _tmr1_period `Cus ~T0 @X0 1 e ]
-[i _tmr1_period
--> -> 250 `i `us
+"25
+[; ;main.c: 25: _Bool kirFlag = 0;
+[v _kirFlag `a ~T0 @X0 1 e ]
+[i _kirFlag
+-> -> 0 `i `a
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"79
-[; ;main.c: 79: void main(void){
+"50
+[; ;main.c: 50: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"81
-[; ;main.c: 81:     delay del = get_delay(0);
-[v _del `us ~T0 @X0 1 a ]
-[e = _del ( _get_delay (1 -> -> 0 `i `us ]
-"83
-[; ;main.c: 83:     SYSTEM_Initialize();
+"52
+[; ;main.c: 52:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"84
-[; ;main.c: 84:     Init_Function();
+"53
+[; ;main.c: 53:     Init_Function();
 [e ( _Init_Function ..  ]
-"87
-[; ;main.c: 87:     (INTCONbits.GIE = 1);
+"55
+[; ;main.c: 55:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"88
-[; ;main.c: 88:     (INTCONbits.PEIE = 1);
+"56
+[; ;main.c: 56:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"90
-[; ;main.c: 90:     IOCAF2_SetInterruptHandler(Zero_Detection_isr);
+"58
+[; ;main.c: 58:     IOCAF2_SetInterruptHandler(Zero_Detection_isr);
 [e ( _IOCAF2_SetInterruptHandler (1 &U _Zero_Detection_isr ]
-"91
-[; ;main.c: 91:     TMR1_SetInterruptHandler(TMR1_Generate_Delay_ms_isr);
-[e ( _TMR1_SetInterruptHandler (1 &U _TMR1_Generate_Delay_ms_isr ]
-"92
-[; ;main.c: 92:     TMR2_SetInterruptHandler(TMR2_Drive_TRIAC_isr);
+"59
+[; ;main.c: 59:     TMR2_SetInterruptHandler(TMR2_Drive_TRIAC_isr);
 [e ( _TMR2_SetInterruptHandler (1 &U _TMR2_Drive_TRIAC_isr ]
-"93
-[; ;main.c: 93:     TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr);
+"60
+[; ;main.c: 60:     TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr);
 [e ( _TMR4_SetInterruptHandler (1 &U _TMR4_Wroking_Blink_AlarmLED_isr ]
-"95
-[; ;main.c: 95:     uint16_t Temp_PT100 = 0.0;
-[v _Temp_PT100 `us ~T0 @X0 1 a ]
-[e = _Temp_PT100 -> .0.0 `us ]
-"99
-[; ;main.c: 99:     while (1){
-[e :U 380 ]
+"63
+[; ;main.c: 63:     while(1){
+[e :U 377 ]
 {
-"101
-[; ;main.c: 101:         Config_Heater();
-[e ( _Config_Heater ..  ]
-"103
-[; ;main.c: 103:         if (del == ticker_g){
-[e $ ! == -> _del `ui -> _ticker_g `ui 382  ]
-{
-"105
-[; ;main.c: 105:             Temp_PT100 = Read_PT100_Temp();
-[e = _Temp_PT100 -> ( _Read_PT100_Temp ..  `us ]
-"106
-[; ;main.c: 106:             sprintf(Buff_g, "%d Celsius\n", Temp_PT100);
-[e ( _sprintf (1 , (. , -> &U _Buff_g `*uc :s 1C -> _Temp_PT100 `ui ]
-"107
-[; ;main.c: 107:             TX_Whole_String(Buff_g);
-[e ( _TX_Whole_String (1 -> &U _Buff_g `*uc ]
-"108
-[; ;main.c: 108:             del = get_delay(500);
-[e = _del ( _get_delay (1 -> -> 500 `i `us ]
-"109
-[; ;main.c: 109:         }
+"65
+[; ;main.c: 65:         StartTouchDetection();
+[e ( _StartTouchDetection ..  ]
+"67
+[; ;main.c: 67:     }
 }
-[e :U 382 ]
-"111
-[; ;main.c: 111:     }
+[e :U 376 ]
+[e $U 377  ]
+[e :U 378 ]
+"69
+[; ;main.c: 69: }
+[e :UE 375 ]
 }
-[e :U 379 ]
-[e $U 380  ]
-[e :U 381 ]
-"112
-[; ;main.c: 112: }
-[e :UE 378 ]
-}
-[v F3824 `(v ~T0 @X0 1 tf ]
-"121
-[; ;main.c: 121: __attribute__((inline)) void Init_Function(void){
-[v _Init_Function `TF3824 ~T0 @X0 1 e ]
+[v F3735 `(v ~T0 @X0 1 tf ]
+"78
+[; ;main.c: 78: __attribute__((inline)) void Init_Function(void){
+[v _Init_Function `TF3735 ~T0 @X0 1 e ]
 {
 [e :U _Init_Function ]
 [f ]
-"123
-[; ;main.c: 123:     StartStop_AlarmLED(0);
+"80
+[; ;main.c: 80:     StartStop_AlarmLED(0);
 [e ( _StartStop_AlarmLED (1 -> -> 0 `i `a ]
-"124
-[; ;main.c: 124:     StartStop_AlarmLED_Blink(0);
+"81
+[; ;main.c: 81:     StartStop_AlarmLED_Blink(0);
 [e ( _StartStop_AlarmLED_Blink (1 -> -> 0 `i `a ]
-"125
-[; ;main.c: 125:     StartStop_Fan(0);
+"82
+[; ;main.c: 82:     StartStop_Fan(0);
 [e ( _StartStop_Fan (1 -> -> 0 `i `a ]
-"126
-[; ;main.c: 126:     StartStop_Buzzer(0);
+"83
+[; ;main.c: 83:     StartStop_Buzzer(0);
 [e ( _StartStop_Buzzer (1 -> -> 0 `i `a ]
-"127
-[; ;main.c: 127:     StartStop_Dimmer(0);
+"84
+[; ;main.c: 84:     StartStop_Dimmer(0);
 [e ( _StartStop_Dimmer (1 -> -> 0 `i `a ]
-"128
-[; ;main.c: 128:     do { LATCbits.LATC5 = 0; } while(0);
-[e :U 386 ]
+"85
+[; ;main.c: 85:     do { LATCbits.LATC5 = 0; } while(0);
+[e :U 382 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 385 ]
-"130
-[; ;main.c: 130:     ADC_SelectChannel(channel_AN10);
-[e ( _ADC_SelectChannel (1 . `E3584 0 ]
-"131
-[; ;main.c: 131: }
-[e :UE 383 ]
+[e :U 381 ]
+"87
+[; ;main.c: 87: }
+[e :UE 379 ]
 }
-[v F3826 `(v ~T0 @X0 1 tf1`uc ]
-"134
-[; ;main.c: 134: __attribute__((inline)) void TX_Command(uint8_t txData) {
-[v _TX_Command `TF3826 ~T0 @X0 1 e ]
-{
-[e :U _TX_Command ]
-[v _txData `uc ~T0 @X0 1 r1 ]
-[f ]
-"136
-[; ;main.c: 136:     if (EUSART_is_tx_ready()) {
-[e $ ! != -> ( _EUSART_is_tx_ready ..  `i -> 0 `i 388  ]
-{
-"138
-[; ;main.c: 138:         EUSART_Write(txData);
-[e ( _EUSART_Write (1 _txData ]
-"139
-[; ;main.c: 139:     }
-}
-[e :U 388 ]
-"140
-[; ;main.c: 140: }
-[e :UE 387 ]
-}
-[v F3829 `(v ~T0 @X0 1 tf1`*uc ]
-"143
-[; ;main.c: 143: __attribute__((inline)) void TX_Whole_String(char *input_string){
-[v _TX_Whole_String `TF3829 ~T0 @X0 1 e ]
-{
-[e :U _TX_Whole_String ]
-[v _input_string `*uc ~T0 @X0 1 r1 ]
-[f ]
-"145
-[; ;main.c: 145:     uint16_t size_of_string = strlen(input_string);
-[v _size_of_string `us ~T0 @X0 1 a ]
-[e = _size_of_string -> ( _strlen (1 -> _input_string `*Cuc `us ]
-"147
-[; ;main.c: 147:     for (uint8_t i = 0; i < size_of_string; i++){
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $U 393  ]
-[e :U 390 ]
-{
-"149
-[; ;main.c: 149:         TX_Command(input_string[i]);
-[e ( _TX_Command (1 -> *U + _input_string * -> _i `ux -> -> # *U _input_string `ui `ux `uc ]
-"150
-[; ;main.c: 150:         _delay((unsigned long)((5)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"152
-[; ;main.c: 152:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 393 ]
-[e $ < -> _i `ui -> _size_of_string `ui 390  ]
-[e :U 391 ]
-}
-"156
-[; ;main.c: 156: }
-[e :UE 389 ]
-}
-[v F3834 `(v ~T0 @X0 1 tf1`us ]
-"159
-[; ;main.c: 159: __attribute__((inline)) void ReadTemperature(uint16_t R_PT100){
-[v _ReadTemperature `TF3834 ~T0 @X0 1 e ]
-{
-[e :U _ReadTemperature ]
-[v _R_PT100 `us ~T0 @X0 1 r1 ]
-[f ]
-"161
-[; ;main.c: 161:     uint16_t Temperature;
-[v _Temperature `us ~T0 @X0 1 a ]
-"163
-[; ;main.c: 163:     Temperature = (-3.9083E-03 + sqrtf(17.58480889E-06 + (-23.10E-09 * R_PT100))) / -1.155E-06;
-[e = _Temperature -> / + -U .3.9083e-03 -> ( _sqrtf (1 -> + .17.58480889e-06 * -U .23.10e-09 -> -> _R_PT100 `ui `d `f `d -U .1.155e-06 `us ]
-"165
-[; ;main.c: 165: }
-[e :UE 394 ]
-}
-[v F3838 `(us ~T0 @X0 1 tf ]
-"168
-[; ;main.c: 168: __attribute__((inline)) uint16_t Read_ADC_Num(void){
-[v _Read_ADC_Num `TF3838 ~T0 @X0 1 e ]
-{
-[e :U _Read_ADC_Num ]
-[f ]
-"170
-[; ;main.c: 170:     uint16_t convertedValue;
-[v _convertedValue `us ~T0 @X0 1 a ]
-"172
-[; ;main.c: 172:     while(!ADC_IsConversionDone());
-[e $U 396  ]
-[e :U 397 ]
-[e :U 396 ]
-[e $ ! != -> ( _ADC_IsConversionDone ..  `i -> 0 `i 397  ]
-[e :U 398 ]
-"173
-[; ;main.c: 173:     convertedValue = ADC_GetConversionResult();
-[e = _convertedValue ( _ADC_GetConversionResult ..  ]
-"175
-[; ;main.c: 175:     return convertedValue;
-[e ) _convertedValue ]
-[e $UE 395  ]
-"177
-[; ;main.c: 177: }
-[e :UE 395 ]
-}
-[v F3841 `(f ~T0 @X0 1 tf1`us ]
-"180
-[; ;main.c: 180: __attribute__((inline)) float ChangeADCtoVoltage(uint16_t ADC_number){
-[v _ChangeADCtoVoltage `TF3841 ~T0 @X0 1 e ]
-{
-[e :U _ChangeADCtoVoltage ]
-[v _ADC_number `us ~T0 @X0 1 r1 ]
-[f ]
-"182
-[; ;main.c: 182:     return (float)(5.0 * ADC_number / 1023);
-[e ) -> / * .5.0 -> -> _ADC_number `ui `d -> -> 1023 `i `d `f ]
-[e $UE 399  ]
-"184
-[; ;main.c: 184: }
-[e :UE 399 ]
-}
-[v F3844 `(f ~T0 @X0 1 tf1`f ]
-"187
-[; ;main.c: 187: __attribute__((inline)) float Measure_R_PT100_2Wire(float ADC_volt){
-[v _Measure_R_PT100_2Wire `TF3844 ~T0 @X0 1 e ]
-{
-[e :U _Measure_R_PT100_2Wire ]
-[v _ADC_volt `f ~T0 @X0 1 r1 ]
-[f ]
-"189
-[; ;main.c: 189:     float R_PT100 = 0;
-[v _R_PT100 `f ~T0 @X0 1 a ]
-[e = _R_PT100 -> -> 0 `i `f ]
-"191
-[; ;main.c: 191:     R_PT100 = R_const * ADC_volt / (V_cc_const - ADC_volt);
-[e = _R_PT100 / * -> -> _R_const `i `f _ADC_volt - -> -> _V_cc_const `i `f _ADC_volt ]
-"193
-[; ;main.c: 193:     return R_PT100;
-[e ) _R_PT100 ]
-[e $UE 400  ]
-"195
-[; ;main.c: 195: }
-[e :UE 400 ]
-}
-[v F3848 `(f ~T0 @X0 1 tf1`f ]
-"198
-[; ;main.c: 198: __attribute__((inline)) float Measure_Temp_PT100_2Wire(float R_PT100){
-[v _Measure_Temp_PT100_2Wire `TF3848 ~T0 @X0 1 e ]
-{
-[e :U _Measure_Temp_PT100_2Wire ]
-[v _R_PT100 `f ~T0 @X0 1 r1 ]
-[f ]
-"200
-[; ;main.c: 200:     float Temp_PT100;
-[v _Temp_PT100 `f ~T0 @X0 1 a ]
-"202
-[; ;main.c: 202:     Temp_PT100 = ((-3.9083E-03 + sqrtf(17.58480889E-06 + -23.10E-09 * R_PT100)) / -1.155E-06) - Tolerance_Temp_const;
-[e = _Temp_PT100 -> - / + -U .3.9083e-03 -> ( _sqrtf (1 -> + .17.58480889e-06 * -U .23.10e-09 -> _R_PT100 `d `f `d -U .1.155e-06 -> _Tolerance_Temp_const `d `f ]
-"204
-[; ;main.c: 204:     return Temp_PT100;
-[e ) _Temp_PT100 ]
-[e $UE 401  ]
-"206
-[; ;main.c: 206: }
-[e :UE 401 ]
-}
-[v F3852 `(f ~T0 @X0 1 tf ]
-"209
-[; ;main.c: 209: __attribute__((inline)) float Read_PT100_Temp(void){
-[v _Read_PT100_Temp `TF3852 ~T0 @X0 1 e ]
-{
-[e :U _Read_PT100_Temp ]
-[f ]
-"211
-[; ;main.c: 211:     uint16_t ADC_num = 0;
-[v _ADC_num `us ~T0 @X0 1 a ]
-[e = _ADC_num -> -> 0 `i `us ]
-"212
-[; ;main.c: 212:     float ADC_volt = 0;
-[v _ADC_volt `f ~T0 @X0 1 a ]
-[e = _ADC_volt -> -> 0 `i `f ]
-"213
-[; ;main.c: 213:     float R_PT100 = 0;
-[v _R_PT100 `f ~T0 @X0 1 a ]
-[e = _R_PT100 -> -> 0 `i `f ]
-"214
-[; ;main.c: 214:     float Temp_PT100 = 0;
-[v _Temp_PT100 `f ~T0 @X0 1 a ]
-[e = _Temp_PT100 -> -> 0 `i `f ]
-"216
-[; ;main.c: 216:     ADC_StartConversion();
-[e ( _ADC_StartConversion ..  ]
-"218
-[; ;main.c: 218:     ADC_num = Read_ADC_Num();
-[e = _ADC_num ( _Read_ADC_Num ..  ]
-"220
-[; ;main.c: 220:     ADC_volt = ChangeADCtoVoltage(ADC_num);
-[e = _ADC_volt ( _ChangeADCtoVoltage (1 _ADC_num ]
-"222
-[; ;main.c: 222:     R_PT100 = Measure_R_PT100_2Wire(ADC_volt);
-[e = _R_PT100 ( _Measure_R_PT100_2Wire (1 _ADC_volt ]
-"224
-[; ;main.c: 224:     Temp_PT100 = Measure_Temp_PT100_2Wire(R_PT100);
-[e = _Temp_PT100 ( _Measure_Temp_PT100_2Wire (1 _R_PT100 ]
-"226
-[; ;main.c: 226:     return Temp_PT100;
-[e ) _Temp_PT100 ]
-[e $UE 402  ]
-"227
-[; ;main.c: 227: }
-[e :UE 402 ]
-}
-"230
-[; ;main.c: 230: void Zero_Detection_isr(void){
+"90
+[; ;main.c: 90: void Zero_Detection_isr(void){
 [v _Zero_Detection_isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _Zero_Detection_isr ]
 [f ]
-"235
-[; ;main.c: 235:     if (1 == DimmerStatusFlag_g){
-[e $ ! == -> 1 `i -> _DimmerStatusFlag_g `i 404  ]
+"95
+[; ;main.c: 95:     if (1 == DimmerStatusFlag_g){
+[e $ ! == -> 1 `i -> _DimmerStatusFlag_g `i 384  ]
 {
-"237
-[; ;main.c: 237:         TMR2_StartTimer();
+"97
+[; ;main.c: 97:         TMR2_StartTimer();
 [e ( _TMR2_StartTimer ..  ]
-"238
-[; ;main.c: 238:     }
+"98
+[; ;main.c: 98:     }
 }
-[e :U 404 ]
-"240
-[; ;main.c: 240: }
-[e :UE 403 ]
+[e :U 384 ]
+"100
+[; ;main.c: 100: }
+[e :UE 383 ]
 }
-"243
-[; ;main.c: 243: void TMR1_Generate_Delay_ms_isr (void){
-[v _TMR1_Generate_Delay_ms_isr `(v ~T0 @X0 1 ef ]
-{
-[e :U _TMR1_Generate_Delay_ms_isr ]
-[f ]
-"245
-[; ;main.c: 245:     ticker_g++;
-[e ++ _ticker_g -> -> 1 `i `us ]
-"246
-[; ;main.c: 246: }
-[e :UE 405 ]
-}
-"249
-[; ;main.c: 249: void TMR2_Drive_TRIAC_isr(void){
+"103
+[; ;main.c: 103: void TMR2_Drive_TRIAC_isr(void){
 [v _TMR2_Drive_TRIAC_isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR2_Drive_TRIAC_isr ]
 [f ]
-"251
-[; ;main.c: 251:     static uint16_t counter_tmr2 = 0;
-[v F3860 `us ~T0 @X0 1 s counter_tmr2 ]
-[i F3860
+"105
+[; ;main.c: 105:     static uint16_t counter_tmr2 = 0;
+[v F3738 `us ~T0 @X0 1 s counter_tmr2 ]
+[i F3738
 -> -> 0 `i `us
 ]
-"253
-[; ;main.c: 253:     if (1 == DimmerStatusFlag_g){
-[e $ ! == -> 1 `i -> _DimmerStatusFlag_g `i 407  ]
+"107
+[; ;main.c: 107:     if (1 == DimmerStatusFlag_g){
+[e $ ! == -> 1 `i -> _DimmerStatusFlag_g `i 386  ]
 {
-"255
-[; ;main.c: 255:         counter_tmr2 ++;
-[e ++ F3860 -> -> 1 `i `us ]
-"257
-[; ;main.c: 257:         if(counter_tmr2 >= tmr2_required_counter_steps_g){
-[e $ ! >= -> F3860 `ui -> _tmr2_required_counter_steps_g `ui 408  ]
+"109
+[; ;main.c: 109:         counter_tmr2 ++;
+[e ++ F3738 -> -> 1 `i `us ]
+"111
+[; ;main.c: 111:         if(counter_tmr2 >= tmr2_required_counter_steps_g){
+[e $ ! >= -> F3738 `ui -> _tmr2_required_counter_steps_g `ui 387  ]
 {
-"259
-[; ;main.c: 259:             counter_tmr2 = 0;
-[e = F3860 -> -> 0 `i `us ]
-"260
-[; ;main.c: 260:             do { LATCbits.LATC5 = 1; } while(0);
-[e :U 411 ]
+"113
+[; ;main.c: 113:             counter_tmr2 = 0;
+[e = F3738 -> -> 0 `i `us ]
+"114
+[; ;main.c: 114:             do { LATCbits.LATC5 = 1; } while(0);
+[e :U 390 ]
 {
 [e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 410 ]
-"262
-[; ;main.c: 262:         }
+[e :U 389 ]
+"116
+[; ;main.c: 116:         }
 }
-[e $U 412  ]
-"263
-[; ;main.c: 263:         else if (1 == PORTCbits.RC5){
-[e :U 408 ]
-[e $ ! == -> 1 `i -> . . _PORTCbits 0 5 `i 413  ]
+[e $U 391  ]
+"117
+[; ;main.c: 117:         else if (1 == PORTCbits.RC5){
+[e :U 387 ]
+[e $ ! == -> 1 `i -> . . _PORTCbits 0 5 `i 392  ]
 {
-"265
-[; ;main.c: 265:             counter_tmr2 = 0;
-[e = F3860 -> -> 0 `i `us ]
-"266
-[; ;main.c: 266:             TMR2_StopTimer();
+"119
+[; ;main.c: 119:             counter_tmr2 = 0;
+[e = F3738 -> -> 0 `i `us ]
+"120
+[; ;main.c: 120:             TMR2_StopTimer();
 [e ( _TMR2_StopTimer ..  ]
-"267
-[; ;main.c: 267:             do { LATCbits.LATC5 = 0; } while(0);
-[e :U 416 ]
+"121
+[; ;main.c: 121:             do { LATCbits.LATC5 = 0; } while(0);
+[e :U 395 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 415 ]
-"268
-[; ;main.c: 268:         }
+[e :U 394 ]
+"122
+[; ;main.c: 122:         }
 }
-[e :U 413 ]
-[e :U 412 ]
-"269
-[; ;main.c: 269:     }
+[e :U 392 ]
+[e :U 391 ]
+"123
+[; ;main.c: 123:     }
 }
-[e $U 417  ]
-"270
-[; ;main.c: 270:     else{
-[e :U 407 ]
+[e $U 396  ]
+"124
+[; ;main.c: 124:     else{
+[e :U 386 ]
 {
-"272
-[; ;main.c: 272:         counter_tmr2 = 0;
-[e = F3860 -> -> 0 `i `us ]
-"273
-[; ;main.c: 273:     }
+"126
+[; ;main.c: 126:         counter_tmr2 = 0;
+[e = F3738 -> -> 0 `i `us ]
+"127
+[; ;main.c: 127:     }
 }
-[e :U 417 ]
-"274
-[; ;main.c: 274: }
-[e :UE 406 ]
+[e :U 396 ]
+"128
+[; ;main.c: 128: }
+[e :UE 385 ]
 }
-"277
-[; ;main.c: 277: void TMR4_Wroking_Blink_AlarmLED_isr(void){
+"131
+[; ;main.c: 131: void TMR4_Wroking_Blink_AlarmLED_isr(void){
 [v _TMR4_Wroking_Blink_AlarmLED_isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR4_Wroking_Blink_AlarmLED_isr ]
 [f ]
-"279
-[; ;main.c: 279:     static uint16_t counter_tmr4 = 0;
-[v F3862 `us ~T0 @X0 1 s counter_tmr4 ]
-[i F3862
+"133
+[; ;main.c: 133:     static uint16_t counter_tmr4 = 0;
+[v F3740 `us ~T0 @X0 1 s counter_tmr4 ]
+[i F3740
 -> -> 0 `i `us
 ]
-"280
-[; ;main.c: 280:     counter_tmr4 ++;
-[e ++ F3862 -> -> 1 `i `us ]
-"282
-[; ;main.c: 282:     if(counter_tmr4 >= 1000){
-[e $ ! >= -> F3862 `ui -> -> 1000 `i `ui 419  ]
+"134
+[; ;main.c: 134:     counter_tmr4 ++;
+[e ++ F3740 -> -> 1 `i `us ]
+"136
+[; ;main.c: 136:     if(counter_tmr4 >= 1000){
+[e $ ! >= -> F3740 `ui -> -> 1000 `i `ui 398  ]
 {
-"284
-[; ;main.c: 284:         counter_tmr4 = 0;
-[e = F3862 -> -> 0 `i `us ]
-"285
-[; ;main.c: 285:         do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0);
-[e :U 422 ]
+"138
+[; ;main.c: 138:         counter_tmr4 = 0;
+[e = F3740 -> -> 0 `i `us ]
+"139
+[; ;main.c: 139:         do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0);
+[e :U 401 ]
 {
 [e = . . _LATCbits 0 2 -> ~ -> . . _LATCbits 0 2 `i `uc ]
 }
-[e :U 421 ]
-"286
-[; ;main.c: 286:     }
+[e :U 400 ]
+"140
+[; ;main.c: 140:     }
 }
-[e :U 419 ]
-"287
-[; ;main.c: 287: }
-[e :UE 418 ]
+[e :U 398 ]
+"141
+[; ;main.c: 141: }
+[e :UE 397 ]
 }
-[v F3864 `(v ~T0 @X0 1 tf1`a ]
-"290
-[; ;main.c: 290: __attribute__((inline)) void StartStop_AlarmLED(_Bool OnOff){
-[v _StartStop_AlarmLED `TF3864 ~T0 @X0 1 e ]
+"144
+[; ;main.c: 144: void TMR6_Check_Touch_Keys_Status_isr(void){
+[v _TMR6_Check_Touch_Keys_Status_isr `(v ~T0 @X0 1 ef ]
+{
+[e :U _TMR6_Check_Touch_Keys_Status_isr ]
+[f ]
+"147
+[; ;main.c: 147:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"149
+[; ;main.c: 149: }
+[e :UE 402 ]
+}
+[v F3743 `(v ~T0 @X0 1 tf1`a ]
+"152
+[; ;main.c: 152: __attribute__((inline)) void StartStop_AlarmLED(_Bool OnOff){
+[v _StartStop_AlarmLED `TF3743 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_AlarmLED ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"292
-[; ;main.c: 292:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 424  ]
+"154
+[; ;main.c: 154:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 404  ]
 {
-"294
-[; ;main.c: 294:         do { LATCbits.LATC2 = 1; } while(0);
-[e :U 427 ]
+"156
+[; ;main.c: 156:         do { LATCbits.LATC2 = 1; } while(0);
+[e :U 407 ]
 {
 [e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 426 ]
-"295
-[; ;main.c: 295:     }
+[e :U 406 ]
+"157
+[; ;main.c: 157:     }
 }
-[e $U 428  ]
-"296
-[; ;main.c: 296:     else{
-[e :U 424 ]
+[e $U 408  ]
+"158
+[; ;main.c: 158:     else{
+[e :U 404 ]
 {
-"298
-[; ;main.c: 298:         do { LATCbits.LATC2 = 0; } while(0);
-[e :U 431 ]
+"160
+[; ;main.c: 160:         do { LATCbits.LATC2 = 0; } while(0);
+[e :U 411 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 430 ]
-"299
-[; ;main.c: 299:     }
+[e :U 410 ]
+"161
+[; ;main.c: 161:     }
 }
-[e :U 428 ]
-"301
-[; ;main.c: 301: }
-[e :UE 423 ]
+[e :U 408 ]
+"163
+[; ;main.c: 163: }
+[e :UE 403 ]
 }
-[v F3867 `(v ~T0 @X0 1 tf1`a ]
-"304
-[; ;main.c: 304: __attribute__((inline)) void StartStop_AlarmLED_Blink(_Bool OnOff){
-[v _StartStop_AlarmLED_Blink `TF3867 ~T0 @X0 1 e ]
+[v F3746 `(v ~T0 @X0 1 tf1`a ]
+"166
+[; ;main.c: 166: __attribute__((inline)) void StartStop_AlarmLED_Blink(_Bool OnOff){
+[v _StartStop_AlarmLED_Blink `TF3746 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_AlarmLED_Blink ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"306
-[; ;main.c: 306:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 433  ]
+"168
+[; ;main.c: 168:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 413  ]
 {
-"308
-[; ;main.c: 308:         TMR4_StartTimer();
+"170
+[; ;main.c: 170:         TMR4_StartTimer();
 [e ( _TMR4_StartTimer ..  ]
-"309
-[; ;main.c: 309:     }
+"171
+[; ;main.c: 171:     }
 }
-[e $U 434  ]
-"310
-[; ;main.c: 310:     else{
-[e :U 433 ]
+[e $U 414  ]
+"172
+[; ;main.c: 172:     else{
+[e :U 413 ]
 {
-"312
-[; ;main.c: 312:         TMR4_StopTimer();
+"174
+[; ;main.c: 174:         TMR4_StopTimer();
 [e ( _TMR4_StopTimer ..  ]
-"313
-[; ;main.c: 313:         do { LATCbits.LATC2 = 0; } while(0);
-[e :U 437 ]
+"175
+[; ;main.c: 175:         do { LATCbits.LATC2 = 0; } while(0);
+[e :U 417 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 436 ]
-"314
-[; ;main.c: 314:     }
+[e :U 416 ]
+"176
+[; ;main.c: 176:     }
 }
-[e :U 434 ]
-"315
-[; ;main.c: 315: }
-[e :UE 432 ]
+[e :U 414 ]
+"177
+[; ;main.c: 177: }
+[e :UE 412 ]
 }
-[v F3870 `(v ~T0 @X0 1 tf1`a ]
-"318
-[; ;main.c: 318: __attribute__((inline)) void StartStop_Fan(_Bool OnOff){
-[v _StartStop_Fan `TF3870 ~T0 @X0 1 e ]
+[v F3749 `(v ~T0 @X0 1 tf1`a ]
+"180
+[; ;main.c: 180: __attribute__((inline)) void StartStop_Fan(_Bool OnOff){
+[v _StartStop_Fan `TF3749 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_Fan ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"320
-[; ;main.c: 320:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 439  ]
+"182
+[; ;main.c: 182:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 419  ]
 {
-"322
-[; ;main.c: 322:         do { LATCbits.LATC3 = 1; } while(0);
-[e :U 442 ]
+"184
+[; ;main.c: 184:         do { LATCbits.LATC3 = 1; } while(0);
+[e :U 422 ]
 {
 [e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
 }
-[e :U 441 ]
-"323
-[; ;main.c: 323:     }
+[e :U 421 ]
+"185
+[; ;main.c: 185:     }
 }
-[e $U 443  ]
-"324
-[; ;main.c: 324:     else{
-[e :U 439 ]
+[e $U 423  ]
+"186
+[; ;main.c: 186:     else{
+[e :U 419 ]
 {
-"326
-[; ;main.c: 326:         do { LATCbits.LATC3 = 0; } while(0);
-[e :U 446 ]
+"188
+[; ;main.c: 188:         do { LATCbits.LATC3 = 0; } while(0);
+[e :U 426 ]
 {
 [e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
 }
-[e :U 445 ]
-"327
-[; ;main.c: 327:     }
+[e :U 425 ]
+"189
+[; ;main.c: 189:     }
 }
-[e :U 443 ]
-"329
-[; ;main.c: 329: }
-[e :UE 438 ]
+[e :U 423 ]
+"191
+[; ;main.c: 191: }
+[e :UE 418 ]
 }
-[v F3873 `(v ~T0 @X0 1 tf1`a ]
-"332
-[; ;main.c: 332: __attribute__((inline)) void StartStop_Buzzer(_Bool OnOff){
-[v _StartStop_Buzzer `TF3873 ~T0 @X0 1 e ]
+[v F3752 `(v ~T0 @X0 1 tf1`a ]
+"194
+[; ;main.c: 194: __attribute__((inline)) void StartStop_Buzzer(_Bool OnOff){
+[v _StartStop_Buzzer `TF3752 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_Buzzer ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"334
-[; ;main.c: 334:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 448  ]
+"196
+[; ;main.c: 196:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 428  ]
 {
-"336
-[; ;main.c: 336:         do { LATCbits.LATC4 = 1; } while(0);
-[e :U 451 ]
+"198
+[; ;main.c: 198:         do { LATCbits.LATC4 = 1; } while(0);
+[e :U 431 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 450 ]
-"337
-[; ;main.c: 337:     }
+[e :U 430 ]
+"199
+[; ;main.c: 199:     }
 }
-[e $U 452  ]
-"338
-[; ;main.c: 338:     else{
-[e :U 448 ]
+[e $U 432  ]
+"200
+[; ;main.c: 200:     else{
+[e :U 428 ]
 {
-"340
-[; ;main.c: 340:         do { LATCbits.LATC4 = 0; } while(0);
-[e :U 455 ]
+"202
+[; ;main.c: 202:         do { LATCbits.LATC4 = 0; } while(0);
+[e :U 435 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 454 ]
-"341
-[; ;main.c: 341:     }
+[e :U 434 ]
+"203
+[; ;main.c: 203:     }
 }
-[e :U 452 ]
-"343
-[; ;main.c: 343: }
-[e :UE 447 ]
+[e :U 432 ]
+"205
+[; ;main.c: 205: }
+[e :UE 427 ]
 }
-[v F3876 `(v ~T0 @X0 1 tf1`a ]
-"346
-[; ;main.c: 346: __attribute__((inline)) void StartStop_Dimmer(_Bool OnOff){
-[v _StartStop_Dimmer `TF3876 ~T0 @X0 1 e ]
+[v F3755 `(v ~T0 @X0 1 tf1`a ]
+"208
+[; ;main.c: 208: __attribute__((inline)) void StartStop_Dimmer(_Bool OnOff){
+[v _StartStop_Dimmer `TF3755 ~T0 @X0 1 e ]
 {
 [e :U _StartStop_Dimmer ]
 [v _OnOff `a ~T0 @X0 1 r1 ]
 [f ]
-"348
-[; ;main.c: 348:     if (1 == OnOff){
-[e $ ! == -> 1 `i -> _OnOff `i 457  ]
+"210
+[; ;main.c: 210:     if (1 == OnOff){
+[e $ ! == -> 1 `i -> _OnOff `i 437  ]
 {
-"350
-[; ;main.c: 350:         DimmerStatusFlag_g = 1;
+"212
+[; ;main.c: 212:         DimmerStatusFlag_g = 1;
 [e = _DimmerStatusFlag_g -> -> 1 `i `a ]
-"351
-[; ;main.c: 351:     }
+"213
+[; ;main.c: 213:     }
 }
-[e $U 458  ]
-"352
-[; ;main.c: 352:     else{
-[e :U 457 ]
+[e $U 438  ]
+"214
+[; ;main.c: 214:     else{
+[e :U 437 ]
 {
-"354
-[; ;main.c: 354:         SetDimmer(3);
+"216
+[; ;main.c: 216:         SetDimmer(3);
 [e ( _SetDimmer (1 -> -> 3 `i `f ]
-"355
-[; ;main.c: 355:         DimmerStatusFlag_g = 0;
+"217
+[; ;main.c: 217:         DimmerStatusFlag_g = 0;
 [e = _DimmerStatusFlag_g -> -> 0 `i `a ]
-"356
-[; ;main.c: 356:     }
+"218
+[; ;main.c: 218:     }
 }
-[e :U 458 ]
-"357
-[; ;main.c: 357: }
-[e :UE 456 ]
+[e :U 438 ]
+"219
+[; ;main.c: 219: }
+[e :UE 436 ]
 }
-[v F3879 `(v ~T0 @X0 1 tf ]
-"360
-[; ;main.c: 360: __attribute__((inline)) void StartTouchDetection(void){
-[v _StartTouchDetection `TF3879 ~T0 @X0 1 e ]
+[v F3758 `(v ~T0 @X0 1 tf ]
+"222
+[; ;main.c: 222: __attribute__((inline)) void StartTouchDetection(void){
+[v _StartTouchDetection `TF3758 ~T0 @X0 1 e ]
 {
 [e :U _StartTouchDetection ]
 [f ]
-"363
-[; ;main.c: 363:     if (1 == MTOUCH_Service_Mainloop()) {
-[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 460  ]
+"225
+[; ;main.c: 225:     if (1 == MTOUCH_Service_Mainloop()) {
+[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 440  ]
 {
-"365
-[; ;main.c: 365:         if (1 == MTOUCH_Button_isPressed(T_start)){
-[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3653 0 `i 461  ]
+"227
+[; ;main.c: 227:         if (1 == MTOUCH_Button_isPressed(T_start)){
+[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3632 0 `i 441  ]
 {
-"367
-[; ;main.c: 367:             StartStop_AlarmLED(1);
-[e ( _StartStop_AlarmLED (1 -> -> 1 `i `a ]
-"369
-[; ;main.c: 369:         }
+"229
+[; ;main.c: 229:             StartHeater();
+[e ( _StartHeater ..  ]
+"231
+[; ;main.c: 231:         }
 }
-[e $U 462  ]
-"370
-[; ;main.c: 370:         else{
-[e :U 461 ]
+[e $U 442  ]
+"232
+[; ;main.c: 232:         else{
+[e :U 441 ]
 {
-"372
-[; ;main.c: 372:             StartStop_AlarmLED(0);
-[e ( _StartStop_AlarmLED (1 -> -> 0 `i `a ]
-"374
-[; ;main.c: 374:         }
+"237
+[; ;main.c: 237:         }
 }
-[e :U 462 ]
-"375
-[; ;main.c: 375:     }
+[e :U 442 ]
+"238
+[; ;main.c: 238:     }
 }
-[e :U 460 ]
-"376
-[; ;main.c: 376: }
-[e :UE 459 ]
+[e :U 440 ]
+"239
+[; ;main.c: 239: }
+[e :UE 439 ]
 }
-[v F3881 `(v ~T0 @X0 1 tf ]
-"379
-[; ;main.c: 379: __attribute__((inline)) void StopTouchDetection(void){
-[v _StopTouchDetection `TF3881 ~T0 @X0 1 e ]
+"242
+[; ;main.c: 242: void StopTouchDetection(void){
+[v _StopTouchDetection `(v ~T0 @X0 1 ef ]
 {
 [e :U _StopTouchDetection ]
 [f ]
-"382
-[; ;main.c: 382:     if (1 == MTOUCH_Service_Mainloop()) {
-[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 464  ]
+"245
+[; ;main.c: 245:     if (1 == MTOUCH_Service_Mainloop()) {
+[e $ ! == -> 1 `i -> ( _MTOUCH_Service_Mainloop ..  `i 444  ]
 {
-"384
-[; ;main.c: 384:         if (1 == MTOUCH_Button_isPressed(T_stop)){
-[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3653 1 `i 465  ]
+"247
+[; ;main.c: 247:         if (1 == MTOUCH_Button_isPressed(T_stop)){
+[e $ ! == -> 1 `i -> ( _MTOUCH_Button_isPressed (1 . `E3632 1 `i 445  ]
 {
-"386
-[; ;main.c: 386:             StartStop_AlarmLED(1);
-[e ( _StartStop_AlarmLED (1 -> -> 1 `i `a ]
-"388
-[; ;main.c: 388:         }
+"249
+[; ;main.c: 249:             Init_Function();
+[e ( _Init_Function ..  ]
+"252
+[; ;main.c: 252:         }
 }
-[e $U 466  ]
-"389
-[; ;main.c: 389:         else{
-[e :U 465 ]
+[e $U 446  ]
+"253
+[; ;main.c: 253:         else{
+[e :U 445 ]
 {
-"391
-[; ;main.c: 391:             StartStop_AlarmLED(0);
-[e ( _StartStop_AlarmLED (1 -> -> 0 `i `a ]
-"393
-[; ;main.c: 393:         }
+"257
+[; ;main.c: 257:         }
 }
-[e :U 466 ]
-"394
-[; ;main.c: 394:     }
+[e :U 446 ]
+"258
+[; ;main.c: 258:     }
 }
-[e :U 464 ]
-"396
-[; ;main.c: 396: }
-[e :UE 463 ]
+[e :U 444 ]
+"259
+[; ;main.c: 259: }
+[e :UE 443 ]
 }
-"400
-[; ;main.c: 400: void SetDimmer(float dim_percentage){
+"262
+[; ;main.c: 262: void SetDimmer(float dim_percentage){
 [v _SetDimmer `(v ~T0 @X0 1 ef1`f ]
 {
 [e :U _SetDimmer ]
 [v _dim_percentage `f ~T0 @X0 1 r1 ]
 [f ]
-"405
-[; ;main.c: 405:     float TRIAC_off_duration_ms = 0;
+"267
+[; ;main.c: 267:     float TRIAC_off_duration_ms = 0;
 [v _TRIAC_off_duration_ms `f ~T0 @X0 1 a ]
 [e = _TRIAC_off_duration_ms -> -> 0 `i `f ]
-"407
-[; ;main.c: 407:     TRIAC_off_duration_ms = HalfCycleACDuration_const - (5.0 * dim_percentage / 50.0);
+"269
+[; ;main.c: 269:     TRIAC_off_duration_ms = HalfCycleACDuration_const - (5.0 * dim_percentage / 50.0);
 [e = _TRIAC_off_duration_ms -> - -> _HalfCycleACDuration_const `d / * .5.0 -> _dim_percentage `d .50.0 `f ]
-"408
-[; ;main.c: 408:     tmr2_required_counter_steps_g = (TRIAC_off_duration_ms * 1000) / TMR2_Timer_Period_const;
+"270
+[; ;main.c: 270:     tmr2_required_counter_steps_g = (TRIAC_off_duration_ms * 1000) / TMR2_Timer_Period_const;
 [e = _tmr2_required_counter_steps_g -> / * _TRIAC_off_duration_ms -> -> 1000 `i `f _TMR2_Timer_Period_const `us ]
-"410
-[; ;main.c: 410: }
-[e :UE 467 ]
+"272
+[; ;main.c: 272: }
+[e :UE 447 ]
 }
-[v F3886 `(v ~T0 @X0 1 tf ]
-"413
-[; ;main.c: 413: __attribute__((inline)) void Config_Heater(void){
-[v _Config_Heater `TF3886 ~T0 @X0 1 e ]
+[v F3764 `(v ~T0 @X0 1 tf ]
+"275
+[; ;main.c: 275: __attribute__((inline)) void StartHeater(void){
+[v _StartHeater `TF3764 ~T0 @X0 1 e ]
 {
-[e :U _Config_Heater ]
+[e :U _StartHeater ]
 [f ]
-"415
-[; ;main.c: 415:     static uint8_t count = 0;
-[v F3887 `uc ~T0 @X0 1 s count ]
-[i F3887
--> -> 0 `i `uc
-]
-"416
-[; ;main.c: 416:     static delay del = 0;
-[v F3888 `us ~T0 @X0 1 s del ]
-[i F3888
--> -> 0 `i `us
-]
-"417
-[; ;main.c: 417:     static _Bool once = 0;
-[v F3889 `a ~T0 @X0 1 s once ]
-[i F3889
--> -> 0 `i `a
-]
-"419
-[; ;main.c: 419:     if (0 == once)
-[e $ ! == -> 0 `i -> F3889 `i 469  ]
-"420
-[; ;main.c: 420:     {
-{
-"422
-[; ;main.c: 422:         once = 1;
-[e = F3889 -> -> 1 `i `a ]
-"423
-[; ;main.c: 423:         del = get_delay (0);
-[e = F3888 ( _get_delay (1 -> -> 0 `i `us ]
-"424
-[; ;main.c: 424:     }
-}
-[e :U 469 ]
-"426
-[; ;main.c: 426:     StartStop_AlarmLED_Blink(1);
+"277
+[; ;main.c: 277:     StartStop_AlarmLED_Blink(1);
 [e ( _StartStop_AlarmLED_Blink (1 -> -> 1 `i `a ]
-"427
-[; ;main.c: 427:     StartStop_Dimmer(1);
+"278
+[; ;main.c: 278:     StartStop_Dimmer(1);
 [e ( _StartStop_Dimmer (1 -> -> 1 `i `a ]
-"429
-[; ;main.c: 429:     if (del != ticker_g){
-[e $ ! != -> F3888 `ui -> _ticker_g `ui 470  ]
-{
-"431
-[; ;main.c: 431:         return;
-[e $UE 468  ]
-"432
-[; ;main.c: 432:     }
-}
-[e :U 470 ]
-"434
-[; ;main.c: 434:     if (1 == onceFlag){
-[e $ ! == -> 1 `i -> _onceFlag `i 471  ]
-{
-"436
-[; ;main.c: 436:         switch (count++){
-[e $U 473  ]
-{
-"439
-[; ;main.c: 439:             case 0:
-[e :U 474 ]
-"440
-[; ;main.c: 440:                 SetDimmer(10);
+"280
+[; ;main.c: 280:     SetDimmer(10);
 [e ( _SetDimmer (1 -> -> 10 `i `f ]
-"441
-[; ;main.c: 441:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"442
-[; ;main.c: 442:                 break;
-[e $U 472  ]
-"443
-[; ;main.c: 443:             case 1:
-[e :U 475 ]
-"444
-[; ;main.c: 444:                 SetDimmer(11);
+"281
+[; ;main.c: 281:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"282
+[; ;main.c: 282:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"284
+[; ;main.c: 284:     SetDimmer(11);
 [e ( _SetDimmer (1 -> -> 11 `i `f ]
-"445
-[; ;main.c: 445:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"446
-[; ;main.c: 446:                 break;
-[e $U 472  ]
-"447
-[; ;main.c: 447:             case 2:
-[e :U 476 ]
-"448
-[; ;main.c: 448:                 SetDimmer(12);
+"285
+[; ;main.c: 285:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"286
+[; ;main.c: 286:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"288
+[; ;main.c: 288:     SetDimmer(12);
 [e ( _SetDimmer (1 -> -> 12 `i `f ]
-"449
-[; ;main.c: 449:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"450
-[; ;main.c: 450:                 break;
-[e $U 472  ]
-"451
-[; ;main.c: 451:             case 3:
-[e :U 477 ]
-"452
-[; ;main.c: 452:                 SetDimmer(13);
+"289
+[; ;main.c: 289:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"290
+[; ;main.c: 290:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"292
+[; ;main.c: 292:     SetDimmer(13);
 [e ( _SetDimmer (1 -> -> 13 `i `f ]
-"453
-[; ;main.c: 453:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"454
-[; ;main.c: 454:                 break;
-[e $U 472  ]
-"455
-[; ;main.c: 455:             case 4:
-[e :U 478 ]
-"456
-[; ;main.c: 456:                 SetDimmer(14);
+"293
+[; ;main.c: 293:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"294
+[; ;main.c: 294:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"296
+[; ;main.c: 296:     SetDimmer(14);
 [e ( _SetDimmer (1 -> -> 14 `i `f ]
-"457
-[; ;main.c: 457:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"458
-[; ;main.c: 458:                 break;
-[e $U 472  ]
-"459
-[; ;main.c: 459:             case 5:
-[e :U 479 ]
-"460
-[; ;main.c: 460:                 SetDimmer(15);
+"297
+[; ;main.c: 297:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"298
+[; ;main.c: 298:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"300
+[; ;main.c: 300:     SetDimmer(15);
 [e ( _SetDimmer (1 -> -> 15 `i `f ]
-"461
-[; ;main.c: 461:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"462
-[; ;main.c: 462:                 break;
-[e $U 472  ]
-"463
-[; ;main.c: 463:             case 6:
-[e :U 480 ]
-"464
-[; ;main.c: 464:                 SetDimmer(16);
+"301
+[; ;main.c: 301:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"302
+[; ;main.c: 302:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"304
+[; ;main.c: 304:     SetDimmer(16);
 [e ( _SetDimmer (1 -> -> 16 `i `f ]
-"465
-[; ;main.c: 465:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"466
-[; ;main.c: 466:                 break;
-[e $U 472  ]
-"467
-[; ;main.c: 467:             case 7:
-[e :U 481 ]
-"468
-[; ;main.c: 468:                 SetDimmer(17);
+"305
+[; ;main.c: 305:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"306
+[; ;main.c: 306:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"308
+[; ;main.c: 308:     SetDimmer(17);
 [e ( _SetDimmer (1 -> -> 17 `i `f ]
-"469
-[; ;main.c: 469:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"470
-[; ;main.c: 470:                 break;
-[e $U 472  ]
-"471
-[; ;main.c: 471:             case 8:
-[e :U 482 ]
-"472
-[; ;main.c: 472:                 SetDimmer(18);
+"309
+[; ;main.c: 309:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"310
+[; ;main.c: 310:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"312
+[; ;main.c: 312:     SetDimmer(18);
 [e ( _SetDimmer (1 -> -> 18 `i `f ]
-"473
-[; ;main.c: 473:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"474
-[; ;main.c: 474:                 break;
-[e $U 472  ]
-"475
-[; ;main.c: 475:             case 9:
-[e :U 483 ]
-"476
-[; ;main.c: 476:                 SetDimmer(19);
+"313
+[; ;main.c: 313:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"314
+[; ;main.c: 314:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"316
+[; ;main.c: 316:     SetDimmer(19);
 [e ( _SetDimmer (1 -> -> 19 `i `f ]
-"477
-[; ;main.c: 477:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"478
-[; ;main.c: 478:                 break;
-[e $U 472  ]
-"479
-[; ;main.c: 479:             case 10:
-[e :U 484 ]
-"480
-[; ;main.c: 480:                 SetDimmer(20);
+"317
+[; ;main.c: 317:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"318
+[; ;main.c: 318:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"320
+[; ;main.c: 320:     SetDimmer(20);
 [e ( _SetDimmer (1 -> -> 20 `i `f ]
-"481
-[; ;main.c: 481:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"482
-[; ;main.c: 482:                 break;
-[e $U 472  ]
-"483
-[; ;main.c: 483:             case 11:
-[e :U 485 ]
-"484
-[; ;main.c: 484:                 SetDimmer(21);
+"321
+[; ;main.c: 321:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"322
+[; ;main.c: 322:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"324
+[; ;main.c: 324:     SetDimmer(21);
 [e ( _SetDimmer (1 -> -> 21 `i `f ]
-"485
-[; ;main.c: 485:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"486
-[; ;main.c: 486:                 break;
-[e $U 472  ]
-"487
-[; ;main.c: 487:             case 12:
-[e :U 486 ]
-"488
-[; ;main.c: 488:                 SetDimmer(22);
+"325
+[; ;main.c: 325:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"326
+[; ;main.c: 326:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"328
+[; ;main.c: 328:     SetDimmer(22);
 [e ( _SetDimmer (1 -> -> 22 `i `f ]
-"489
-[; ;main.c: 489:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"490
-[; ;main.c: 490:                 break;
-[e $U 472  ]
-"491
-[; ;main.c: 491:             case 13:
-[e :U 487 ]
-"492
-[; ;main.c: 492:                 SetDimmer(23);
+"329
+[; ;main.c: 329:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"330
+[; ;main.c: 330:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"332
+[; ;main.c: 332:     SetDimmer(23);
 [e ( _SetDimmer (1 -> -> 23 `i `f ]
-"493
-[; ;main.c: 493:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"494
-[; ;main.c: 494:                 break;
-[e $U 472  ]
-"495
-[; ;main.c: 495:             case 14:
-[e :U 488 ]
-"496
-[; ;main.c: 496:                 SetDimmer(24);
+"333
+[; ;main.c: 333:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"334
+[; ;main.c: 334:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"336
+[; ;main.c: 336:     SetDimmer(24);
 [e ( _SetDimmer (1 -> -> 24 `i `f ]
-"497
-[; ;main.c: 497:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"498
-[; ;main.c: 498:                 break;
-[e $U 472  ]
-"499
-[; ;main.c: 499:             case 15:
-[e :U 489 ]
-"500
-[; ;main.c: 500:                 SetDimmer(25);
+"337
+[; ;main.c: 337:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"338
+[; ;main.c: 338:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"340
+[; ;main.c: 340:     SetDimmer(25);
 [e ( _SetDimmer (1 -> -> 25 `i `f ]
-"501
-[; ;main.c: 501:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"502
-[; ;main.c: 502:                 break;
-[e $U 472  ]
-"503
-[; ;main.c: 503:             case 16:
-[e :U 490 ]
-"504
-[; ;main.c: 504:                 SetDimmer(26);
+"341
+[; ;main.c: 341:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"342
+[; ;main.c: 342:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"344
+[; ;main.c: 344:     SetDimmer(26);
 [e ( _SetDimmer (1 -> -> 26 `i `f ]
-"505
-[; ;main.c: 505:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"506
-[; ;main.c: 506:                 break;
-[e $U 472  ]
-"507
-[; ;main.c: 507:             case 17:
-[e :U 491 ]
-"508
-[; ;main.c: 508:                 SetDimmer(27);
+"345
+[; ;main.c: 345:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"346
+[; ;main.c: 346:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"348
+[; ;main.c: 348:     SetDimmer(27);
 [e ( _SetDimmer (1 -> -> 27 `i `f ]
-"509
-[; ;main.c: 509:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"510
-[; ;main.c: 510:                 break;
-[e $U 472  ]
-"511
-[; ;main.c: 511:             case 18:
-[e :U 492 ]
-"512
-[; ;main.c: 512:                 SetDimmer(28);
+"349
+[; ;main.c: 349:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"350
+[; ;main.c: 350:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"352
+[; ;main.c: 352:     SetDimmer(28);
 [e ( _SetDimmer (1 -> -> 28 `i `f ]
-"513
-[; ;main.c: 513:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"514
-[; ;main.c: 514:                 break;
-[e $U 472  ]
-"515
-[; ;main.c: 515:             case 19:
-[e :U 493 ]
-"516
-[; ;main.c: 516:                 SetDimmer(29);
+"353
+[; ;main.c: 353:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"354
+[; ;main.c: 354:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"356
+[; ;main.c: 356:     SetDimmer(29);
 [e ( _SetDimmer (1 -> -> 29 `i `f ]
-"517
-[; ;main.c: 517:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"518
-[; ;main.c: 518:                 break;
-[e $U 472  ]
-"519
-[; ;main.c: 519:             case 20:
-[e :U 494 ]
-"520
-[; ;main.c: 520:                 SetDimmer(30);
+"357
+[; ;main.c: 357:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"358
+[; ;main.c: 358:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"360
+[; ;main.c: 360:     SetDimmer(30);
 [e ( _SetDimmer (1 -> -> 30 `i `f ]
-"521
-[; ;main.c: 521:                 del = get_delay(1500);
-[e = F3888 ( _get_delay (1 -> -> 1500 `i `us ]
-"522
-[; ;main.c: 522:                 break;
-[e $U 472  ]
-"525
-[; ;main.c: 525:             case 21:
-[e :U 495 ]
-"526
-[; ;main.c: 526:                 SetDimmer(30.5);
+"361
+[; ;main.c: 361:     _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"362
+[; ;main.c: 362:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"366
+[; ;main.c: 366:     SetDimmer(30.5);
 [e ( _SetDimmer (1 -> .30.5 `f ]
-"527
-[; ;main.c: 527:                 del = get_delay(5000);
-[e = F3888 ( _get_delay (1 -> -> 5000 `i `us ]
-"528
-[; ;main.c: 528:                 break;
-[e $U 472  ]
-"529
-[; ;main.c: 529:             case 22:
-[e :U 496 ]
-"530
-[; ;main.c: 530:                 SetDimmer(31);
+"367
+[; ;main.c: 367:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"368
+[; ;main.c: 368:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"370
+[; ;main.c: 370:     SetDimmer(31);
 [e ( _SetDimmer (1 -> -> 31 `i `f ]
-"531
-[; ;main.c: 531:                 del = get_delay(5000);
-[e = F3888 ( _get_delay (1 -> -> 5000 `i `us ]
-"532
-[; ;main.c: 532:                 break;
-[e $U 472  ]
-"533
-[; ;main.c: 533:             case 23:
-[e :U 497 ]
-"534
-[; ;main.c: 534:                 SetDimmer(31.5);
+"371
+[; ;main.c: 371:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"372
+[; ;main.c: 372:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"374
+[; ;main.c: 374:     SetDimmer(31.5);
 [e ( _SetDimmer (1 -> .31.5 `f ]
-"535
-[; ;main.c: 535:                 del = get_delay(5000);
-[e = F3888 ( _get_delay (1 -> -> 5000 `i `us ]
-"536
-[; ;main.c: 536:                 break;
-[e $U 472  ]
-"537
-[; ;main.c: 537:             case 24:
-[e :U 498 ]
-"538
-[; ;main.c: 538:                 SetDimmer(32);
+"375
+[; ;main.c: 375:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"376
+[; ;main.c: 376:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"378
+[; ;main.c: 378:     SetDimmer(32);
 [e ( _SetDimmer (1 -> -> 32 `i `f ]
-"539
-[; ;main.c: 539:                 del = get_delay(5000);
-[e = F3888 ( _get_delay (1 -> -> 5000 `i `us ]
-"540
-[; ;main.c: 540:                 break;
-[e $U 472  ]
-"541
-[; ;main.c: 541:             case 25:
-[e :U 499 ]
-"542
-[; ;main.c: 542:                 SetDimmer(32.5);
+"379
+[; ;main.c: 379:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"380
+[; ;main.c: 380:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"382
+[; ;main.c: 382:     SetDimmer(32.5);
 [e ( _SetDimmer (1 -> .32.5 `f ]
-"543
-[; ;main.c: 543:                 del = get_delay(5000);
-[e = F3888 ( _get_delay (1 -> -> 5000 `i `us ]
-"544
-[; ;main.c: 544:                 break;
-[e $U 472  ]
-"545
-[; ;main.c: 545:             case 26:
-[e :U 500 ]
-"546
-[; ;main.c: 546:                 SetDimmer(33);
+"383
+[; ;main.c: 383:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"384
+[; ;main.c: 384:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"386
+[; ;main.c: 386:     SetDimmer(33);
 [e ( _SetDimmer (1 -> -> 33 `i `f ]
-"547
-[; ;main.c: 547:                 del = get_delay(5000);
-[e = F3888 ( _get_delay (1 -> -> 5000 `i `us ]
-"548
-[; ;main.c: 548:                 break;
-[e $U 472  ]
-"549
-[; ;main.c: 549:             case 27:
-[e :U 501 ]
-"550
-[; ;main.c: 550:                 SetDimmer(33.5);
+"387
+[; ;main.c: 387:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"388
+[; ;main.c: 388:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"390
+[; ;main.c: 390:     SetDimmer(33.5);
 [e ( _SetDimmer (1 -> .33.5 `f ]
-"551
-[; ;main.c: 551:                 del = get_delay(5000);
-[e = F3888 ( _get_delay (1 -> -> 5000 `i `us ]
-"552
-[; ;main.c: 552:                 break;
-[e $U 472  ]
-"553
-[; ;main.c: 553:             case 28:
-[e :U 502 ]
-"554
-[; ;main.c: 554:                 SetDimmer(34);
+"391
+[; ;main.c: 391:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"392
+[; ;main.c: 392:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"394
+[; ;main.c: 394:     SetDimmer(34);
 [e ( _SetDimmer (1 -> -> 34 `i `f ]
-"555
-[; ;main.c: 555:                 del = get_delay(5000);
-[e = F3888 ( _get_delay (1 -> -> 5000 `i `us ]
-"556
-[; ;main.c: 556:                 break;
-[e $U 472  ]
-"557
-[; ;main.c: 557:             case 29:
-[e :U 503 ]
-"558
-[; ;main.c: 558:                 SetDimmer(34.5);
+"395
+[; ;main.c: 395:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"396
+[; ;main.c: 396:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"398
+[; ;main.c: 398:     SetDimmer(34.5);
 [e ( _SetDimmer (1 -> .34.5 `f ]
-"559
-[; ;main.c: 559:                 del = get_delay(5000);
-[e = F3888 ( _get_delay (1 -> -> 5000 `i `us ]
-"560
-[; ;main.c: 560:                 break;
-[e $U 472  ]
-"561
-[; ;main.c: 561:             case 30:
-[e :U 504 ]
-"562
-[; ;main.c: 562:                 SetDimmer(35);
+"399
+[; ;main.c: 399:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"400
+[; ;main.c: 400:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"402
+[; ;main.c: 402:     SetDimmer(35);
 [e ( _SetDimmer (1 -> -> 35 `i `f ]
-"563
-[; ;main.c: 563:                 del = get_delay(5000);
-[e = F3888 ( _get_delay (1 -> -> 5000 `i `us ]
-"564
-[; ;main.c: 564:                 break;
-[e $U 472  ]
-"568
-[; ;main.c: 568:             case 31:
-[e :U 505 ]
-"569
-[; ;main.c: 569:                 SetDimmer(37);
+"403
+[; ;main.c: 403:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"404
+[; ;main.c: 404:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"408
+[; ;main.c: 408:     SetDimmer(37);
 [e ( _SetDimmer (1 -> -> 37 `i `f ]
-"570
-[; ;main.c: 570:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"571
-[; ;main.c: 571:                 break;
-[e $U 472  ]
-"572
-[; ;main.c: 572:             case 32:
-[e :U 506 ]
-"573
-[; ;main.c: 573:                 SetDimmer(39);
+"409
+[; ;main.c: 409:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"410
+[; ;main.c: 410:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"412
+[; ;main.c: 412:     SetDimmer(39);
 [e ( _SetDimmer (1 -> -> 39 `i `f ]
-"574
-[; ;main.c: 574:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"575
-[; ;main.c: 575:                 break;
-[e $U 472  ]
-"576
-[; ;main.c: 576:             case 33:
-[e :U 507 ]
-"577
-[; ;main.c: 577:                 SetDimmer(41);
+"413
+[; ;main.c: 413:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"414
+[; ;main.c: 414:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"416
+[; ;main.c: 416:     SetDimmer(41);
 [e ( _SetDimmer (1 -> -> 41 `i `f ]
-"578
-[; ;main.c: 578:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"579
-[; ;main.c: 579:                 break;
-[e $U 472  ]
-"580
-[; ;main.c: 580:             case 34:
-[e :U 508 ]
-"581
-[; ;main.c: 581:                 SetDimmer(43);
+"417
+[; ;main.c: 417:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"418
+[; ;main.c: 418:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"420
+[; ;main.c: 420:     SetDimmer(43);
 [e ( _SetDimmer (1 -> -> 43 `i `f ]
-"582
-[; ;main.c: 582:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"583
-[; ;main.c: 583:                 break;
-[e $U 472  ]
-"584
-[; ;main.c: 584:             case 35:
-[e :U 509 ]
-"585
-[; ;main.c: 585:                 SetDimmer(45);
+"421
+[; ;main.c: 421:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"422
+[; ;main.c: 422:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"424
+[; ;main.c: 424:     SetDimmer(45);
 [e ( _SetDimmer (1 -> -> 45 `i `f ]
-"586
-[; ;main.c: 586:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"587
-[; ;main.c: 587:                 break;
-[e $U 472  ]
-"588
-[; ;main.c: 588:             case 36:
-[e :U 510 ]
-"589
-[; ;main.c: 589:                 SetDimmer(47);
+"425
+[; ;main.c: 425:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"426
+[; ;main.c: 426:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"428
+[; ;main.c: 428:     SetDimmer(47);
 [e ( _SetDimmer (1 -> -> 47 `i `f ]
-"590
-[; ;main.c: 590:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"591
-[; ;main.c: 591:                 break;
-[e $U 472  ]
-"592
-[; ;main.c: 592:             case 37:
-[e :U 511 ]
-"593
-[; ;main.c: 593:                 SetDimmer(49);
+"429
+[; ;main.c: 429:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"430
+[; ;main.c: 430:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"432
+[; ;main.c: 432:     SetDimmer(49);
 [e ( _SetDimmer (1 -> -> 49 `i `f ]
-"594
-[; ;main.c: 594:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"595
-[; ;main.c: 595:                 break;
-[e $U 472  ]
-"596
-[; ;main.c: 596:             case 38:
-[e :U 512 ]
-"597
-[; ;main.c: 597:                 SetDimmer(51);
+"433
+[; ;main.c: 433:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"434
+[; ;main.c: 434:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"436
+[; ;main.c: 436:     SetDimmer(51);
 [e ( _SetDimmer (1 -> -> 51 `i `f ]
-"598
-[; ;main.c: 598:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"599
-[; ;main.c: 599:                 break;
-[e $U 472  ]
-"600
-[; ;main.c: 600:             case 39:
-[e :U 513 ]
-"601
-[; ;main.c: 601:                 SetDimmer(53);
+"437
+[; ;main.c: 437:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"438
+[; ;main.c: 438:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"440
+[; ;main.c: 440:     SetDimmer(53);
 [e ( _SetDimmer (1 -> -> 53 `i `f ]
-"602
-[; ;main.c: 602:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"603
-[; ;main.c: 603:                 break;
-[e $U 472  ]
-"604
-[; ;main.c: 604:             case 40:
-[e :U 514 ]
-"605
-[; ;main.c: 605:                 SetDimmer(55);
+"441
+[; ;main.c: 441:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"442
+[; ;main.c: 442:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"444
+[; ;main.c: 444:     SetDimmer(55);
 [e ( _SetDimmer (1 -> -> 55 `i `f ]
-"606
-[; ;main.c: 606:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"607
-[; ;main.c: 607:                 break;
-[e $U 472  ]
-"608
-[; ;main.c: 608:             case 41:
-[e :U 515 ]
-"609
-[; ;main.c: 609:                 SetDimmer(57);
+"445
+[; ;main.c: 445:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"446
+[; ;main.c: 446:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"448
+[; ;main.c: 448:     SetDimmer(57);
 [e ( _SetDimmer (1 -> -> 57 `i `f ]
-"610
-[; ;main.c: 610:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"611
-[; ;main.c: 611:                 break;
-[e $U 472  ]
-"612
-[; ;main.c: 612:             case 42:
-[e :U 516 ]
-"613
-[; ;main.c: 613:                 SetDimmer(59);
+"449
+[; ;main.c: 449:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"450
+[; ;main.c: 450:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"452
+[; ;main.c: 452:     SetDimmer(59);
 [e ( _SetDimmer (1 -> -> 59 `i `f ]
-"614
-[; ;main.c: 614:                 del = get_delay(2500);
-[e = F3888 ( _get_delay (1 -> -> 2500 `i `us ]
-"615
-[; ;main.c: 615:                 break;
-[e $U 472  ]
-"619
-[; ;main.c: 619:             case 43:
-[e :U 517 ]
-"620
-[; ;main.c: 620:                 SetDimmer(61);
+"453
+[; ;main.c: 453:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"454
+[; ;main.c: 454:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"456
+[; ;main.c: 456:     SetDimmer(61);
 [e ( _SetDimmer (1 -> -> 61 `i `f ]
-"621
-[; ;main.c: 621:                 del = get_delay(500);
-[e = F3888 ( _get_delay (1 -> -> 500 `i `us ]
-"622
-[; ;main.c: 622:                 break;
-[e $U 472  ]
-"623
-[; ;main.c: 623:             case 44:
-[e :U 518 ]
-"624
-[; ;main.c: 624:                 SetDimmer(63);
+"457
+[; ;main.c: 457:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"458
+[; ;main.c: 458:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"460
+[; ;main.c: 460:     SetDimmer(63);
 [e ( _SetDimmer (1 -> -> 63 `i `f ]
-"625
-[; ;main.c: 625:                 del = get_delay(500);
-[e = F3888 ( _get_delay (1 -> -> 500 `i `us ]
-"626
-[; ;main.c: 626:                 break;
-[e $U 472  ]
-"627
-[; ;main.c: 627:             case 45:
-[e :U 519 ]
-"628
-[; ;main.c: 628:                 SetDimmer(65);
+"461
+[; ;main.c: 461:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"462
+[; ;main.c: 462:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"464
+[; ;main.c: 464:     SetDimmer(65);
 [e ( _SetDimmer (1 -> -> 65 `i `f ]
-"629
-[; ;main.c: 629:                 del = get_delay(500);
-[e = F3888 ( _get_delay (1 -> -> 500 `i `us ]
-"630
-[; ;main.c: 630:                 break;
-[e $U 472  ]
-"631
-[; ;main.c: 631:             case 46:
-[e :U 520 ]
-"632
-[; ;main.c: 632:                 SetDimmer(67);
+"465
+[; ;main.c: 465:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"466
+[; ;main.c: 466:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"468
+[; ;main.c: 468:     SetDimmer(67);
 [e ( _SetDimmer (1 -> -> 67 `i `f ]
-"633
-[; ;main.c: 633:                 del = get_delay(500);
-[e = F3888 ( _get_delay (1 -> -> 500 `i `us ]
-"634
-[; ;main.c: 634:                 break;
-[e $U 472  ]
-"635
-[; ;main.c: 635:             case 47:
-[e :U 521 ]
-"636
-[; ;main.c: 636:                 SetDimmer(69);
+"469
+[; ;main.c: 469:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"470
+[; ;main.c: 470:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"472
+[; ;main.c: 472:     SetDimmer(69);
 [e ( _SetDimmer (1 -> -> 69 `i `f ]
-"637
-[; ;main.c: 637:                 del = get_delay(500);
-[e = F3888 ( _get_delay (1 -> -> 500 `i `us ]
-"638
-[; ;main.c: 638:                 break;
-[e $U 472  ]
-"639
-[; ;main.c: 639:             case 48:
-[e :U 522 ]
-"640
-[; ;main.c: 640:                 SetDimmer(71);
+"473
+[; ;main.c: 473:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"474
+[; ;main.c: 474:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"476
+[; ;main.c: 476:     SetDimmer(71);
 [e ( _SetDimmer (1 -> -> 71 `i `f ]
-"641
-[; ;main.c: 641:                 del = get_delay(500);
-[e = F3888 ( _get_delay (1 -> -> 500 `i `us ]
-"642
-[; ;main.c: 642:                 break;
-[e $U 472  ]
-"643
-[; ;main.c: 643:             case 49:
-[e :U 523 ]
-"644
-[; ;main.c: 644:                 SetDimmer(73);
-[e ( _SetDimmer (1 -> -> 73 `i `f ]
-"645
-[; ;main.c: 645:                 del = get_delay(500);
-[e = F3888 ( _get_delay (1 -> -> 500 `i `us ]
-"646
-[; ;main.c: 646:                 break;
-[e $U 472  ]
-"647
-[; ;main.c: 647:             case 50:
-[e :U 524 ]
-"648
-[; ;main.c: 648:                 SetDimmer(75);
-[e ( _SetDimmer (1 -> -> 75 `i `f ]
-"649
-[; ;main.c: 649:                 del = get_delay(500);
-[e = F3888 ( _get_delay (1 -> -> 500 `i `us ]
-"650
-[; ;main.c: 650:                 break;
-[e $U 472  ]
-"651
-[; ;main.c: 651:             case 51:
-[e :U 525 ]
-"652
-[; ;main.c: 652:                 SetDimmer(77);
-[e ( _SetDimmer (1 -> -> 77 `i `f ]
-"653
-[; ;main.c: 653:                 del = get_delay(500);
-[e = F3888 ( _get_delay (1 -> -> 500 `i `us ]
-"654
-[; ;main.c: 654:                 break;
-[e $U 472  ]
-"655
-[; ;main.c: 655:             case 52:
-[e :U 526 ]
-"656
-[; ;main.c: 656:                 SetDimmer(79);
-[e ( _SetDimmer (1 -> -> 79 `i `f ]
-"657
-[; ;main.c: 657:                 del = get_delay(500);
-[e = F3888 ( _get_delay (1 -> -> 500 `i `us ]
-"658
-[; ;main.c: 658:                 break;
-[e $U 472  ]
-"661
-[; ;main.c: 661:             case 53:
-[e :U 527 ]
-"662
-[; ;main.c: 662:                 StartStop_Fan(1);
-[e ( _StartStop_Fan (1 -> -> 1 `i `a ]
-"663
-[; ;main.c: 663:                 StartStop_Buzzer(1);
-[e ( _StartStop_Buzzer (1 -> -> 1 `i `a ]
-"664
-[; ;main.c: 664:                 _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"665
-[; ;main.c: 665:                 StartStop_Buzzer(0);
-[e ( _StartStop_Buzzer (1 -> -> 0 `i `a ]
-"666
-[; ;main.c: 666:                 StartStop_Dimmer(0);
-[e ( _StartStop_Dimmer (1 -> -> 0 `i `a ]
-"667
-[; ;main.c: 667:                 StartStop_AlarmLED_Blink(0);
+"477
+[; ;main.c: 477:     _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"478
+[; ;main.c: 478:     StopTouchDetection();
+[e ( _StopTouchDetection ..  ]
+"482
+[; ;main.c: 482:     StartStop_AlarmLED_Blink(0);
 [e ( _StartStop_AlarmLED_Blink (1 -> -> 0 `i `a ]
-"668
-[; ;main.c: 668:                 onceFlag = 0;
-[e = _onceFlag -> -> 0 `i `a ]
-"669
-[; ;main.c: 669:                 break;
-[e $U 472  ]
-"671
-[; ;main.c: 671:         }
-}
-[e $U 472  ]
-[e :U 473 ]
-[e [\ -> ++ F3887 -> -> 1 `i `uc `i , $ -> 0 `i 474
- , $ -> 1 `i 475
- , $ -> 2 `i 476
- , $ -> 3 `i 477
- , $ -> 4 `i 478
- , $ -> 5 `i 479
- , $ -> 6 `i 480
- , $ -> 7 `i 481
- , $ -> 8 `i 482
- , $ -> 9 `i 483
- , $ -> 10 `i 484
- , $ -> 11 `i 485
- , $ -> 12 `i 486
- , $ -> 13 `i 487
- , $ -> 14 `i 488
- , $ -> 15 `i 489
- , $ -> 16 `i 490
- , $ -> 17 `i 491
- , $ -> 18 `i 492
- , $ -> 19 `i 493
- , $ -> 20 `i 494
- , $ -> 21 `i 495
- , $ -> 22 `i 496
- , $ -> 23 `i 497
- , $ -> 24 `i 498
- , $ -> 25 `i 499
- , $ -> 26 `i 500
- , $ -> 27 `i 501
- , $ -> 28 `i 502
- , $ -> 29 `i 503
- , $ -> 30 `i 504
- , $ -> 31 `i 505
- , $ -> 32 `i 506
- , $ -> 33 `i 507
- , $ -> 34 `i 508
- , $ -> 35 `i 509
- , $ -> 36 `i 510
- , $ -> 37 `i 511
- , $ -> 38 `i 512
- , $ -> 39 `i 513
- , $ -> 40 `i 514
- , $ -> 41 `i 515
- , $ -> 42 `i 516
- , $ -> 43 `i 517
- , $ -> 44 `i 518
- , $ -> 45 `i 519
- , $ -> 46 `i 520
- , $ -> 47 `i 521
- , $ -> 48 `i 522
- , $ -> 49 `i 523
- , $ -> 50 `i 524
- , $ -> 51 `i 525
- , $ -> 52 `i 526
- , $ -> 53 `i 527
- 472 ]
-[e :U 472 ]
-"672
-[; ;main.c: 672:     }
-}
-[e :U 471 ]
-"673
-[; ;main.c: 673: }
-[e :UE 468 ]
-}
-"847
-[; ;main.c: 847: delay get_delay (delay ms){
-[v _get_delay `(us ~T0 @X0 1 ef1`us ]
+"483
+[; ;main.c: 483:     StartStop_Dimmer(0);
+[e ( _StartStop_Dimmer (1 -> -> 0 `i `a ]
+"484
+[; ;main.c: 484:     StartStop_Fan(1);
+[e ( _StartStop_Fan (1 -> -> 1 `i `a ]
+"485
+[; ;main.c: 485:     for (uint8_t i = 0; i < 18; i++){
 {
-[e :U _get_delay ]
-[v _ms `us ~T0 @X0 1 r1 ]
-[f ]
-"849
-[; ;main.c: 849:     uint32_t buf = ms / tmr1_period;
-[v _buf `ul ~T0 @X0 1 a ]
-[e = _buf -> / -> _ms `ui -> _tmr1_period `ui `ul ]
-"851
-[; ;main.c: 851:     if ((ticker_g + buf) > ticker_max){
-[e $ ! > + -> _ticker_g `ul _buf -> _ticker_max `ul 529  ]
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 18 `i 449  ]
+[e $U 450  ]
+[e :U 449 ]
 {
-"853
-[; ;main.c: 853:         return (ticker_g + buf) - ticker_max;
-[e ) -> - + -> _ticker_g `ul _buf -> _ticker_max `ul `us ]
-[e $UE 528  ]
-"854
-[; ;main.c: 854:     }
+"487
+[; ;main.c: 487:         _delay((unsigned long)((10000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"488
+[; ;main.c: 488:     }
 }
-[e $U 530  ]
-"855
-[; ;main.c: 855:     else{
-[e :U 529 ]
-{
-"857
-[; ;main.c: 857:         return ticker_g + buf;
-[e ) -> + -> _ticker_g `ul _buf `us ]
-[e $UE 528  ]
-"858
-[; ;main.c: 858:     }
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 18 `i 449  ]
+[e :U 450 ]
 }
-[e :U 530 ]
-"859
-[; ;main.c: 859: }
-[e :UE 528 ]
+"489
+[; ;main.c: 489:     StartStop_Fan(0);
+[e ( _StartStop_Fan (1 -> -> 0 `i `a ]
+"490
+[; ;main.c: 490:     StartStop_Buzzer(1);
+[e ( _StartStop_Buzzer (1 -> -> 1 `i `a ]
+"491
+[; ;main.c: 491:     _delay((unsigned long)((1000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"492
+[; ;main.c: 492:     StartStop_Buzzer(0);
+[e ( _StartStop_Buzzer (1 -> -> 0 `i `a ]
+"493
+[; ;main.c: 493: }
+[e :UE 448 ]
 }
-[p f _sprintf 8388736 ]
-[a 1C 37 100 32 67 101 108 115 105 117 115 10 0 ]

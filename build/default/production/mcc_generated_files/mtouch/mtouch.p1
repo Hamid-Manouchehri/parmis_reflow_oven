@@ -540,10 +540,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "71
 [; ;mcc_generated_files/mtouch/mtouch.c: 71:     return mtouch_time_toScan;
 [e ) _mtouch_time_toScan ]
-[e $UE 375  ]
+[e $UE 372  ]
 "72
 [; ;mcc_generated_files/mtouch/mtouch.c: 72: }
-[e :UE 375 ]
+[e :UE 372 ]
 }
 "81
 [; ;mcc_generated_files/mtouch/mtouch.c: 81: void MTOUCH_Initialize(void)
@@ -567,7 +567,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _MTOUCH_Sensor_Scan_Initialize ..  ]
 "88
 [; ;mcc_generated_files/mtouch/mtouch.c: 88: }
-[e :UE 376 ]
+[e :UE 373 ]
 }
 "96
 [; ;mcc_generated_files/mtouch/mtouch.c: 96: _Bool MTOUCH_Service_Mainloop(void)
@@ -579,7 +579,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "99
 [; ;mcc_generated_files/mtouch/mtouch.c: 99:     if(mtouch_request_init)
-[e $ ! != -> _mtouch_request_init `i -> 0 `i 378  ]
+[e $ ! != -> _mtouch_request_init `i -> 0 `i 375  ]
 "100
 [; ;mcc_generated_files/mtouch/mtouch.c: 100:     {
 {
@@ -592,24 +592,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "103
 [; ;mcc_generated_files/mtouch/mtouch.c: 103:     }
 }
-[e :U 378 ]
+[e :U 375 ]
 "106
 [; ;mcc_generated_files/mtouch/mtouch.c: 106:     mtouch_time_toScan = 1;
 [e = _mtouch_time_toScan -> -> 1 `i `a ]
 "108
 [; ;mcc_generated_files/mtouch/mtouch.c: 108:     if(mtouch_time_toScan)
-[e $ ! != -> _mtouch_time_toScan `i -> 0 `i 379  ]
+[e $ ! != -> _mtouch_time_toScan `i -> 0 `i 376  ]
 "109
 [; ;mcc_generated_files/mtouch/mtouch.c: 109:     {
 {
 "110
 [; ;mcc_generated_files/mtouch/mtouch.c: 110:         if(MTOUCH_Sensor_SampleAll() == 0)
-[e $ ! == -> ( _MTOUCH_Sensor_SampleAll ..  `i -> 0 `i 380  ]
+[e $ ! == -> ( _MTOUCH_Sensor_SampleAll ..  `i -> 0 `i 377  ]
 "111
 [; ;mcc_generated_files/mtouch/mtouch.c: 111:             return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 377  ]
-[e :U 380 ]
+[e $UE 374  ]
+[e :U 377 ]
 "113
 [; ;mcc_generated_files/mtouch/mtouch.c: 113:             MTOUCH_Button_ServiceAll();
 [e ( _MTOUCH_Button_ServiceAll ..  ]
@@ -625,28 +625,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 "117
 [; ;mcc_generated_files/mtouch/mtouch.c: 117:             return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 377  ]
+[e $UE 374  ]
 "118
 [; ;mcc_generated_files/mtouch/mtouch.c: 118:     }
 }
-[e $U 381  ]
+[e $U 378  ]
 "119
 [; ;mcc_generated_files/mtouch/mtouch.c: 119:     else
-[e :U 379 ]
+[e :U 376 ]
 "120
 [; ;mcc_generated_files/mtouch/mtouch.c: 120:     {
 {
 "121
 [; ;mcc_generated_files/mtouch/mtouch.c: 121:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 377  ]
+[e $UE 374  ]
 "122
 [; ;mcc_generated_files/mtouch/mtouch.c: 122:     }
 }
-[e :U 381 ]
+[e :U 378 ]
 "123
 [; ;mcc_generated_files/mtouch/mtouch.c: 123: }
-[e :UE 377 ]
+[e :UE 374 ]
 }
 "130
 [; ;mcc_generated_files/mtouch/mtouch.c: 130: void MTOUCH_Tick(void)
@@ -661,7 +661,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _MTOUCH_Button_Tick ..  ]
 "133
 [; ;mcc_generated_files/mtouch/mtouch.c: 133: }
-[e :UE 382 ]
+[e :UE 379 ]
 }
 "140
 [; ;mcc_generated_files/mtouch/mtouch.c: 140:  static _Bool MTOUCH_needReburst(void)
@@ -678,10 +678,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "144
 [; ;mcc_generated_files/mtouch/mtouch.c: 144:     return needReburst;
 [e ) _needReburst ]
-[e $UE 383  ]
+[e $UE 380  ]
 "145
 [; ;mcc_generated_files/mtouch/mtouch.c: 145:  }
-[e :UE 383 ]
+[e :UE 380 ]
 }
 "156
 [; ;mcc_generated_files/mtouch/mtouch.c: 156:  void MTOUCH_requestInitSet(void)
@@ -696,7 +696,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _mtouch_request_init -> -> 1 `i `a ]
 "159
 [; ;mcc_generated_files/mtouch/mtouch.c: 159:  }
-[e :UE 384 ]
+[e :UE 381 ]
 }
 "161
 [; ;mcc_generated_files/mtouch/mtouch.c: 161:  _Bool MTOUCH_requestInitGet(void)
@@ -709,8 +709,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "163
 [; ;mcc_generated_files/mtouch/mtouch.c: 163:      return mtouch_request_init;
 [e ) _mtouch_request_init ]
-[e $UE 385  ]
+[e $UE 382  ]
 "164
 [; ;mcc_generated_files/mtouch/mtouch.c: 164:  }
-[e :UE 385 ]
+[e :UE 382 ]
 }
