@@ -4807,7 +4807,7 @@ enum mtouch_button_state
             Sensor_AN8,
             MTOUCH_BUTTON_STATE_initializing,
             0,0,0,0,0,
-            (mtouch_button_deviation_t)100u,
+            (mtouch_button_deviation_t)125u,
             (mtouch_button_scaling_t)1u
         },
 
@@ -4815,7 +4815,7 @@ enum mtouch_button_state
             Sensor_AN9,
             MTOUCH_BUTTON_STATE_initializing,
             0,0,0,0,0,
-            (mtouch_button_deviation_t)100u,
+            (mtouch_button_deviation_t)125u,
             (mtouch_button_scaling_t)1u
         }
     };

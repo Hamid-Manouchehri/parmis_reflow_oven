@@ -22,7 +22,6 @@ const float HalfCycleACDuration_const = 10.0; // ms
 const float TMR2_Timer_Period_const = 100; // us  <TODO>
 uint16_t tmr2_required_counter_steps_g;
 bool DimmerStatusFlag_g = false;
-bool kirFlag = false;
 
 inline void Init_Function(void);
 void Zero_Detection_isr(void);
@@ -226,6 +225,10 @@ inline void StartTouchDetection(void){
 
         if (true == MTOUCH_Button_isPressed(T_start)){ // touch pressed: Start the Procedure
 
+            StartStop_Buzzer(ON);
+            __delay_ms(100);
+            StartStop_Buzzer(OFF);
+            
             StartHeater();
 
         }            
@@ -246,8 +249,11 @@ void StopTouchDetection(void){
 
         if (true == MTOUCH_Button_isPressed(T_stop)){ // touch pressed: Emergency Stop
 
+            StartStop_Buzzer(ON);
+            __delay_ms(1000);
+            StartStop_Buzzer(OFF);
+            
             Init_Function();
-//            kirFlag = false;
 
         }            
         else{
@@ -278,203 +284,203 @@ inline void StartHeater(void){
     StartStop_Dimmer(ON);
     
     SetDimmer(10);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(11);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
     
     SetDimmer(12);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(13);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(14);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(15);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(16);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(17);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(18);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(19);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(20);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(21);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(22);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(23);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(24);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(25);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(26);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(27);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(28);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(29);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
     SetDimmer(30);
-    __delay_ms(1500);
+    __delay_ms(2000);
     StopTouchDetection();
 
 
     // <section #2>    
     SetDimmer(30.5);
-    __delay_ms(5000);
+    __delay_ms(8000);
     StopTouchDetection();
 
     SetDimmer(31);
-    __delay_ms(5000);
+    __delay_ms(8000);
     StopTouchDetection();
 
     SetDimmer(31.5);
-    __delay_ms(5000);
+    __delay_ms(8000);
     StopTouchDetection();
 
     SetDimmer(32);
-    __delay_ms(5000);
+    __delay_ms(8000);
     StopTouchDetection();
 
     SetDimmer(32.5);
-    __delay_ms(5000);
+    __delay_ms(8000);
     StopTouchDetection();
 
     SetDimmer(33);
-    __delay_ms(5000);
+    __delay_ms(8000);
     StopTouchDetection();
 
     SetDimmer(33.5);
-    __delay_ms(5000);
+    __delay_ms(8000);
     StopTouchDetection();
 
     SetDimmer(34);
-    __delay_ms(5000);
+    __delay_ms(8000);
     StopTouchDetection();
 
     SetDimmer(34.5);
-    __delay_ms(5000);
+    __delay_ms(8000);
     StopTouchDetection();
 
     SetDimmer(35);
-    __delay_ms(5000);
+    __delay_ms(8000);
     StopTouchDetection();
 
 
     // <section #3>
     SetDimmer(37);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(39);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(41);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(43);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(45);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(47);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(49);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(51);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(53);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(55);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(57);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(59);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(61);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(63);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(65);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(67);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(69);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
     SetDimmer(71);
-    __delay_ms(3000);
+    __delay_ms(4500);
     StopTouchDetection();
 
 

@@ -589,7 +589,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `c
 -> -> 0 `i `us
 -> -> 0 `i `us
--> -> -> 100 `ui `c `uc
+-> -> -> 125 `ui `c `uc
 -> -> 1 `ui `uc
 ..
 :U ..
@@ -601,7 +601,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `c
 -> -> 0 `i `us
 -> -> 0 `i `us
--> -> -> 100 `ui `c `uc
+-> -> -> 125 `ui `c `uc
 -> -> 1 `ui `uc
 ..
 ..

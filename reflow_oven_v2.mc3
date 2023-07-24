@@ -436,18 +436,6 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RXDTSEL%aux1"/>
-         <value>RB5</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="T1GSEL%aux2"/>
-         <value>%DESELECT%</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="TXCKSEL%aux0"/>
-         <value>RB7</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRA0"/>
          <value>disabled</value>
       </entry>
@@ -3185,7 +3173,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%0%threshold"/>
-         <value>100</value>
+         <value>125</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%0%timeout_counts"/>
@@ -3257,7 +3245,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%threshold"/>
-         <value>100</value>
+         <value>125</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%timeout_counts"/>
@@ -4070,12 +4058,12 @@
          <hash>f614aded53ae75b9823607f476be87bb8d72de794bb9001d3d0e0b11b0e8b1af</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/mtouch/mtouch_button.c</file>
-         <hash>d9280800a93d1ce5676774e13644c3a4c0adbaf1293e739060d992f0427e0d90</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/mcc.h</file>
          <hash>58f0a5eaf9d7fdb19fa03aefda6bb9ba68149a1a12e04a456af93b7792c90398</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/mtouch/mtouch_button.c</file>
+         <hash>d9280800a93d1ce5676774e13644c3a4c0adbaf1293e739060d992f0427e0d90</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_button.h</file>
@@ -4111,7 +4099,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_config.h</file>
-         <hash>621e4d9192221ab0a84ffba5247b461ebeddc22b687b14d5f5cdd10c7d024335</hash>
+         <hash>93ca44cd07abbbf5f71aab8e116e71dbf68861ef726368d3cdf8b394849f4a7e</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/tmr6.c</file>

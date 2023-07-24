@@ -45,7 +45,7 @@ HYST_12_5_PERCENT 3
 HYST_6_25_PERCENT 4
 HYST_MAX 5
 ]
-"227 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"226 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [e E3632 mtouch_button_names `uc
 T_start 0
 T_stop 1
@@ -72,33 +72,33 @@ T_stop 1
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"50 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"49 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"78
+"77
 [v _Init_Function Init_Function `T(v  1 e 1 0 ]
-"90
+"89
 [v _Zero_Detection_isr Zero_Detection_isr `(v  1 e 1 0 ]
-"103
+"102
 [v _TMR2_Drive_TRIAC_isr TMR2_Drive_TRIAC_isr `(v  1 e 1 0 ]
-"131
+"130
 [v _TMR4_Wroking_Blink_AlarmLED_isr TMR4_Wroking_Blink_AlarmLED_isr `(v  1 e 1 0 ]
-"152
+"151
 [v _StartStop_AlarmLED StartStop_AlarmLED `T(v  1 e 1 0 ]
-"166
+"165
 [v _StartStop_AlarmLED_Blink StartStop_AlarmLED_Blink `T(v  1 e 1 0 ]
-"180
+"179
 [v _StartStop_Fan StartStop_Fan `T(v  1 e 1 0 ]
-"194
+"193
 [v _StartStop_Buzzer StartStop_Buzzer `T(v  1 e 1 0 ]
-"208
+"207
 [v _StartStop_Dimmer StartStop_Dimmer `T(v  1 e 1 0 ]
-"222
+"221
 [v _StartTouchDetection StartTouchDetection `T(v  1 e 1 0 ]
-"242
+"245
 [v _StopTouchDetection StopTouchDetection `(v  1 e 1 0 ]
-"262
+"268
 [v _SetDimmer SetDimmer `(v  1 e 1 0 ]
-"275
+"281
 [v _StartHeater StartHeater `T(v  1 e 1 0 ]
 "52 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -269,7 +269,7 @@ T_stop 1
 ]
 [u S150 . 1 `S136 1 . 1 0 `S145 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES150  1 e 1 @11 ]
-[s S1439 . 1 `uc 1 RC0 1 0 :1:0 
+[s S1526 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -279,8 +279,8 @@ T_stop 1
 `uc 1 RC7 1 0 :1:7 
 ]
 "536
-[u S1448 . 1 `S1439 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES1448  1 e 1 @14 ]
+[u S1535 . 1 `S1526 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES1535  1 e 1 @14 ]
 [s S1103 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -405,7 +405,7 @@ T_stop 1
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2184
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S1417 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S1504 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -415,8 +415,8 @@ T_stop 1
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2201
-[u S1426 . 1 `S1417 1 . 1 0 ]
-[v _LATCbits LATCbits `VES1426  1 e 1 @270 ]
+[u S1513 . 1 `S1504 1 . 1 0 ]
+[v _LATCbits LATCbits `VES1513  1 e 1 @270 ]
 "2518
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
 "2867
@@ -546,27 +546,27 @@ T_stop 1
 [v _TMR4_InterruptHandler TMR4_InterruptHandler `*.37(v  1 e 2 0 ]
 "58 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr6.c
 [v _TMR6_InterruptHandler TMR6_InterruptHandler `*.37(v  1 e 2 0 ]
-"50 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"49 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"69
+"68
 } 0
-"222
+"221
 [v _StartTouchDetection StartTouchDetection `T(v  1 e 1 0 ]
 {
-"239
+"242
 } 0
-"275
+"281
 [v _StartHeater StartHeater `T(v  1 e 1 0 ]
 {
-"485
-[v StartHeater@i i `uc  1 a 1 69 ]
-"493
+"491
+[v StartHeater@i i `uc  1 a 1 71 ]
+"499
 } 0
-"242
+"245
 [v _StopTouchDetection StopTouchDetection `(v  1 e 1 0 ]
 {
-"259
+"265
 } 0
 "96 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mtouch/mtouch.c
 [v _MTOUCH_Service_Mainloop MTOUCH_Service_Mainloop `(a  1 e 1 0 ]
@@ -938,37 +938,37 @@ T_stop 1
 [v MTOUCH_Button_isPressed@name name `E2819  1 a 1 1 ]
 "372
 } 0
-"78 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"77 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _Init_Function Init_Function `T(v  1 e 1 0 ]
 {
-"87
+"86
 } 0
-"180
+"179
 [v _StartStop_Fan StartStop_Fan `T(v  1 e 1 0 ]
 {
 [v StartStop_Fan@OnOff OnOff `a  1 a 1 wreg ]
 [v StartStop_Fan@OnOff OnOff `a  1 a 1 wreg ]
-"182
+"181
 [v StartStop_Fan@OnOff OnOff `a  1 a 1 0 ]
-"191
+"190
 } 0
-"208
+"207
 [v _StartStop_Dimmer StartStop_Dimmer `T(v  1 e 1 0 ]
 {
 [v StartStop_Dimmer@OnOff OnOff `a  1 a 1 wreg ]
 [v StartStop_Dimmer@OnOff OnOff `a  1 a 1 wreg ]
-"210
+"209
 [v StartStop_Dimmer@OnOff OnOff `a  1 a 1 66 ]
-"219
+"218
 } 0
-"262
+"268
 [v _SetDimmer SetDimmer `(v  1 e 1 0 ]
 {
-"267
+"273
 [v SetDimmer@TRIAC_off_duration_ms TRIAC_off_duration_ms `f  1 a 4 62 ]
-"262
+"268
 [v SetDimmer@dim_percentage dim_percentage `f  1 p 4 58 ]
-"272
+"278
 } 0
 "43 /opt/microchip/xc8/v2.31/pic/sources/c99/common/fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
@@ -1006,17 +1006,17 @@ T_stop 1
 "8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1931 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1930 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1936 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S1939 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1931 1 fAsBytes 4 0 `S1936 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1939  1 a 4 15 ]
+[s S1935 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1938 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1930 1 fAsBytes 4 0 `S1935 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1938  1 a 4 15 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 10 ]
-[s S2008 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S2007 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S2011 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S2008 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S2011  1 a 2 19 ]
+[u S2010 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S2007 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S2010  1 a 2 19 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 14 ]
 "11
@@ -1062,23 +1062,23 @@ T_stop 1
 [v ___fldiv@b b `d  1 p 4 25 ]
 "185
 } 0
-"194 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"193 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _StartStop_Buzzer StartStop_Buzzer `T(v  1 e 1 0 ]
 {
 [v StartStop_Buzzer@OnOff OnOff `a  1 a 1 wreg ]
 [v StartStop_Buzzer@OnOff OnOff `a  1 a 1 wreg ]
-"196
+"195
 [v StartStop_Buzzer@OnOff OnOff `a  1 a 1 0 ]
-"205
+"204
 } 0
-"166
+"165
 [v _StartStop_AlarmLED_Blink StartStop_AlarmLED_Blink `T(v  1 e 1 0 ]
 {
 [v StartStop_AlarmLED_Blink@OnOff OnOff `a  1 a 1 wreg ]
 [v StartStop_AlarmLED_Blink@OnOff OnOff `a  1 a 1 wreg ]
-"168
+"167
 [v StartStop_AlarmLED_Blink@OnOff OnOff `a  1 a 1 0 ]
-"177
+"176
 } 0
 "93 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr4.c
 [v _TMR4_StopTimer TMR4_StopTimer `(v  1 e 1 0 ]
@@ -1090,14 +1090,14 @@ T_stop 1
 {
 "91
 } 0
-"152 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"151 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _StartStop_AlarmLED StartStop_AlarmLED `T(v  1 e 1 0 ]
 {
 [v StartStop_AlarmLED@OnOff OnOff `a  1 a 1 wreg ]
 [v StartStop_AlarmLED@OnOff OnOff `a  1 a 1 wreg ]
-"154
+"153
 [v StartStop_AlarmLED@OnOff OnOff `a  1 a 1 0 ]
-"163
+"162
 } 0
 "50 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -1299,12 +1299,12 @@ T_stop 1
 {
 "139
 } 0
-"131 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"130 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _TMR4_Wroking_Blink_AlarmLED_isr TMR4_Wroking_Blink_AlarmLED_isr `(v  1 e 1 0 ]
 {
-"133
+"132
 [v TMR4_Wroking_Blink_AlarmLED_isr@counter_tmr4 counter_tmr4 `us  1 s 2 counter_tmr4 ]
-"141
+"140
 } 0
 "119 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr2.c
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
@@ -1316,12 +1316,12 @@ T_stop 1
 {
 "139
 } 0
-"103 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"102 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _TMR2_Drive_TRIAC_isr TMR2_Drive_TRIAC_isr `(v  1 e 1 0 ]
 {
-"105
+"104
 [v TMR2_Drive_TRIAC_isr@counter_tmr2 counter_tmr2 `us  1 s 2 counter_tmr2 ]
-"128
+"127
 } 0
 "93 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr2.c
 [v _TMR2_StopTimer TMR2_StopTimer `(v  1 e 1 0 ]
@@ -1343,10 +1343,10 @@ T_stop 1
 {
 "152
 } 0
-"90 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
+"89 /home/rebel/MPLABXProjects/reflow_oven_v2.X/main.c
 [v _Zero_Detection_isr Zero_Detection_isr `(v  1 e 1 0 ]
 {
-"100
+"99
 } 0
 "87 /home/rebel/MPLABXProjects/reflow_oven_v2.X/mcc_generated_files/tmr2.c
 [v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]

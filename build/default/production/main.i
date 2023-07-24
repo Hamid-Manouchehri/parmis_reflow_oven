@@ -5422,7 +5422,6 @@ const float HalfCycleACDuration_const = 10.0;
 const float TMR2_Timer_Period_const = 100;
 uint16_t tmr2_required_counter_steps_g;
 _Bool DimmerStatusFlag_g = 0;
-_Bool kirFlag = 0;
 
 __attribute__((inline)) void Init_Function(void);
 void Zero_Detection_isr(void);
@@ -5438,7 +5437,7 @@ __attribute__((inline)) void StartTouchDetection(void);
 void StopTouchDetection(void);
 void SetDimmer(float);
 __attribute__((inline)) void StartHeater(void);
-# 50 "main.c"
+# 49 "main.c"
 void main(void){
 
     SYSTEM_Initialize();
@@ -5459,7 +5458,7 @@ void main(void){
     }
 
 }
-# 78 "main.c"
+# 77 "main.c"
 __attribute__((inline)) void Init_Function(void){
 
     StartStop_AlarmLED(0);
@@ -5611,6 +5610,10 @@ __attribute__((inline)) void StartTouchDetection(void){
 
         if (1 == MTOUCH_Button_isPressed(T_start)){
 
+            StartStop_Buzzer(1);
+            _delay((unsigned long)((100)*(8000000/4000.0)));
+            StartStop_Buzzer(0);
+
             StartHeater();
 
         }
@@ -5631,8 +5634,11 @@ void StopTouchDetection(void){
 
         if (1 == MTOUCH_Button_isPressed(T_stop)){
 
-            Init_Function();
+            StartStop_Buzzer(1);
+            _delay((unsigned long)((1000)*(8000000/4000.0)));
+            StartStop_Buzzer(0);
 
+            Init_Function();
 
         }
         else{
@@ -5663,203 +5669,203 @@ __attribute__((inline)) void StartHeater(void){
     StartStop_Dimmer(1);
 
     SetDimmer(10);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(11);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(12);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(13);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(14);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(15);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(16);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(17);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(18);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(19);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(20);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(21);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(22);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(23);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(24);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(25);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(26);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(27);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(28);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(29);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(30);
-    _delay((unsigned long)((1500)*(8000000/4000.0)));
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
     StopTouchDetection();
 
 
 
     SetDimmer(30.5);
-    _delay((unsigned long)((5000)*(8000000/4000.0)));
+    _delay((unsigned long)((8000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(31);
-    _delay((unsigned long)((5000)*(8000000/4000.0)));
+    _delay((unsigned long)((8000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(31.5);
-    _delay((unsigned long)((5000)*(8000000/4000.0)));
+    _delay((unsigned long)((8000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(32);
-    _delay((unsigned long)((5000)*(8000000/4000.0)));
+    _delay((unsigned long)((8000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(32.5);
-    _delay((unsigned long)((5000)*(8000000/4000.0)));
+    _delay((unsigned long)((8000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(33);
-    _delay((unsigned long)((5000)*(8000000/4000.0)));
+    _delay((unsigned long)((8000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(33.5);
-    _delay((unsigned long)((5000)*(8000000/4000.0)));
+    _delay((unsigned long)((8000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(34);
-    _delay((unsigned long)((5000)*(8000000/4000.0)));
+    _delay((unsigned long)((8000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(34.5);
-    _delay((unsigned long)((5000)*(8000000/4000.0)));
+    _delay((unsigned long)((8000)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(35);
-    _delay((unsigned long)((5000)*(8000000/4000.0)));
+    _delay((unsigned long)((8000)*(8000000/4000.0)));
     StopTouchDetection();
 
 
 
     SetDimmer(37);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(39);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(41);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(43);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(45);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(47);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(49);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(51);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(53);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(55);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(57);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(59);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(61);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(63);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(65);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(67);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(69);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
     SetDimmer(71);
-    _delay((unsigned long)((3000)*(8000000/4000.0)));
+    _delay((unsigned long)((4500)*(8000000/4000.0)));
     StopTouchDetection();
 
 
