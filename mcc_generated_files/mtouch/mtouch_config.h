@@ -116,8 +116,8 @@
     #define MTOUCH_BUTTON_SENSOR_T_start             Sensor_AN8
     #define MTOUCH_BUTTON_SENSOR_T_stop             Sensor_AN9
 
-    #define MTOUCH_BUTTON_THRESHOLD_T_start          125u
-    #define MTOUCH_BUTTON_THRESHOLD_T_stop          125u
+    #define MTOUCH_BUTTON_THRESHOLD_T_start          126u
+    #define MTOUCH_BUTTON_THRESHOLD_T_stop          126u
     
     #define MTOUCH_BUTTON_SCALING_T_start            1u
     #define MTOUCH_BUTTON_SCALING_T_stop            1u

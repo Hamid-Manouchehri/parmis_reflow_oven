@@ -82,23 +82,6 @@
 #define ZC_RA2_SetAnalogMode()      do { ANSELAbits.ANSA2 = 1; } while(0)
 #define ZC_RA2_SetDigitalMode()     do { ANSELAbits.ANSA2 = 0; } while(0)
 
-// get/set out_CS aliases
-#define out_CS_TRIS                 TRISAbits.TRISA4
-#define out_CS_LAT                  LATAbits.LATA4
-#define out_CS_PORT                 PORTAbits.RA4
-#define out_CS_WPU                  WPUAbits.WPUA4
-#define out_CS_ANS                  ANSELAbits.ANSA4
-#define out_CS_SetHigh()            do { LATAbits.LATA4 = 1; } while(0)
-#define out_CS_SetLow()             do { LATAbits.LATA4 = 0; } while(0)
-#define out_CS_Toggle()             do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0)
-#define out_CS_GetValue()           PORTAbits.RA4
-#define out_CS_SetDigitalInput()    do { TRISAbits.TRISA4 = 1; } while(0)
-#define out_CS_SetDigitalOutput()   do { TRISAbits.TRISA4 = 0; } while(0)
-#define out_CS_SetPullup()          do { WPUAbits.WPUA4 = 1; } while(0)
-#define out_CS_ResetPullup()        do { WPUAbits.WPUA4 = 0; } while(0)
-#define out_CS_SetAnalogMode()      do { ANSELAbits.ANSA4 = 1; } while(0)
-#define out_CS_SetDigitalMode()     do { ANSELAbits.ANSA4 = 0; } while(0)
-
 // get/set IO_RC2_alarm_LED aliases
 #define IO_RC2_alarm_LED_TRIS                 TRISCbits.TRISC2
 #define IO_RC2_alarm_LED_LAT                  LATCbits.LATC2

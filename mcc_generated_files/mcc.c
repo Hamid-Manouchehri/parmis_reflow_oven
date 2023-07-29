@@ -53,7 +53,6 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
-    TMR6_Initialize();
     TMR4_Initialize();
     TMR2_Initialize();
     MTOUCH_Initialize();

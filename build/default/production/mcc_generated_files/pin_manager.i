@@ -4544,17 +4544,17 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "/opt/microchip/mplabx/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8/pic/include/xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 198 "mcc_generated_files/pin_manager.h"
+# 181 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 210 "mcc_generated_files/pin_manager.h"
+# 193 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 223 "mcc_generated_files/pin_manager.h"
+# 206 "mcc_generated_files/pin_manager.h"
 void IOCAF2_ISR(void);
-# 246 "mcc_generated_files/pin_manager.h"
+# 229 "mcc_generated_files/pin_manager.h"
 void IOCAF2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 270 "mcc_generated_files/pin_manager.h"
+# 253 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF2_InterruptHandler)(void);
-# 294 "mcc_generated_files/pin_manager.h"
+# 277 "mcc_generated_files/pin_manager.h"
 void IOCAF2_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
@@ -4577,7 +4577,7 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    TRISA = 0x2F;
+    TRISA = 0x3F;
     TRISB = 0x70;
     TRISC = 0x03;
 
