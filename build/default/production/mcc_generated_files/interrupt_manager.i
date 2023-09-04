@@ -4602,27 +4602,27 @@ extern void cputs(const char *);
 # 54 "mcc_generated_files/mcc.h" 2
 
 
-# 1 "mcc_generated_files/tmr2.h" 1
-# 103 "mcc_generated_files/tmr2.h"
-void TMR2_Initialize(void);
-# 132 "mcc_generated_files/tmr2.h"
-void TMR2_StartTimer(void);
-# 164 "mcc_generated_files/tmr2.h"
-void TMR2_StopTimer(void);
-# 199 "mcc_generated_files/tmr2.h"
-uint8_t TMR2_ReadTimer(void);
-# 238 "mcc_generated_files/tmr2.h"
-void TMR2_WriteTimer(uint8_t timerVal);
-# 290 "mcc_generated_files/tmr2.h"
-void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 308 "mcc_generated_files/tmr2.h"
-void TMR2_ISR(void);
-# 326 "mcc_generated_files/tmr2.h"
- void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 344 "mcc_generated_files/tmr2.h"
-extern void (*TMR2_InterruptHandler)(void);
-# 362 "mcc_generated_files/tmr2.h"
-void TMR2_DefaultInterruptHandler(void);
+# 1 "mcc_generated_files/tmr6.h" 1
+# 103 "mcc_generated_files/tmr6.h"
+void TMR6_Initialize(void);
+# 132 "mcc_generated_files/tmr6.h"
+void TMR6_StartTimer(void);
+# 164 "mcc_generated_files/tmr6.h"
+void TMR6_StopTimer(void);
+# 199 "mcc_generated_files/tmr6.h"
+uint8_t TMR6_ReadTimer(void);
+# 238 "mcc_generated_files/tmr6.h"
+void TMR6_WriteTimer(uint8_t timerVal);
+# 290 "mcc_generated_files/tmr6.h"
+void TMR6_LoadPeriodRegister(uint8_t periodVal);
+# 308 "mcc_generated_files/tmr6.h"
+void TMR6_ISR(void);
+# 326 "mcc_generated_files/tmr6.h"
+ void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "mcc_generated_files/tmr6.h"
+extern void (*TMR6_InterruptHandler)(void);
+# 362 "mcc_generated_files/tmr6.h"
+void TMR6_DefaultInterruptHandler(void);
 # 56 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr4.h" 1
@@ -4647,6 +4647,29 @@ extern void (*TMR4_InterruptHandler)(void);
 # 362 "mcc_generated_files/tmr4.h"
 void TMR4_DefaultInterruptHandler(void);
 # 57 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/tmr2.h" 1
+# 103 "mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 308 "mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 326 "mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 362 "mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+# 58 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/mtouch/mtouch.h" 1
 # 41 "mcc_generated_files/mtouch/mtouch.h"
@@ -4802,12 +4825,12 @@ void TMR4_DefaultInterruptHandler(void);
     _Bool MTOUCH_Service_isInProgress (void);
     void MTOUCH_requestInitSet (void);
     _Bool MTOUCH_requestInitGet (void);
-# 58 "mcc_generated_files/mcc.h" 2
-# 73 "mcc_generated_files/mcc.h"
+# 59 "mcc_generated_files/mcc.h" 2
+# 74 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 86 "mcc_generated_files/mcc.h"
+# 87 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 98 "mcc_generated_files/mcc.h"
+# 99 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 50 "mcc_generated_files/interrupt_manager.c" 2
 
@@ -4821,7 +4844,11 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
     }
     else if(INTCONbits.PEIE == 1)
     {
-        if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
+        if(PIE3bits.TMR6IE == 1 && PIR3bits.TMR6IF == 1)
+        {
+            TMR6_ISR();
+        }
+        else if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
         {
             TMR4_ISR();
         }

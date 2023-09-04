@@ -14,6 +14,8 @@
 
 
 #define  TMR4_REQUIRED_COUNTER_STEPS   1000 // TMR4_REQUIRED_COUNTER_STEPS * 1 (ms) <TODO>
+#define  TMR6_LONGPRESS_DURATION       92   // TMR6_LONGPRESS_DURATION * 32.768 (ms) ~ 3 s <TODO>
+
 #define  SMALL_PCB                     10
 #define  LARGE_PCB                     11
 
@@ -24,12 +26,14 @@
 const float HalfCycleACDuration_const = 10.0; // ms
 const float TMR2_Timer_Period_const = 100; // us  <TODO>
 uint16_t tmr2_required_counter_steps_g;
+uint8_t g_tmr6_longpress_duration_counter;
 bool DimmerStatusFlag_g = false;
 
 inline void Init_Function(void);
 void Zero_Detection_isr(void);
 void TMR2_Drive_TRIAC_isr(void);
 void TMR4_Wroking_Blink_AlarmLED_isr(void);
+void TMR6_long_press_duration_isr(void);
 inline void StartStop_AlarmLED(bool);
 inline void StartStop_AlarmLED_Blink(bool);
 inline void StartStop_Fan(bool);
@@ -59,6 +63,7 @@ void main(void){
     IOCAF2_SetInterruptHandler(Zero_Detection_isr);
     TMR2_SetInterruptHandler(TMR2_Drive_TRIAC_isr);
     TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr);
+    TMR6_SetInterruptHandler(TMR6_long_press_duration_isr); // period: 32.768 ms
     
     while(1){ // do not delete while(1)
         
@@ -142,6 +147,12 @@ void TMR4_Wroking_Blink_AlarmLED_isr(void){
 }
 
 
+void TMR6_long_press_duration_isr(void) {
+
+    g_tmr6_longpress_duration_counter++;
+}
+
+
 inline void StartStop_AlarmLED(bool OnOff){
     
     if (ON == OnOff){
@@ -215,49 +226,54 @@ inline void StartStop_Dimmer(bool OnOff){
 void StartTouchDetection(void){
     /* To use; just call this function where ever you want to detect touch*/
    
-    if (true == MTOUCH_Service_Mainloop()) {
+    g_tmr6_longpress_duration_counter = 0;
+    
+    while ((true == MTOUCH_Button_isPressed(T_start)) &&
+           (g_tmr6_longpress_duration_counter < TMR6_LONGPRESS_DURATION)) {
+        
+        MTOUCH_Service_Mainloop();
+    }
+    
 
-        if (true == MTOUCH_Button_isPressed(T_start)){ // touch pressed: Start the Procedure
-            
-            while (true == MTOUCH_Button_isPressed(T_start)) {
-                MTOUCH_Service_Mainloop();
-            }
-                
-            StartStop_Buzzer(ON);
-            __delay_ms(100);
-            StartStop_Buzzer(OFF);
-            
-            StartHeater(SMALL_PCB);
+    if (true == MTOUCH_Button_isPressed(T_start)){ // long press detection
 
-            while (true == MTOUCH_Button_isPressed(T_start)) {
-                MTOUCH_Service_Mainloop();
-            }
+        while (true == MTOUCH_Button_isPressed(T_start)) {
+            MTOUCH_Service_Mainloop();
         }
-    }    
+
+        StartStop_Buzzer(ON);
+        __delay_ms(100);
+        StartStop_Buzzer(OFF);
+
+        StartHeater(SMALL_PCB);
+
+    }  
 }
 
 
 void StopTouchDetection(void){
     /* To use; just call this function where ever you want to detect touch*/
     
-    if (true == MTOUCH_Service_Mainloop()) {
+    g_tmr6_longpress_duration_counter = 0;
+    
+    while ((true == MTOUCH_Button_isPressed(T_stop)) &&
+           (g_tmr6_longpress_duration_counter < TMR6_LONGPRESS_DURATION)) {
+        
+        MTOUCH_Service_Mainloop();
+    }
 
-        if (true == MTOUCH_Button_isPressed(T_stop)){ // touch pressed: Emergency Stop
+    if (true == MTOUCH_Button_isPressed(T_stop)){ // long press detection
 
-            while (true == MTOUCH_Button_isPressed(T_stop)) {
-                MTOUCH_Service_Mainloop();
-            }
-                
-            StartStop_Buzzer(ON);
-            __delay_ms(100);
-            StartStop_Buzzer(OFF);
-            
-            StartHeater(LARGE_PCB);
-
-            while (true == MTOUCH_Button_isPressed(T_stop)) {
-                MTOUCH_Service_Mainloop();
-            }
+        while (true == MTOUCH_Button_isPressed(T_stop)) {
+            MTOUCH_Service_Mainloop();
         }
+
+        StartStop_Buzzer(ON);
+        __delay_ms(100);
+        StartStop_Buzzer(OFF);
+
+        StartHeater(LARGE_PCB);
+
     }
 }
 

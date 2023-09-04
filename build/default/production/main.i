@@ -5179,27 +5179,27 @@ extern void cputs(const char *);
 # 1 "./mcc_generated_files/interrupt_manager.h" 1
 # 55 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/tmr2.h" 1
-# 103 "./mcc_generated_files/tmr2.h"
-void TMR2_Initialize(void);
-# 132 "./mcc_generated_files/tmr2.h"
-void TMR2_StartTimer(void);
-# 164 "./mcc_generated_files/tmr2.h"
-void TMR2_StopTimer(void);
-# 199 "./mcc_generated_files/tmr2.h"
-uint8_t TMR2_ReadTimer(void);
-# 238 "./mcc_generated_files/tmr2.h"
-void TMR2_WriteTimer(uint8_t timerVal);
-# 290 "./mcc_generated_files/tmr2.h"
-void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 308 "./mcc_generated_files/tmr2.h"
-void TMR2_ISR(void);
-# 326 "./mcc_generated_files/tmr2.h"
- void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 344 "./mcc_generated_files/tmr2.h"
-extern void (*TMR2_InterruptHandler)(void);
-# 362 "./mcc_generated_files/tmr2.h"
-void TMR2_DefaultInterruptHandler(void);
+# 1 "./mcc_generated_files/tmr6.h" 1
+# 103 "./mcc_generated_files/tmr6.h"
+void TMR6_Initialize(void);
+# 132 "./mcc_generated_files/tmr6.h"
+void TMR6_StartTimer(void);
+# 164 "./mcc_generated_files/tmr6.h"
+void TMR6_StopTimer(void);
+# 199 "./mcc_generated_files/tmr6.h"
+uint8_t TMR6_ReadTimer(void);
+# 238 "./mcc_generated_files/tmr6.h"
+void TMR6_WriteTimer(uint8_t timerVal);
+# 290 "./mcc_generated_files/tmr6.h"
+void TMR6_LoadPeriodRegister(uint8_t periodVal);
+# 308 "./mcc_generated_files/tmr6.h"
+void TMR6_ISR(void);
+# 326 "./mcc_generated_files/tmr6.h"
+ void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "./mcc_generated_files/tmr6.h"
+extern void (*TMR6_InterruptHandler)(void);
+# 362 "./mcc_generated_files/tmr6.h"
+void TMR6_DefaultInterruptHandler(void);
 # 56 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/tmr4.h" 1
@@ -5224,6 +5224,29 @@ extern void (*TMR4_InterruptHandler)(void);
 # 362 "./mcc_generated_files/tmr4.h"
 void TMR4_DefaultInterruptHandler(void);
 # 57 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/tmr2.h" 1
+# 103 "./mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "./mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "./mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "./mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "./mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "./mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 308 "./mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 326 "./mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "./mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 362 "./mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/mtouch/mtouch.h" 1
 # 41 "./mcc_generated_files/mtouch/mtouch.h"
@@ -5379,24 +5402,26 @@ void TMR4_DefaultInterruptHandler(void);
     _Bool MTOUCH_Service_isInProgress (void);
     void MTOUCH_requestInitSet (void);
     _Bool MTOUCH_requestInitGet (void);
-# 58 "./mcc_generated_files/mcc.h" 2
-# 73 "./mcc_generated_files/mcc.h"
+# 59 "./mcc_generated_files/mcc.h" 2
+# 74 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 86 "./mcc_generated_files/mcc.h"
+# 87 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 98 "./mcc_generated_files/mcc.h"
+# 99 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 13 "main.c" 2
-# 24 "main.c"
+# 26 "main.c"
 const float HalfCycleACDuration_const = 10.0;
 const float TMR2_Timer_Period_const = 100;
 uint16_t tmr2_required_counter_steps_g;
+uint8_t g_tmr6_longpress_duration_counter;
 _Bool DimmerStatusFlag_g = 0;
 
 __attribute__((inline)) void Init_Function(void);
 void Zero_Detection_isr(void);
 void TMR2_Drive_TRIAC_isr(void);
 void TMR4_Wroking_Blink_AlarmLED_isr(void);
+void TMR6_long_press_duration_isr(void);
 __attribute__((inline)) void StartStop_AlarmLED(_Bool);
 __attribute__((inline)) void StartStop_AlarmLED_Blink(_Bool);
 __attribute__((inline)) void StartStop_Fan(_Bool);
@@ -5406,7 +5431,7 @@ void StartTouchDetection(void);
 void StopTouchDetection(void);
 void SetDimmer(float);
 __attribute__((inline)) void StartHeater(uint8_t);
-# 51 "main.c"
+# 55 "main.c"
 void main(void){
 
     SYSTEM_Initialize();
@@ -5418,6 +5443,7 @@ void main(void){
     IOCAF2_SetInterruptHandler(Zero_Detection_isr);
     TMR2_SetInterruptHandler(TMR2_Drive_TRIAC_isr);
     TMR4_SetInterruptHandler(TMR4_Wroking_Blink_AlarmLED_isr);
+    TMR6_SetInterruptHandler(TMR6_long_press_duration_isr);
 
     while(1){
 
@@ -5427,7 +5453,7 @@ void main(void){
     }
 
 }
-# 79 "main.c"
+# 84 "main.c"
 __attribute__((inline)) void Init_Function(void){
 
     StartStop_AlarmLED(0);
@@ -5491,6 +5517,12 @@ void TMR4_Wroking_Blink_AlarmLED_isr(void){
         counter_tmr4 = 0;
         do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0);
     }
+}
+
+
+void TMR6_long_press_duration_isr(void) {
+
+    g_tmr6_longpress_duration_counter++;
 }
 
 
@@ -5567,24 +5599,27 @@ __attribute__((inline)) void StartStop_Dimmer(_Bool OnOff){
 void StartTouchDetection(void){
 
 
-    if (1 == MTOUCH_Service_Mainloop()) {
+    g_tmr6_longpress_duration_counter = 0;
 
-        if (1 == MTOUCH_Button_isPressed(T_start)){
+    while ((1 == MTOUCH_Button_isPressed(T_start)) &&
+           (g_tmr6_longpress_duration_counter < 92)) {
 
-            while (1 == MTOUCH_Button_isPressed(T_start)) {
-                MTOUCH_Service_Mainloop();
-            }
+        MTOUCH_Service_Mainloop();
+    }
 
-            StartStop_Buzzer(1);
-            _delay((unsigned long)((100)*(8000000/4000.0)));
-            StartStop_Buzzer(0);
 
-            StartHeater(10);
+    if (1 == MTOUCH_Button_isPressed(T_start)){
 
-            while (1 == MTOUCH_Button_isPressed(T_start)) {
-                MTOUCH_Service_Mainloop();
-            }
+        while (1 == MTOUCH_Button_isPressed(T_start)) {
+            MTOUCH_Service_Mainloop();
         }
+
+        StartStop_Buzzer(1);
+        _delay((unsigned long)((100)*(8000000/4000.0)));
+        StartStop_Buzzer(0);
+
+        StartHeater(10);
+
     }
 }
 
@@ -5592,24 +5627,26 @@ void StartTouchDetection(void){
 void StopTouchDetection(void){
 
 
-    if (1 == MTOUCH_Service_Mainloop()) {
+    g_tmr6_longpress_duration_counter = 0;
 
-        if (1 == MTOUCH_Button_isPressed(T_stop)){
+    while ((1 == MTOUCH_Button_isPressed(T_stop)) &&
+           (g_tmr6_longpress_duration_counter < 92)) {
 
-            while (1 == MTOUCH_Button_isPressed(T_stop)) {
-                MTOUCH_Service_Mainloop();
-            }
+        MTOUCH_Service_Mainloop();
+    }
 
-            StartStop_Buzzer(1);
-            _delay((unsigned long)((100)*(8000000/4000.0)));
-            StartStop_Buzzer(0);
+    if (1 == MTOUCH_Button_isPressed(T_stop)){
 
-            StartHeater(11);
-
-            while (1 == MTOUCH_Button_isPressed(T_stop)) {
-                MTOUCH_Service_Mainloop();
-            }
+        while (1 == MTOUCH_Button_isPressed(T_stop)) {
+            MTOUCH_Service_Mainloop();
         }
+
+        StartStop_Buzzer(1);
+        _delay((unsigned long)((100)*(8000000/4000.0)));
+        StartStop_Buzzer(0);
+
+        StartHeater(11);
+
     }
 }
 

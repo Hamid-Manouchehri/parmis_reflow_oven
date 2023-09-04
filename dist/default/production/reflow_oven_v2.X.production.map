@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=/opt/microchip/xc8/v2.31/pic/dat/en_msgs.txt -cn \
   -h+dist/default/production/reflow_oven_v2.X.production.sym \
   --cmf=dist/default/production/reflow_oven_v2.X.production.cmf -z \
-  -Q16F1829 -o/tmp/xcXKldNpo --defsym=__MPLAB_BUILD=1 \
+  -Q16F1829 -o/tmp/xcXjBOLaM --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/reflow_oven_v2.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=020C0h-023EFh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -31,7 +31,7 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
-  -pcinit=CODE -pfunctab=ENTRY -k /tmp/xcXlECPMP.o \
+  -pcinit=CODE -pfunctab=ENTRY -k /tmp/xcXNNgOdP.o \
   dist/default/production/reflow_oven_v2.X.production.o 
 
 Object code version is 3.11
@@ -41,225 +41,236 @@ Machine type is 16F1829
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXlECPMP.o
-                end_init                             34       34        2        8       0
+/tmp/xcXNNgOdP.o
+                end_init                             42       42        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
                 idloc                              8000     8000        4        0       5
 dist/default/production/reflow_oven_v2.X.production.o
-                cinit                                36       36       28        8       0
-                intentry                              4        4       30        8       0
-                text3_split_1                        5E       5E      504        8       0
+                cinit                                44       44       25        8       0
+                intentry                              4        4       3E        8       0
+                text3_split_1                        69       69      504        8       0
                 config                             8007     8007        2        0       4
                 idloc                              8000     8000        4        0       5
-                text91                             1C11     1C11        3     3822       0
-                text90                             1C74     1C74        A     38E8       0
-                text89                             1C0C     1C0C        1     3818       0
-                text88                             1CAF     1CAF        F     395E       0
-                text87                             1C6B     1C6B        9     38D6       0
-                text86                             1C14     1C14        3     3828       0
-                text85                             10A0     10A0       2C     2140       0
-                text84                             1C0D     1C0D        1     381A       0
-                text83                             1CBE     1CBE        F     397C       0
-                text82                             1EBE     1EBE       1D     3D7C       0
-                text81                             1C0E     1C0E        1     381C       0
-                text80                             1CCD     1CCD        F     399A       0
-                text78                             1C7E     1C7E        C     38FC       0
-                text77                             1C17     1C17        3     382E       0
-                text76                             1C1A     1C1A        3     3834       0
-                text75                             1CEB     1CEB       10     39D6       0
-                text74                             1C8A     1C8A        C     3914       0
-                text73                             164C     164C      1B4     2C98       0
-                text72                             1FB7     1FB7       23     3F6E       0
-                text71                              562      562      257        8       0
-                text70                              8EF      8EF      23F     11DE       0
-                text69                             1F17     1F17       20     3E2E       0
-                text68                             1436     1436       75     286C       0
-                text67                             14AB     14AB       81     2956       0
-                text66                             1E09     1E09       18     3C12       0
-                text65                             1C96     1C96        C     392C       0
-                text64                             1DDB     1DDB       17     3BB6       0
-                text63                             1C0F     1C0F        1     381E       0
-                text62                             1128     1128       37     2250       0
-                text61                             10F9     10F9       2F     21F2       0
-                text60                             1EA2     1EA2       1C     3D44       0
-                text59                             1DB0     1DB0       15     3B60       0
-                text58                             1D9C     1D9C       14     3B38       0
-                text57                             1C48     1C48        7     3890       0
-                text56                             1D2D     1D2D       12     3A5A       0
-                text55                             1CFB     1CFB       10     39F6       0
-                text54                             1EDB     1EDB       1E     3DB6       0
-                text53                             1C25     1C25        5     384A       0
-                text52                             1CA2     1CA2        D     3944       0
-                text51                             1C4F     1C4F        7     389E       0
-                text50                             1C2A     1C2A        6     3854       0
-                text49                             1022     1022       29     2044       0
-                text48                             1C30     1C30        6     3860       0
-                text47                             1D0B     1D0B       11     3A16       0
-                text46                             1C36     1C36        6     386C       0
-                text45                             1D63     1D63       13     3AC6       0
-                text44                             1C1D     1C1D        4     383A       0
-                text43                             1D76     1D76       13     3AEC       0
-                text42                             1EF9     1EF9       1E     3DF2       0
+                text96                             1BC5     1BC5        3     378A       0
+                text95                             1C28     1C28        A     3850       0
+                text94                             1BBF     1BBF        1     377E       0
+                text93                             1C63     1C63        F     38C6       0
+                text92                             1C1F     1C1F        9     383E       0
+                text91                             1BC8     1BC8        3     3790       0
+                text90                             105D     105D       2C     20BA       0
+                text89                             1BC0     1BC0        1     3780       0
+                text88                             1C72     1C72        F     38E4       0
+                text87                             1E7B     1E7B       1D     3CF6       0
+                text86                             1BC1     1BC1        1     3782       0
+                text85                             1C81     1C81        F     3902       0
+                text84                             1BD9     1BD9        6     37B2       0
+                text83                             1BC2     1BC2        1     3784       0
+                text82                             1C90     1C90        F     3920       0
+                text80                             1C32     1C32        C     3864       0
+                text79                             1BCB     1BCB        3     3796       0
+                text78                             1BCE     1BCE        3     379C       0
+                text77                             1CAE     1CAE       10     395C       0
+                text76                             1C3E     1C3E        C     387C       0
+                text75                             164C     164C      1B4     2C98       0
+                text74                             1FB4     1FB4       23     3F68       0
+                text73                              56D      56D      257        8       0
+                text72                              8F6      8F6      238     11EC       0
+                text71                             1EF2     1EF2       20     3DE4       0
+                text70                             1436     1436       75     286C       0
+                text69                             14AB     14AB       81     2956       0
+                text68                             1DE2     1DE2       18     3BC4       0
+                text67                             1C4A     1C4A        C     3894       0
+                text66                             1DB4     1DB4       17     3B68       0
+                text65                             1BC3     1BC3        1     3786       0
+                text64                              7C4      7C4       37        8       0
+                text63                             10E4     10E4       2F     21C8       0
+                text62                             1E98     1E98       1E     3D30       0
+                text61                             1D74     1D74       15     3AE8       0
+                text60                             1D60     1D60       14     3AC0       0
+                text59                             1C03     1C03        7     3806       0
+                text58                             1CDF     1CDF       12     39BE       0
+                text57                             1CBE     1CBE       10     397C       0
+                text56                             1EB6     1EB6       1E     3D6C       0
+                text55                              7FB      7FB        5        8       0
+                text54                             1C56     1C56        D     38AC       0
+                text53                             1C0A     1C0A        7     3814       0
+                text52                             1BDF     1BDF        6     37BE       0
+                text51                             1FD7     1FD7       29     3FAE       0
+                text50                             1BE5     1BE5        6     37CA       0
+                text49                             1CCE     1CCE       11     399C       0
+                text48                             1BEB     1BEB        6     37D6       0
+                text47                             1D27     1D27       13     3A4E       0
+                text46                             1BF1     1BF1        6     37E2       0
+                text45                             1D3A     1D3A       13     3A74       0
+                text44                             1BD1     1BD1        4     37A2       0
+                text43                             1D9E     1D9E       16     3B3C       0
+                text42                             1ED4     1ED4       1E     3DA8       0
                 text41                             152C     152C       8F     2A58       0
-                text40                             1E39     1E39       1A     3C72       0
-                text39                             11A9     11A9       51     2352       0
-                text38                             1D1C     1D1C       11     3A38       0
-                text37                             10CC     10CC       2D     2198       0
+                text40                             1E12     1E12       1A     3C24       0
+                text39                             119F     119F       51     233E       0
+                text38                             1CF1     1CF1       12     39E2       0
+                text37                             10B6     10B6       2E     216C       0
                 text36                             15BB     15BB       91     2B76       0
-                text35                             1C10     1C10        1     3820       0
+                text35                             1BC4     1BC4        1     3788       0
                 text34                             136A     136A       66     26D4       0
                 text33                             13D0     13D0       66     27A0       0
-                text32                              846      846       A9     108C       0
-                text31                                2        2        2        0       0
-                text30                             1DF2     1DF2       17     3BE4       0
-                text29                             12AD     12AD       5B     255A       0
-                text28                             1D3F     1D3F       12     3A7E       0
-                text27                             1D89     1D89       13     3B12       0
-                text26                             1DC5     1DC5       16     3B8A       0
-                text25                             1F37     1F37       20     3E6E       0
-                text24                             1F57     1F57       20     3EAE       0
-                text23                             1F77     1F77       20     3EEE       0
-                text22                             1F97     1F97       20     3F2E       0
-                text21                             1308     1308       62     2610       0
-                text20                             1D51     1D51       12     3AA2       0
-                text19                             1253     1253       5A     24A6       0
-                text18                             1CDC     1CDC        F     39B8       0
-                text17                             1C56     1C56        7     38AC       0
-                text16                             1C5D     1C5D        7     38BA       0
-                text15                             1E53     1E53       1A     3CA6       0
-                text14                             115F     115F       4A     22BE       0
-                text13                              800      800        1        8       0
-                text12                             1E87     1E87       1B     3D0E       0
-                text11                             1C64     1C64        7     38C8       0
-                text10                             11FA     11FA       59     23F4       0
-                text9                              1E6D     1E6D       1A     3CDA       0
-                text8                              1075     1075       2B     20EA       0
-                text7                              1E21     1E21       18     3C42       0
-                text6                              1C21     1C21        4     3842       0
-                text5                               7FE      7FE        2        8       0
-                text4                              104B     104B       2A     2096       0
+                text32                              84C      84C       AA     1098       0
+                text31                              800      800        2        8       0
+                text30                             1DCB     1DCB       17     3B96       0
+                text29                             124A     124A       5B     2494       0
+                text28                             1D03     1D03       12     3A06       0
+                text27                             1D4D     1D4D       13     3A9A       0
+                text26                             1D89     1D89       15     3B12       0
+                text25                             1F12     1F12       20     3E24       0
+                text24                             1F32     1F32       20     3E64       0
+                text23                             1F52     1F52       20     3EA4       0
+                text22                             1F72     1F72       20     3EE4       0
+                text21                             12A5     12A5       62     254A       0
+                text20                             1D15     1D15       12     3A2A       0
+                text19                             1307     1307       63     260E       0
+                text18                             1C9F     1C9F        F     393E       0
+                text17                             1C11     1C11        7     3822       0
+                text16                             1C18     1C18        7     3830       0
+                text15                             1E2C     1E2C       1A     3C58       0
+                text14                              802      802       4A     1004       0
+                text13                             1000     1000        1     165C       0
+                text12                             1E60     1E60       1B     3CC0       0
+                text11                             1001     1001        7     2002       0
+                text10                             11F0     11F0       5A     23E0       0
+                text9                              1E46     1E46       1A     3C8C       0
+                text8                              1032     1032       2B     2064       0
+                text7                              1DFA     1DFA       18     3BF4       0
+                text6                              1BD5     1BD5        4     37AA       0
+                text5                                 2        2        2        0       0
+                text4                              1008     1008       2A     2010       0
                 text3                               B2E      B2E      4D2     165C       0
-                text2                               801      801       45     1002       0
-                text1                               7B9      7B9       45        8       0
-                maintext                           1FDA     1FDA       26     3FB4       0
-                cstackBANK0                          20       20       49       20       1
-                cstackCOMMON                         70       70        E       70       1
-                clrtext                            1C3C     1C3C        6     3878       0
-                inittext                           1C42     1C42        6     3884       0
+                text2                              1113     1113       46     2226       0
+                text1                              1159     1159       46     22B2       0
+                maintext                           1089     1089       2D     2112       0
+                cstackBANK0                          20       20       4C       20       1
+                cstackCOMMON                         70       70        C       70       1
+                clrtext                            1BF7     1BF7        6     37EE       0
+                inittext                           1BFD     1BFD        6     37FA       0
                 bssBANK2                            120      120       20      120       1
                 dataBANK1                            A0       A0       22       A0       1
-                bssBANK1                             C2       C2        A       A0       1
-                bssBANK0                             69       69        7       20       1
-                nvBANK1                              CC       CC        6       A0       1
+                bssBANK1                             C2       C2        D       A0       1
+                bssBANK0                             6C       6C        4       20       1
+                bssCOMMON                            7C       7C        1       70       1
+                nvBANK1                              CF       CF        8       A0       1
                 stringtext3                        1824     1824        4     3000       0
                 stringtext2                        1800     1800       20     3000       0
                 stringtext1                        1820     1820        4     3000       0
-                idataBANK1                         1000     1000       22     165C       0
+                idataBANK1                         1F92     1F92       22     3F24       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
-                end_init                             34       34        2         0
-                cinit                                36       36       28         0
-                intentry                              4        4       30         0
+                end_init                             42       42        2         0
+                cinit                                44       44       25         0
+                intentry                              4        4       3E         0
                 reset_vec                             0        0        2         0
-                text3_split_1                        5E       5E      504         0
-                text91                             1C11     1C11        3         0
-                text90                             1C74     1C74        A         0
-                text89                             1C0C     1C0C        1         0
-                text88                             1CAF     1CAF        F         0
-                text87                             1C6B     1C6B        9         0
-                text86                             1C14     1C14        3         0
-                text85                             10A0     10A0       2C         0
-                text84                             1C0D     1C0D        1         0
-                text83                             1CBE     1CBE        F         0
-                text82                             1EBE     1EBE       1D         0
-                text81                             1C0E     1C0E        1         0
-                text80                             1CCD     1CCD        F         0
-                text78                             1C7E     1C7E        C         0
-                text77                             1C17     1C17        3         0
-                text76                             1C1A     1C1A        3         0
-                text75                             1CEB     1CEB       10         0
-                text74                             1C8A     1C8A        C         0
-                text73                             164C     164C      1B4         0
-                text72                             1FB7     1FB7       23         0
-                text71                              562      562      257         0
-                text70                              8EF      8EF      23F         0
-                text69                             1F17     1F17       20         0
-                text68                             1436     1436       75         0
-                text67                             14AB     14AB       81         0
-                text66                             1E09     1E09       18         0
-                text65                             1C96     1C96        C         0
-                text64                             1DDB     1DDB       17         0
-                text63                             1C0F     1C0F        1         0
-                text62                             1128     1128       37         0
-                text61                             10F9     10F9       2F         0
-                text60                             1EA2     1EA2       1C         0
-                text59                             1DB0     1DB0       15         0
-                text58                             1D9C     1D9C       14         0
-                text57                             1C48     1C48        7         0
-                text56                             1D2D     1D2D       12         0
-                text55                             1CFB     1CFB       10         0
-                text54                             1EDB     1EDB       1E         0
-                text53                             1C25     1C25        5         0
-                text52                             1CA2     1CA2        D         0
-                text51                             1C4F     1C4F        7         0
-                text50                             1C2A     1C2A        6         0
-                text49                             1022     1022       29         0
-                text48                             1C30     1C30        6         0
-                text47                             1D0B     1D0B       11         0
-                text46                             1C36     1C36        6         0
-                text45                             1D63     1D63       13         0
-                text44                             1C1D     1C1D        4         0
-                text43                             1D76     1D76       13         0
-                text42                             1EF9     1EF9       1E         0
+                text3_split_1                        69       69      504         0
+                text96                             1BC5     1BC5        3         0
+                text95                             1C28     1C28        A         0
+                text94                             1BBF     1BBF        1         0
+                text93                             1C63     1C63        F         0
+                text92                             1C1F     1C1F        9         0
+                text91                             1BC8     1BC8        3         0
+                text90                             105D     105D       2C         0
+                text89                             1BC0     1BC0        1         0
+                text88                             1C72     1C72        F         0
+                text87                             1E7B     1E7B       1D         0
+                text86                             1BC1     1BC1        1         0
+                text85                             1C81     1C81        F         0
+                text84                             1BD9     1BD9        6         0
+                text83                             1BC2     1BC2        1         0
+                text82                             1C90     1C90        F         0
+                text80                             1C32     1C32        C         0
+                text79                             1BCB     1BCB        3         0
+                text78                             1BCE     1BCE        3         0
+                text77                             1CAE     1CAE       10         0
+                text76                             1C3E     1C3E        C         0
+                text75                             164C     164C      1B4         0
+                text74                             1FB4     1FB4       23         0
+                text73                              56D      56D      257         0
+                text72                              8F6      8F6      238         0
+                text71                             1EF2     1EF2       20         0
+                text70                             1436     1436       75         0
+                text69                             14AB     14AB       81         0
+                text68                             1DE2     1DE2       18         0
+                text67                             1C4A     1C4A        C         0
+                text66                             1DB4     1DB4       17         0
+                text65                             1BC3     1BC3        1         0
+                text64                              7C4      7C4       37         0
+                text63                             10E4     10E4       2F         0
+                text62                             1E98     1E98       1E         0
+                text61                             1D74     1D74       15         0
+                text60                             1D60     1D60       14         0
+                text59                             1C03     1C03        7         0
+                text58                             1CDF     1CDF       12         0
+                text57                             1CBE     1CBE       10         0
+                text56                             1EB6     1EB6       1E         0
+                text55                              7FB      7FB        5         0
+                text54                             1C56     1C56        D         0
+                text53                             1C0A     1C0A        7         0
+                text52                             1BDF     1BDF        6         0
+                text51                             1FD7     1FD7       29         0
+                text50                             1BE5     1BE5        6         0
+                text49                             1CCE     1CCE       11         0
+                text48                             1BEB     1BEB        6         0
+                text47                             1D27     1D27       13         0
+                text46                             1BF1     1BF1        6         0
+                text45                             1D3A     1D3A       13         0
+                text44                             1BD1     1BD1        4         0
+                text43                             1D9E     1D9E       16         0
+                text42                             1ED4     1ED4       1E         0
                 text41                             152C     152C       8F         0
-                text40                             1E39     1E39       1A         0
-                text39                             11A9     11A9       51         0
-                text38                             1D1C     1D1C       11         0
-                text37                             10CC     10CC       2D         0
+                text40                             1E12     1E12       1A         0
+                text39                             119F     119F       51         0
+                text38                             1CF1     1CF1       12         0
+                text37                             10B6     10B6       2E         0
                 text36                             15BB     15BB       91         0
-                text35                             1C10     1C10        1         0
+                text35                             1BC4     1BC4        1         0
                 text34                             136A     136A       66         0
                 text33                             13D0     13D0       66         0
-                text32                              846      846       A9         0
-                text31                                2        2        2         0
-                text30                             1DF2     1DF2       17         0
-                text29                             12AD     12AD       5B         0
-                text28                             1D3F     1D3F       12         0
-                text27                             1D89     1D89       13         0
-                text26                             1DC5     1DC5       16         0
-                text25                             1F37     1F37       20         0
-                text24                             1F57     1F57       20         0
-                text23                             1F77     1F77       20         0
-                text22                             1F97     1F97       20         0
-                text21                             1308     1308       62         0
-                text20                             1D51     1D51       12         0
-                text19                             1253     1253       5A         0
-                text18                             1CDC     1CDC        F         0
-                text17                             1C56     1C56        7         0
-                text16                             1C5D     1C5D        7         0
-                text15                             1E53     1E53       1A         0
-                text14                             115F     115F       4A         0
-                text13                              800      800        1         0
-                text12                             1E87     1E87       1B         0
-                text11                             1C64     1C64        7         0
-                text10                             11FA     11FA       59         0
-                text9                              1E6D     1E6D       1A         0
-                text8                              1075     1075       2B         0
-                text7                              1E21     1E21       18         0
-                text6                              1C21     1C21        4         0
-                text5                               7FE      7FE        2         0
-                text4                              104B     104B       2A         0
+                text32                              84C      84C       AA         0
+                text31                              800      800        2         0
+                text30                             1DCB     1DCB       17         0
+                text29                             124A     124A       5B         0
+                text28                             1D03     1D03       12         0
+                text27                             1D4D     1D4D       13         0
+                text26                             1D89     1D89       15         0
+                text25                             1F12     1F12       20         0
+                text24                             1F32     1F32       20         0
+                text23                             1F52     1F52       20         0
+                text22                             1F72     1F72       20         0
+                text21                             12A5     12A5       62         0
+                text20                             1D15     1D15       12         0
+                text19                             1307     1307       63         0
+                text18                             1C9F     1C9F        F         0
+                text17                             1C11     1C11        7         0
+                text16                             1C18     1C18        7         0
+                text15                             1E2C     1E2C       1A         0
+                text14                              802      802       4A         0
+                text13                             1000     1000        1         0
+                text12                             1E60     1E60       1B         0
+                text11                             1001     1001        7         0
+                text10                             11F0     11F0       5A         0
+                text9                              1E46     1E46       1A         0
+                text8                              1032     1032       2B         0
+                text7                              1DFA     1DFA       18         0
+                text6                              1BD5     1BD5        4         0
+                text5                                 2        2        2         0
+                text4                              1008     1008       2A         0
                 text3                               B2E      B2E      4D2         0
-                text2                               801      801       45         0
-                text1                               7B9      7B9       45         0
-                maintext                           1FDA     1FDA       26         0
-                clrtext                            1C3C     1C3C        6         0
-                inittext                           1C42     1C42        6         0
-                idataBANK1                         1000     1000       22         0
+                text2                              1113     1113       46         0
+                text1                              1159     1159       46         0
+                maintext                           1089     1089       2D         0
+                clrtext                            1BF7     1BF7        6         0
+                inittext                           1BFD     1BFD        6         0
+                idataBANK1                         1F92     1F92       22         0
 
         CLASS   STRCODE        
                 stringtext3                        1824     1824        4         0
@@ -273,16 +284,17 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ENTRY          
 
         CLASS   COMMON         
-                cstackCOMMON                         70       70        E         1
+                cstackCOMMON                         70       70        C         1
+                bssCOMMON                            7C       7C        1         1
 
         CLASS   BANK0          
-                cstackBANK0                          20       20       49         1
-                bssBANK0                             69       69        7         1
+                cstackBANK0                          20       20       4C         1
+                bssBANK0                             6C       6C        4         1
 
         CLASS   BANK1          
                 dataBANK1                            A0       A0       22         1
-                bssBANK1                             C2       C2        A         1
-                nvBANK1                              CC       CC        6         1
+                bssBANK1                             C2       C2        D         1
+                nvBANK1                              CF       CF        8         1
 
         CLASS   BANK2          
                 bssBANK2                            120      120       20         1
@@ -428,107 +440,112 @@ TOTAL           Name                               Link     Load   Length     Sp
 
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
-                text7                          001E21  000018  001E39      3C42       0  CODE        2
-                text40                         001E39  00001A  001E53      3C72       0  CODE        2
-                text30                         001DF2  000017  001E09      3BE4       0  CODE        2
-                text66                         001E09  000018  001E21      3C12       0  CODE        2
-                text15                         001E53  00001A  001E6D      3CA6       0  CODE        2
-                text60                         001EA2  00001C  001EBE      3D44       0  CODE        2
-                text82                         001EBE  00001D  001EDB      3D7C       0  CODE        2
-                text9                          001E6D  00001A  001E87      3CDA       0  CODE        2
-                text12                         001E87  00001B  001EA2      3D0E       0  CODE        2
-                text45                         001D63  000013  001D76      3AC6       0  CODE        2
-                text43                         001D76  000013  001D89      3AEC       0  CODE        2
-                text28                         001D3F  000012  001D51      3A7E       0  CODE        2
-                text20                         001D51  000012  001D63      3AA2       0  CODE        2
-                text27                         001D89  000013  001D9C      3B12       0  CODE        2
-                text26                         001DC5  000016  001DDB      3B8A       0  CODE        2
-                text64                         001DDB  000017  001DF2      3BB6       0  CODE        2
-                text58                         001D9C  000014  001DB0      3B38       0  CODE        2
-                text59                         001DB0  000015  001DC5      3B60       0  CODE        2
-                text54                         001EDB  00001E  001EF9      3DB6       0  CODE        2
-                text8                          001075  00002B  0010A0      20EA       0  CODE        2
-                text85                         0010A0  00002C  0010CC      2140       0  CODE        2
-                text49                         001022  000029  00104B      2044       0  CODE        2
-                text4                          00104B  00002A  001075      2096       0  CODE        2
-                text37                         0010CC  00002D  0010F9      2198       0  CODE        2
-                text2                          000801  000045  000846      1002       0  CODE        2
-                text14                         00115F  00004A  0011A9      22BE       0  CODE        2
-                text61                         0010F9  00002F  001128      21F2       0  CODE        2
-                text62                         001128  000037  00115F      2250       0  CODE        2
-                text25                         001F37  000020  001F57      3E6E       0  CODE        2
-                text24                         001F57  000020  001F77      3EAE       0  CODE        2
-                text42                         001EF9  00001E  001F17      3DF2       0  CODE        2
-                text69                         001F17  000020  001F37      3E2E       0  CODE        2
-                text23                         001F77  000020  001F97      3EEE       0  CODE        2
-                text72                         001FB7  000023  001FDA      3F6E       0  CODE        2
-                maintext                       001FDA  000026  002000      3FB4       0  CODE        2
-                text22                         001F97  000020  001FB7      3F2E       0  CODE        2
+                text30                         001DCB  000017  001DE2      3B96       0  CODE        2
+                text68                         001DE2  000018  001DFA      3BC4       0  CODE        2
+                text43                         001D9E  000016  001DB4      3B3C       0  CODE        2
+                text66                         001DB4  000017  001DCB      3B68       0  CODE        2
+                text7                          001DFA  000018  001E12      3BF4       0  CODE        2
+                text9                          001E46  00001A  001E60      3C8C       0  CODE        2
+                text12                         001E60  00001B  001E7B      3CC0       0  CODE        2
+                text40                         001E12  00001A  001E2C      3C24       0  CODE        2
+                text15                         001E2C  00001A  001E46      3C58       0  CODE        2
+                text26                         001D89  000015  001D9E      3B12       0  CODE        2
+                text28                         001D03  000012  001D15      3A06       0  CODE        2
+                text20                         001D15  000012  001D27      3A2A       0  CODE        2
+                text58                         001CDF  000012  001CF1      39BE       0  CODE        2
+                text38                         001CF1  000012  001D03      39E2       0  CODE        2
+                text47                         001D27  000013  001D3A      3A4E       0  CODE        2
+                text60                         001D60  000014  001D74      3AC0       0  CODE        2
+                text61                         001D74  000015  001D89      3AE8       0  CODE        2
+                text45                         001D3A  000013  001D4D      3A74       0  CODE        2
+                text27                         001D4D  000013  001D60      3A9A       0  CODE        2
+                text51                         001FD7  000029  002000      3FAE       0  CODE        2
+                text4                          001008  00002A  001032      2010       0  CODE        2
+                idataBANK1                     001F92  000022  001FB4      3F24       0  CODE        2
+                text74                         001FB4  000023  001FD7      3F68       0  CODE        2
+                text8                          001032  00002B  00105D      2064       0  CODE        2
+                text37                         0010B6  00002E  0010E4      216C       0  CODE        2
+                text63                         0010E4  00002F  001113      21C8       0  CODE        2
+                text90                         00105D  00002C  001089      20BA       0  CODE        2
+                maintext                       001089  00002D  0010B6      2112       0  CODE        2
                 stringtext2                    001800  000028  001828      3000       0  STRCODE     2
-                text53                         001C25  000005  001C2A      384A       0  CODE        2
-                text50                         001C2A  000006  001C30      3854       0  CODE        2
-                text44                         001C1D  000004  001C21      383A       0  CODE        2
-                text6                          001C21  000004  001C25      3842       0  CODE        2
-                text48                         001C30  000006  001C36      3860       0  CODE        2
-                inittext                       001C42  000006  001C48      3884       0  CODE        2
-                text57                         001C48  000007  001C4F      3890       0  CODE        2
-                text46                         001C36  000006  001C3C      386C       0  CODE        2
-                clrtext                        001C3C  000006  001C42      3878       0  CODE        2
-                text81                         001C0E  000001  001C0F      381C       0  CODE        2
-                text63                         001C0F  000001  001C10      381E       0  CODE        2
-                text89                         001C0C  000001  001C0D      3818       0  CODE        2
-                text84                         001C0D  000001  001C0E      381A       0  CODE        2
-                text35                         001C10  000001  001C11      3820       0  CODE        2
-                text77                         001C17  000003  001C1A      382E       0  CODE        2
-                text76                         001C1A  000003  001C1D      3834       0  CODE        2
-                text91                         001C11  000003  001C14      3822       0  CODE        2
-                text86                         001C14  000003  001C17      3828       0  CODE        2
-                text51                         001C4F  000007  001C56      389E       0  CODE        2
-                text80                         001CCD  00000F  001CDC      399A       0  CODE        2
-                text18                         001CDC  00000F  001CEB      39B8       0  CODE        2
-                text88                         001CAF  00000F  001CBE      395E       0  CODE        2
-                text83                         001CBE  00000F  001CCD      397C       0  CODE        2
-                text75                         001CEB  000010  001CFB      39D6       0  CODE        2
-                text38                         001D1C  000011  001D2D      3A38       0  CODE        2
-                text56                         001D2D  000012  001D3F      3A5A       0  CODE        2
-                text55                         001CFB  000010  001D0B      39F6       0  CODE        2
-                text47                         001D0B  000011  001D1C      3A16       0  CODE        2
-                text11                         001C64  000007  001C6B      38C8       0  CODE        2
-                text87                         001C6B  000009  001C74      38D6       0  CODE        2
-                text17                         001C56  000007  001C5D      38AC       0  CODE        2
-                text16                         001C5D  000007  001C64      38BA       0  CODE        2
-                text90                         001C74  00000A  001C7E      38E8       0  CODE        2
-                text65                         001C96  00000C  001CA2      392C       0  CODE        2
-                text52                         001CA2  00000D  001CAF      3944       0  CODE        2
-                text78                         001C7E  00000C  001C8A      38FC       0  CODE        2
-                text74                         001C8A  00000C  001C96      3914       0  CODE        2
+                text56                         001EB6  00001E  001ED4      3D6C       0  CODE        2
+                text42                         001ED4  00001E  001EF2      3DA8       0  CODE        2
+                text87                         001E7B  00001D  001E98      3CF6       0  CODE        2
+                text62                         001E98  00001E  001EB6      3D30       0  CODE        2
+                text71                         001EF2  000020  001F12      3DE4       0  CODE        2
+                text23                         001F52  000020  001F72      3EA4       0  CODE        2
+                text22                         001F72  000020  001F92      3EE4       0  CODE        2
+                text25                         001F12  000020  001F32      3E24       0  CODE        2
+                text24                         001F32  000020  001F52      3E64       0  CODE        2
+                text84                         001BD9  000006  001BDF      37B2       0  CODE        2
+                text52                         001BDF  000006  001BE5      37BE       0  CODE        2
+                text44                         001BD1  000004  001BD5      37A2       0  CODE        2
+                text6                          001BD5  000004  001BD9      37AA       0  CODE        2
+                text50                         001BE5  000006  001BEB      37CA       0  CODE        2
+                clrtext                        001BF7  000006  001BFD      37EE       0  CODE        2
+                inittext                       001BFD  000006  001C03      37FA       0  CODE        2
+                text48                         001BEB  000006  001BF1      37D6       0  CODE        2
+                text46                         001BF1  000006  001BF7      37E2       0  CODE        2
+                text78                         001BCE  000003  001BD1      379C       0  CODE        2
+                text86                         001BC1  000001  001BC2      3782       0  CODE        2
+                text83                         001BC2  000001  001BC3      3784       0  CODE        2
+                text94                         001BBF  000001  001BC0      377E       0  CODE        2
+                text89                         001BC0  000001  001BC1      3780       0  CODE        2
+                text65                         001BC3  000001  001BC4      3786       0  CODE        2
+                text91                         001BC8  000003  001BCB      3790       0  CODE        2
+                text79                         001BCB  000003  001BCE      3796       0  CODE        2
+                text35                         001BC4  000001  001BC5      3788       0  CODE        2
+                text96                         001BC5  000003  001BC8      378A       0  CODE        2
+                text88                         001C72  00000F  001C81      38E4       0  CODE        2
+                text85                         001C81  00000F  001C90      3902       0  CODE        2
+                text54                         001C56  00000D  001C63      38AC       0  CODE        2
+                text93                         001C63  00000F  001C72      38C6       0  CODE        2
+                text82                         001C90  00000F  001C9F      3920       0  CODE        2
+                text57                         001CBE  000010  001CCE      397C       0  CODE        2
+                text49                         001CCE  000011  001CDF      399C       0  CODE        2
+                text18                         001C9F  00000F  001CAE      393E       0  CODE        2
+                text77                         001CAE  000010  001CBE      395C       0  CODE        2
+                text67                         001C4A  00000C  001C56      3894       0  CODE        2
+                text17                         001C11  000007  001C18      3822       0  CODE        2
+                text16                         001C18  000007  001C1F      3830       0  CODE        2
+                text59                         001C03  000007  001C0A      3806       0  CODE        2
+                text53                         001C0A  000007  001C11      3814       0  CODE        2
+                text11                         001001  000007  001008      2002       0  CODE        2
+                text80                         001C32  00000C  001C3E      3864       0  CODE        2
+                text76                         001C3E  00000C  001C4A      387C       0  CODE        2
+                text92                         001C1F  000009  001C28      383E       0  CODE        2
+                text95                         001C28  00000A  001C32      3850       0  CODE        2
+                text2                          001113  000046  001159      2226       0  CODE        2
                 reset_vec                      000000  000004  000004         0       0  CODE        2
                 cstackBANK0                    000020  000050  000070        20       1  BANK0       1
                 bssBANK2                       000120  000020  000140       120       1  BANK2       1
-                dataBANK1                      0000A0  000032  0000D2        A0       1  BANK1       1
-                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
-                intentry                       000004  0007FD  000801         8       0  CODE        2
-                text21                         001308  000062  00136A      2610       0  CODE        2
+                dataBANK1                      0000A0  000037  0000D7        A0       1  BANK1       1
+                cstackCOMMON                   000070  00000D  00007D        70       1  COMMON      1
+                intentry                       000004  0007FE  000802         8       0  CODE        2
+                text21                         0012A5  000062  001307      254A       0  CODE        2
+                text19                         001307  000063  00136A      260E       0  CODE        2
+                text29                         00124A  00005B  0012A5      2494       0  CODE        2
                 text34                         00136A  000066  0013D0      26D4       0  CODE        2
-                text29                         0012AD  00005B  001308      255A       0  CODE        2
+                text10                         0011F0  00005A  00124A      23E0       0  CODE        2
                 text33                         0013D0  000066  001436      27A0       0  CODE        2
-                text19                         001253  00005A  0012AD      24A6       0  CODE        2
-                text68                         001436  000075  0014AB      286C       0  CODE        2
-                text67                         0014AB  000081  00152C      2956       0  CODE        2
-                text10                         0011FA  000059  001253      23F4       0  CODE        2
-                text39                         0011A9  000051  0011FA      2352       0  CODE        2
+                text70                         001436  000075  0014AB      286C       0  CODE        2
+                text39                         00119F  000051  0011F0      233E       0  CODE        2
+                text14                         000802  00004A  00084C      1004       0  CODE        2
+                text1                          001159  000046  00119F      22B2       0  CODE        2
+                text72                         0008F6  000238  000B2E      11EC       0  CODE        2
+                text3                          000B2E  0004D3  001001      165C       0  CODE        2
                 text41                         00152C  00008F  0015BB      2A58       0  CODE        2
-                text3                          000B2E  0004F4  001022      165C       0  CODE        2
-                text32                         000846  0000A9  0008EF      108C       0  CODE        2
+                text69                         0014AB  000081  00152C      2956       0  CODE        2
                 text36                         0015BB  000091  00164C      2B76       0  CODE        2
-                text70                         0008EF  00023F  000B2E      11DE       0  CODE        2
-                text73                         00164C  0001B4  001800      2C98       0  CODE        2
+                text75                         00164C  0001B4  001800      2C98       0  CODE        2
+                text32                         00084C  0000AA  0008F6      1098       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK1            0000D2-0000EF               1E           1
+        BANK1            0000D7-0000EF               19           1
         BANK10           000520-00056F               50           1
         BANK11           0005A0-0005EF               50           1
         BANK12           000620-00064F               30           1
@@ -541,11 +558,12 @@ UNUSED ADDRESS RANGES
         BANK8            000420-00046F               50           1
         BANK9            0004A0-0004EF               50           1
         BIGRAM           002000-0023EF              3F0           1
-        CODE             001828-001C0B              3E4           2
-        CONST            001828-001C0B              100           2
+        CODE             001828-001BBE              397           2
+        COMMON           00007D-00007D                1           1
+        CONST            001828-001BBE              100           2
         EEDATA           00F000-00F0FF              100           2
-        ENTRY            001828-001C0B              100           2
-        RAM              0000D2-0000EF               1E           1
+        ENTRY            001828-001BBE              100           2
+        RAM              0000D7-0000EF               19           1
                          000140-00016F               30
                          0001A0-0001EF               50
                          000220-00026F               50
@@ -590,80 +608,81 @@ UNUSED ADDRESS RANGES
         SFR8             000400-00041F               20           1
         SFR9             000480-00049F               20           1
         STACK            0020C0-0023EF              330           1
-        STRCODE          001828-001C0B              3E4           2
-        STRING           001828-001C0B              100           2
+        STRCODE          001828-001BBE              397           2
+        STRING           001828-001BBE              100           2
 
                                   Symbol Table
 
-?_MTOUCH_Sensor_RawSample_Get                cstackCOMMON 000074
-?__Umul8_16                                  cstackCOMMON 000070
-?___fladd                                    cstackCOMMON 000070
-?___fldiv                                    cstackBANK0  000035
+?_MTOUCH_Sensor_RawSample_Get                cstackCOMMON 000075
+?__Umul8_16                                  cstackCOMMON 000071
+?___fladd                                    cstackCOMMON 000071
+?___fldiv                                    cstackBANK0  00003A
 ?___flmul                                    cstackBANK0  000020
-?___flsub                                    cstackBANK0  00004F
-?___fltol                                    cstackBANK0  00004F
-?_abs                                        cstackCOMMON 000070
-Button_Baseline_Initialize@button            cstackCOMMON 00007C
-Button_Baseline_Update@button                cstackCOMMON 000076
-Button_DefaultCallback@button                cstackCOMMON 000070
+?___flsub                                    cstackBANK0  000054
+?___fltol                                    cstackBANK0  000054
+?_abs                                        cstackCOMMON 000071
+Button_Baseline_Initialize@button            cstackCOMMON 000079
+Button_Baseline_Update@button                cstackCOMMON 000077
+Button_DefaultCallback@button                cstackCOMMON 000071
 Button_Deviation_Update@button               cstackBANK0  000020
 Button_Deviation_Update@deviation            cstackBANK0  000021
-Button_Reading_Update@button                 cstackCOMMON 00007B
-Button_Reading_Update_Helper@button          cstackCOMMON 00007A
-Button_Service@button                        cstackBANK0  000028
-Button_Service@name                          cstackBANK0  000027
-Button_State_Initializing@button             cstackCOMMON 00007D
-Button_State_NotPressed@button               cstackCOMMON 00007D
-Button_State_Pressed@button                  cstackCOMMON 00007D
-Button_Tick_helper@button                    cstackCOMMON 000072
-IOCAF2_SetInterruptHandler@InterruptHandler  cstackCOMMON 000070
-MTOUCH_Button_Initialize@button              cstackCOMMON 000073
-MTOUCH_Button_Initialize@name                cstackCOMMON 000072
-MTOUCH_Button_InitializeAll@button           cstackCOMMON 00007B
-MTOUCH_Button_ServiceAll@button              cstackBANK0  00002A
-MTOUCH_Button_Tick@i                         cstackCOMMON 000074
-MTOUCH_Button_isPressed@name                 cstackCOMMON 000071
-MTOUCH_Delay@i                               cstackCOMMON 000071
-MTOUCH_Random@seed                           bssBANK0     00006F
-MTOUCH_Sensor_Enable@sensor                  cstackCOMMON 000075
-MTOUCH_Sensor_Initialize@sensor              cstackCOMMON 000077
-MTOUCH_Sensor_InitializeAll@sensor           cstackCOMMON 000079
-MTOUCH_Sensor_RawSample_Get@name             cstackCOMMON 000077
-MTOUCH_Sensor_SampleAll@sensor               cstackBANK0  000029
-MTOUCH_Sensor_Sampled_ResetAll@sensor        cstackCOMMON 000072
-MTOUCH_Sensor_wasSampled@sensor              cstackCOMMON 000075
-Sensor_Acq_ExecutePacket@ADCON0_temp         cstackCOMMON 000079
-Sensor_Acq_ExecutePacket@ADCON1_temp         cstackCOMMON 00007A
-Sensor_Acq_ExecutePacket@GIE_state           cstackCOMMON 00007B
-Sensor_Acq_ExecutePacket@error               cstackCOMMON 00007C
-Sensor_Acq_ExecutePacket@sensor              cstackCOMMON 00007D
-Sensor_Acq_ExecuteScan@result                cstackCOMMON 000076
-Sensor_Acquisition@retry                     cstackBANK0  000021
-Sensor_Acquisition@sensor                    cstackBANK0  000022
-Sensor_DefaultCallback@sensor                cstackCOMMON 000070
-Sensor_RawSample_Update@sensor               cstackCOMMON 000070
-Sensor_Sampled_Reset@sensor                  cstackCOMMON 000070
-Sensor_Service@error                         cstackBANK0  000026
-Sensor_Service@name                          cstackBANK0  000025
-Sensor_Service@sensor                        cstackBANK0  000027
-Sensor_isEnabled@sensor                      cstackCOMMON 000070
-Sensor_setActive@sensor                      cstackCOMMON 000070
-Sensor_setInactive@sensor                    cstackCOMMON 000070
-Sensor_setSampled@sensor                     cstackCOMMON 000070
-Sensor_setScanFunction@sensor                cstackCOMMON 000070
-SetDimmer@TRIAC_off_duration_ms              cstackBANK0  00005E
-SetDimmer@dim_percentage                     cstackBANK0  00005A
-StartHeater@i                                cstackBANK0  000066
-StartHeater@status_flag                      cstackBANK0  000065
-StartStop_AlarmLED@OnOff                     cstackCOMMON 000070
-StartStop_AlarmLED_Blink@OnOff               cstackCOMMON 000070
-StartStop_Buzzer@OnOff                       cstackCOMMON 000070
-StartStop_Dimmer@OnOff                       cstackBANK0  000062
-StartStop_Fan@OnOff                          cstackCOMMON 000070
+Button_Reading_Update@button                 cstackBANK0  000020
+Button_Reading_Update_Helper@button          cstackCOMMON 00007B
+Button_Service@button                        cstackBANK0  00002C
+Button_Service@name                          cstackBANK0  00002B
+Button_State_Initializing@button             cstackBANK0  000024
+Button_State_NotPressed@button               cstackBANK0  000024
+Button_State_Pressed@button                  cstackBANK0  000024
+Button_Tick_helper@button                    cstackCOMMON 000073
+IOCAF2_SetInterruptHandler@InterruptHandler  cstackCOMMON 000071
+MTOUCH_Button_Initialize@button              cstackCOMMON 000074
+MTOUCH_Button_Initialize@name                cstackCOMMON 000073
+MTOUCH_Button_InitializeAll@button           cstackBANK0  000020
+MTOUCH_Button_ServiceAll@button              cstackBANK0  00002E
+MTOUCH_Button_Tick@i                         cstackCOMMON 000075
+MTOUCH_Button_isPressed@name                 cstackCOMMON 000072
+MTOUCH_Delay@i                               cstackCOMMON 000072
+MTOUCH_Random@seed                           bssCOMMON    00007C
+MTOUCH_Sensor_Enable@sensor                  cstackCOMMON 000076
+MTOUCH_Sensor_Initialize@sensor              cstackCOMMON 000078
+MTOUCH_Sensor_InitializeAll@sensor           cstackCOMMON 00007A
+MTOUCH_Sensor_RawSample_Get@name             cstackCOMMON 000078
+MTOUCH_Sensor_SampleAll@sensor               cstackBANK0  00002C
+MTOUCH_Sensor_Sampled_ResetAll@sensor        cstackCOMMON 000073
+MTOUCH_Sensor_wasSampled@sensor              cstackCOMMON 000076
+Sensor_Acq_ExecutePacket@ADCON0_temp         cstackBANK0  000020
+Sensor_Acq_ExecutePacket@ADCON1_temp         cstackBANK0  000021
+Sensor_Acq_ExecutePacket@GIE_state           cstackBANK0  000022
+Sensor_Acq_ExecutePacket@error               cstackBANK0  000023
+Sensor_Acq_ExecutePacket@sensor              cstackBANK0  000024
+Sensor_Acq_ExecuteScan@result                cstackCOMMON 000077
+Sensor_Acquisition@retry                     cstackBANK0  000025
+Sensor_Acquisition@sensor                    cstackBANK0  000026
+Sensor_DefaultCallback@sensor                cstackCOMMON 000071
+Sensor_RawSample_Update@sensor               cstackCOMMON 000071
+Sensor_Sampled_Reset@sensor                  cstackCOMMON 000071
+Sensor_Service@error                         cstackBANK0  00002A
+Sensor_Service@name                          cstackBANK0  000029
+Sensor_Service@sensor                        cstackBANK0  00002B
+Sensor_isEnabled@sensor                      cstackCOMMON 000071
+Sensor_setActive@sensor                      cstackCOMMON 000071
+Sensor_setInactive@sensor                    cstackCOMMON 000071
+Sensor_setSampled@sensor                     cstackCOMMON 000071
+Sensor_setScanFunction@sensor                cstackCOMMON 000071
+SetDimmer@TRIAC_off_duration_ms              cstackBANK0  000061
+SetDimmer@dim_percentage                     cstackBANK0  00005D
+StartHeater@i                                cstackBANK0  000069
+StartHeater@status_flag                      cstackBANK0  000068
+StartStop_AlarmLED@OnOff                     cstackCOMMON 000071
+StartStop_AlarmLED_Blink@OnOff               cstackCOMMON 000071
+StartStop_Buzzer@OnOff                       cstackCOMMON 000071
+StartStop_Dimmer@OnOff                       cstackBANK0  000065
+StartStop_Fan@OnOff                          cstackCOMMON 000071
 TMR2_Drive_TRIAC_isr@counter_tmr2            bssBANK1     0000C4
-TMR2_SetInterruptHandler@InterruptHandler    cstackCOMMON 000070
-TMR4_SetInterruptHandler@InterruptHandler    cstackCOMMON 000070
+TMR2_SetInterruptHandler@InterruptHandler    cstackCOMMON 000071
+TMR4_SetInterruptHandler@InterruptHandler    cstackCOMMON 000071
 TMR4_Wroking_Blink_AlarmLED_isr@counter_tmr4 bssBANK1     0000C2
+TMR6_SetInterruptHandler@InterruptHandler    cstackCOMMON 000071
 _ADCON0                                      (abs)        00009D
 _ADCON0bits                                  (abs)        00009D
 _ADCON1                                      (abs)        00009E
@@ -674,127 +693,137 @@ _ANSELC                                      (abs)        00018E
 _APFCON0                                     (abs)        00011D
 _APFCON1                                     (abs)        00011E
 _BORCON                                      (abs)        000116
-_Button_Baseline_Initialize                  text37       0010CC
+_Button_Baseline_Initialize                  text37       0010B6
 _Button_Baseline_Update                      text36       0015BB
-_Button_DefaultCallback                      text35       001C10
+_Button_DefaultCallback                      text35       001BC4
 _Button_Deviation_Update                     text41       00152C
-_Button_Reading_Update                       text38       001D1C
-_Button_Reading_Update_Helper                text39       0011A9
-_Button_Service                              text29       0012AD
+_Button_Reading_Update                       text38       001CF1
+_Button_Reading_Update_Helper                text39       00119F
+_Button_Service                              text29       00124A
 _Button_StateMachine                         dataBANK1    0000A0
 _Button_State_Initializing                   text33       0013D0
-_Button_State_NotPressed                     text32       000846
+_Button_State_NotPressed                     text32       00084C
 _Button_State_Pressed                        text34       00136A
-_Button_Tick_helper                          text8        001075
-_DimmerStatusFlag_g                          bssBANK0     000069
+_Button_Tick_helper                          text8        001032
+_DimmerStatusFlag_g                          bssBANK0     00006C
 _GIE                                         (abs)        00005F
 _INTCONbits                                  (abs)        00000B
 _INTERRUPT_InterruptManager                  intentry     000004
-_IOCAF2_DefaultInterruptHandler              text89       001C0C
-_IOCAF2_ISR                                  text88       001CAF
-_IOCAF2_InterruptHandler                     nvBANK1      0000D0
-_IOCAF2_SetInterruptHandler                  text50       001C2A
+_IOCAF2_DefaultInterruptHandler              text94       001BBF
+_IOCAF2_ISR                                  text93       001C63
+_IOCAF2_InterruptHandler                     nvBANK1      0000D5
+_IOCAF2_SetInterruptHandler                  text52       001BDF
 _IOCAFbits                                   (abs)        000393
 _IOCANbits                                   (abs)        000392
 _IOCAPbits                                   (abs)        000391
-_Init_Function                               text64       001DDB
+_Init_Function                               text66       001DB4
 _LATA                                        (abs)        00010C
 _LATB                                        (abs)        00010D
 _LATC                                        (abs)        00010E
 _LATCbits                                    (abs)        00010E
-_MTOUCH_Button_Initialize                    text62       001128
-_MTOUCH_Button_InitializeAll                 text60       001EA2
-_MTOUCH_Button_ServiceAll                    text28       001D3F
-_MTOUCH_Button_Tick                          text7        001E21
-_MTOUCH_Button_isPressed                     text42       001EF9
-_MTOUCH_CVD_ScanA_0                          text24       001F57
-_MTOUCH_CVD_ScanA_1                          text25       001F37
-_MTOUCH_CVD_ScanB_0                          text22       001F97
-_MTOUCH_CVD_ScanB_1                          text23       001F77
-_MTOUCH_Delay                                text27       001D89
-_MTOUCH_Initialize                           text52       001CA2
-_MTOUCH_Random                               text26       001DC5
-_MTOUCH_Sensor_Calibrate                     text63       001C0F
-_MTOUCH_Sensor_Enable                        text58       001D9C
-_MTOUCH_Sensor_Initialize                    text56       001D2D
-_MTOUCH_Sensor_InitializeAll                 text55       001CFB
-_MTOUCH_Sensor_RawSample_Get                 text40       001E39
-_MTOUCH_Sensor_SampleAll                     text9        001E6D
-_MTOUCH_Sensor_Sampled_ResetAll              text54       001EDB
-_MTOUCH_Sensor_Scan_Initialize               text53       001C25
-_MTOUCH_Sensor_isCalibrated                  text31       000002
-_MTOUCH_Sensor_wasSampled                    text30       001DF2
-_MTOUCH_Service_Mainloop                     text4        00104B
-_MTOUCH_Tick                                 text6        001C21
-_MTOUCH_needReburst                          text5        0007FE
+_MTOUCH_Button_Initialize                    text64       0007C4
+_MTOUCH_Button_InitializeAll                 text62       001E98
+_MTOUCH_Button_ServiceAll                    text28       001D03
+_MTOUCH_Button_Tick                          text7        001DFA
+_MTOUCH_Button_isPressed                     text42       001ED4
+_MTOUCH_CVD_ScanA_0                          text24       001F32
+_MTOUCH_CVD_ScanA_1                          text25       001F12
+_MTOUCH_CVD_ScanB_0                          text22       001F72
+_MTOUCH_CVD_ScanB_1                          text23       001F52
+_MTOUCH_Delay                                text27       001D4D
+_MTOUCH_Initialize                           text54       001C56
+_MTOUCH_Random                               text26       001D89
+_MTOUCH_Sensor_Calibrate                     text65       001BC3
+_MTOUCH_Sensor_Enable                        text60       001D60
+_MTOUCH_Sensor_Initialize                    text58       001CDF
+_MTOUCH_Sensor_InitializeAll                 text57       001CBE
+_MTOUCH_Sensor_RawSample_Get                 text40       001E12
+_MTOUCH_Sensor_SampleAll                     text9        001E46
+_MTOUCH_Sensor_Sampled_ResetAll              text56       001EB6
+_MTOUCH_Sensor_Scan_Initialize               text55       0007FB
+_MTOUCH_Sensor_isCalibrated                  text31       000800
+_MTOUCH_Sensor_wasSampled                    text30       001DCB
+_MTOUCH_Service_Mainloop                     text4        001008
+_MTOUCH_Tick                                 text6        001BD5
+_MTOUCH_needReburst                          text5        000002
 _OPTION_REGbits                              (abs)        000095
 _OSCCON                                      (abs)        000099
-_OSCILLATOR_Initialize                       text51       001C4F
+_OSCILLATOR_Initialize                       text53       001C0A
 _OSCTUNE                                     (abs)        000098
 _PIE1bits                                    (abs)        000091
 _PIE3bits                                    (abs)        000093
-_PIN_MANAGER_IOC                             text87       001C6B
-_PIN_MANAGER_Initialize                      text49       001022
+_PIN_MANAGER_IOC                             text92       001C1F
+_PIN_MANAGER_Initialize                      text51       001FD7
 _PIR1bits                                    (abs)        000011
 _PIR3bits                                    (abs)        000013
 _PORTCbits                                   (abs)        00000E
 _PR2                                         (abs)        00001B
 _PR4                                         (abs)        000416
-_SYSTEM_Initialize                           text43       001D76
-_Sensor_Acq_ExecutePacket                    text19       001253
-_Sensor_Acq_ExecuteScan                      text21       001308
-_Sensor_Acquisition                          text14       00115F
-_Sensor_DefaultCallback                      text13       000800
-_Sensor_RawSample_Update                     text12       001E87
-_Sensor_Sampled_Reset                        text57       001C48
-_Sensor_Service                              text10       0011FA
-_Sensor_isEnabled                            text18       001CDC
+_PR6                                         (abs)        00041D
+_SYSTEM_Initialize                           text43       001D9E
+_Sensor_Acq_ExecutePacket                    text19       001307
+_Sensor_Acq_ExecuteScan                      text21       0012A5
+_Sensor_Acquisition                          text14       000802
+_Sensor_DefaultCallback                      text13       001000
+_Sensor_RawSample_Update                     text12       001E60
+_Sensor_Sampled_Reset                        text59       001C03
+_Sensor_Service                              text10       0011F0
+_Sensor_isEnabled                            text18       001C9F
 _Sensor_scanA                                dataBANK1    0000AC
 _Sensor_scanB                                dataBANK1    0000AA
-_Sensor_setActive                            text17       001C56
-_Sensor_setInactive                          text16       001C5D
-_Sensor_setSampled                           text11       001C64
-_Sensor_setScanFunction                      text20       001D51
-_SetDimmer                                   text67       0014AB
+_Sensor_setActive                            text17       001C11
+_Sensor_setInactive                          text16       001C18
+_Sensor_setSampled                           text11       001001
+_Sensor_setScanFunction                      text20       001D15
+_SetDimmer                                   text69       0014AB
 _StartHeater                                 text3        000B2E
-_StartStop_AlarmLED                          text78       001C7E
-_StartStop_AlarmLED_Blink                    text75       001CEB
-_StartStop_Buzzer                            text74       001C8A
-_StartStop_Dimmer                            text66       001E09
-_StartStop_Fan                               text65       001C96
-_StartTouchDetection                         text2        000801
-_StopTouchDetection                          text1        0007B9
+_StartStop_AlarmLED                          text80       001C32
+_StartStop_AlarmLED_Blink                    text77       001CAE
+_StartStop_Buzzer                            text76       001C3E
+_StartStop_Dimmer                            text68       001DE2
+_StartStop_Fan                               text67       001C4A
+_StartTouchDetection                         text2        001113
+_StopTouchDetection                          text1        001159
 _T2CON                                       (abs)        00001C
 _T2CONbits                                   (abs)        00001C
 _T4CON                                       (abs)        000417
 _T4CONbits                                   (abs)        000417
+_T6CON                                       (abs)        00041E
+_T6CONbits                                   (abs)        00041E
 _TMR2                                        (abs)        00001A
-_TMR2_DefaultInterruptHandler                text84       001C0D
-_TMR2_Drive_TRIAC_isr                        text85       0010A0
-_TMR2_ISR                                    text83       001CBE
-_TMR2_Initialize                             text47       001D0B
-_TMR2_InterruptHandler                       nvBANK1      0000CE
-_TMR2_SetInterruptHandler                    text48       001C30
-_TMR2_StartTimer                             text91       001C11
-_TMR2_StopTimer                              text86       001C14
+_TMR2_DefaultInterruptHandler                text89       001BC0
+_TMR2_Drive_TRIAC_isr                        text90       00105D
+_TMR2_ISR                                    text88       001C72
+_TMR2_Initialize                             text49       001CCE
+_TMR2_InterruptHandler                       nvBANK1      0000D3
+_TMR2_SetInterruptHandler                    text50       001BE5
+_TMR2_StartTimer                             text96       001BC5
+_TMR2_StopTimer                              text91       001BC8
 _TMR4                                        (abs)        000415
-_TMR4_DefaultInterruptHandler                text81       001C0E
-_TMR4_ISR                                    text80       001CCD
-_TMR4_Initialize                             text45       001D63
-_TMR4_InterruptHandler                       nvBANK1      0000CC
-_TMR4_SetInterruptHandler                    text46       001C36
-_TMR4_StartTimer                             text77       001C17
-_TMR4_StopTimer                              text76       001C1A
-_TMR4_Wroking_Blink_AlarmLED_isr             text82       001EBE
+_TMR4_DefaultInterruptHandler                text86       001BC1
+_TMR4_ISR                                    text85       001C81
+_TMR4_Initialize                             text47       001D27
+_TMR4_InterruptHandler                       nvBANK1      0000D1
+_TMR4_SetInterruptHandler                    text48       001BEB
+_TMR4_StartTimer                             text79       001BCB
+_TMR4_StopTimer                              text78       001BCE
+_TMR4_Wroking_Blink_AlarmLED_isr             text87       001E7B
+_TMR6                                        (abs)        00041C
+_TMR6_DefaultInterruptHandler                text83       001BC2
+_TMR6_ISR                                    text82       001C90
+_TMR6_Initialize                             text45       001D3A
+_TMR6_InterruptHandler                       nvBANK1      0000CF
+_TMR6_SetInterruptHandler                    text46       001BF1
+_TMR6_long_press_duration_isr                text84       001BD9
 _TRISA                                       (abs)        00008C
 _TRISB                                       (abs)        00008D
 _TRISC                                       (abs)        00008E
 _WDTCON                                      (abs)        000097
-_WDT_Initialize                              text44       001C1D
+_WDT_Initialize                              text44       001BD1
 _WPUA                                        (abs)        00020C
 _WPUB                                        (abs)        00020D
 _WPUC                                        (abs)        00020E
-_Zero_Detection_isr                          text90       001C74
+_Zero_Detection_isr                          text95       001C28
 __Habs1                                      abs1         000000
 __Hbank0                                     bank0        000000
 __Hbank1                                     bank1        000000
@@ -832,7 +861,8 @@ __Hbigram                                    bigram       000000
 __HbssBANK0                                  bssBANK0     000000
 __HbssBANK1                                  bssBANK1     000000
 __HbssBANK2                                  bssBANK2     000000
-__Hcinit                                     cinit        00005E
+__HbssCOMMON                                 bssCOMMON    000000
+__Hcinit                                     cinit        000069
 __Hclrtext                                   clrtext      000000
 __Hcode                                      code         000000
 __Hcommon                                    common       000000
@@ -841,13 +871,13 @@ __HcstackBANK0                               cstackBANK0  000000
 __HcstackCOMMON                              cstackCOMMON 000000
 __HdataBANK1                                 dataBANK1    000000
 __Heeprom_data                               eeprom_data  000000
-__Hend_init                                  end_init     000036
+__Hend_init                                  end_init     000044
 __Hfunctab                                   functab      000000
 __HidataBANK1                                idataBANK1   000000
 __Hidloc                                     idloc        008004
-__Hinit                                      init         000034
+__Hinit                                      init         000042
 __Hinittext                                  inittext     000000
-__Hintentry                                  intentry     000034
+__Hintentry                                  intentry     000042
 __Hmaintext                                  maintext     000000
 __HnvBANK1                                   nvBANK1      000000
 __Hpowerup                                   powerup      000000
@@ -933,7 +963,8 @@ __Lbigram                                    bigram       000000
 __LbssBANK0                                  bssBANK0     000000
 __LbssBANK1                                  bssBANK1     000000
 __LbssBANK2                                  bssBANK2     000000
-__Lcinit                                     cinit        000036
+__LbssCOMMON                                 bssCOMMON    000000
+__Lcinit                                     cinit        000044
 __Lclrtext                                   clrtext      000000
 __Lcode                                      code         000000
 __Lcommon                                    common       000000
@@ -942,11 +973,11 @@ __LcstackBANK0                               cstackBANK0  000000
 __LcstackCOMMON                              cstackCOMMON 000000
 __LdataBANK1                                 dataBANK1    000000
 __Leeprom_data                               eeprom_data  000000
-__Lend_init                                  end_init     000034
+__Lend_init                                  end_init     000042
 __Lfunctab                                   functab      000000
 __LidataBANK1                                idataBANK1   000000
 __Lidloc                                     idloc        000000
-__Linit                                      init         000034
+__Linit                                      init         000042
 __Linittext                                  inittext     000000
 __Lintentry                                  intentry     000004
 __Lmaintext                                  maintext     000000
@@ -1001,252 +1032,263 @@ __S0                                         (abs)        002000
 __S1                                         (abs)        000140
 __S2                                         (abs)        000000
 __S3                                         (abs)        000000
-__Umul8_16                                   text72       001FB7
-__Umul8_16@multiplicand                      cstackCOMMON 000070
-__Umul8_16@multiplier                        cstackCOMMON 000078
-__Umul8_16@product                           cstackCOMMON 000074
-__Umul8_16@word_mpld                         cstackCOMMON 000076
-___bmul                                      text59       001DB0
-___bmul@multiplicand                         cstackCOMMON 000070
-___bmul@multiplier                           cstackCOMMON 000073
-___bmul@product                              cstackCOMMON 000072
-___fladd                                     text70       0008EF
-___fladd@a                                   cstackCOMMON 000074
-___fladd@aexp                                cstackCOMMON 000079
-___fladd@b                                   cstackCOMMON 000070
-___fladd@bexp                                cstackCOMMON 00007A
-___fladd@grs                                 cstackCOMMON 00007B
-___fladd@signs                               cstackCOMMON 000078
-___fldiv                                     text73       00164C
-___fldiv@a                                   cstackBANK0  000035
-___fldiv@aexp                                cstackBANK0  00004E
-___fldiv@b                                   cstackBANK0  000039
-___fldiv@bexp                                cstackBANK0  00004D
-___fldiv@grs                                 cstackBANK0  000049
-___fldiv@new_exp                             cstackBANK0  000047
-___fldiv@rem                                 cstackBANK0  000042
-___fldiv@sign                                cstackBANK0  000046
-___flmul                                     text71       000562
+__Umul8_16                                   text74       001FB4
+__Umul8_16@multiplicand                      cstackCOMMON 000071
+__Umul8_16@multiplier                        cstackCOMMON 000079
+__Umul8_16@product                           cstackCOMMON 000075
+__Umul8_16@word_mpld                         cstackCOMMON 000077
+___bmul                                      text61       001D74
+___bmul@multiplicand                         cstackCOMMON 000071
+___bmul@multiplier                           cstackCOMMON 000074
+___bmul@product                              cstackCOMMON 000073
+___fladd                                     text72       0008F6
+___fladd@a                                   cstackCOMMON 000075
+___fladd@aexp                                cstackBANK0  000029
+___fladd@b                                   cstackCOMMON 000071
+___fladd@bexp                                cstackBANK0  00002A
+___fladd@grs                                 cstackBANK0  00002B
+___fladd@signs                               cstackBANK0  000028
+___fldiv                                     text75       00164C
+___fldiv@a                                   cstackBANK0  00003A
+___fldiv@aexp                                cstackBANK0  000053
+___fldiv@b                                   cstackBANK0  00003E
+___fldiv@bexp                                cstackBANK0  000052
+___fldiv@grs                                 cstackBANK0  00004E
+___fldiv@new_exp                             cstackBANK0  00004C
+___fldiv@rem                                 cstackBANK0  000047
+___fldiv@sign                                cstackBANK0  00004B
+___flmul                                     text73       00056D
 ___flmul@a                                   cstackBANK0  000024
-___flmul@aexp                                cstackBANK0  00002D
+___flmul@aexp                                cstackBANK0  000032
 ___flmul@b                                   cstackBANK0  000020
-___flmul@bexp                                cstackBANK0  00002E
-___flmul@grs                                 cstackBANK0  000029
-___flmul@prod                                cstackBANK0  00002F
-___flmul@sign                                cstackBANK0  000028
-___flmul@temp                                cstackBANK0  000033
-___flsub                                     text69       001F17
-___flsub@a                                   cstackBANK0  00004F
-___flsub@b                                   cstackBANK0  000053
-___fltol                                     text68       001436
-___fltol@exp1                                cstackBANK0  000059
-___fltol@f1                                  cstackBANK0  00004F
-___fltol@sign1                               cstackBANK0  000058
+___flmul@bexp                                cstackBANK0  000033
+___flmul@grs                                 cstackBANK0  00002E
+___flmul@prod                                cstackBANK0  000034
+___flmul@sign                                cstackBANK0  00002D
+___flmul@temp                                cstackBANK0  000038
+___flsub                                     text71       001EF2
+___flsub@a                                   cstackBANK0  000054
+___flsub@b                                   cstackBANK0  000058
+___fltol                                     text70       001436
+___fltol@exp1                                cstackCOMMON 00007B
+___fltol@f1                                  cstackBANK0  000054
+___fltol@sign1                               cstackCOMMON 00007A
 ___int_sp                                    stack        000000
 ___latbits                                   (abs)        000002
 ___sp                                        stack        000000
 ___stackhi                                   (abs)        0023EF
 ___stacklo                                   (abs)        0020C0
-__end_of_Button_Baseline_Initialize          text37       0010F9
+__end_of_Button_Baseline_Initialize          text37       0010E4
 __end_of_Button_Baseline_Update              text36       00164C
-__end_of_Button_DefaultCallback              text35       001C11
+__end_of_Button_DefaultCallback              text35       001BC5
 __end_of_Button_Deviation_Update             text41       0015BB
-__end_of_Button_Reading_Update               text38       001D2D
-__end_of_Button_Reading_Update_Helper        text39       0011FA
-__end_of_Button_Service                      text29       001308
+__end_of_Button_Reading_Update               text38       001D03
+__end_of_Button_Reading_Update_Helper        text39       0011F0
+__end_of_Button_Service                      text29       0012A5
 __end_of_Button_State_Initializing           text33       001436
-__end_of_Button_State_NotPressed             text32       0008EF
+__end_of_Button_State_NotPressed             text32       0008F6
 __end_of_Button_State_Pressed                text34       0013D0
-__end_of_Button_Tick_helper                  text8        0010A0
+__end_of_Button_Tick_helper                  text8        00105D
 __end_of_HalfCycleACDuration_const           stringtext3  001828
-__end_of_INTERRUPT_InterruptManager          intentry     000034
-__end_of_IOCAF2_DefaultInterruptHandler      text89       001C0D
-__end_of_IOCAF2_ISR                          text88       001CBE
-__end_of_IOCAF2_SetInterruptHandler          text50       001C30
-__end_of_Init_Function                       text64       001DF2
-__end_of_MTOUCH_Button_Initialize            text62       00115F
-__end_of_MTOUCH_Button_InitializeAll         text60       001EBE
-__end_of_MTOUCH_Button_ServiceAll            text28       001D51
-__end_of_MTOUCH_Button_Tick                  text7        001E39
-__end_of_MTOUCH_Button_isPressed             text42       001F17
-__end_of_MTOUCH_CVD_ScanA_0                  text24       001F77
-__end_of_MTOUCH_CVD_ScanA_1                  text25       001F57
-__end_of_MTOUCH_CVD_ScanB_0                  text22       001FB7
-__end_of_MTOUCH_CVD_ScanB_1                  text23       001F97
-__end_of_MTOUCH_Delay                        text27       001D9C
-__end_of_MTOUCH_Initialize                   text52       001CAF
-__end_of_MTOUCH_Random                       text26       001DDB
-__end_of_MTOUCH_Sensor_Calibrate             text63       001C10
-__end_of_MTOUCH_Sensor_Enable                text58       001DB0
-__end_of_MTOUCH_Sensor_Initialize            text56       001D3F
-__end_of_MTOUCH_Sensor_InitializeAll         text55       001D0B
-__end_of_MTOUCH_Sensor_RawSample_Get         text40       001E53
-__end_of_MTOUCH_Sensor_SampleAll             text9        001E87
-__end_of_MTOUCH_Sensor_Sampled_ResetAll      text54       001EF9
-__end_of_MTOUCH_Sensor_Scan_Initialize       text53       001C2A
-__end_of_MTOUCH_Sensor_isCalibrated          text31       000004
-__end_of_MTOUCH_Sensor_wasSampled            text30       001E09
-__end_of_MTOUCH_Service_Mainloop             text4        001075
-__end_of_MTOUCH_Tick                         text6        001C25
-__end_of_MTOUCH_needReburst                  text5        000800
-__end_of_OSCILLATOR_Initialize               text51       001C56
-__end_of_PIN_MANAGER_IOC                     text87       001C74
-__end_of_PIN_MANAGER_Initialize              text49       00104B
-__end_of_SYSTEM_Initialize                   text43       001D89
-__end_of_Sensor_Acq_ExecutePacket            text19       0012AD
-__end_of_Sensor_Acq_ExecuteScan              text21       00136A
-__end_of_Sensor_Acquisition                  text14       0011A9
-__end_of_Sensor_DefaultCallback              text13       000801
-__end_of_Sensor_RawSample_Update             text12       001EA2
-__end_of_Sensor_Sampled_Reset                text57       001C4F
-__end_of_Sensor_Service                      text10       001253
-__end_of_Sensor_isEnabled                    text18       001CEB
-__end_of_Sensor_setActive                    text17       001C5D
-__end_of_Sensor_setInactive                  text16       001C64
-__end_of_Sensor_setSampled                   text11       001C6B
-__end_of_Sensor_setScanFunction              text20       001D63
-__end_of_SetDimmer                           text67       00152C
-__end_of_StartHeater                         text3_split_1 000562
-__end_of_StartStop_AlarmLED                  text78       001C8A
-__end_of_StartStop_AlarmLED_Blink            text75       001CFB
-__end_of_StartStop_Buzzer                    text74       001C96
-__end_of_StartStop_Dimmer                    text66       001E21
-__end_of_StartStop_Fan                       text65       001CA2
-__end_of_StartTouchDetection                 text2        000846
-__end_of_StopTouchDetection                  text1        0007FE
-__end_of_TMR2_DefaultInterruptHandler        text84       001C0E
-__end_of_TMR2_Drive_TRIAC_isr                text85       0010CC
-__end_of_TMR2_ISR                            text83       001CCD
-__end_of_TMR2_Initialize                     text47       001D1C
-__end_of_TMR2_SetInterruptHandler            text48       001C36
-__end_of_TMR2_StartTimer                     text91       001C14
-__end_of_TMR2_StopTimer                      text86       001C17
+__end_of_INTERRUPT_InterruptManager          intentry     000042
+__end_of_IOCAF2_DefaultInterruptHandler      text94       001BC0
+__end_of_IOCAF2_ISR                          text93       001C72
+__end_of_IOCAF2_SetInterruptHandler          text52       001BE5
+__end_of_Init_Function                       text66       001DCB
+__end_of_MTOUCH_Button_Initialize            text64       0007FB
+__end_of_MTOUCH_Button_InitializeAll         text62       001EB6
+__end_of_MTOUCH_Button_ServiceAll            text28       001D15
+__end_of_MTOUCH_Button_Tick                  text7        001E12
+__end_of_MTOUCH_Button_isPressed             text42       001EF2
+__end_of_MTOUCH_CVD_ScanA_0                  text24       001F52
+__end_of_MTOUCH_CVD_ScanA_1                  text25       001F32
+__end_of_MTOUCH_CVD_ScanB_0                  text22       001F92
+__end_of_MTOUCH_CVD_ScanB_1                  text23       001F72
+__end_of_MTOUCH_Delay                        text27       001D60
+__end_of_MTOUCH_Initialize                   text54       001C63
+__end_of_MTOUCH_Random                       text26       001D9E
+__end_of_MTOUCH_Sensor_Calibrate             text65       001BC4
+__end_of_MTOUCH_Sensor_Enable                text60       001D74
+__end_of_MTOUCH_Sensor_Initialize            text58       001CF1
+__end_of_MTOUCH_Sensor_InitializeAll         text57       001CCE
+__end_of_MTOUCH_Sensor_RawSample_Get         text40       001E2C
+__end_of_MTOUCH_Sensor_SampleAll             text9        001E60
+__end_of_MTOUCH_Sensor_Sampled_ResetAll      text56       001ED4
+__end_of_MTOUCH_Sensor_Scan_Initialize       text55       000800
+__end_of_MTOUCH_Sensor_isCalibrated          text31       000802
+__end_of_MTOUCH_Sensor_wasSampled            text30       001DE2
+__end_of_MTOUCH_Service_Mainloop             text4        001032
+__end_of_MTOUCH_Tick                         text6        001BD9
+__end_of_MTOUCH_needReburst                  text5        000004
+__end_of_OSCILLATOR_Initialize               text53       001C11
+__end_of_PIN_MANAGER_IOC                     text92       001C28
+__end_of_PIN_MANAGER_Initialize              text51       002000
+__end_of_SYSTEM_Initialize                   text43       001DB4
+__end_of_Sensor_Acq_ExecutePacket            text19       00136A
+__end_of_Sensor_Acq_ExecuteScan              text21       001307
+__end_of_Sensor_Acquisition                  text14       00084C
+__end_of_Sensor_DefaultCallback              text13       001001
+__end_of_Sensor_RawSample_Update             text12       001E7B
+__end_of_Sensor_Sampled_Reset                text59       001C0A
+__end_of_Sensor_Service                      text10       00124A
+__end_of_Sensor_isEnabled                    text18       001CAE
+__end_of_Sensor_setActive                    text17       001C18
+__end_of_Sensor_setInactive                  text16       001C1F
+__end_of_Sensor_setSampled                   text11       001008
+__end_of_Sensor_setScanFunction              text20       001D27
+__end_of_SetDimmer                           text69       00152C
+__end_of_StartHeater                         text3_split_1 00056D
+__end_of_StartStop_AlarmLED                  text80       001C3E
+__end_of_StartStop_AlarmLED_Blink            text77       001CBE
+__end_of_StartStop_Buzzer                    text76       001C4A
+__end_of_StartStop_Dimmer                    text68       001DFA
+__end_of_StartStop_Fan                       text67       001C56
+__end_of_StartTouchDetection                 text2        001159
+__end_of_StopTouchDetection                  text1        00119F
+__end_of_TMR2_DefaultInterruptHandler        text89       001BC1
+__end_of_TMR2_Drive_TRIAC_isr                text90       001089
+__end_of_TMR2_ISR                            text88       001C81
+__end_of_TMR2_Initialize                     text49       001CDF
+__end_of_TMR2_SetInterruptHandler            text50       001BEB
+__end_of_TMR2_StartTimer                     text96       001BC8
+__end_of_TMR2_StopTimer                      text91       001BCB
 __end_of_TMR2_Timer_Period_const             stringtext1  001824
-__end_of_TMR4_DefaultInterruptHandler        text81       001C0F
-__end_of_TMR4_ISR                            text80       001CDC
-__end_of_TMR4_Initialize                     text45       001D76
-__end_of_TMR4_SetInterruptHandler            text46       001C3C
-__end_of_TMR4_StartTimer                     text77       001C1A
-__end_of_TMR4_StopTimer                      text76       001C1D
-__end_of_TMR4_Wroking_Blink_AlarmLED_isr     text82       001EDB
-__end_of_WDT_Initialize                      text44       001C21
-__end_of_Zero_Detection_isr                  text90       001C7E
-__end_of__Umul8_16                           text72       001FDA
-__end_of___bmul                              text59       001DC5
-__end_of___fladd                             text70       000B2E
-__end_of___fldiv                             text73       001800
-__end_of___flmul                             text71       0007B9
-__end_of___flsub                             text69       001F37
-__end_of___fltol                             text68       0014AB
-__end_of__initialization                     cinit        00005A
-__end_of_abs                                 text15       001E6D
-__end_of_main                                maintext     002000
-__end_of_memcpy                              text61       001128
+__end_of_TMR4_DefaultInterruptHandler        text86       001BC2
+__end_of_TMR4_ISR                            text85       001C90
+__end_of_TMR4_Initialize                     text47       001D3A
+__end_of_TMR4_SetInterruptHandler            text48       001BF1
+__end_of_TMR4_StartTimer                     text79       001BCE
+__end_of_TMR4_StopTimer                      text78       001BD1
+__end_of_TMR4_Wroking_Blink_AlarmLED_isr     text87       001E98
+__end_of_TMR6_DefaultInterruptHandler        text83       001BC3
+__end_of_TMR6_ISR                            text82       001C9F
+__end_of_TMR6_Initialize                     text45       001D4D
+__end_of_TMR6_SetInterruptHandler            text46       001BF7
+__end_of_TMR6_long_press_duration_isr        text84       001BDF
+__end_of_WDT_Initialize                      text44       001BD5
+__end_of_Zero_Detection_isr                  text95       001C32
+__end_of__Umul8_16                           text74       001FD7
+__end_of___bmul                              text61       001D89
+__end_of___fladd                             text72       000B2E
+__end_of___fldiv                             text75       001800
+__end_of___flmul                             text73       0007C4
+__end_of___flsub                             text71       001F12
+__end_of___fltol                             text70       0014AB
+__end_of__initialization                     cinit        000065
+__end_of_abs                                 text15       001E46
+__end_of_main                                maintext     0010B6
+__end_of_memcpy                              text63       001113
 __end_of_mtouch_button_init                  stringtext2  001820
-__initialization                             cinit        000036
-__pbssBANK0                                  bssBANK0     000069
+__initialization                             cinit        000044
+__pbssBANK0                                  bssBANK0     00006C
 __pbssBANK1                                  bssBANK1     0000C2
 __pbssBANK2                                  bssBANK2     000120
+__pbssCOMMON                                 bssCOMMON    00007C
 __pcstackBANK0                               cstackBANK0  000020
 __pcstackCOMMON                              cstackCOMMON 000070
 __pdataBANK1                                 dataBANK1    0000A0
-__pidataBANK1                                idataBANK1   001000
+__pidataBANK1                                idataBANK1   001F92
 __pintentry                                  intentry     000004
-__pmaintext                                  maintext     001FDA
-__pnvBANK1                                   nvBANK1      0000CC
+__pmaintext                                  maintext     001089
+__pnvBANK1                                   nvBANK1      0000CF
 __pstringtext1                               stringtext1  001820
 __pstringtext2                               stringtext2  001800
 __pstringtext3                               stringtext3  001824
-__ptext1                                     text1        0007B9
-__ptext10                                    text10       0011FA
-__ptext11                                    text11       001C64
-__ptext12                                    text12       001E87
-__ptext13                                    text13       000800
-__ptext14                                    text14       00115F
-__ptext15                                    text15       001E53
-__ptext16                                    text16       001C5D
-__ptext17                                    text17       001C56
-__ptext18                                    text18       001CDC
-__ptext19                                    text19       001253
-__ptext2                                     text2        000801
-__ptext20                                    text20       001D51
-__ptext21                                    text21       001308
-__ptext22                                    text22       001F97
-__ptext23                                    text23       001F77
-__ptext24                                    text24       001F57
-__ptext25                                    text25       001F37
-__ptext26                                    text26       001DC5
-__ptext27                                    text27       001D89
-__ptext28                                    text28       001D3F
-__ptext29                                    text29       0012AD
+__ptext1                                     text1        001159
+__ptext10                                    text10       0011F0
+__ptext11                                    text11       001001
+__ptext12                                    text12       001E60
+__ptext13                                    text13       001000
+__ptext14                                    text14       000802
+__ptext15                                    text15       001E2C
+__ptext16                                    text16       001C18
+__ptext17                                    text17       001C11
+__ptext18                                    text18       001C9F
+__ptext19                                    text19       001307
+__ptext2                                     text2        001113
+__ptext20                                    text20       001D15
+__ptext21                                    text21       0012A5
+__ptext22                                    text22       001F72
+__ptext23                                    text23       001F52
+__ptext24                                    text24       001F32
+__ptext25                                    text25       001F12
+__ptext26                                    text26       001D89
+__ptext27                                    text27       001D4D
+__ptext28                                    text28       001D03
+__ptext29                                    text29       00124A
 __ptext3                                     text3        000B2E
-__ptext30                                    text30       001DF2
-__ptext31                                    text31       000002
-__ptext32                                    text32       000846
+__ptext30                                    text30       001DCB
+__ptext31                                    text31       000800
+__ptext32                                    text32       00084C
 __ptext33                                    text33       0013D0
 __ptext34                                    text34       00136A
-__ptext35                                    text35       001C10
+__ptext35                                    text35       001BC4
 __ptext36                                    text36       0015BB
-__ptext37                                    text37       0010CC
-__ptext38                                    text38       001D1C
-__ptext39                                    text39       0011A9
-__ptext4                                     text4        00104B
-__ptext40                                    text40       001E39
+__ptext37                                    text37       0010B6
+__ptext38                                    text38       001CF1
+__ptext39                                    text39       00119F
+__ptext4                                     text4        001008
+__ptext40                                    text40       001E12
 __ptext41                                    text41       00152C
-__ptext42                                    text42       001EF9
-__ptext43                                    text43       001D76
-__ptext44                                    text44       001C1D
-__ptext45                                    text45       001D63
-__ptext46                                    text46       001C36
-__ptext47                                    text47       001D0B
-__ptext48                                    text48       001C30
-__ptext49                                    text49       001022
-__ptext5                                     text5        0007FE
-__ptext50                                    text50       001C2A
-__ptext51                                    text51       001C4F
-__ptext52                                    text52       001CA2
-__ptext53                                    text53       001C25
-__ptext54                                    text54       001EDB
-__ptext55                                    text55       001CFB
-__ptext56                                    text56       001D2D
-__ptext57                                    text57       001C48
-__ptext58                                    text58       001D9C
-__ptext59                                    text59       001DB0
-__ptext6                                     text6        001C21
-__ptext60                                    text60       001EA2
-__ptext61                                    text61       0010F9
-__ptext62                                    text62       001128
-__ptext63                                    text63       001C0F
-__ptext64                                    text64       001DDB
-__ptext65                                    text65       001C96
-__ptext66                                    text66       001E09
-__ptext67                                    text67       0014AB
-__ptext68                                    text68       001436
-__ptext69                                    text69       001F17
-__ptext7                                     text7        001E21
-__ptext70                                    text70       0008EF
-__ptext71                                    text71       000562
-__ptext72                                    text72       001FB7
-__ptext73                                    text73       00164C
-__ptext74                                    text74       001C8A
-__ptext75                                    text75       001CEB
-__ptext76                                    text76       001C1A
-__ptext77                                    text77       001C17
-__ptext78                                    text78       001C7E
-__ptext8                                     text8        001075
-__ptext80                                    text80       001CCD
-__ptext81                                    text81       001C0E
-__ptext82                                    text82       001EBE
-__ptext83                                    text83       001CBE
-__ptext84                                    text84       001C0D
-__ptext85                                    text85       0010A0
-__ptext86                                    text86       001C14
-__ptext87                                    text87       001C6B
-__ptext88                                    text88       001CAF
-__ptext89                                    text89       001C0C
-__ptext9                                     text9        001E6D
-__ptext90                                    text90       001C74
-__ptext91                                    text91       001C11
+__ptext42                                    text42       001ED4
+__ptext43                                    text43       001D9E
+__ptext44                                    text44       001BD1
+__ptext45                                    text45       001D3A
+__ptext46                                    text46       001BF1
+__ptext47                                    text47       001D27
+__ptext48                                    text48       001BEB
+__ptext49                                    text49       001CCE
+__ptext5                                     text5        000002
+__ptext50                                    text50       001BE5
+__ptext51                                    text51       001FD7
+__ptext52                                    text52       001BDF
+__ptext53                                    text53       001C0A
+__ptext54                                    text54       001C56
+__ptext55                                    text55       0007FB
+__ptext56                                    text56       001EB6
+__ptext57                                    text57       001CBE
+__ptext58                                    text58       001CDF
+__ptext59                                    text59       001C03
+__ptext6                                     text6        001BD5
+__ptext60                                    text60       001D60
+__ptext61                                    text61       001D74
+__ptext62                                    text62       001E98
+__ptext63                                    text63       0010E4
+__ptext64                                    text64       0007C4
+__ptext65                                    text65       001BC3
+__ptext66                                    text66       001DB4
+__ptext67                                    text67       001C4A
+__ptext68                                    text68       001DE2
+__ptext69                                    text69       0014AB
+__ptext7                                     text7        001DFA
+__ptext70                                    text70       001436
+__ptext71                                    text71       001EF2
+__ptext72                                    text72       0008F6
+__ptext73                                    text73       00056D
+__ptext74                                    text74       001FB4
+__ptext75                                    text75       00164C
+__ptext76                                    text76       001C3E
+__ptext77                                    text77       001CAE
+__ptext78                                    text78       001BCE
+__ptext79                                    text79       001BCB
+__ptext8                                     text8        001032
+__ptext80                                    text80       001C32
+__ptext82                                    text82       001C90
+__ptext83                                    text83       001BC2
+__ptext84                                    text84       001BD9
+__ptext85                                    text85       001C81
+__ptext86                                    text86       001BC1
+__ptext87                                    text87       001E7B
+__ptext88                                    text88       001C72
+__ptext89                                    text89       001BC0
+__ptext9                                     text9        001E46
+__ptext90                                    text90       00105D
+__ptext91                                    text91       001BC8
+__ptext92                                    text92       001C1F
+__ptext93                                    text93       001C63
+__ptext94                                    text94       001BBF
+__ptext95                                    text95       001C28
+__ptext96                                    text96       001BC5
 __size_of_Button_Baseline_Initialize         (abs)        000000
 __size_of_Button_Baseline_Update             (abs)        000000
 __size_of_Button_DefaultCallback             (abs)        000000
@@ -1327,6 +1369,11 @@ __size_of_TMR4_SetInterruptHandler           (abs)        000000
 __size_of_TMR4_StartTimer                    (abs)        000000
 __size_of_TMR4_StopTimer                     (abs)        000000
 __size_of_TMR4_Wroking_Blink_AlarmLED_isr    (abs)        000000
+__size_of_TMR6_DefaultInterruptHandler       (abs)        000000
+__size_of_TMR6_ISR                           (abs)        000000
+__size_of_TMR6_Initialize                    (abs)        000000
+__size_of_TMR6_SetInterruptHandler           (abs)        000000
+__size_of_TMR6_long_press_duration_isr       (abs)        000000
 __size_of_WDT_Initialize                     (abs)        000000
 __size_of_Zero_Detection_isr                 (abs)        000000
 __size_of__Umul8_16                          (abs)        000000
@@ -1339,29 +1386,30 @@ __size_of___fltol                            (abs)        000000
 __size_of_abs                                (abs)        000000
 __size_of_main                               (abs)        000000
 __size_of_memcpy                             (abs)        000000
-_abs                                         text15       001E53
+_abs                                         text15       001E2C
 _callback_notPressed                         dataBANK1    0000A6
 _callback_pressed                            dataBANK1    0000A8
 _callback_sampled                            dataBANK1    0000AE
-_currentScannSensor                          bssBANK0     00006D
-_lowpowerActivated                           bssBANK0     00006A
-_main                                        maintext     001FDA
-_memcpy                                      text61       0010F9
+_currentScannSensor                          bssBANK1     0000CE
+_g_tmr6_longpress_duration_counter           bssBANK0     00006D
+_lowpowerActivated                           bssBANK1     0000CC
+_main                                        maintext     001089
+_memcpy                                      text63       0010E4
 _mtouch_button                               bssBANK2     000120
 _mtouch_button_init                          stringtext2  001800
 _mtouch_request_init                         bssBANK1     0000CA
 _mtouch_sensor                               dataBANK1    0000B0
 _mtouch_time_toScan                          bssBANK1     0000CB
-_packet_counter                              bssBANK0     00006C
+_packet_counter                              bssBANK0     00006E
 _packet_sample                               bssBANK1     0000C8
-_sample_delay                                bssBANK0     00006B
-_sensor_globalFlags                          bssBANK0     00006E
+_sample_delay                                bssBANK1     0000CD
+_sensor_globalFlags                          bssBANK0     00006F
 _tmr2_required_counter_steps_g               bssBANK1     0000C6
-abs@a                                        cstackCOMMON 000070
+abs@a                                        cstackCOMMON 000071
 btemp                                        (abs)        00007E
-clear_ram0                                   clrtext      001C3C
-end_of_initialization                        cinit        00005A
-init_ram                                     inittext     001C42
+clear_ram0                                   clrtext      001BF7
+end_of_initialization                        cinit        000065
+init_ram                                     inittext     001BFD
 int$flags                                    (abs)        00007E
 intlevel0                                    functab      000000
 intlevel1                                    functab      000000
@@ -1369,18 +1417,18 @@ intlevel2                                    functab      000000
 intlevel3                                    functab      000000
 intlevel4                                    functab      000000
 intlevel5                                    functab      000000
-memcpy@d                                     cstackCOMMON 000079
-memcpy@d1                                    cstackCOMMON 000078
-memcpy@n                                     cstackCOMMON 000072
-memcpy@s                                     cstackCOMMON 000075
-memcpy@s1                                    cstackCOMMON 000070
-memcpy@tmp                                   cstackCOMMON 000077
-pnum$text3                                   (abs)        000013
-pnum$text3_split_1                           (abs)        00006E
-psplit$0                                     (abs)        13006E
+memcpy@d                                     cstackCOMMON 00007A
+memcpy@d1                                    cstackCOMMON 000079
+memcpy@n                                     cstackCOMMON 000073
+memcpy@s                                     cstackCOMMON 000077
+memcpy@s1                                    cstackCOMMON 000071
+memcpy@tmp                                   cstackCOMMON 000076
+pnum$text3                                   (abs)        000014
+pnum$text3_split_1                           (abs)        000074
+psplit$0                                     (abs)        140074
 reset_vec                                    reset_vec    000000
-start                                        init         000034
-start_initialization                         cinit        000036
+start                                        init         000042
+start_initialization                         cinit        000044
 wtemp0                                       (abs)        00007E
 
 
@@ -1388,7 +1436,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 51 in file "main.c"
+		line 55 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1416,6 +1464,7 @@ Total ram usage:        0 bytes
 		_StopTouchDetection
 		_TMR2_SetInterruptHandler
 		_TMR4_SetInterruptHandler
+		_TMR6_SetInterruptHandler
  This function is called by:
 		Startup code after reset
  This function uses a non-reentrant model
@@ -1423,7 +1472,7 @@ Total ram usage:        0 bytes
 
  *************** function _StopTouchDetection *****************
  Defined at:
-		line 240 in file "main.c"
+		line 254 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1456,7 +1505,7 @@ Total ram usage:        2 bytes
 
  *************** function _StartTouchDetection *****************
  Defined at:
-		line 215 in file "main.c"
+		line 226 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1489,12 +1538,12 @@ Total ram usage:        2 bytes
 
  *************** function _StartHeater *****************
  Defined at:
-		line 278 in file "main.c"
+		line 294 in file "main.c"
  Parameters:    Size  Location     Type
   status_flag     1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
-  status_flag     1   69[BANK0 ] unsigned char 
-  i               1   70[BANK0 ] unsigned char 
+  status_flag     1   72[BANK0 ] unsigned char 
+  i               1   73[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -1626,7 +1675,7 @@ Total ram usage:        0 bytes
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  i               1    4[COMMON] unsigned char 
+  i               1    5[COMMON] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -1657,7 +1706,7 @@ Total ram usage:        2 bytes
   button          1    wreg     PTR struct .
 		 -> mtouch_button(32), 
  Auto vars:     Size  Location     Type
-  button          1    2[COMMON] PTR struct .
+  button          1    3[COMMON] PTR struct .
 		 -> mtouch_button(32), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -1688,7 +1737,7 @@ Total ram usage:        3 bytes
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  sensor          1    9[BANK0 ] enum E2661
+  sensor          1   12[BANK0 ] enum E2661
  Return value:  Size  Location     Type
                   1    wreg      _Bool 
  Registers used:
@@ -1700,8 +1749,8 @@ Total ram usage:        3 bytes
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       1       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       1       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:   10
@@ -1718,10 +1767,10 @@ Total ram usage:        2 bytes
  Parameters:    Size  Location     Type
   name            1    wreg     enum E2661
  Auto vars:     Size  Location     Type
-  name            1    5[BANK0 ] enum E2661
-  sensor          1    7[BANK0 ] PTR struct .
+  name            1    9[BANK0 ] enum E2661
+  sensor          1   11[BANK0 ] PTR struct .
 		 -> mtouch_sensor(18), 
-  error           1    6[BANK0 ] enum E2664
+  error           1   10[BANK0 ] enum E2664
  Return value:  Size  Location     Type
                   1    wreg      enum E2664
  Registers used:
@@ -1757,7 +1806,7 @@ Total ram usage:        5 bytes
   sensor          1    wreg     PTR struct .
 		 -> mtouch_sensor(18), 
  Auto vars:     Size  Location     Type
-  sensor          1    0[COMMON] PTR struct .
+  sensor          1    1[COMMON] PTR struct .
 		 -> mtouch_sensor(18), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -1789,7 +1838,7 @@ Total ram usage:        1 bytes
   sensor          1    wreg     PTR struct .
 		 -> mtouch_sensor(18), 
  Auto vars:     Size  Location     Type
-  sensor          1    0[COMMON] PTR struct .
+  sensor          1    1[COMMON] PTR struct .
 		 -> mtouch_sensor(18), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -1818,7 +1867,7 @@ Total ram usage:        1 bytes
  Defined at:
 		line 450 in file "mcc_generated_files/mtouch/mtouch_sensor.c"
  Parameters:    Size  Location     Type
-  sensor          1    0[COMMON] enum E2661
+  sensor          1    1[COMMON] enum E2661
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
@@ -1851,9 +1900,9 @@ Total ram usage:        1 bytes
   sensor          1    wreg     PTR struct .
 		 -> mtouch_sensor(18), 
  Auto vars:     Size  Location     Type
-  sensor          1    2[BANK0 ] PTR struct .
+  sensor          1    6[BANK0 ] PTR struct .
 		 -> mtouch_sensor(18), 
-  retry           1    1[BANK0 ] unsigned char 
+  retry           1    5[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      enum E2664
  Registers used:
@@ -1865,8 +1914,8 @@ Total ram usage:        1 bytes
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       1       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       3       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       2       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        3 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    8
@@ -1885,11 +1934,11 @@ Total ram usage:        3 bytes
  Defined at:
 		line 1 in file "/opt/microchip/xc8/v2.31/pic/sources/c99/common/abs.c"
  Parameters:    Size  Location     Type
-  a               2    0[COMMON] int 
+  a               2    1[COMMON] int 
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
-                  2    0[COMMON] int 
+                  2    1[COMMON] int 
  Registers used:
 		wreg, status,2, status,0
  Tracked objects:
@@ -1918,7 +1967,7 @@ Total ram usage:        4 bytes
   sensor          1    wreg     PTR struct .
 		 -> mtouch_sensor(18), 
  Auto vars:     Size  Location     Type
-  sensor          1    0[COMMON] PTR struct .
+  sensor          1    1[COMMON] PTR struct .
 		 -> mtouch_sensor(18), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -1950,7 +1999,7 @@ Total ram usage:        1 bytes
   sensor          1    wreg     PTR struct .
 		 -> mtouch_sensor(18), 
  Auto vars:     Size  Location     Type
-  sensor          1    0[COMMON] PTR struct .
+  sensor          1    1[COMMON] PTR struct .
 		 -> mtouch_sensor(18), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -1982,7 +2031,7 @@ Total ram usage:        1 bytes
   sensor          1    wreg     PTR struct .
 		 -> mtouch_sensor(18), 
  Auto vars:     Size  Location     Type
-  sensor          1    0[COMMON] PTR struct .
+  sensor          1    1[COMMON] PTR struct .
 		 -> mtouch_sensor(18), 
  Return value:  Size  Location     Type
                   1    wreg      _Bool 
@@ -2015,12 +2064,12 @@ Total ram usage:        1 bytes
   sensor          1    wreg     PTR struct .
 		 -> mtouch_sensor(18), 
  Auto vars:     Size  Location     Type
-  sensor          1   13[COMMON] PTR struct .
+  sensor          1    4[BANK0 ] PTR struct .
 		 -> mtouch_sensor(18), 
-  error           1   12[COMMON] enum E2664
-  GIE_state       1   11[COMMON] unsigned char 
-  ADCON1_temp     1   10[COMMON] unsigned char 
-  ADCON0_temp     1    9[COMMON] unsigned char 
+  error           1    3[BANK0 ] enum E2664
+  GIE_state       1    2[BANK0 ] unsigned char 
+  ADCON1_temp     1    1[BANK0 ] unsigned char 
+  ADCON0_temp     1    0[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      enum E2664
  Registers used:
@@ -2031,9 +2080,9 @@ Total ram usage:        1 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         5       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       5       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       5       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        6 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    7
@@ -2055,7 +2104,7 @@ Total ram usage:        6 bytes
   sensor          1    wreg     PTR struct .
 		 -> mtouch_sensor(18), 
  Auto vars:     Size  Location     Type
-  sensor          1    0[COMMON] PTR struct .
+  sensor          1    1[COMMON] PTR struct .
 		 -> mtouch_sensor(18), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -2086,7 +2135,7 @@ Total ram usage:        1 bytes
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  result          2    6[COMMON] unsigned short 
+  result          2    7[COMMON] unsigned short 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -2270,7 +2319,7 @@ Total ram usage:        1 bytes
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  i               1    1[COMMON] unsigned char 
+  i               1    2[COMMON] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -2300,7 +2349,7 @@ Total ram usage:        2 bytes
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  button          1   10[BANK0 ] enum E2819
+  button          1   14[BANK0 ] enum E2819
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -2330,8 +2379,8 @@ Total ram usage:        2 bytes
  Parameters:    Size  Location     Type
   name            1    wreg     enum E2819
  Auto vars:     Size  Location     Type
-  name            1    7[BANK0 ] enum E2819
-  button          1    8[BANK0 ] PTR struct .
+  name            1   11[BANK0 ] enum E2819
+  button          1   12[BANK0 ] PTR struct .
 		 -> mtouch_button(32), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -2369,7 +2418,7 @@ Total ram usage:        4 bytes
  Parameters:    Size  Location     Type
   sensor          1    wreg     enum E2661
  Auto vars:     Size  Location     Type
-  sensor          1    5[COMMON] enum E2661
+  sensor          1    6[COMMON] enum E2661
  Return value:  Size  Location     Type
                   1    wreg      _Bool 
  Registers used:
@@ -2427,7 +2476,7 @@ Total ram usage:        0 bytes
  Defined at:
 		line 229 in file "mcc_generated_files/mtouch/mtouch_button.c"
  Parameters:    Size  Location     Type
-  button          1   13[COMMON] PTR struct .
+  button          1    4[BANK0 ] PTR struct .
 		 -> mtouch_button(32), 
  Auto vars:     Size  Location     Type
 		None
@@ -2440,10 +2489,10 @@ Total ram usage:        0 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       2       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         1       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       1       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        3 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    7
@@ -2460,7 +2509,7 @@ Total ram usage:        3 bytes
  Defined at:
 		line 209 in file "mcc_generated_files/mtouch/mtouch_button.c"
  Parameters:    Size  Location     Type
-  button          1   13[COMMON] PTR struct .
+  button          1    4[BANK0 ] PTR struct .
 		 -> mtouch_button(32), 
  Auto vars:     Size  Location     Type
 		None
@@ -2473,10 +2522,10 @@ Total ram usage:        3 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       4       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         1       4       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       5       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        5 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    8
@@ -2492,7 +2541,7 @@ Total ram usage:        5 bytes
  Defined at:
 		line 265 in file "mcc_generated_files/mtouch/mtouch_button.c"
  Parameters:    Size  Location     Type
-  button          1   13[COMMON] PTR struct .
+  button          1    4[BANK0 ] PTR struct .
 		 -> mtouch_button(32), 
  Auto vars:     Size  Location     Type
 		None
@@ -2505,10 +2554,10 @@ Total ram usage:        5 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       2       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         1       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       1       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        3 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    7
@@ -2524,7 +2573,7 @@ Total ram usage:        3 bytes
  Defined at:
 		line 519 in file "mcc_generated_files/mtouch/mtouch_button.c"
  Parameters:    Size  Location     Type
-  button          1    0[COMMON] enum E2819
+  button          1    1[COMMON] enum E2819
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
@@ -2558,7 +2607,7 @@ Total ram usage:        1 bytes
   button          1    wreg     PTR struct .
 		 -> mtouch_button(32), 
  Auto vars:     Size  Location     Type
-  button          1    6[COMMON] PTR struct .
+  button          1    7[COMMON] PTR struct .
 		 -> mtouch_button(32), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -2591,7 +2640,7 @@ Total ram usage:        7 bytes
   button          1    wreg     PTR struct .
 		 -> mtouch_button(32), 
  Auto vars:     Size  Location     Type
-  button          1   12[COMMON] PTR struct .
+  button          1    9[COMMON] PTR struct .
 		 -> mtouch_button(32), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -2604,8 +2653,8 @@ Total ram usage:        7 bytes
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          4       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         5       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       4       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       4       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        5 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    7
@@ -2623,7 +2672,7 @@ Total ram usage:        5 bytes
   button          1    wreg     PTR struct .
 		 -> mtouch_button(32), 
  Auto vars:     Size  Location     Type
-  button          1   11[COMMON] PTR struct .
+  button          1    0[BANK0 ] PTR struct .
 		 -> mtouch_button(32), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -2635,9 +2684,9 @@ Total ram usage:        5 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        1 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    8
@@ -2655,7 +2704,7 @@ Total ram usage:        1 bytes
   button          1    wreg     PTR struct .
 		 -> mtouch_button(32), 
  Auto vars:     Size  Location     Type
-  button          1   10[COMMON] PTR struct .
+  button          1   11[COMMON] PTR struct .
 		 -> mtouch_button(32), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -2686,9 +2735,9 @@ Total ram usage:        3 bytes
  Parameters:    Size  Location     Type
   name            1    wreg     enum E2661
  Auto vars:     Size  Location     Type
-  name            1    7[COMMON] enum E2661
+  name            1    8[COMMON] enum E2661
  Return value:  Size  Location     Type
-                  2    4[COMMON] unsigned short 
+                  2    5[COMMON] unsigned short 
  Registers used:
 		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
  Tracked objects:
@@ -2750,7 +2799,7 @@ Total ram usage:       15 bytes
  Parameters:    Size  Location     Type
   name            1    wreg     enum E2819
  Auto vars:     Size  Location     Type
-  name            1    1[COMMON] enum E2819
+  name            1    2[COMMON] enum E2819
  Return value:  Size  Location     Type
                   1    wreg      _Bool 
  Registers used:
@@ -2806,6 +2855,7 @@ Total ram usage:        0 bytes
 		_PIN_MANAGER_Initialize
 		_TMR2_Initialize
 		_TMR4_Initialize
+		_TMR6_Initialize
 		_WDT_Initialize
  This function is called by:
 		_main
@@ -2814,7 +2864,7 @@ Total ram usage:        0 bytes
 
  *************** function _WDT_Initialize *****************
  Defined at:
-		line 71 in file "mcc_generated_files/mcc.c"
+		line 72 in file "mcc_generated_files/mcc.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2839,6 +2889,68 @@ Total ram usage:        0 bytes
 		Nothing
  This function is called by:
 		_SYSTEM_Initialize
+ This function uses a non-reentrant model
+
+
+ *************** function _TMR6_Initialize *****************
+ Defined at:
+		line 64 in file "mcc_generated_files/tmr6.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_TMR6_SetInterruptHandler
+ This function is called by:
+		_SYSTEM_Initialize
+ This function uses a non-reentrant model
+
+
+ *************** function _TMR6_SetInterruptHandler *****************
+ Defined at:
+		line 132 in file "mcc_generated_files/tmr6.c"
+ Parameters:    Size  Location     Type
+  InterruptHan    2    1[COMMON] PTR FTN()void 
+		 -> TMR6_DefaultInterruptHandler(1), TMR6_long_press_duration_isr(1), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+		_TMR6_Initialize
  This function uses a non-reentrant model
 
 
@@ -2876,7 +2988,7 @@ Total ram usage:        0 bytes
  Defined at:
 		line 132 in file "mcc_generated_files/tmr4.c"
  Parameters:    Size  Location     Type
-  InterruptHan    2    0[COMMON] PTR FTN()void 
+  InterruptHan    2    1[COMMON] PTR FTN()void 
 		 -> TMR4_Wroking_Blink_AlarmLED_isr(1), TMR4_DefaultInterruptHandler(1), 
  Auto vars:     Size  Location     Type
 		None
@@ -2938,7 +3050,7 @@ Total ram usage:        0 bytes
  Defined at:
 		line 132 in file "mcc_generated_files/tmr2.c"
  Parameters:    Size  Location     Type
-  InterruptHan    2    0[COMMON] PTR FTN()void 
+  InterruptHan    2    1[COMMON] PTR FTN()void 
 		 -> TMR2_Drive_TRIAC_isr(1), TMR2_DefaultInterruptHandler(1), 
  Auto vars:     Size  Location     Type
 		None
@@ -3000,7 +3112,7 @@ Total ram usage:        0 bytes
  Defined at:
 		line 142 in file "mcc_generated_files/pin_manager.c"
  Parameters:    Size  Location     Type
-  InterruptHan    2    0[COMMON] PTR FTN()void 
+  InterruptHan    2    1[COMMON] PTR FTN()void 
 		 -> Zero_Detection_isr(1), IOCAF2_DefaultInterruptHandler(1), 
  Auto vars:     Size  Location     Type
 		None
@@ -3030,7 +3142,7 @@ Total ram usage:        2 bytes
 
  *************** function _OSCILLATOR_Initialize *****************
  Defined at:
-		line 61 in file "mcc_generated_files/mcc.c"
+		line 62 in file "mcc_generated_files/mcc.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3129,7 +3241,7 @@ Total ram usage:        0 bytes
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  sensor          1    2[COMMON] PTR struct .
+  sensor          1    3[COMMON] PTR struct .
 		 -> mtouch_sensor(18), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -3161,7 +3273,7 @@ Total ram usage:        2 bytes
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  sensor          1    9[COMMON] enum E2661
+  sensor          1   10[COMMON] enum E2661
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -3191,7 +3303,7 @@ Total ram usage:        2 bytes
  Parameters:    Size  Location     Type
   sensor          1    wreg     enum E2661
  Auto vars:     Size  Location     Type
-  sensor          1    7[COMMON] enum E2661
+  sensor          1    8[COMMON] enum E2661
  Return value:  Size  Location     Type
                   1    wreg      enum E2664
  Registers used:
@@ -3224,7 +3336,7 @@ Total ram usage:        2 bytes
   sensor          1    wreg     PTR struct .
 		 -> mtouch_sensor(18), 
  Auto vars:     Size  Location     Type
-  sensor          1    0[COMMON] PTR struct .
+  sensor          1    1[COMMON] PTR struct .
 		 -> mtouch_sensor(18), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -3256,7 +3368,7 @@ Total ram usage:        1 bytes
  Parameters:    Size  Location     Type
   sensor          1    wreg     enum E2661
  Auto vars:     Size  Location     Type
-  sensor          1    5[COMMON] enum E2661
+  sensor          1    6[COMMON] enum E2661
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -3285,10 +3397,10 @@ Total ram usage:        2 bytes
 		line 4 in file "/opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8.c"
  Parameters:    Size  Location     Type
   multiplier      1    wreg     unsigned char 
-  multiplicand    1    0[COMMON] unsigned char 
+  multiplicand    1    1[COMMON] unsigned char 
  Auto vars:     Size  Location     Type
-  multiplier      1    3[COMMON] unsigned char 
-  product         1    2[COMMON] unsigned char 
+  multiplier      1    4[COMMON] unsigned char 
+  product         1    3[COMMON] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      unsigned char 
  Registers used:
@@ -3329,7 +3441,7 @@ Total ram usage:        4 bytes
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  button          1   11[COMMON] enum E2819
+  button          1    0[BANK0 ] enum E2819
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -3340,9 +3452,9 @@ Total ram usage:        4 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       1       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    7
@@ -3360,17 +3472,17 @@ Total ram usage:        2 bytes
  Parameters:    Size  Location     Type
   d1              1    wreg     PTR void 
 		 -> mtouch_button(32), 
-  s1              2    0[COMMON] PTR const void 
+  s1              2    1[COMMON] PTR const void 
 		 -> mtouch_button_init(32), 
-  n               2    2[COMMON] unsigned int 
+  n               2    3[COMMON] unsigned int 
  Auto vars:     Size  Location     Type
-  d1              1    8[COMMON] PTR void 
+  d1              1    9[COMMON] PTR void 
 		 -> mtouch_button(32), 
-  s               2    5[COMMON] PTR const unsigned char 
+  s               2    7[COMMON] PTR const unsigned char 
 		 -> mtouch_button_init(32), 
-  d               1    9[COMMON] PTR unsigned char 
+  d               1   10[COMMON] PTR unsigned char 
 		 -> mtouch_button(32), 
-  tmp             1    7[COMMON] unsigned char 
+  tmp             1    6[COMMON] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      PTR void 
  Registers used:
@@ -3400,8 +3512,8 @@ Total ram usage:       10 bytes
  Parameters:    Size  Location     Type
   name            1    wreg     enum E2819
  Auto vars:     Size  Location     Type
-  name            1    2[COMMON] enum E2819
-  button          1    3[COMMON] PTR struct .
+  name            1    3[COMMON] enum E2819
+  button          1    4[COMMON] PTR struct .
 		 -> mtouch_button(32), 
  Return value:  Size  Location     Type
                   1    wreg      void 
@@ -3461,7 +3573,7 @@ Total ram usage:        0 bytes
 
  *************** function _Init_Function *****************
  Defined at:
-		line 79 in file "main.c"
+		line 84 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3495,11 +3607,11 @@ Total ram usage:        0 bytes
 
  *************** function _StartStop_Fan *****************
  Defined at:
-		line 173 in file "main.c"
+		line 184 in file "main.c"
  Parameters:    Size  Location     Type
   OnOff           1    wreg     _Bool 
  Auto vars:     Size  Location     Type
-  OnOff           1    0[COMMON] _Bool 
+  OnOff           1    1[COMMON] _Bool 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -3526,11 +3638,11 @@ Total ram usage:        1 bytes
 
  *************** function _StartStop_Dimmer *****************
  Defined at:
-		line 201 in file "main.c"
+		line 212 in file "main.c"
  Parameters:    Size  Location     Type
   OnOff           1    wreg     _Bool 
  Auto vars:     Size  Location     Type
-  OnOff           1   66[BANK0 ] _Bool 
+  OnOff           1   69[BANK0 ] _Bool 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -3557,11 +3669,11 @@ Total ram usage:        1 bytes
 
  *************** function _SetDimmer *****************
  Defined at:
-		line 265 in file "main.c"
+		line 281 in file "main.c"
  Parameters:    Size  Location     Type
-  dim_percenta    4   58[BANK0 ] float 
+  dim_percenta    4   61[BANK0 ] float 
  Auto vars:     Size  Location     Type
-  TRIAC_off_du    4   62[BANK0 ] float 
+  TRIAC_off_du    4   65[BANK0 ] float 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -3593,12 +3705,12 @@ Total ram usage:        8 bytes
  Defined at:
 		line 43 in file "/opt/microchip/xc8/v2.31/pic/sources/c99/common/fltol.c"
  Parameters:    Size  Location     Type
-  f1              4   47[BANK0 ] void 
+  f1              4   52[BANK0 ] void 
  Auto vars:     Size  Location     Type
-  exp1            1   57[BANK0 ] unsigned char 
-  sign1           1   56[BANK0 ] unsigned char 
+  exp1            1   11[COMMON] unsigned char 
+  sign1           1   10[COMMON] unsigned char 
  Return value:  Size  Location     Type
-                  4   47[BANK0 ] long 
+                  4   52[BANK0 ] long 
  Registers used:
 		wreg, status,2, status,0
  Tracked objects:
@@ -3607,9 +3719,9 @@ Total ram usage:        8 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       4       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       5       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0      11       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       9       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:       11 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    5
@@ -3624,12 +3736,12 @@ Total ram usage:       11 bytes
  Defined at:
 		line 242 in file "/opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcadd.c"
  Parameters:    Size  Location     Type
-  a               4   47[BANK0 ] long 
-  b               4   51[BANK0 ] long 
+  a               4   52[BANK0 ] long 
+  b               4   56[BANK0 ] long 
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
-                  4   47[BANK0 ] long 
+                  4   52[BANK0 ] long 
  Registers used:
 		wreg, status,2, status,0, pclath, cstack
  Tracked objects:
@@ -3655,15 +3767,15 @@ Total ram usage:        8 bytes
  Defined at:
 		line 10 in file "/opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcadd.c"
  Parameters:    Size  Location     Type
-  b               4    0[COMMON] long 
-  a               4    4[COMMON] long 
+  b               4    1[COMMON] long 
+  a               4    5[COMMON] long 
  Auto vars:     Size  Location     Type
-  grs             1   11[COMMON] unsigned char 
-  bexp            1   10[COMMON] unsigned char 
-  aexp            1    9[COMMON] unsigned char 
-  signs           1    8[COMMON] unsigned char 
+  grs             1   11[BANK0 ] unsigned char 
+  bexp            1   10[BANK0 ] unsigned char 
+  aexp            1    9[BANK0 ] unsigned char 
+  signs           1    8[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
-                  4    0[COMMON] unsigned char 
+                  4    1[COMMON] unsigned char 
  Registers used:
 		wreg, status,2, status,0
  Tracked objects:
@@ -3672,9 +3784,9 @@ Total ram usage:        8 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         8       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       4       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       8       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:        12       8       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         8      12       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:       20 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    5
@@ -3692,12 +3804,12 @@ Total ram usage:       20 bytes
   b               4    0[BANK0 ] unsigned char 
   a               4    4[BANK0 ] unsigned char 
  Auto vars:     Size  Location     Type
-  prod            4   15[BANK0 ] struct .
-  grs             4    9[BANK0 ] unsigned long 
-  temp            2   19[BANK0 ] struct .
-  bexp            1   14[BANK0 ] unsigned char 
-  aexp            1   13[BANK0 ] unsigned char 
-  sign            1    8[BANK0 ] unsigned char 
+  prod            4   20[BANK0 ] struct .
+  grs             4   14[BANK0 ] unsigned long 
+  temp            2   24[BANK0 ] struct .
+  bexp            1   19[BANK0 ] unsigned char 
+  aexp            1   18[BANK0 ] unsigned char 
+  sign            1   13[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   4    0[BANK0 ] unsigned char 
  Registers used:
@@ -3709,8 +3821,8 @@ Total ram usage:       20 bytes
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       8       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0      13       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          5       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         5      21       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       5       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0      26       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:       26 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    6
@@ -3726,13 +3838,13 @@ Total ram usage:       26 bytes
 		line 4 in file "/opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8_16.c"
  Parameters:    Size  Location     Type
   multiplier      1    wreg     unsigned char 
-  multiplicand    1    0[COMMON] unsigned char 
+  multiplicand    1    1[COMMON] unsigned char 
  Auto vars:     Size  Location     Type
-  multiplier      1    8[COMMON] unsigned char 
-  word_mpld       2    6[COMMON] unsigned int 
-  product         2    4[COMMON] unsigned int 
+  multiplier      1    9[COMMON] unsigned char 
+  word_mpld       2    7[COMMON] unsigned int 
+  product         2    5[COMMON] unsigned int 
  Return value:  Size  Location     Type
-                  2    0[COMMON] unsigned int 
+                  2    1[COMMON] unsigned int 
  Registers used:
 		wreg, status,2, status,0
  Tracked objects:
@@ -3758,17 +3870,17 @@ Total ram usage:        9 bytes
  Defined at:
 		line 8 in file "/opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcdiv.c"
  Parameters:    Size  Location     Type
-  a               4   21[BANK0 ] unsigned int 
-  b               4   25[BANK0 ] unsigned int 
+  a               4   26[BANK0 ] unsigned int 
+  b               4   30[BANK0 ] unsigned int 
  Auto vars:     Size  Location     Type
-  grs             4   41[BANK0 ] unsigned long 
-  rem             4   34[BANK0 ] unsigned long 
-  new_exp         2   39[BANK0 ] int 
-  aexp            1   46[BANK0 ] unsigned char 
-  bexp            1   45[BANK0 ] unsigned char 
-  sign            1   38[BANK0 ] unsigned char 
+  grs             4   46[BANK0 ] unsigned long 
+  rem             4   39[BANK0 ] unsigned long 
+  new_exp         2   44[BANK0 ] int 
+  aexp            1   51[BANK0 ] unsigned char 
+  bexp            1   50[BANK0 ] unsigned char 
+  sign            1   43[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
-                  4   21[BANK0 ] unsigned char 
+                  4   26[BANK0 ] unsigned char 
  Registers used:
 		wreg, status,2, status,0
  Tracked objects:
@@ -3792,11 +3904,11 @@ Total ram usage:       26 bytes
 
  *************** function _StartStop_Buzzer *****************
  Defined at:
-		line 187 in file "main.c"
+		line 198 in file "main.c"
  Parameters:    Size  Location     Type
   OnOff           1    wreg     _Bool 
  Auto vars:     Size  Location     Type
-  OnOff           1    0[COMMON] _Bool 
+  OnOff           1    1[COMMON] _Bool 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -3825,11 +3937,11 @@ Total ram usage:        1 bytes
 
  *************** function _StartStop_AlarmLED_Blink *****************
  Defined at:
-		line 159 in file "main.c"
+		line 170 in file "main.c"
  Parameters:    Size  Location     Type
   OnOff           1    wreg     _Bool 
  Auto vars:     Size  Location     Type
-  OnOff           1    0[COMMON] _Bool 
+  OnOff           1    1[COMMON] _Bool 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -3917,11 +4029,11 @@ Total ram usage:        0 bytes
 
  *************** function _StartStop_AlarmLED *****************
  Defined at:
-		line 145 in file "main.c"
+		line 156 in file "main.c"
  Parameters:    Size  Location     Type
   OnOff           1    wreg     _Bool 
  Auto vars:     Size  Location     Type
-  OnOff           1    0[COMMON] _Bool 
+  OnOff           1    1[COMMON] _Bool 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -3972,8 +4084,101 @@ Total ram usage:        0 bytes
 		_PIN_MANAGER_IOC
 		_TMR2_ISR
 		_TMR4_ISR
+		_TMR6_ISR
  This function is called by:
 		Interrupt level 1
+ This function uses a non-reentrant model
+
+
+ *************** function _TMR6_ISR *****************
+ Defined at:
+		line 119 in file "mcc_generated_files/tmr6.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Absolute function
+		_TMR6_DefaultInterruptHandler
+		_TMR6_long_press_duration_isr
+ This function is called by:
+		_INTERRUPT_InterruptManager
+ This function uses a non-reentrant model
+
+
+ *************** function _TMR6_DefaultInterruptHandler *****************
+ Defined at:
+		line 136 in file "mcc_generated_files/tmr6.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_TMR6_Initialize
+		_TMR6_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function _TMR6_long_press_duration_isr *****************
+ Defined at:
+		line 150 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+		_TMR6_ISR
  This function uses a non-reentrant model
 
 
@@ -4041,7 +4246,7 @@ Total ram usage:        0 bytes
 
  *************** function _TMR4_Wroking_Blink_AlarmLED_isr *****************
  Defined at:
-		line 132 in file "main.c"
+		line 137 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -4133,7 +4338,7 @@ Total ram usage:        0 bytes
 
  *************** function _TMR2_Drive_TRIAC_isr *****************
  Defined at:
-		line 104 in file "main.c"
+		line 109 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -4285,7 +4490,7 @@ Total ram usage:        0 bytes
 
  *************** function _Zero_Detection_isr *****************
  Defined at:
-		line 91 in file "main.c"
+		line 96 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -4349,23 +4554,23 @@ MODULE INFORMATION
 Module		Function		Class		Link	Load	Size
 mcc_generated_files/mtouch/mtouch_button.c
 		_Button_Deviation_Update		CODE           	152C	0000	143
-		_MTOUCH_Button_isPressed		CODE           	1EF9	0000	30
-		_MTOUCH_Button_Initialize		CODE           	1128	0000	55
-		_Button_Tick_helper		CODE           	1075	0000	43
-		_MTOUCH_Button_InitializeAll		CODE           	1EA2	0000	28
+		_MTOUCH_Button_isPressed		CODE           	1ED4	0000	30
+		_MTOUCH_Button_Initialize		CODE           	07C4	0000	55
+		_Button_Tick_helper		CODE           	1032	0000	43
+		_MTOUCH_Button_InitializeAll		CODE           	1E98	0000	30
 		_Button_Baseline_Update		CODE           	15BB	0000	145
 		_Button_State_Pressed		CODE           	136A	0000	102
-		_Button_Reading_Update		CODE           	1D1C	0000	17
-		_Button_DefaultCallback		CODE           	1C10	0000	1
-		_MTOUCH_Button_Tick		CODE           	1E21	0000	24
-		_Button_State_NotPressed		CODE           	0846	0000	169
-		_Button_Reading_Update_Helper		CODE           	11A9	0000	81
-		_Button_Service		CODE           	12AD	0000	91
+		_Button_Reading_Update		CODE           	1CF1	0000	18
+		_Button_DefaultCallback		CODE           	1BC4	0000	1
+		_MTOUCH_Button_Tick		CODE           	1DFA	0000	24
+		_Button_State_NotPressed		CODE           	084C	0000	170
+		_Button_Reading_Update_Helper		CODE           	119F	0000	81
+		_Button_Service		CODE           	124A	0000	91
 		_Button_State_Initializing		CODE           	13D0	0000	102
-		_MTOUCH_Button_ServiceAll		CODE           	1D3F	0000	18
-		_Button_Baseline_Initialize		CODE           	10CC	0000	45
+		_MTOUCH_Button_ServiceAll		CODE           	1D03	0000	18
+		_Button_Baseline_Initialize		CODE           	10B6	0000	46
 
-mcc_generated_files/mtouch/mtouch_button.c estimated size: 1094
+mcc_generated_files/mtouch/mtouch_button.c estimated size: 1099
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcdiv.c
 		___fldiv       		CODE           	164C	0000	436
@@ -4373,145 +4578,154 @@ mcc_generated_files/mtouch/mtouch_button.c estimated size: 1094
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcdiv.c estimated size: 436
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8.c
-		___bmul        		CODE           	1DB0	0000	21
+		___bmul        		CODE           	1D74	0000	21
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8.c estimated size: 21
 
+mcc_generated_files/tmr6.c
+		_TMR6_ISR      		CODE           	1C90	0000	15
+		_TMR6_Initialize		CODE           	1D3A	0000	19
+		_TMR6_SetInterruptHandler		CODE           	1BF1	0000	6
+		_TMR6_DefaultInterruptHandler		CODE           	1BC2	0000	1
+
+mcc_generated_files/tmr6.c estimated size: 41
+
 mcc_generated_files/tmr4.c
-		_TMR4_ISR      		CODE           	1CCD	0000	15
-		_TMR4_Initialize		CODE           	1D63	0000	19
-		_TMR4_SetInterruptHandler		CODE           	1C36	0000	6
-		_TMR4_StopTimer		CODE           	1C1A	0000	3
-		_TMR4_DefaultInterruptHandler		CODE           	1C0E	0000	1
-		_TMR4_StartTimer		CODE           	1C17	0000	3
+		_TMR4_ISR      		CODE           	1C81	0000	15
+		_TMR4_Initialize		CODE           	1D27	0000	19
+		_TMR4_SetInterruptHandler		CODE           	1BEB	0000	6
+		_TMR4_StopTimer		CODE           	1BCE	0000	3
+		_TMR4_DefaultInterruptHandler		CODE           	1BC1	0000	1
+		_TMR4_StartTimer		CODE           	1BCB	0000	3
 
 mcc_generated_files/tmr4.c estimated size: 47
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/abs.c
-		_abs           		CODE           	1E53	0000	26
+		_abs           		CODE           	1E2C	0000	26
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/abs.c estimated size: 26
 
 mcc_generated_files/tmr2.c
-		_TMR2_ISR      		CODE           	1CBE	0000	15
-		_TMR2_Initialize		CODE           	1D0B	0000	17
-		_TMR2_SetInterruptHandler		CODE           	1C30	0000	6
-		_TMR2_StopTimer		CODE           	1C14	0000	3
-		_TMR2_DefaultInterruptHandler		CODE           	1C0D	0000	1
-		_TMR2_StartTimer		CODE           	1C11	0000	3
+		_TMR2_ISR      		CODE           	1C72	0000	15
+		_TMR2_Initialize		CODE           	1CCE	0000	17
+		_TMR2_SetInterruptHandler		CODE           	1BE5	0000	6
+		_TMR2_StopTimer		CODE           	1BC8	0000	3
+		_TMR2_DefaultInterruptHandler		CODE           	1BC0	0000	1
+		_TMR2_StartTimer		CODE           	1BC5	0000	3
 
 mcc_generated_files/tmr2.c estimated size: 45
 
 mcc_generated_files/interrupt_manager.c
-		_INTERRUPT_InterruptManager		CODE           	0004	0000	48
+		_INTERRUPT_InterruptManager		CODE           	0004	0000	62
 
-mcc_generated_files/interrupt_manager.c estimated size: 48
+mcc_generated_files/interrupt_manager.c estimated size: 62
 
 mcc_generated_files/mtouch/mtouch.c
-		_MTOUCH_Tick   		CODE           	1C21	0000	4
-		_MTOUCH_Initialize		CODE           	1CA2	0000	13
-		_MTOUCH_Service_Mainloop		CODE           	104B	0000	42
-		_MTOUCH_needReburst		CODE           	07FE	0000	2
+		_MTOUCH_Tick   		CODE           	1BD5	0000	4
+		_MTOUCH_Initialize		CODE           	1C56	0000	13
+		_MTOUCH_Service_Mainloop		CODE           	1008	0000	42
+		_MTOUCH_needReburst		CODE           	0002	0000	2
 
 mcc_generated_files/mtouch/mtouch.c estimated size: 61
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/memcpy.c
-		_memcpy        		CODE           	10F9	0000	47
+		_memcpy        		CODE           	10E4	0000	47
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/memcpy.c estimated size: 47
 
 mcc_generated_files/pin_manager.c
-		_PIN_MANAGER_Initialize		CODE           	1022	0000	41
-		_IOCAF2_DefaultInterruptHandler		CODE           	1C0C	0000	1
-		_IOCAF2_ISR    		CODE           	1CAF	0000	15
-		_PIN_MANAGER_IOC		CODE           	1C6B	0000	9
-		_IOCAF2_SetInterruptHandler		CODE           	1C2A	0000	6
+		_PIN_MANAGER_Initialize		CODE           	1FD7	0000	41
+		_IOCAF2_DefaultInterruptHandler		CODE           	1BBF	0000	1
+		_IOCAF2_ISR    		CODE           	1C63	0000	15
+		_PIN_MANAGER_IOC		CODE           	1C1F	0000	9
+		_IOCAF2_SetInterruptHandler		CODE           	1BDF	0000	6
 
 mcc_generated_files/pin_manager.c estimated size: 72
 
 mcc_generated_files/mtouch/mtouch_sensor_scan.c
-		_MTOUCH_CVD_ScanA_0		CODE           	1F57	0000	32
-		_MTOUCH_CVD_ScanB_0		CODE           	1F97	0000	32
-		_MTOUCH_CVD_ScanA_1		CODE           	1F37	0000	32
-		_MTOUCH_CVD_ScanB_1		CODE           	1F77	0000	32
+		_MTOUCH_CVD_ScanA_0		CODE           	1F32	0000	32
+		_MTOUCH_CVD_ScanB_0		CODE           	1F72	0000	32
+		_MTOUCH_CVD_ScanA_1		CODE           	1F12	0000	32
+		_MTOUCH_CVD_ScanB_1		CODE           	1F52	0000	32
 
 mcc_generated_files/mtouch/mtouch_sensor_scan.c estimated size: 128
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcadd.c
-		___flsub       		CODE           	1F17	0000	32
-		___fladd       		CODE           	08EF	0000	575
+		___flsub       		CODE           	1EF2	0000	32
+		___fladd       		CODE           	08F6	0000	568
 
-/opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcadd.c estimated size: 607
+/opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcadd.c estimated size: 600
 
 shared
 		_HalfCycleACDuration_const		STRCODE        	0000	0000	0
 		_TMR2_Timer_Period_const		STRCODE        	0000	0000	0
-		__initialization		CODE           	0036	0000	36
+		__initialization		CODE           	0044	0000	33
 		_mtouch_button_init		STRCODE        	1800	0000	32
 
-shared estimated size: 68
+shared estimated size: 65
 
 mcc_generated_files/mcc.c
-		_WDT_Initialize		CODE           	1C1D	0000	4
-		_OSCILLATOR_Initialize		CODE           	1C4F	0000	7
-		_SYSTEM_Initialize		CODE           	1D76	0000	19
+		_WDT_Initialize		CODE           	1BD1	0000	4
+		_OSCILLATOR_Initialize		CODE           	1C0A	0000	7
+		_SYSTEM_Initialize		CODE           	1D9E	0000	22
 
-mcc_generated_files/mcc.c estimated size: 30
+mcc_generated_files/mcc.c estimated size: 33
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8_16.c
-		__Umul8_16     		CODE           	1FB7	0000	35
+		__Umul8_16     		CODE           	1FB4	0000	35
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8_16.c estimated size: 35
 
 main.c
-		_StartTouchDetection		CODE           	0801	0000	69
-		_StartStop_AlarmLED_Blink		CODE           	1CEB	0000	16
-		_main          		CODE           	1FDA	0000	38
-		_TMR2_Drive_TRIAC_isr		CODE           	10A0	0000	44
-		_TMR4_Wroking_Blink_AlarmLED_isr		CODE           	1EBE	0000	29
+		_StartTouchDetection		CODE           	1113	0000	70
+		_StartStop_AlarmLED_Blink		CODE           	1CAE	0000	16
+		_TMR6_long_press_duration_isr		CODE           	1BD9	0000	6
+		_main          		CODE           	1089	0000	45
+		_TMR2_Drive_TRIAC_isr		CODE           	105D	0000	44
+		_TMR4_Wroking_Blink_AlarmLED_isr		CODE           	1E7B	0000	29
 		_SetDimmer     		CODE           	14AB	0000	129
 		_StartHeater   		CODE           	0B2E	0000	2518
-		_Zero_Detection_isr		CODE           	1C74	0000	10
-		_StopTouchDetection		CODE           	07B9	0000	69
-		_Init_Function 		CODE           	1DDB	0000	23
-		_StartStop_Fan 		CODE           	1C96	0000	12
-		_StartStop_Dimmer		CODE           	1E09	0000	24
-		_StartStop_AlarmLED		CODE           	1C7E	0000	12
-		_StartStop_Buzzer		CODE           	1C8A	0000	12
+		_Zero_Detection_isr		CODE           	1C28	0000	10
+		_StopTouchDetection		CODE           	1159	0000	70
+		_Init_Function 		CODE           	1DB4	0000	23
+		_StartStop_Fan 		CODE           	1C4A	0000	12
+		_StartStop_Dimmer		CODE           	1DE2	0000	24
+		_StartStop_AlarmLED		CODE           	1C32	0000	12
+		_StartStop_Buzzer		CODE           	1C3E	0000	12
 
-main.c estimated size: 3005
+main.c estimated size: 3020
 
 mcc_generated_files/mtouch/mtouch_random.c
-		_MTOUCH_Random 		CODE           	1DC5	0000	22
+		_MTOUCH_Random 		CODE           	1D89	0000	21
 
-mcc_generated_files/mtouch/mtouch_random.c estimated size: 22
+mcc_generated_files/mtouch/mtouch_random.c estimated size: 21
 
 mcc_generated_files/mtouch/mtouch_sensor.c
-		_Sensor_Acq_ExecutePacket		CODE           	1253	0000	90
-		_MTOUCH_Delay  		CODE           	1D89	0000	19
-		_Sensor_Acquisition		CODE           	115F	0000	74
-		_MTOUCH_Sensor_Initialize		CODE           	1D2D	0000	18
-		_Sensor_Sampled_Reset		CODE           	1C48	0000	7
-		_MTOUCH_Sensor_InitializeAll		CODE           	1CFB	0000	16
-		_Sensor_DefaultCallback		CODE           	0800	0000	1
-		_Sensor_isEnabled		CODE           	1CDC	0000	15
-		_MTOUCH_Sensor_isCalibrated		CODE           	0002	0000	2
-		_MTOUCH_Sensor_Calibrate		CODE           	1C0F	0000	1
-		_MTOUCH_Sensor_Sampled_ResetAll		CODE           	1EDB	0000	30
-		_Sensor_setActive		CODE           	1C56	0000	7
-		_MTOUCH_Sensor_Enable		CODE           	1D9C	0000	20
-		_Sensor_Acq_ExecuteScan		CODE           	1308	0000	98
-		_Sensor_setSampled		CODE           	1C64	0000	7
-		_MTOUCH_Sensor_RawSample_Get		CODE           	1E39	0000	26
-		_MTOUCH_Sensor_SampleAll		CODE           	1E6D	0000	26
-		_MTOUCH_Sensor_wasSampled		CODE           	1DF2	0000	23
-		_Sensor_Service		CODE           	11FA	0000	89
-		_Sensor_setScanFunction		CODE           	1D51	0000	18
-		_MTOUCH_Sensor_Scan_Initialize		CODE           	1C25	0000	5
-		_Sensor_RawSample_Update		CODE           	1E87	0000	27
-		_Sensor_setInactive		CODE           	1C5D	0000	7
+		_Sensor_Acq_ExecutePacket		CODE           	1307	0000	99
+		_MTOUCH_Delay  		CODE           	1D4D	0000	19
+		_Sensor_Acquisition		CODE           	0802	0000	74
+		_MTOUCH_Sensor_Initialize		CODE           	1CDF	0000	18
+		_Sensor_Sampled_Reset		CODE           	1C03	0000	7
+		_MTOUCH_Sensor_InitializeAll		CODE           	1CBE	0000	16
+		_Sensor_DefaultCallback		CODE           	1000	0000	1
+		_Sensor_isEnabled		CODE           	1C9F	0000	15
+		_MTOUCH_Sensor_isCalibrated		CODE           	0800	0000	2
+		_MTOUCH_Sensor_Calibrate		CODE           	1BC3	0000	1
+		_MTOUCH_Sensor_Sampled_ResetAll		CODE           	1EB6	0000	30
+		_Sensor_setActive		CODE           	1C11	0000	7
+		_MTOUCH_Sensor_Enable		CODE           	1D60	0000	20
+		_Sensor_Acq_ExecuteScan		CODE           	12A5	0000	98
+		_Sensor_setSampled		CODE           	1001	0000	7
+		_MTOUCH_Sensor_RawSample_Get		CODE           	1E12	0000	26
+		_MTOUCH_Sensor_SampleAll		CODE           	1E46	0000	26
+		_MTOUCH_Sensor_wasSampled		CODE           	1DCB	0000	23
+		_Sensor_Service		CODE           	11F0	0000	90
+		_Sensor_setScanFunction		CODE           	1D15	0000	18
+		_MTOUCH_Sensor_Scan_Initialize		CODE           	07FB	0000	5
+		_Sensor_RawSample_Update		CODE           	1E60	0000	27
+		_Sensor_setInactive		CODE           	1C18	0000	7
 
-mcc_generated_files/mtouch/mtouch_sensor.c estimated size: 626
+mcc_generated_files/mtouch/mtouch_sensor.c estimated size: 636
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/fltol.c
 		___fltol       		CODE           	1436	0000	117
@@ -4519,7 +4733,7 @@ mcc_generated_files/mtouch/mtouch_sensor.c estimated size: 626
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/fltol.c estimated size: 117
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcmul.c
-		___flmul       		CODE           	0562	0000	599
+		___flmul       		CODE           	056D	0000	599
 
 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcmul.c estimated size: 599
 
