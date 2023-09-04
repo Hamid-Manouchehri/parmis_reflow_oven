@@ -41,6 +41,7 @@ inline void StartStop_Buzzer(bool);
 inline void StartStop_Dimmer(bool);
 void StartTouchDetection(void);
 void StopTouchDetection(void);
+void BothTouchesDetection(void);
 void SetDimmer(float);
 inline void StartHeater(uint8_t);
 
@@ -69,9 +70,9 @@ void main(void){
         
         StartTouchDetection();
         StopTouchDetection();
+        BothTouchesDetection();
        
     }
-    
 } // end of main()
 
 
@@ -226,54 +227,141 @@ inline void StartStop_Dimmer(bool OnOff){
 void StartTouchDetection(void){
     /* To use; just call this function where ever you want to detect touch*/
    
-    g_tmr6_longpress_duration_counter = 0;
+    if (true == MTOUCH_Button_isPressed(T_start)) {
     
-    while ((true == MTOUCH_Button_isPressed(T_start)) &&
-           (g_tmr6_longpress_duration_counter < TMR6_LONGPRESS_DURATION)) {
-        
-        MTOUCH_Service_Mainloop();
-    }
-    
+        g_tmr6_longpress_duration_counter = 0;
 
-    if (true == MTOUCH_Button_isPressed(T_start)){ // long press detection
+        while ((true == MTOUCH_Button_isPressed(T_start)) &&
+               (g_tmr6_longpress_duration_counter < TMR6_LONGPRESS_DURATION)) {
 
-        while (true == MTOUCH_Button_isPressed(T_start)) {
             MTOUCH_Service_Mainloop();
         }
 
-        StartStop_Buzzer(ON);
-        __delay_ms(100);
-        StartStop_Buzzer(OFF);
 
-        StartHeater(SMALL_PCB);
+        if (true == MTOUCH_Button_isPressed(T_start)){ // long press detection
 
-    }  
+            while (true == MTOUCH_Button_isPressed(T_start)) {
+                MTOUCH_Service_Mainloop();
+            }
+
+            StartStop_Buzzer(ON);
+            __delay_ms(100);
+            StartStop_Buzzer(OFF);
+
+            StartStop_AlarmLED_Blink(ON);
+            StartStop_Dimmer(ON);
+
+            StartHeater(SMALL_PCB);
+
+            // <section #4>       
+            StartStop_Fan(ON);
+            StartStop_Dimmer(OFF);
+            for (uint8_t i = 0; i < 36; i++){ // generate 3 min delay
+
+                __delay_ms(5000);
+            }
+            StartStop_Fan(OFF);
+            StartStop_Buzzer(ON);
+            __delay_ms(1000);
+            StartStop_Buzzer(OFF);
+            StartStop_AlarmLED_Blink(OFF);
+
+        }  
+    }
 }
 
 
 void StopTouchDetection(void){
     /* To use; just call this function where ever you want to detect touch*/
     
-    g_tmr6_longpress_duration_counter = 0;
+    if (true == MTOUCH_Button_isPressed(T_stop)) {
     
-    while ((true == MTOUCH_Button_isPressed(T_stop)) &&
-           (g_tmr6_longpress_duration_counter < TMR6_LONGPRESS_DURATION)) {
-        
-        MTOUCH_Service_Mainloop();
-    }
+        g_tmr6_longpress_duration_counter = 0;
 
-    if (true == MTOUCH_Button_isPressed(T_stop)){ // long press detection
+        while ((true == MTOUCH_Button_isPressed(T_stop)) &&
+               (g_tmr6_longpress_duration_counter < TMR6_LONGPRESS_DURATION)) {
 
-        while (true == MTOUCH_Button_isPressed(T_stop)) {
             MTOUCH_Service_Mainloop();
         }
 
-        StartStop_Buzzer(ON);
-        __delay_ms(100);
-        StartStop_Buzzer(OFF);
+        if (true == MTOUCH_Button_isPressed(T_stop)){ // long press detection
 
-        StartHeater(LARGE_PCB);
+            while (true == MTOUCH_Button_isPressed(T_stop)) {
+                MTOUCH_Service_Mainloop();
+            }
 
+            StartStop_Buzzer(ON);
+            __delay_ms(100);
+            StartStop_Buzzer(OFF);
+
+            StartStop_AlarmLED_Blink(ON);
+            StartStop_Dimmer(ON);
+
+            StartHeater(LARGE_PCB);
+
+            // <section #4>       
+            StartStop_Fan(ON);
+            StartStop_Dimmer(OFF);
+            for (uint8_t i = 0; i < 36; i++){ // generate 3 min delay
+
+                __delay_ms(5000);
+            }
+            StartStop_Fan(OFF);
+            StartStop_Buzzer(ON);
+            __delay_ms(1000);
+            StartStop_Buzzer(OFF);
+            StartStop_AlarmLED_Blink(OFF);
+
+        }
+    }
+}
+
+
+void BothTouchesDetection(void){
+    
+    if ((true == MTOUCH_Button_isPressed(T_start)) &&
+        (true == MTOUCH_Button_isPressed(T_stop))) {
+    
+        while ((true == MTOUCH_Button_isPressed(T_start)) &&
+               (true == MTOUCH_Button_isPressed(T_stop)) &&
+               (g_tmr6_longpress_duration_counter < TMR6_LONGPRESS_DURATION)) {
+
+            MTOUCH_Service_Mainloop();
+        }
+
+        if ((true == MTOUCH_Button_isPressed(T_start)) && 
+            (true == MTOUCH_Button_isPressed(T_stop))){ // long press detection
+
+            while ((true == MTOUCH_Button_isPressed(T_start)) && 
+                   (true == MTOUCH_Button_isPressed(T_stop))) {
+
+                MTOUCH_Service_Mainloop();
+            }
+
+            StartStop_Buzzer(ON);
+            __delay_ms(500);
+            StartStop_Buzzer(OFF);
+
+            StartStop_AlarmLED_Blink(ON);
+            StartStop_Dimmer(ON);
+
+            StartHeater(SMALL_PCB);
+
+            // <section #4>       
+            for (uint8_t i = 0; i < 170; i++){ // generate a cycle of 20 (min): 170*(5+2)
+
+                SetDimmer(3);
+                __delay_ms(5000);
+                SetDimmer(71);
+                __delay_ms(2000);
+            }
+
+            StartStop_Buzzer(ON);
+            __delay_ms(1000);
+            StartStop_Buzzer(OFF);
+            StartStop_AlarmLED_Blink(OFF);
+
+        }
     }
 }
 
@@ -292,9 +380,6 @@ void SetDimmer(float dim_percentage){
 
 
 inline void StartHeater(uint8_t status_flag){
-    
-    StartStop_AlarmLED_Blink(ON);
-    StartStop_Dimmer(ON);
     
     if(SMALL_PCB == status_flag){
         
@@ -602,18 +687,4 @@ inline void StartHeater(uint8_t status_flag){
         SetDimmer(79);
         __delay_ms(5000);
     }
-
-
-    // <section #4>       
-    StartStop_Fan(ON);
-    StartStop_Dimmer(OFF);
-    for (uint8_t i = 0; i < 36; i++){ // generate 3 min delay
-        
-        __delay_ms(5000);
-    }
-    StartStop_Fan(OFF);
-    StartStop_Buzzer(ON);
-    __delay_ms(1000);
-    StartStop_Buzzer(OFF);
-    StartStop_AlarmLED_Blink(OFF);
 }
