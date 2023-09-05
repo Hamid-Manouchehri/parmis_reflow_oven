@@ -967,8 +967,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mtouch/mtouch_button.c: 266: {
 [f ]
 "268
-[; ;mcc_generated_files/mtouch/mtouch_button.c: 268:     if ((button->counter) >= ((mtouch_button_statecounter_t)1000u))
-[e $ ! >= -> . *U _button 6 `ui -> -> -> 1000 `ui `us `ui 398  ]
+[; ;mcc_generated_files/mtouch/mtouch_button.c: 268:     if ((button->counter) >= ((mtouch_button_statecounter_t)59990u))
+[e $ ! >= -> . *U _button 6 `ui -> -> -> 59990 `ui `us `ui 398  ]
 "269
 [; ;mcc_generated_files/mtouch/mtouch_button.c: 269:     {
 {

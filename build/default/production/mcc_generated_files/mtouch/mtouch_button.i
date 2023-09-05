@@ -4986,7 +4986,7 @@ static void Button_State_NotPressed(mtouch_button_t* button)
 static void Button_State_Pressed(mtouch_button_t* button)
 {
 
-    if ((button->counter) >= ((mtouch_button_statecounter_t)1000u))
+    if ((button->counter) >= ((mtouch_button_statecounter_t)59990u))
     {
         MTOUCH_Button_Initialize(button->name);
         callback_notPressed(button->name);

@@ -281,7 +281,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Interrupt Module" name="SelectedInterruptIndexHigh"/>
-         <value>0</value>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Interrupt Module" name="preemptiveHigh"/>
@@ -1913,7 +1913,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCI" settingAlias="order"/>
-         <value>0</value>
+         <value>3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="LATA" settingAlias="LATA0"/>
@@ -2553,7 +2553,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR2" registerAlias="TMRI" settingAlias="order"/>
-         <value>-1</value>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR4" name="CallbackFuncRate"/>
@@ -2733,7 +2733,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR4" registerAlias="TMRI" settingAlias="order"/>
-         <value>-1</value>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR6" name="CallbackFuncRate"/>
@@ -2913,7 +2913,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR6" registerAlias="TMRI" settingAlias="order"/>
-         <value>-1</value>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="WDT" name="wdtPeriod"/>
@@ -3281,7 +3281,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%timeout_counts"/>
-         <value>1000</value>
+         <value>59990</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%timeout_enabled"/>
@@ -3937,7 +3937,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%selectedScanRateTimer"/>
-         <value/>
+         <value></value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="sensors%timingUnit"/>
@@ -4032,34 +4032,46 @@
          <value>5000</value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
+      <entry>
+         <file>main.c</file>
+         <hash>22663304ba5599d13828c8bfec0930999fc916ecc11aa0084ee82eaaf518dc46</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/device_config.c</file>
+         <hash>89ee0e71428cf544e7b1d8af90ba290a1fa83c125cf50dbd4e5046e7d88b34f9</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/device_config.h</file>
+         <hash>fccbbad2a2934436c64599ca437e0070c9519378396af3c7c1b775fe39ee4aea</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/interrupt_manager.c</file>
+         <hash>a056792f7e1b5f8792ddb42f292b23644b08162a56dad7cf94d23d6c463e5b7f</hash>
+      </entry>
       <entry>
          <file>mcc_generated_files/interrupt_manager.h</file>
          <hash>41a4fa54bbaf6e3f37e39ec1258c28b9924adaa4be9a12e6dc158f9a969acf00</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/mtouch/mtouch_api_example.c</file>
-         <hash>ce370c3fbfbaceb68baa3ec1c7d46cb2ecabbf01d94d1c9d24d02d590d57159d</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files/mtouch/mtouch_sensor_scan.h</file>
-         <hash>149760e252482a1850a98695d25352957118d462e7797e5eb8688d6bcf35eb23</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files/mtouch/mtouch_sensor.h</file>
-         <hash>243eca95a2ef343bbb38677c34bf725821d9cff75667f7fb00867489e2e7fcde</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files/mtouch/mtouch_sensor_scan.c</file>
-         <hash>1198299cd191a45ced35bb7237216dc815318c7f7e9fdc478b9694c4f9e4c82a</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files/mtouch/mtouch_sensor.c</file>
-         <hash>f614aded53ae75b9823607f476be87bb8d72de794bb9001d3d0e0b11b0e8b1af</hash>
+         <file>mcc_generated_files/mcc.c</file>
+         <hash>c8154bc4b3a77029936402822e92f3cf2f4ebfa3e4051eff1c39d0fb31668906</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.h</file>
          <hash>58f0a5eaf9d7fdb19fa03aefda6bb9ba68149a1a12e04a456af93b7792c90398</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/mtouch/mtouch.c</file>
+         <hash>a67f3f98dc24123be978bcd138622d9ad785a99b6ec50bb5b1df42376f9e0a03</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/mtouch/mtouch.h</file>
+         <hash>b8e1666e7f409ea1be6707bc5f08d794d1dac970c13ccc4a4c4d72bd70c80dd4</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/mtouch/mtouch_api_example.c</file>
+         <hash>ce370c3fbfbaceb68baa3ec1c7d46cb2ecabbf01d94d1c9d24d02d590d57159d</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_button.c</file>
@@ -4070,76 +4082,64 @@
          <hash>25ef0396459fe7bf88d7f8f53e5f7e16aefb5a7038c2f8d33834880d3fa027e6</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/interrupt_manager.c</file>
-         <hash>a056792f7e1b5f8792ddb42f292b23644b08162a56dad7cf94d23d6c463e5b7f</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files/mcc.c</file>
-         <hash>c8154bc4b3a77029936402822e92f3cf2f4ebfa3e4051eff1c39d0fb31668906</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files/pin_manager.c</file>
-         <hash>c575fe4e0574f90c1cb057c320d9af487e52b14e9dd9d5e4af4c1cb15b837f12</hash>
+         <file>mcc_generated_files/mtouch/mtouch_config.h</file>
+         <hash>0faf8e0147ab2dc2127b30fbc3512145167f6306072ff9f5bf08916d868542bc</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mtouch/mtouch_random.c</file>
          <hash>e8e2b4badbb6b30cb7690ad9a7d4693585fd96dc0f5f6d9da1151488bfc76c56</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/pin_manager.h</file>
-         <hash>f14f8b169c83407ce9ab978ccc00dd866fcce73ce3e6017c0ae80c3562624c53</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/mtouch/mtouch_random.h</file>
          <hash>34d67251a9db8efc31a6315989224e422ec856a4e07df83fc7ae743708c2c090</hash>
       </entry>
       <entry>
-         <file>main.c</file>
-         <hash>22663304ba5599d13828c8bfec0930999fc916ecc11aa0084ee82eaaf518dc46</hash>
+         <file>mcc_generated_files/mtouch/mtouch_sensor.c</file>
+         <hash>f614aded53ae75b9823607f476be87bb8d72de794bb9001d3d0e0b11b0e8b1af</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/mtouch/mtouch_config.h</file>
-         <hash>a1f8f7143c2fd883ec02d0fe29e293ba7ea528d8be11ea069c8f48c5fee270cb</hash>
+         <file>mcc_generated_files/mtouch/mtouch_sensor.h</file>
+         <hash>243eca95a2ef343bbb38677c34bf725821d9cff75667f7fb00867489e2e7fcde</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/tmr6.c</file>
-         <hash>5d8ecaba9597138e8cfef42609bb185ea1065e2432c944c7a96784f4d9776e51</hash>
+         <file>mcc_generated_files/mtouch/mtouch_sensor_scan.c</file>
+         <hash>1198299cd191a45ced35bb7237216dc815318c7f7e9fdc478b9694c4f9e4c82a</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/tmr2.h</file>
-         <hash>de71660b07c8875177378eca6b37a9168b72a478eee3f114d169a0c5f8ef869c</hash>
+         <file>mcc_generated_files/mtouch/mtouch_sensor_scan.h</file>
+         <hash>149760e252482a1850a98695d25352957118d462e7797e5eb8688d6bcf35eb23</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/mtouch/mtouch.h</file>
-         <hash>b8e1666e7f409ea1be6707bc5f08d794d1dac970c13ccc4a4c4d72bd70c80dd4</hash>
+         <file>mcc_generated_files/pin_manager.c</file>
+         <hash>c575fe4e0574f90c1cb057c320d9af487e52b14e9dd9d5e4af4c1cb15b837f12</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/tmr4.h</file>
-         <hash>6b8464d3d84bef4eae1ce0efa72c1b5abcbd1a7b1b9c7ae09c131591cbe2fa33</hash>
+         <file>mcc_generated_files/pin_manager.h</file>
+         <hash>f14f8b169c83407ce9ab978ccc00dd866fcce73ce3e6017c0ae80c3562624c53</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/tmr2.c</file>
          <hash>08924ebe20cabe2b17ab4a174877abc857ac24e19d378d0121be5d4f206ae053</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/mtouch/mtouch.c</file>
-         <hash>a67f3f98dc24123be978bcd138622d9ad785a99b6ec50bb5b1df42376f9e0a03</hash>
+         <file>mcc_generated_files/tmr2.h</file>
+         <hash>de71660b07c8875177378eca6b37a9168b72a478eee3f114d169a0c5f8ef869c</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/tmr4.c</file>
          <hash>5732356bb175ab384b9e27f456979457b555dd88a61c97a74a306d876b618a0b</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/device_config.h</file>
-         <hash>fccbbad2a2934436c64599ca437e0070c9519378396af3c7c1b775fe39ee4aea</hash>
+         <file>mcc_generated_files/tmr4.h</file>
+         <hash>6b8464d3d84bef4eae1ce0efa72c1b5abcbd1a7b1b9c7ae09c131591cbe2fa33</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/tmr6.c</file>
+         <hash>5d8ecaba9597138e8cfef42609bb185ea1065e2432c944c7a96784f4d9776e51</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/tmr6.h</file>
          <hash>3e889af4bb44b9a6219d26b80ced68236e87044323c43b5321a15f4a179d689f</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files/device_config.c</file>
-         <hash>89ee0e71428cf544e7b1d8af90ba290a1fa83c125cf50dbd4e5046e7d88b34f9</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

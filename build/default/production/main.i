@@ -5414,7 +5414,7 @@ void WDT_Initialize(void);
 const float HalfCycleACDuration_const = 10.0;
 const float TMR2_Timer_Period_const = 100;
 uint16_t tmr2_required_counter_steps_g;
-uint8_t g_tmr6_longpress_duration_counter;
+uint16_t g_tmr6_longpress_duration_counter;
 _Bool DimmerStatusFlag_g = 0;
 
 __attribute__((inline)) void Init_Function(void);
@@ -5600,45 +5600,50 @@ __attribute__((inline)) void StartStop_Dimmer(_Bool OnOff){
 void StartTouchDetection(void){
 
 
-    if (1 == MTOUCH_Button_isPressed(T_start)) {
+    if (1 == MTOUCH_Service_Mainloop()) {
 
-        g_tmr6_longpress_duration_counter = 0;
+        if ((1 == MTOUCH_Button_isPressed(T_start)) &&
+            (0 == MTOUCH_Button_isPressed(T_stop))) {
 
-        while ((1 == MTOUCH_Button_isPressed(T_start)) &&
-               (g_tmr6_longpress_duration_counter < 92)) {
+            g_tmr6_longpress_duration_counter = 0;
 
-            MTOUCH_Service_Mainloop();
-        }
-
-
-        if (1 == MTOUCH_Button_isPressed(T_start)){
-
-            while (1 == MTOUCH_Button_isPressed(T_start)) {
+            while ((1 == MTOUCH_Button_isPressed(T_start)) &&
+                   (0 == MTOUCH_Button_isPressed(T_stop)) &&
+                    (g_tmr6_longpress_duration_counter < 92)) {
                 MTOUCH_Service_Mainloop();
             }
 
-            StartStop_Buzzer(1);
-            _delay((unsigned long)((100)*(8000000/4000.0)));
-            StartStop_Buzzer(0);
-
-            StartStop_AlarmLED_Blink(1);
-            StartStop_Dimmer(1);
-
-            StartHeater(10);
+            if ((1 == MTOUCH_Button_isPressed(T_start)) &&
+                (0 == MTOUCH_Button_isPressed(T_stop))) {
 
 
-            StartStop_Fan(1);
-            StartStop_Dimmer(0);
-            for (uint8_t i = 0; i < 36; i++){
 
-                _delay((unsigned long)((5000)*(8000000/4000.0)));
+                StartStop_Buzzer(1);
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+                StartStop_Buzzer(0);
+
+                StartStop_AlarmLED_Blink(1);
+                StartStop_Dimmer(1);
+
+                StartHeater(10);
+
+
+                StartStop_Fan(1);
+                StartStop_Dimmer(0);
+                for (uint8_t i = 0; i < 36; i++){
+                    _delay((unsigned long)((5000)*(8000000/4000.0)));
+                }
+                StartStop_Fan(0);
+                StartStop_Buzzer(1);
+                _delay((unsigned long)((1000)*(8000000/4000.0)));
+                StartStop_Buzzer(0);
+                StartStop_AlarmLED_Blink(0);
+
+
+                while (1 == MTOUCH_Button_isPressed(T_start)) {
+                    MTOUCH_Service_Mainloop();
+                }
             }
-            StartStop_Fan(0);
-            StartStop_Buzzer(1);
-            _delay((unsigned long)((1000)*(8000000/4000.0)));
-            StartStop_Buzzer(0);
-            StartStop_AlarmLED_Blink(0);
-
         }
     }
 }
@@ -5647,44 +5652,49 @@ void StartTouchDetection(void){
 void StopTouchDetection(void){
 
 
-    if (1 == MTOUCH_Button_isPressed(T_stop)) {
+    if (1 == MTOUCH_Service_Mainloop()) {
 
-        g_tmr6_longpress_duration_counter = 0;
+        if ((1 == MTOUCH_Button_isPressed(T_stop)) &&
+            (0 == MTOUCH_Button_isPressed(T_start))) {
 
-        while ((1 == MTOUCH_Button_isPressed(T_stop)) &&
-               (g_tmr6_longpress_duration_counter < 92)) {
+            g_tmr6_longpress_duration_counter = 0;
 
-            MTOUCH_Service_Mainloop();
-        }
-
-        if (1 == MTOUCH_Button_isPressed(T_stop)){
-
-            while (1 == MTOUCH_Button_isPressed(T_stop)) {
+            while ((1 == MTOUCH_Button_isPressed(T_stop)) &&
+                   (0 == MTOUCH_Button_isPressed(T_start)) &&
+                   (g_tmr6_longpress_duration_counter < 92)) {
                 MTOUCH_Service_Mainloop();
             }
 
-            StartStop_Buzzer(1);
-            _delay((unsigned long)((100)*(8000000/4000.0)));
-            StartStop_Buzzer(0);
-
-            StartStop_AlarmLED_Blink(1);
-            StartStop_Dimmer(1);
-
-            StartHeater(11);
+            if ((1 == MTOUCH_Button_isPressed(T_stop)) &&
+                (0 == MTOUCH_Button_isPressed(T_start))) {
 
 
-            StartStop_Fan(1);
-            StartStop_Dimmer(0);
-            for (uint8_t i = 0; i < 36; i++){
 
-                _delay((unsigned long)((5000)*(8000000/4000.0)));
+                StartStop_Buzzer(1);
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+                StartStop_Buzzer(0);
+
+                StartStop_AlarmLED_Blink(1);
+                StartStop_Dimmer(1);
+
+                StartHeater(11);
+
+
+                StartStop_Fan(1);
+                StartStop_Dimmer(0);
+                for (uint8_t i = 0; i < 36; i++){
+                    _delay((unsigned long)((5000)*(8000000/4000.0)));
+                }
+                StartStop_Fan(0);
+                StartStop_Buzzer(1);
+                _delay((unsigned long)((1000)*(8000000/4000.0)));
+                StartStop_Buzzer(0);
+                StartStop_AlarmLED_Blink(0);
+
+                while (1 == MTOUCH_Button_isPressed(T_stop)) {
+                    MTOUCH_Service_Mainloop();
+                }
             }
-            StartStop_Fan(0);
-            StartStop_Buzzer(1);
-            _delay((unsigned long)((1000)*(8000000/4000.0)));
-            StartStop_Buzzer(0);
-            StartStop_AlarmLED_Blink(0);
-
         }
     }
 }
@@ -5692,51 +5702,62 @@ void StopTouchDetection(void){
 
 void BothTouchesDetection(void){
 
-    if ((1 == MTOUCH_Button_isPressed(T_start)) &&
-        (1 == MTOUCH_Button_isPressed(T_stop))) {
+    if (1 == MTOUCH_Service_Mainloop()) {
 
-        while ((1 == MTOUCH_Button_isPressed(T_start)) &&
-               (1 == MTOUCH_Button_isPressed(T_stop)) &&
-               (g_tmr6_longpress_duration_counter < 92)) {
+        if (1 == MTOUCH_Button_isPressed(T_start)) {
 
-            MTOUCH_Service_Mainloop();
-        }
-
-        if ((1 == MTOUCH_Button_isPressed(T_start)) &&
-            (1 == MTOUCH_Button_isPressed(T_stop))){
+            g_tmr6_longpress_duration_counter = 0;
 
             while ((1 == MTOUCH_Button_isPressed(T_start)) &&
-                   (1 == MTOUCH_Button_isPressed(T_stop))) {
+                   (1 == MTOUCH_Button_isPressed(T_stop)) &&
+                    (g_tmr6_longpress_duration_counter < 92)) {
 
                 MTOUCH_Service_Mainloop();
             }
 
-            StartStop_Buzzer(1);
-            _delay((unsigned long)((500)*(8000000/4000.0)));
-            StartStop_Buzzer(0);
-
-            StartStop_AlarmLED_Blink(1);
-            StartStop_Dimmer(1);
-
-            StartHeater(10);
+            if ((1 == MTOUCH_Button_isPressed(T_start)) &&
+                (1 == MTOUCH_Button_isPressed(T_stop))) {
 
 
-            for (uint8_t i = 0; i < 170; i++){
 
-                SetDimmer(3);
-                _delay((unsigned long)((5000)*(8000000/4000.0)));
-                SetDimmer(71);
-                _delay((unsigned long)((2000)*(8000000/4000.0)));
+                StartStop_Buzzer(1);
+                _delay((unsigned long)((1000)*(8000000/4000.0)));
+                StartStop_Buzzer(0);
+
+                StartStop_AlarmLED_Blink(1);
+                StartStop_Dimmer(1);
+
+                StartHeater(10);
+
+
+                for (uint8_t i = 0; i < 100; i++){
+
+                    SetDimmer(3);
+                    _delay((unsigned long)((5000)*(8000000/4000.0)));
+                    SetDimmer(71);
+                    _delay((unsigned long)((800)*(8000000/4000.0)));
+                }
+
+                StartStop_Fan(1);
+                StartStop_Dimmer(0);
+                for (uint8_t i = 0; i < 36; i++){
+                    _delay((unsigned long)((5000)*(8000000/4000.0)));
+                }
+                StartStop_Fan(0);
+                StartStop_Buzzer(1);
+                _delay((unsigned long)((1000)*(8000000/4000.0)));
+                StartStop_Buzzer(0);
+                StartStop_AlarmLED_Blink(0);
+
+                while ((1 == MTOUCH_Button_isPressed(T_start)) &&
+                       (1 == MTOUCH_Button_isPressed(T_stop))) {
+                    MTOUCH_Service_Mainloop();
+                }
             }
-
-            StartStop_Buzzer(1);
-            _delay((unsigned long)((1000)*(8000000/4000.0)));
-            StartStop_Buzzer(0);
-            StartStop_AlarmLED_Blink(0);
-
         }
     }
 }
+
 
 
 void SetDimmer(float dim_percentage){
